@@ -3,7 +3,7 @@
 
 <input_panel>
   <textfield>
-    <label_line>Please enter the order of the tree (2, 3, or 4)</label_line>
+    <label_line>Please enter the order of the tree (3 or 4)</label_line>
     <default_field>4</default_field>
     <value_entered></value_entered>
   </textfield>
