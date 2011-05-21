@@ -1,0 +1,10 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Bar Graph</call_stack>
+<program_listing>
+<line line_number = "1">Inserted item is less than previous item</line>
+<line line_number = "2">Inserted item is greater than previous item</line>
+<line line_number = "3">Inserted item is equal to previous item</line>
+</program_listing>
+</pseudocode>

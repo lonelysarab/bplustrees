@@ -1,0 +1,41 @@
+coords -1.0 -1.0 10 10
+circle 0 0.0 8.0 0.5 green solid
+circle O0 0.0 8.0 0.5 orange outline
+text T0 0.0 8 1 black D1  S3
+circle 1 1.0 6.0 0.5 green solid
+circle O1 1.0 6.0 0.5 orange outline
+text T1 1.0 6 1 black D2  S1
+circle 2 2.0 7.0 0.5 green solid
+circle O2 2.0 7.0 0.5 orange outline
+text T2 2.0 7 1 black D3  S2
+circle 3 3.0 9.0 0.5 green solid
+circle O3 3.0 9.0 0.5 orange outline
+text T3 3.0 9 1 black D4  S10
+circle 4 4.0 6.0 0.5 green solid
+circle O4 4.0 6.0 0.5 orange outline
+text T4 4.0 6 1 black D5  S1
+circle 5 5.0 7.0 0.5 green solid
+circle O5 5.0 7.0 0.5 orange outline
+text T5 5.0 7 1 black D6  S3
+circle 6 6.0 6.0 0.5 green solid
+circle O6 6.0 6.0 0.5 orange outline
+text T6 6.0 6 1 black D7  S1
+circle 7 7.0 8.0 0.5 green solid
+circle O7 7.0 8.0 0.5 orange outline
+text T7 7.0 8 1 black D8  S6
+circle 8 8.0 6.0 0.5 green solid
+circle O8 8.0 6.0 0.5 orange outline
+text T8 8.0 6 1 black D9  S1
+circle 9 9.0 7.0 0.5 green solid
+circle O9 9.0 7.0 0.5 orange outline
+text T9 9.0 7 1 black D10  S2
+pointline 423 2.650 8.650 0.350 8.350 red thick
+pointline 430 0.350 7.650 1.650 7.350 blue thick
+pointline 442 1.650 6.650 1.350 6.350 red thick
+pointline 453 3.350 8.650 6.650 8.350 blue thick
+pointline 467 6.650 7.650 5.350 7.350 red thick
+pointline 475 4.650 6.650 4.350 6.350 red thick
+pointline 485 5.350 6.650 5.650 6.350 blue thick
+pointline 497 7.350 7.650 8.650 7.350 blue thick
+pointline 509 8.650 6.650 8.350 6.350 red thick
+bigtext LLN 4.500 1.000 1 purple Laura's Tree

@@ -1,0 +1,27 @@
+Hashing with linear probing
+linearhashing new_data_only gaigs
+****
+Hashing with quadratic probing
+quadhashing new_data_only gaigs
+****
+Double hashing (Rehashing)
+doublehashing new_data_only gaigs
+****
+The Union-Find ADT
+unionfindmyles new_data_only gaigs
+**** 
+Huffman Encoding
+huffmanEncoding new_data_only gaigs
+****
+Huffman Decoding 
+huffmanDecoding new_data_only gaigs 
+****
+The Heap Sort
+heapmyles new_data_only gaigs
+**** 
+Red-black Tree 
+rbtreealex new_data_only gaigs
+**** 
+Stack-based Parsing
+parsing_lln dynamic gaigs
+**** 

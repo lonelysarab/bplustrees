@@ -1,0 +1,12 @@
+Matrix DFS simulation
+dfsmatrix static matrix
+****
+Matrix BFS simulation
+bfsmatrix static matrix
+****
+Matrix Prim MST
+primmatrix static matrix
+****
+Matrix Dijkstra with heap
+dijkstramatrix static matrix
+****

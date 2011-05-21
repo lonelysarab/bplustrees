@@ -1,0 +1,8 @@
+TEXTFIELD
+Enter the number of slots in the hash table: (2-10)
+6
+ENDTEXTFIELD
+TEXTFIELD
+Enter the number of keys to insert:
+6
+ENDTEXTFIELD

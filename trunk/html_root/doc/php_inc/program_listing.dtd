@@ -1,0 +1,10 @@
+<!-- Document type definition for program_listing xml document -->
+<!ELEMENT program_listing (line+)>
+<!ELEMENT line ((#PCDATA | replace)+)>
+<!ATTLIST line line_number CDATA #IMPLIED>
+<!ELEMENT replace EMPTY>
+<!ATTLIST replace var NMTOKEN #REQUIRED>
+<!ENTITY lt "&#60;">
+<!ENTITY gt "&#62;">
+<!ENTITY amp "&#38;">
+<!ENTITY quot "&#34;">

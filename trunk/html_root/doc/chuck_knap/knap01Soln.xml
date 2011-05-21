@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>knapsack01/solnKnap</call_stack>
+	<program_listing>
+		<signature>solnKnap(knap, a, y)</signature>
+		<line line_number="1">1	 k = a.length; </line>
+		<line line_number="2">2	 While k is greater than 0 </line>
+		<line line_number="3">3  	Set val = knap[k][y] </line>
+		<line line_number="4">4		While knap[k-1][y] equals val </line>
+		<line line_number="5">5			go up one row in knap - reduce k by 1 </line>
+	        <line line_number="6">6		Item k is a component of the solution	</line>
+		<line line_number="7">7		Reduce y by the weight of item k - move over a[k] columns </line>
+		<line line_number="8">8		go up one row in knap - reduce k by 1	</line>
+	</program_listing>
+</pseudocode>

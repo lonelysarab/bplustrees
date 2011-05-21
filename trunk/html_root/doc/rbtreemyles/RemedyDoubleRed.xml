@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>RemedyDoubleRed(currentNode)</signature>
+	<line line_number="2">1    if(parent is root)</line>
+	<line line_number="3">2         return</line>
+	<line line_number="4">3    if(parent is not red)</line>
+	<line line_number="5">4         return</line>
+	<line line_number="6">5    if(parent's sibling is not red)</line>
+	<line line_number="7">6         parent = restructure(currentNode)</line>
+	<line line_number="8">7         parent = black</line>
+	<line line_number="9">8         parent.left = red</line>
+	<line line_number="10">9   	  parent.right = red	 </line>
+	<line line_number="11">10   else</line>
+	<line line_number="12">11        parent = black;	 </line>
+	<line line_number="13">12        parent.sibling = black</line>
+	<line line_number="15">13        if(grandparent is root) </line>
+	<line line_number="16">14   		 return</line>
+	<line line_number="17">15   	  grandparent = red </line>
+	<line line_number="18">16   	  RemedyDoubleRed(grandparent)</line>
+
+    </program_listing>
+    <variables>
+        <variable>CurrentNode = <replace var="item" /></variable>
+        <variable>parent = <replace var="v" /></variable>
+    </variables>
+</pseudocode>
+

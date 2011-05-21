@@ -1,0 +1,55 @@
+body {
+        background-color:#EEEEEE;
+}
+pre {
+        margin: 0px;
+}
+.stack {
+        background-color: #EEEEEE;
+        padding: 5px 0px 5px 10px;
+        font-family: monospace;
+        color: #000066;
+        font-weight: bold;
+        text-align: center;
+        
+}
+.codeArea {
+	background-color: #FFFFFF;
+	padding: 10px 0px 10px 0px;
+}
+.signature {
+        padding: 5px 0px 5px 10px;
+        white-space: pre;
+        font-family: monospace;
+        color: #000066;
+        font-weight: bold;
+}
+.plainCode {
+	padding: 1px 0px 1px 6px;
+//        white-space: pre;
+//        font-family: monospace;
+}
+.highlightCode {
+        padding: 1px 0px 1px 6px;
+//        white-space: pre;
+	background-color: #F6F6F6;
+        color: #AA0000;
+//        font-family: monospace;
+}
+.variables {
+        padding: 10px 10px 10px 10px;
+        background-color: #EEEEEE;
+        color: #000066;
+        font-family: monospace;
+        border-bottom: 1px solid #333333;
+        font-weight: bold;
+}
+.variable {
+        padding: 1px 0px 1px 20px;
+        margin: 0px;
+        color: #111111;
+        font-family: monospace;
+        display: inline;
+        font-weight: normal;
+}
+

@@ -1,0 +1,230 @@
+; ParseDataEx.wbt
+; 32-bit
+;
+; Written 1/13/1999 by Chuck Chopp, RTFM Consulting Services, Inc.
+;
+; The functionality provided by this script is to fully parse all available parameters
+; that have been passed on the command line.  By default, WinBatch only parses the first
+; nine parameters (param1 - param9) that are on the command line.  It will, however, 
+; detect that there are more than 9 and set param0 to have an appropriate value.  This
+; script will take the unparsed command line and re-parse it.  All parameters will be
+; parsed and placed into variables with the same names as the built-in parameters (Param#),
+; except that the value of "#" can go as high as necessary.
+;
+; The need for this script arose due to having some scripts that have a very complex 
+; set of command line switches.  The limit of only nine parameters was causing some of the 
+; command line switch information to be lost for those scripts.
+
+
+; Initialize global variables
+
+Param0 = 0
+
+
+; Initialize local variables that we will Drop() when finished...
+
+PDEX_C = ""
+PDEX_CNext = ""
+
+if (!IsDefined(PDEX_CmdLine))
+  PDEX_CmdLine = IntControl(1006,0,0,0,0)
+endif
+
+PDEX_I = 0
+PDEX_CmdLineLen = StrLen(PDEX_CmdLine)
+PDEX_bInParam = @FALSE
+PDEX_bWhiteSpace = @FALSE
+PDEX_bWhiteSpaceNext = @FALSE
+PDEX_bQuoteMode = @FALSE
+PDEX_Quote = ""
+PDEX_bQuote = @FALSE
+PDEX_bQuoteNext = @FALSE
+PDEX_bDone = @FALSE
+PDEX_ParamLen = 0
+
+for PDEX_I = 1 to PDEX_CmdLineLen
+
+  PDEX_C = StrSub(PDEX_CmdLine, PDEX_I, 1)
+  if (PDEX_I < PDEX_CmdLineLen)
+    PDEX_CNext = StrSub(PDEX_CmdLine, PDEX_I + 1, 1)
+  else
+    PDEX_CNext = ""
+  endif
+
+  if ((PDEX_C == " ") || (PDEX_C == @TAB))
+   PDEX_bWhiteSpace = @TRUE
+  else
+    PDEX_bWhiteSpace = @FALSE
+  endif
+
+  if ((PDEX_CNext == " ") || (PDEX_CNext == @TAB))
+    PDEX_bWhiteSpaceNext = @TRUE
+  else
+    PDEX_bWhiteSpaceNext = @FALSE
+  endif
+
+  if (PDEX_bQuoteMode)
+    if (PDEX_C == PDEX_Quote)
+      if (PDEX_CNext <> PDEX_Quote)
+        PDEX_bQuoteMode = @FALSE
+        if (PDEX_ParamLen == 0)
+          ; OK, here is one odd ball situation.  We have a parameter that consisted of
+          ; an empty pair of QUOTE characters.  Our logic has caused us to strip them
+          ; from the empty parameter that they contained.  This in turn has short circuited
+          ; some of our character handling and we never did increment the parameter count.
+          ; We need to at least increment the parameter count and create an empty parameter
+          ; at the new slot.  If the next character is white space then we know that we
+          ; are truly at the end of the current parameter.  If the next character is one
+          ; of the QUOTE characters then the current parameter might continue.  If the next 
+          ; character is not a QUOTE character and is not white space then our current 
+          ; parameter will definitely continue.
+          if (!PDEX_bInParam)
+            param0 = param0 + 1
+            param%param0% = ""
+          endif
+          if (PDEX_bWhiteSpaceNext)
+            ; do nothing
+          else
+            ; the parameter could continue to be added to with the upcoming characters...
+            PDEX_bInParam = @TRUE
+          endif
+        endif
+        continue
+      else
+        ; This is a doubled (escaped) QUOTE character.  Allow it to pass on
+        ; down to where we put data into the parameter variables
+        PDEX_ParamLen = PDEX_ParamLen + 1
+      endif
+    else
+      ; This is some other character.  Allow it to pass on
+      ; down to where we continue checking to see if this is
+      ; an important character.
+      PDEX_ParamLen = PDEX_ParamLen + 1
+    endif
+  else
+    if (PDEX_C == '"')
+      PDEX_bQuoteMode = @TRUE
+      PDEX_Quote = '"'
+      PDEX_ParamLen = 0
+      continue
+    else
+      if (PDEX_C == "'")
+        PDEX_bQuoteMode = @TRUE
+        PDEX_Quote = "'"
+        PDEX_ParamLen = 0
+        continue
+      else
+        if (PDEX_C == "`")
+          PDEX_bQuoteMode = @TRUE
+          PDEX_Quote = "`"
+          PDEX_ParamLen = 0
+          continue
+        endif
+      endif
+    endif
+  endif
+
+  if (PDEX_C == PDEX_Quote)
+    PDEX_bQuote = @TRUE
+  else
+    PDEX_bQuote = @FALSE
+  endif
+
+  if (PDEX_CNext == PDEX_Quote)
+    PDEX_bQuoteNext = @TRUE
+  else
+    PDEX_bQuoteNext = @FALSE
+  endif
+
+  if (PDEX_bInParam)
+    if (PDEX_bWhiteSpace)
+      if (PDEX_bQuoteMode)
+        ; add to parameter and get next character...
+        param%param0% = StrCat(param%param0%,PDEX_C)
+      else ; not in quote mode
+        ; done with current parameter, go on to next
+        PDEX_bInParam = @FALSE
+      endif
+    else ; not a white-space character
+      if (PDEX_bQuote)
+        if (PDEX_bQuoteNext)
+          ; We have found a doubled QUOTE.
+          ; Put a QUOTE character into the parameter and
+          ; skip the next character (eat one QUOTE from the
+          ; input data)...
+          param%param0% = StrCat(param%param0%,PDEX_C)
+          PDEX_I = PDEX_I + 1
+        else
+          ; We cannot get here from there.  Getting here would
+          ; be a sign of a bounced sanity check.
+        endif
+      else
+        ;  non-quote, non-white-space character, add to parameter
+        ;  and get next character...
+        param%param0% = StrCat(param%param0%,PDEX_C)
+      endif
+    endif
+  else ; not in a parameter, see if we should start one...
+    if (PDEX_bWhiteSpace)
+      ; skip white-space characters encountered between parameters unless
+      ; we are in quote mode, in which case we are actually starting a new
+      ; parameter that begins with some white space.
+      if (PDEX_bQuoteMode)
+        PDEX_bInParam = @TRUE
+        param0 = param0 + 1
+        param%param0% = PDEX_C
+      endif
+    else ; not a white-space character
+      if (PDEX_bQuote)
+        if (PDEX_bQuoteNext)
+          ; start a new parameter
+          ; We have found a doubled QUOTE.
+          ; Put a QUOTE character into the parameter and
+          ; skip the next character (eat one QUOTE from the
+          ; input data)...
+          PDEX_bInParam = @TRUE
+          param0 = param0 + 1
+          param%param0% = PDEX_C
+          PDEX_I = PDEX_I + 1
+        else
+          ; We cannot get here from there.  Getting here would
+          ; be a sign of a bounced sanity check.
+        endif
+      else ; not a quote character, not white space
+      ; start a new parameter, put this character in the parameter...
+        param0 = param0 + 1
+        param%param0% = PDEX_C
+        PDEX_bInParam = @TRUE
+      endif
+    endif
+  endif
+next
+
+DropWild("PDEX_*")
+
+
+
+
+filebase = param1 
+datafileparam = param2
+;parsestring = param3
+;iplus = param5
+;splus = param7
+;iminus = param9
+;sminus = param11
+;itimes = param13
+;stimes = param15
+;idivide = param17
+;sdivide = param19
+;ipower = param21
+;spower = param23
+
+; Establish the name of the sho file
+shofile = strcat(filebase, ".sho")
+;message ("script file", shofile)
+algoexe = "ParsingVis.exe"
+
+;runhidewait(algoexe, "%shofile% %parsestring% %iplus% %splus% %iminus% %sminus% %itimes% %stimes% %idivide% %sdivide% %ipower% %spower%")  
+runhidewait(algoexe, "%shofile% A*B+(C-D/E)  1 1 1 1 2 2 2 2 3 3")  
+
+exit                                   ; bye

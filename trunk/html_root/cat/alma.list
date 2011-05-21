@@ -1,0 +1,24 @@
+The Alma Selection Sort
+selectionmyles new_data_only gaigs
+****
+The Alma Bubble Sort
+bubblemyles new_data_only gaigs
+****
+The Alma Insertion Sort
+insertionmyles new_data_only gaigs
+****
+The Alma Shell Sort
+shellmyles new_data_only gaigs
+****
+The Alma Heap Sort
+heapmyles new_data_only gaigs
+****
+The Alma Merge Sort
+mergemyles new_data_only gaigs
+****
+The Alma Quick Sort
+quickmyles new_data_only gaigs
+****
+The Alma Union Find
+unionfindmyles new_data_only gaigs
+****

@@ -1,0 +1,16 @@
+class Fibonacci_iterative {
+
+	public static void main(String[] args) {
+
+		int num1 = 1;
+		int num2 = 1;
+		int tmp;
+		int i = 3;
+		while (i <= 4) {
+			tmp = num2;
+			num2 = num1 + num2;
+			num1 = tmp;
+			i++;
+		}
+	}
+}

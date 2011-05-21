@@ -1,0 +1,8 @@
+TEXTFIELD
+Enter operations: num_nodes num_edges (addx | adex,y | remx | rmex,y {add or rem node x or edge x,y} | colx,y {color node x hex string y})*
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+User-defined
+ENDCHOICE

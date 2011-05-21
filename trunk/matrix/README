@@ -1,0 +1,8 @@
+Ville Karavirta's description of the format of script files for the Matrix visualizer:
+
+Script contains exercise property which should be an exercise class of matrix. The other property, task, specifies the content of Info and Pseudo code tabs using following "rules":
+   *  <span class="task"/> defines the start of the "task"-part. This part is required. If not found, the exercise description is displayed in one block in the Info tab.
+   * <span class="instructions"/> defines the "instructions"-part. This part is not required, but should be used when the division between the parts is clear.
+   * <span class="code" name="code_block_name"/> defines a section in the Pseudo code tab. All code blocks should have a unique name defined by the "name"-attribute.
+
+Observe that the span-tags *must* be closed immediately, no separate closing tags ( </span> ) should be used. A description part is closed by the following parts start-tag.

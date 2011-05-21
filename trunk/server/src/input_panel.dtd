@@ -1,0 +1,12 @@
+<!ELEMENT input_panel ( (textfield | combobox)* )>
+
+<!ELEMENT textfield (label_line*, default_field, value_entered)>
+<!ELEMENT textarea (label_line*, default_field, value_entered)>
+<!ELEMENT label_line (#PCDATA)>
+<!ELEMENT default_field (#PCDATA)>
+<!ELEMENT value_entered (#PCDATA)>
+
+<!ELEMENT combobox (label_line*, option*, option_entered)>
+<!ELEMENT option (#PCDATA)>
+<!ELEMENT option_entered (#PCDATA)>
+

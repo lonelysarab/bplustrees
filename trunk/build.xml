@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<project default="buildall">
+
+    <property name="project" location="../../server/build/classes:." />
+
+    <target name="buildall">
+        <echo message="******** Building all of Jhave ********"/>
+	<echo message="**** Building Core ****"/>
+        <ant antfile="build.xml" dir="core"/>
+	<echo message="**** Building Gaigs ****"/>
+	<ant antfile="build.xml" dir="gaigs"/>
+	<echo message="**** Building Xaal ****"/>
+	<ant antfile="build.xml" dir="xaal"/>
+	<echo message="**** Building Matrix ****"/>
+	<ant antfile="build.xml" dir="matrix"/>
+	<echo message="**** Building Server ****"/>
+	<ant antfile="build.xml" dir="server"/>
+	<echo message="**** Building Client ****"/>
+	<ant antfile="build.xml" dir="client"/> 
+	<echo message="******** Full Compilation Complete ********"/>
+    </target>
+  
+    <target name="cleanall">
+        <echo message="******** Cleaning all of Jhave ********"/>
+	<echo message="**** Cleaning Core ****"/>
+        <ant antfile="build.xml" dir="core" target="clean"/>
+	<echo message="**** Cleaning Gaigs ****"/>
+	<ant antfile="build.xml" dir="gaigs" target="clean"/>
+	<echo message="**** Cleaning Xaal ****"/>
+	<ant antfile="build.xml" dir="xaal" target="clean"/>
+	<echo message="**** Cleaning Matrix ****"/>
+	<ant antfile="build.xml" dir="matrix" target="clean"/>
+	<echo message="**** Cleaning Server ****"/>
+	<ant antfile="build.xml" dir="server" target="clean"/>
+	<echo message="**** Cleaning Client ****"/>
+	<ant antfile="build.xml" dir="client" target="clean"/>
+	<echo message="******** Full Clean Complete ********"/>
+    </target>
+  
+    <target name="buildserver">
+        <echo message="******** Building Jhave Server ********"/>
+	<echo message="**** Bulding Core ****"/>
+	<ant antfile="build.xml" dir="core"/>
+	<echo message="**** Building Server ****"/>
+	<ant antfile="build.xml" dir="server"/>
+	<echo message="******** Server Build Complete ********"/>
+    </target>
+  
+    <target name="cleanserver">
+        <echo message="******** Cleaning Jhave Server ********"/>
+	<echo message="**** Cleaning Core ****"/>
+	<ant antfile="build.xml" dir="core" target="clean"/>
+	<echo message="**** Cleaning Server ****"/>
+	<ant antfile="build.xml" dir="core" target="clean"/>
+	<echo message="******** Server Clean Complete ********"/>
+    </target>
+
+    <target name="buildclient">
+        <echo message="******** Building Jhave Client ********"/>
+	<echo message="**** Building Core ****"/>
+	<ant antfile="build.xml" dir="core"/>
+	<echo message="**** Building Gaigs ****"/>
+	<ant antfile="build.xml" dir="gaigs"/>
+	<echo message="**** Building Xaal ****"/>
+	<ant antfile="build.xml" dir="xaal"/>
+	<echo message="**** Building Matrix ****"/>
+	<ant antfile="build.xml" dir="matrix"/>
+	<echo message="**** Building Client ****"/>
+	<ant antfile="build.xml" dir="client"/>
+	<echo message="******** Client Build Complete ********"/>
+    </target>
+
+    <target name="cleanclient">
+        <echo message="******** Cleaning Jhave Client ********"/>
+	<echo message="**** Cleaning Core ****"/>
+	<ant antfile="build.xml" dir="core" target="clean"/>
+	<echo message="**** Cleaning Gaigs ****"/>
+	<ant antfile="build.xml" dir="gaigs" target="clean"/>
+	<echo message="**** Cleaning Xaal ****"/>
+	<ant antfile="build.xml" dir="xaal" target="clean"/>
+	<echo message="**** Cleaning Matrix ****"/>
+	<ant antfile="build.xml" dir="xaal" target="clean"/>
+	<echo message="**** Cleaning Matrix ****"/>
+	<ant antfile="build.xml" dir="client" target="clean"/>
+	<echo message="******** Client Clean Complete ********"/>
+    </target>
+
+    <target name="runserver">
+        <echo message="******** Running Jhave Server ********"/>
+	<ant antfile="build.xml" dir="server" target="run"/>
+    </target>
+
+    <target name="runclient">
+        <echo message="******** Running Jhave Client ********"/>
+	<ant antfile="build.xml" dir="client" target="run"/>
+    </target>
+
+</project>

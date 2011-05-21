@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>RBdelete(delItem, currentNode)</signature>
+	<line line_number="1">1    if(currentNode is node to be deleted)</line>
+	<line line_number="2">2     	BinaryNode t</line>
+	<line line_number="3">3     	if(r.right == null)</line>
+	<line line_number="6">4     		currentNode = currentNode.left</line>
+	<line line_number="7">5     		RBDelFix(currentNode's left, currentNode's sibling, currentNode's parent)</line>
+	<line line_number="8">6     	else if(currenNode's right child has no left child)</line>
+	<line line_number="9">7     		currentNode = currentNode.right </line>
+	<line line_number="10">8   		RBDelFix(currentNode, currentNode's sibling, currentNode's parent)</line>
+	<line line_number="11">9   	else</line>
+	<line line_number="12">10   		Node temp = deleteMin(currentNode.right)</line>
+	<line line_number="13">11   		currentNode = temp</line>
+	<line line_number="14">12   		RBDelFix(temp.parent.left, temp.parent.right, temp.parent)</line>
+	<line line_number="15">13   else if(r.element > delItem)</line>
+	<line line_number="16">14   	RBdelete(delItem, currentNode's left child)</line>
+	<line line_number="17">15   else</line>
+	<line line_number="18">16   	RBdelete(delItem, currentNode.right)</line>
+    </program_listing>
+    <variables>
+        <variable>delItem = <replace var="item" /></variable>
+        <variable>currentNode = <replace var="v" /></variable>
+    </variables>
+</pseudocode>
+

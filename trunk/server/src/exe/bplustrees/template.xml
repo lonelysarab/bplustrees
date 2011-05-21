@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pseudocode>
+  <stack><replace var="current_function" /></stack>
+  <code>
+    <signature>Pseudocode</signature>
+    <line num="1">insert(x)</line>
+    <line num="2">if (root == null)</line>
+    <line num="2"></line>
+
+  </code>
+  <vars>
+    <var>x = <replace var="x" /></var>
+  </vars>
+</pseudocode>

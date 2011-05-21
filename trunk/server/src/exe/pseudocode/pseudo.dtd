@@ -1,0 +1,18 @@
+<!ELEMENT pseudocode (stack, code, vars)>
+
+<!ELEMENT stack (replace, #PCDATA)>
+
+<!ELEMENT code (signature?, line*)>
+
+<!ELEMENT signature (#PCDATA)>
+
+<!ELEMENT line (#PCDATA)>
+  <!ATTLIST line num CDATA #REQUIRED>
+  <!ATTLIST line sel CDATA #REQUIRED>
+  <!ATTLIST line indent CDATA>
+
+<!ELEMENT vars (var*)>
+  <!ELEMENT var (#PCDATA, replace)>
+
+<!ELEMENT replace EMPTY>
+  <!ATTLIST replace var CDATA #REQUIRED>

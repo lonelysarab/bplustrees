@@ -1,0 +1,136 @@
+viewdef Pro 500 600
+view Pro
+bg black
+viewdef Samba 500 600
+bg black
+view Samba
+bg black
+bigtext equation1 0.0 0.1 1 yellow #1
+bigtext 11 0.1 0.1 1 tomato3 2.0
+bigtext x1 0.1 0.4 1 green x1
+bigtext value1 0.4 0.1 1 tomato3 4.0
+bigtext equation2 0.0 0.2 1 yellow #2
+bigtext 21 0.1 0.2 1 tomato3 3.0
+bigtext 22 0.2 0.2 1 tomato3 2.0
+bigtext x2 0.2 0.4 1 green x2
+bigtext value2 0.4 0.2 1 tomato3 6.0
+bigtext equation3 0.0 0.3 1 yellow #3
+bigtext 31 0.1 0.3 1 tomato3 5.0
+bigtext 32 0.2 0.3 1 tomato3 1.0
+bigtext 33 0.3 0.3 1 tomato3 4.0
+bigtext x3 0.3 0.4 1 green x3
+bigtext value3 0.4 0.3 1 tomato3 12.0
+pointline leftbracket 0.05 0.05 0.05 0.35 white thick
+pointline centerbracket 0.35 0.05 0.35 0.35 white thick
+pointline rightbracket 0.45 0.05 0.45 0.35 white thick
+view Pro
+bigtext pipelinetitle 0.1 0.0 0 white PipeLine
+bigtext position1 0.33 -0.05 0 grey 1
+bigtext position2 0.43 -0.05 0 grey 2
+bigtext position3 0.52 -0.05 0 grey 3
+view Samba
+bigtext solving1 0.1 0.50 0 royalblue Begun Solving for x1
+bigtext solving2 0.1 0.60 0 royalblue Begun Solving for x2
+bigtext solving3 0.1 0.70 0 royalblue Begun Solving for x3
+bigtext assign1 0.70 0.1 1 orange Assigned to Processor#1
+bigtext assign2 0.70 0.2 1 orange Assigned to Processor#2
+bigtext assign3 0.70 0.3 1 orange Assigned to Processor#3
+view Pro
+bigtext proc1 0.1 0.20 0 grey Proc#1
+view Pro
+bigtext proc2 0.1 0.40 0 grey Proc#2
+view Pro
+bigtext proc3 0.1 0.60 0 grey Proc#3
+view Pro
+bigtext valueof1 0.5 0.20 0 yellow X1 = (4.00 - 0.00)/2.00
+view Pro
+bigtext valueX1 0.55 0.15 0 red   = 
+view Pro
+bigtext valueX1 0.6 0.15 0 red 2.00
+view Pro
+bigtext pipe1 0.6 0.15 0 blue 2.00
+view Pro
+move pipe1 0.3 0.0 
+view Pro
+bigtext copy1 0.3 0.0 0 blue 2.00
+move copy1 0.4 0.0 
+delete copy1
+view Samba
+bigtext solved1 0.6  0.50 0 Red Solved!
+view Pro
+bigtext pipe2 0.4 0.0 0 blue 2.00
+bigtext xval2 0.4 0.0 0 blue 2.00
+view Pro
+bigtext pipe21 0.4 0.0 0 blue 2.00
+view Pro
+move xval2 0.3 0.40
+move pipe21 0.5 0.0
+view Pro
+text sum2 0.3 0.35 0 green sum = 0.00 + 3.00 * 2.00 = 6.00
+view Pro
+bigtext pipe3 0.5 0.0 0 blue 2.00
+bigtext xval3 0.5 0.0 0 blue 2.00
+view Pro
+delete pipe2
+delete xval2
+delete pipe21
+delete sum2
+view Pro
+bigtext valueof2 0.5 0.40 0 yellow X2 = (6.00 - 6.00)/2.00
+view Pro
+bigtext pipe31 0.5 0.0 0 blue 2.00
+view Pro
+move xval3 0.3 0.60
+move pipe31 0.6 0.0
+view Pro
+bigtext valueX2 0.55 0.35 0 red   = 
+view Pro
+bigtext valueX2 0.6 0.35 0 red 0.00
+view Pro
+text sum3 0.3 0.55 0 green sum = 0.00 + 5.00 * 2.00 = 10.00
+view Pro
+bigtext pipe2 0.6 0.35 0 blue 0.00
+view Pro
+move pipe2 0.4 0.0 
+view Pro
+bigtext copy2 0.4 0.0 0 blue 0.00
+move copy2 0.5 0.0 
+view Pro
+delete pipe3
+delete xval3
+delete pipe31
+delete sum3
+delete copy2
+view Samba
+bigtext solved2 0.6  0.60 0 Red Solved!
+view Pro
+bigtext pipe3 0.5 0.0 0 blue 0.00
+bigtext xval3 0.5 0.0 0 blue 0.00
+view Pro
+bigtext pipe32 0.5 0.0 0 blue 0.00
+view Pro
+move xval3 0.3 0.60
+move pipe32 0.6 0.0
+view Pro
+text sum3 0.3 0.55 0 green sum = 10.00 + 1.00 * 0.00 = 10.00
+view Pro
+delete pipe3
+delete xval3
+delete pipe32
+delete sum3
+view Pro
+bigtext valueof3 0.5 0.60 0 yellow X3 = (12.00 - 10.00)/4.00
+view Pro
+bigtext valueX3 0.55 0.55 0 red   = 
+view Pro
+bigtext valueX3 0.6 0.55 0 red 0.50
+view Pro
+bigtext pipe3 0.6 0.55 0 blue 0.50
+view Pro
+move pipe3 0.5 0.0 
+view Pro
+bigtext copy3 0.5 0.0 0 blue 0.50
+move copy3 0.6 0.0 
+delete copy3
+view Samba
+bigtext solved3 0.6  0.70 0 Red Solved!

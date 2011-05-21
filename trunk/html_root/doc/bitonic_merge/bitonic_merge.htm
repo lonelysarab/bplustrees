@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY TEXT="#660000" BGCOLOR="#FFFF99">
+
+<P>In the bitonic merge sort algorithm, parallel 'binary split' processes are used to refine an array into successively
+larger bitonic lists, that is, lists that have at most one local max or min. In the final stage of the algorithm,
+the entire array is just one big bitonic list. When that occurs, the binary split partner processes are applied
+to sort the array using the bitonic sort.  Remember the distinction between the <I>bitonic sort</I> and the <I>bitonic
+merge sort</I>.  The former only sorts a bitonic list while the latter sorts an arbitrary list by successively
+refining it until it becomes a bitonic list and then applying the bitonic sort.</P>
+
+<P>The array is refined into successively larger bitonic lists by sorting segments into alternate ascending/descending
+order. In the visualization the color red is used to highlight segments that are being sorted into ascending order,
+and blue is used to highlight segments that are being sorted into descending order. When two items in the array
+are being compared by a pair of partner binary split processes, they are momentarily highlighted yellow.</P>
+
+<P><B><FONT SIZE="4">Note:</FONT>  </B>Remember that the bitonic merge sort algorithm is a parallel algorithm.
+This visualization is best viewed with &quot;quiz mode&quot; turned on, especially when you are first practicing
+with the algorithm.  When quiz mode is on, all the swaps that occur between questions of the form <I>&quot;the
+distance between 'binary split' partner processes will be ?????&quot; </I> would actually occur in parallel. However,
+to allow you to better understand the individual swaps that are made, the visualization slows them down so that
+they appear to occur in sequence.
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

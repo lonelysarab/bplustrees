@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\html.dot">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>KMP</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFCCFF" LINK="blue" VLINK="purple">
+
+<P><FONT SIZE="2">The Knuth-Morris-Pratt (KMP) algorithm provides an efficient means of solving the </FONT><I><FONT
+SIZE="2">string search problem. </FONT></I><FONT SIZE="2">In this problem we are given two strings -- a master
+string and a pattern string. We are to search the master string for the first occurrence of the pattern that appears
+in it, returning the position of the pattern in the master string or -1 if the pattern cannot be found in the master
+string. Thus, if the master string was &quot;MODERN BASEBALL HISTORY&quot; and the pattern was &quot;BASEBALL&quot;,
+the search algorithm should return 7. Note that, consistent with index notation in C++ and Java, we start at 0
+when counting positions within a string. Algorithms to solve this problem rely on the following basic loop structure:</FONT></P>
+<P><I><FONT SIZE="2" COLOR="#000099">Initially, align the pattern string against leftmost portion of the master
+string;<BR>
+</FONT><B><FONT SIZE="2" COLOR="#000099">do</FONT></B><FONT SIZE="2" COLOR="#000099"><BR>
+Perform a character-by-character comparison of pattern against master, stopping<BR>
+when you can conclude match or no match;<BR>
+</FONT><B><FONT SIZE="2" COLOR="#000099">if</FONT></B><FONT SIZE="2" COLOR="#000099"> no match<BR>
+realign the pattern to the right against a new portion of master<BR>
+</FONT><B><FONT SIZE="2" COLOR="#000099">while</FONT></B><FONT SIZE="2" COLOR="#000099">((no match has been found)
+and (a match remains possible));</FONT><FONT SIZE="2"><BR>
+&nbsp;</FONT></I></P>
+<P><FONT SIZE="2">The key to the efficiency of a string search algorithm is how far it is able to realign when
+a mismatch occurs. In a na&iuml;ve, brute force algorithm, this realignment would always be one character position.
+For example, suppose we are searching the master string &quot;KOKOKOMO&quot; for the pattern &quot;KOKOMO.&quot;
+Aligning &quot;KOKOMO&quot; against the leftmost portion of master, we realize that they do not match after five
+individual character comparisons. Realignment in the naive approach means simply sliding the pattern string one
+position to the right against the master string and starting at the beginning of the pattern string again. But
+we can do better than this is we are willing to analyze the structure of the pattern string. In the example above,
+when a mismatch occurs at the M in pattern KOKOMO, we know two things:&nbsp;</FONT></P>
+
+<UL>
+	<LI><FONT SIZE="2">The KO immediately preceding M in KOKOMO must have matched with a KO in the master string (otherwise
+	we wouldn't have reached the M).</FONT>
+	<LI><FONT SIZE="2">The KO immediately preceding M in KOKOMO matches the KO at the beginning of the pattern string</FONT>
+</UL>
+
+<P><FONT SIZE="2">&nbsp;Given this information, we could realign the pattern string so that the leading KO in KOKOMO
+is aligned under the KO preceding the K at which the mismatch occurred in the master string KO</FONT><B><FONT COLOR="#000099">KO</FONT><FONT
+SIZE="4" COLOR="red">K</FONT></B><FONT SIZE="2">OMO. The KMP algorithm relies upon this type of realignment to
+attain greater efficiency. The price paid for this efficiency is that the KMP algorithm must make a preliminary
+pass through the pattern string to compute an &quot;alignment array&quot;. During this preliminary pass:</FONT>&nbsp;</P>
+
+<UL>
+	<LI><FONT SIZE="2">align[0] = -1</FONT>
+	<LI><FONT SIZE="2">align[1]= 0</FONT>
+	<LI><FONT SIZE="2">For p &gt;= 2, align[p] is the length of the longest </FONT><I><FONT SIZE="2">PROPER</FONT></I><FONT
+	SIZE="2"> substring (of length less than p) immediately preceding position p that matches a substring at the beginning
+	of the pattern string.</FONT>
+</UL>
+
+<P>&nbsp;<FONT SIZE="2">Once the align array is computed and the alignment-based search begins, we advance in the
+master string:</FONT>&nbsp;</P>
+
+<UL>
+	<LI><FONT SIZE="2">When characters in the master and pattern strings match, in which case the index for the pattern
+	string also moves ahead</FONT>
+	<LI><FONT SIZE="2">When there is a non-match at the first character of the pattern, in which case the index for
+	the pattern doesn't change while the index for the master moves ahead by 1</FONT>&nbsp;
+</UL>
+
+<P><FONT SIZE="2">We advance in the pattern string:</FONT>&nbsp;</P>
+
+<UL>
+	<LI><FONT SIZE="2">When there is a mismatch at a position other than the first character of the pattern, in which
+	case the index for the pattern is set to the align array value and the master index remains fixed</FONT>
+</UL>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

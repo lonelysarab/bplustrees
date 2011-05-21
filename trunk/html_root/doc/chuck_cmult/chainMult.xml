@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>chainMult/dynProgCM</call_stack>
+	<program_listing>
+		<signature>chainMult(f, n, a, b)</signature>
+		<line line_number="1">for (int band = 1; band < n; band++) </line>
+            	<line line_number="2">	for (int left = 1; left <= n - band; left++)  </line>
+               	<line line_number="3">		right = left + band; </line>
+               	<line line_number="4">		m[left][right] = 9999999; 	</line>
+               	<line line_number="5">		for (int k = left; k < right; k++) 	</line>
+                <line line_number="6">   		int q = m[left][k] + m[k+1][right] + p[left-1]*p[k]*p[right];	</line>
+                <line line_number="7">   		if (q < m[left][right]) 	</line>
+                <line line_number="8">			       m[left][right] = q;	</line>
+		<line line_number="9">     		       s[left][right] = k;	</line>	
+	</program_listing>
+</pseudocode>

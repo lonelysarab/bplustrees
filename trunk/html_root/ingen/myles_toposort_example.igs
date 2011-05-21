@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>Enter number of graph nodes:</label_line>
+    <default_field>10</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>Enter number of graph edges:</label_line>
+    <default_field>17</default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>

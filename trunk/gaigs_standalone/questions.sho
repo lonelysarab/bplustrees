@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+ <snap>
+  <title>Question 1</title>
+  <question_ref ref="1"/>
+ </snap>
+
+ <snap>
+  <title>Question 2</title>
+  <question_ref ref="qrs"/>
+ </snap>
+
+ <snap>
+  <title>Question 3</title>
+  <question_ref ref="alpha13"/>
+ </snap>
+
+ <questions>
+STARTQUESTIONS
+TFQUESTION 1
+This is a question.
+ENDTEXT
+ANSWER
+F
+ENDANSWER
+FIBQUESTION qrs
+The answer to the ultimate question of life, the universe, and everything is:
+ENDTEXT
+ANSWER
+42
+forty-two
+pie
+ENDANSWER
+MCQUESTION alpha13
+"MCQUESTION" sounds like an item on the menu of:
+ENDTEXT
+Hardee's
+ENDCHOICE
+McDonald's
+ENDCHOICE
+Burger King
+ENDCHOICE
+Pizza Hut
+ENDCHOICE
+ANSWER
+2
+ENDANSWER
+ </questions>
+
+</show>

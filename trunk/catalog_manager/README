@@ -1,0 +1,40 @@
+The build process will package the gaigs_sho.dtd in the gaigs
+subdirectory of catalog_manager and the input_panel.dtd in the
+input_gen directory of catalog_manager so that the following DOCTYPE
+tag:
+
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+will automatically make the jdom methods used in GAIGS refer to the
+gaigs_sho.dtd and input_panel.dtd files that are bundled in the
+distribution jar file for the client.  Should you want to bundle a new
+gaigs_sho.dtd file (input_panel.dtd) in the distribution jar file,
+first put your gaigs_sho.dtd file (input_panel.dtd) in the gaigs (input_gen)
+subdirectory of catalog_manager.  Then create a new CatalogManger.jar
+file by issuing the command:
+
+jar cf CatalogManager.jar CatalogManager.properties catalog.xml gaigs input_gen
+
+Finally, copy this CatalogManger.jar file to two locations:
+
+../build/CatalogManager.jar
+../client/lib/CatalogManager.jar
+
+Should you wish to use a "home-brewed" dtd for your own local
+development, place a copy of your gaigs_sho.dtd in the ../client
+directory, change the DOCTYPE tag in your show files to:
+ 
+<!DOCTYPE show SYSTEM "gaigs_sho.dtd">
+
+Should you wish to use a "home-brewed" dtd for your own local
+development, place a copy of your input_gen.dtd in the ../client
+directory and the ../server/src directory, change the DOCTYPE tag in
+your show files to:
+ 
+<!DOCTYPE show SYSTEM "input_panel.dtd">
+
+Then the "ant run" command used to launch the client directly from the
+client directory will look at your gaigs_sho.dtd instead of the one
+referenced by the PUBLIC id.
+

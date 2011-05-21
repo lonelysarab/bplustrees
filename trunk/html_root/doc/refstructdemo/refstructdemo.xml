@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Reference Structure Demo</call_stack>
+<program_listing>
+public static void main(String[] args)
+{
+<line line_number="1">    Line segment;</line>
+<line line_number="2">    segment = new Line();</line>
+<line line_number="3">    segment.start = new Point();</line>
+<line line_number="4">    segment.finish = new Point();</line>
+<line line_number="5">    segment.start.x = 2;</line>
+<line line_number="6">    segment.start.y = 3;</line>
+<line line_number="7">    segment.finish.x = 3;</line>
+<line line_number="8">    segment.finish.y = 5;</line>
+}
+</program_listing>
+</pseudocode>

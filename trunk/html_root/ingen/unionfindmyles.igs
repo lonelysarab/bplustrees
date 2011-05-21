@@ -1,0 +1,28 @@
+TEXTFIELD
+Enter the number of sets to start with.
+10
+ENDTEXTFIELD
+CHOICE
+What type of structure should be used to store the sets?
+Array
+Tree
+ENDCHOICE
+CHOICE
+Use path compression?
+T
+F
+ENDCHOICE
+CHOICE
+Use weighted unions?
+T
+F
+ENDCHOICE
+CHOICE
+Randomly generate unions and finds?
+T
+F
+ENDCHOICE
+TEXTFIELD
+Enter a set of user defined commands. ex) u 10 4 (union sets 10 and 4) f 2 (find representative for 2)
+NONE
+ENDTEXTFIELD

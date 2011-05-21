@@ -1,0 +1,5 @@
+CHOICE
+Choose the source of the decode string:
+Randomly generated
+Chosen from a file
+ENDCHOICE

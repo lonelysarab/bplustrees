@@ -1,0 +1,87 @@
+<graph weighted = "false" heuristics = "false">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<vertex color = "#FFFFFF">
+<label>A</label>
+<position x = "0.5937003814135556" y = "0.4304447394716228"/>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>B</label>
+<position x = "0.9500000000000001" y = "0.06480854271628235"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>C</label>
+<position x = "0.17499927963369455" y = "0.05"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>D</label>
+<position x = "0.2905173149922872" y = "0.5859154799672157"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>E</label>
+<position x = "0.05" y = "0.34634803562719746"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>F</label>
+<position x = "0.5022961650097888" y = "0.09099536835423816"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>G</label>
+<position x = "0.5740928349512656" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+</vertex>
+</graph>

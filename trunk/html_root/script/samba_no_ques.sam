@@ -1,0 +1,2015 @@
+viewdef main
+viewdef weights 300 300
+view main
+bg black
+coords -0.2 -0.2 1.2 1.2
+view weights
+bg black
+coords -0.2 -0.2 1.2 1.2
+view main
+{
+bigtext toplabel 0.5 1.1 1 white With objects 1 through 1
+bigtext bottomlabel 0.5 -0.1 1 white Testing object 2 with weight 2 and benefit 3
+text labelt_0 -0.1 0.5200 1 white 0
+text labelb_0 -0.1 0.0200 1 white 0
+rectangle bar1_0 0.0 0.5000 0.0000 0.0405 red solid
+text labelt_1 -0.1 0.5655 1 white 1
+text labelb_1 -0.1 0.0655 1 white 1
+rectangle bar1_1 0.0 0.5455 0.0000 0.0405 red solid
+text labelt_2 -0.1 0.6109 1 white 2
+text labelb_2 -0.1 0.1109 1 white 2
+rectangle bar1_2 0.0 0.5909 0.0000 0.0405 red solid
+text labelt_3 -0.1 0.6564 1 white 3
+text labelb_3 -0.1 0.1564 1 white 3
+rectangle bar1_3 0.0 0.6364 0.0000 0.0405 red solid
+text labelt_4 -0.1 0.7018 1 white 4
+text labelb_4 -0.1 0.2018 1 white 4
+rectangle bar1_4 0.0 0.6818 0.4000 0.0405 red solid
+text labelt_5 -0.1 0.7473 1 white 5
+text labelb_5 -0.1 0.2473 1 white 5
+rectangle bar1_5 0.0 0.7273 0.4000 0.0405 red solid
+text labelt_6 -0.1 0.7927 1 white 6
+text labelb_6 -0.1 0.2927 1 white 6
+rectangle bar1_6 0.0 0.7727 0.4000 0.0405 red solid
+text labelt_7 -0.1 0.8382 1 white 7
+text labelb_7 -0.1 0.3382 1 white 7
+rectangle bar1_7 0.0 0.8182 0.4000 0.0405 red solid
+text labelt_8 -0.1 0.8836 1 white 8
+text labelb_8 -0.1 0.3836 1 white 8
+rectangle bar1_8 0.0 0.8636 0.4000 0.0405 red solid
+text labelt_9 -0.1 0.9291 1 white 9
+text labelb_9 -0.1 0.4291 1 white 9
+rectangle bar1_9 0.0 0.9091 0.4000 0.0405 red solid
+text labelt_10 -0.1 0.9745 1 white 10
+text labelb_10 -0.1 0.4745 1 white 10
+rectangle bar1_10 0.0 0.9545 0.4000 0.0405 red solid
+}
+rectangle bar2_0 0.0 0.0000 0.0000 0.0405 blue solid
+rectangle bar2_1 0.0 0.0455 0.0000 0.0405 blue solid
+view weights
+rectangle 0 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 1 0.5 1.1 1 white Prior weights 2 
+bigtext 2 0.0 0.48 1 white 0
+bigtext 3 0.0 0.88 1 white 2
+rectangle 4 -0.01 0.19 1.02 0.22 green outline
+rectangle 5 -0.01 0.59 1.02 0.22 green outline
+}
+view main
+rectangle benefit_ext 0.0000 0.5000 0.2000 0.0405 yellow solid
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+{
+vis bar1_2
+vis bar1_0
+vis benefit_ext
+}
+rectangle bar2_2 0.0 0.5000 0.2000 0.0405 blue solid
+move bar2_2 0.0 0.0909
+delete benefit_ext
+view weights
+rectangle 6 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 7 0.5 1.1 1 white Prior weights 2 
+bigtext 8 0.0 0.48 1 white 1
+bigtext 9 0.0 0.88 1 white 3
+rectangle 10 -0.01 0.19 1.02 0.22 green outline
+rectangle 11 -0.01 0.59 1.02 0.22 green outline
+}
+view main
+rectangle benefit_ext 0.0000 0.5455 0.2000 0.0405 yellow solid
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+{
+vis bar1_3
+vis bar1_1
+vis benefit_ext
+}
+rectangle bar2_3 0.0 0.5455 0.2000 0.0405 blue solid
+move bar2_3 0.0 0.1364
+delete benefit_ext
+view weights
+rectangle 12 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 13 0.5 1.1 1 white Prior weights 2 
+bigtext 14 0.0 0.48 1 white 2
+bigtext 15 0.0 0.88 1 white 4
+rectangle 16 -0.01 0.19 1.02 0.22 green outline
+rectangle 17 -0.01 0.59 1.02 0.22 green outline
+rectangle 18 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 19 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 20 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5909 0.2000 0.0405 yellow solid
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+{
+vis bar1_4
+vis bar1_2
+vis benefit_ext
+}
+rectangle bar2_4 0.0 0.6818 0.4000 0.0405 blue solid
+move bar2_4 0.0 0.1818
+delete benefit_ext
+view weights
+rectangle 21 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 22 0.5 1.1 1 white Prior weights 2 
+bigtext 23 0.0 0.48 1 white 3
+bigtext 24 0.0 0.88 1 white 5
+rectangle 25 -0.01 0.19 1.02 0.22 green outline
+rectangle 26 -0.01 0.59 1.02 0.22 green outline
+rectangle 27 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 28 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 29 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.6364 0.2000 0.0405 yellow solid
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+{
+vis bar1_5
+vis bar1_3
+vis benefit_ext
+}
+rectangle bar2_5 0.0 0.7273 0.4000 0.0405 blue solid
+move bar2_5 0.0 0.2273
+delete benefit_ext
+view weights
+rectangle 30 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 31 0.5 1.1 1 white Prior weights 2 
+bigtext 32 0.0 0.48 1 white 4
+bigtext 33 0.0 0.88 1 white 6
+rectangle 34 -0.01 0.19 1.02 0.22 green outline
+rectangle 35 -0.01 0.59 1.02 0.22 green outline
+rectangle 36 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 37 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 38 0.1000 0.2500 1 black 2
+rectangle 39 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 40 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 41 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.6818 0.2000 0.0405 yellow solid
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+{
+vis bar1_6
+vis bar1_4
+vis benefit_ext
+}
+rectangle bar2_6 0.0 0.6818 0.6000 0.0405 blue solid
+move bar2_6 0.0 0.2727
+delete benefit_ext
+view weights
+rectangle 42 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 43 0.5 1.1 1 white Prior weights 2 
+bigtext 44 0.0 0.48 1 white 5
+bigtext 45 0.0 0.88 1 white 7
+rectangle 46 -0.01 0.19 1.02 0.22 green outline
+rectangle 47 -0.01 0.59 1.02 0.22 green outline
+rectangle 48 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 49 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 50 0.1000 0.2500 1 black 2
+rectangle 51 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 52 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 53 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.7273 0.2000 0.0405 yellow solid
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+{
+vis bar1_7
+vis bar1_5
+vis benefit_ext
+}
+rectangle bar2_7 0.0 0.7273 0.6000 0.0405 blue solid
+move bar2_7 0.0 0.3182
+delete benefit_ext
+view weights
+rectangle 54 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 55 0.5 1.1 1 white Prior weights 2 
+bigtext 56 0.0 0.48 1 white 6
+bigtext 57 0.0 0.88 1 white 8
+rectangle 58 -0.01 0.19 1.02 0.22 green outline
+rectangle 59 -0.01 0.59 1.02 0.22 green outline
+rectangle 60 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 61 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 62 0.1000 0.2500 1 black 2
+rectangle 63 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 64 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 65 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.7727 0.2000 0.0405 yellow solid
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+{
+vis bar1_8
+vis bar1_6
+vis benefit_ext
+}
+rectangle bar2_8 0.0 0.7727 0.6000 0.0405 blue solid
+move bar2_8 0.0 0.3636
+delete benefit_ext
+view weights
+rectangle 66 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 67 0.5 1.1 1 white Prior weights 2 
+bigtext 68 0.0 0.48 1 white 7
+bigtext 69 0.0 0.88 1 white 9
+rectangle 70 -0.01 0.19 1.02 0.22 green outline
+rectangle 71 -0.01 0.59 1.02 0.22 green outline
+rectangle 72 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 73 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 74 0.1000 0.2500 1 black 2
+rectangle 75 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 76 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 77 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.8182 0.2000 0.0405 yellow solid
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+{
+vis bar1_9
+vis bar1_7
+vis benefit_ext
+}
+rectangle bar2_9 0.0 0.8182 0.6000 0.0405 blue solid
+move bar2_9 0.0 0.4091
+delete benefit_ext
+view weights
+rectangle 78 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 79 0.5 1.1 1 white Prior weights 2 
+bigtext 80 0.0 0.48 1 white 8
+bigtext 81 0.0 0.88 1 white 10
+rectangle 82 -0.01 0.19 1.02 0.22 green outline
+rectangle 83 -0.01 0.59 1.02 0.22 green outline
+rectangle 84 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 85 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 86 0.1000 0.2500 1 black 2
+rectangle 87 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 88 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 89 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.8636 0.2000 0.0405 yellow solid
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+{
+vis bar1_10
+vis bar1_8
+vis benefit_ext
+}
+rectangle bar2_10 0.0 0.8636 0.6000 0.0405 blue solid
+move bar2_10 0.0 0.4545
+delete benefit_ext
+{
+alter toplabel With objects 1 through 2
+alter bottomlabel Testing object 3 with weight 6 and benefit 5
+jump bar1_0 -1.0 -1.0
+jumprelative bar2_0 0.0 0.5
+color bar2_0 red
+jump bar1_1 -1.0 -1.0
+jumprelative bar2_1 0.0 0.5
+color bar2_1 red
+jump bar1_2 -1.0 -1.0
+jumprelative bar2_2 0.0 0.5
+color bar2_2 red
+jump bar1_3 -1.0 -1.0
+jumprelative bar2_3 0.0 0.5
+color bar2_3 red
+jump bar1_4 -1.0 -1.0
+jumprelative bar2_4 0.0 0.5
+color bar2_4 red
+jump bar1_5 -1.0 -1.0
+jumprelative bar2_5 0.0 0.5
+color bar2_5 red
+jump bar1_6 -1.0 -1.0
+jumprelative bar2_6 0.0 0.5
+color bar2_6 red
+jump bar1_7 -1.0 -1.0
+jumprelative bar2_7 0.0 0.5
+color bar2_7 red
+jump bar1_8 -1.0 -1.0
+jumprelative bar2_8 0.0 0.5
+color bar2_8 red
+jump bar1_9 -1.0 -1.0
+jumprelative bar2_9 0.0 0.5
+color bar2_9 red
+jump bar1_10 -1.0 -1.0
+jumprelative bar2_10 0.0 0.5
+color bar2_10 red
+}
+rectangle bar3_0 0.0 0.0000 0.0000 0.0405 blue solid
+rectangle bar3_1 0.0 0.0455 0.0000 0.0405 blue solid
+rectangle bar3_2 0.0 0.0909 0.2000 0.0405 blue solid
+rectangle bar3_3 0.0 0.1364 0.2000 0.0405 blue solid
+rectangle bar3_4 0.0 0.1818 0.4000 0.0405 blue solid
+rectangle bar3_5 0.0 0.2273 0.4000 0.0405 blue solid
+view weights
+rectangle 90 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 91 0.5 1.1 1 white Prior weights 2 2 
+bigtext 92 0.0 0.48 1 white 0
+bigtext 93 0.0 0.88 1 white 6
+rectangle 94 -0.01 0.19 1.02 0.22 green outline
+rectangle 95 -0.01 0.59 1.02 0.22 green outline
+rectangle 96 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 97 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 98 0.1000 0.6500 1 black 2
+rectangle 99 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 100 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 101 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5000 0.3333 0.0405 yellow solid
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+{
+vis bar2_6
+vis bar2_0
+vis benefit_ext
+}
+rectangle bar3_6 0.0 0.7727 0.6000 0.0405 blue solid
+move bar3_6 0.0 0.2727
+delete benefit_ext
+view weights
+rectangle 102 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 103 0.5 1.1 1 white Prior weights 2 2 
+bigtext 104 0.0 0.48 1 white 1
+bigtext 105 0.0 0.88 1 white 7
+rectangle 106 -0.01 0.19 1.02 0.22 green outline
+rectangle 107 -0.01 0.59 1.02 0.22 green outline
+rectangle 108 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 109 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 110 0.1000 0.6500 1 black 2
+rectangle 111 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 112 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 113 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5455 0.3333 0.0405 yellow solid
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+{
+vis bar2_7
+vis bar2_1
+vis benefit_ext
+}
+rectangle bar3_7 0.0 0.8182 0.6000 0.0405 blue solid
+move bar3_7 0.0 0.3182
+delete benefit_ext
+view weights
+rectangle 114 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 115 0.5 1.1 1 white Prior weights 2 2 
+bigtext 116 0.0 0.48 1 white 2
+bigtext 117 0.0 0.88 1 white 8
+rectangle 118 -0.01 0.19 1.02 0.22 green outline
+rectangle 119 -0.01 0.59 1.02 0.22 green outline
+rectangle 120 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 121 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 122 0.1000 0.2500 1 black 2
+rectangle 123 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 124 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 125 0.1000 0.6500 1 black 2
+rectangle 126 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 127 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 128 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.5909 0.3333 0.0405 yellow solid
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+{
+vis bar2_8
+vis bar2_2
+vis benefit_ext
+}
+rectangle bar3_8 0.0 0.8636 0.6000 0.0405 blue solid
+move bar3_8 0.0 0.3636
+delete benefit_ext
+view weights
+rectangle 129 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 130 0.5 1.1 1 white Prior weights 2 2 
+bigtext 131 0.0 0.48 1 white 3
+bigtext 132 0.0 0.88 1 white 9
+rectangle 133 -0.01 0.19 1.02 0.22 green outline
+rectangle 134 -0.01 0.59 1.02 0.22 green outline
+rectangle 135 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 136 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 137 0.1000 0.2500 1 black 2
+rectangle 138 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 139 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 140 0.1000 0.6500 1 black 2
+rectangle 141 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 142 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 143 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.6364 0.3333 0.0405 yellow solid
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+{
+vis bar2_9
+vis bar2_3
+vis benefit_ext
+}
+rectangle bar3_9 0.0 0.9091 0.6000 0.0405 blue solid
+move bar3_9 0.0 0.4091
+delete benefit_ext
+view weights
+rectangle 144 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 145 0.5 1.1 1 white Prior weights 2 2 
+bigtext 146 0.0 0.48 1 white 4
+bigtext 147 0.0 0.88 1 white 10
+rectangle 148 -0.01 0.19 1.02 0.22 green outline
+rectangle 149 -0.01 0.59 1.02 0.22 green outline
+rectangle 150 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 151 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 152 0.1000 0.2500 1 black 2
+rectangle 153 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 154 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 155 0.1000 0.6500 1 black 2
+rectangle 156 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 157 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 158 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.6818 0.3333 0.0405 yellow solid
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+{
+vis bar2_10
+vis bar2_4
+vis benefit_ext
+}
+rectangle bar3_10 0.0 0.6818 0.7333 0.0405 blue solid
+move bar3_10 0.0 0.4545
+delete benefit_ext
+{
+alter toplabel With objects 1 through 3
+alter bottomlabel Testing object 4 with weight 5 and benefit 4
+jump bar2_0 -1.0 -1.0
+jumprelative bar3_0 0.0 0.5
+color bar3_0 red
+jump bar2_1 -1.0 -1.0
+jumprelative bar3_1 0.0 0.5
+color bar3_1 red
+jump bar2_2 -1.0 -1.0
+jumprelative bar3_2 0.0 0.5
+color bar3_2 red
+jump bar2_3 -1.0 -1.0
+jumprelative bar3_3 0.0 0.5
+color bar3_3 red
+jump bar2_4 -1.0 -1.0
+jumprelative bar3_4 0.0 0.5
+color bar3_4 red
+jump bar2_5 -1.0 -1.0
+jumprelative bar3_5 0.0 0.5
+color bar3_5 red
+jump bar2_6 -1.0 -1.0
+jumprelative bar3_6 0.0 0.5
+color bar3_6 red
+jump bar2_7 -1.0 -1.0
+jumprelative bar3_7 0.0 0.5
+color bar3_7 red
+jump bar2_8 -1.0 -1.0
+jumprelative bar3_8 0.0 0.5
+color bar3_8 red
+jump bar2_9 -1.0 -1.0
+jumprelative bar3_9 0.0 0.5
+color bar3_9 red
+jump bar2_10 -1.0 -1.0
+jumprelative bar3_10 0.0 0.5
+color bar3_10 red
+}
+rectangle bar4_0 0.0 0.0000 0.0000 0.0405 blue solid
+rectangle bar4_1 0.0 0.0455 0.0000 0.0405 blue solid
+rectangle bar4_2 0.0 0.0909 0.2000 0.0405 blue solid
+rectangle bar4_3 0.0 0.1364 0.2000 0.0405 blue solid
+rectangle bar4_4 0.0 0.1818 0.4000 0.0405 blue solid
+view weights
+rectangle 159 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 160 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 161 0.0 0.48 1 white 0
+bigtext 162 0.0 0.88 1 white 5
+rectangle 163 -0.01 0.19 1.02 0.22 green outline
+rectangle 164 -0.01 0.59 1.02 0.22 green outline
+rectangle 165 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 166 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 167 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5000 0.2667 0.0405 yellow solid
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+{
+vis bar3_5
+vis bar3_0
+vis benefit_ext
+}
+rectangle bar4_5 0.0 0.7273 0.4000 0.0405 blue solid
+move bar4_5 0.0 0.2273
+delete benefit_ext
+view weights
+rectangle 168 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 169 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 170 0.0 0.48 1 white 1
+bigtext 171 0.0 0.88 1 white 6
+rectangle 172 -0.01 0.19 1.02 0.22 green outline
+rectangle 173 -0.01 0.59 1.02 0.22 green outline
+rectangle 174 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 175 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 176 0.1000 0.6500 1 black 2
+rectangle 177 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 178 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 179 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5455 0.2667 0.0405 yellow solid
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+{
+vis bar3_6
+vis bar3_1
+vis benefit_ext
+}
+rectangle bar4_6 0.0 0.7727 0.6000 0.0405 blue solid
+move bar4_6 0.0 0.2727
+delete benefit_ext
+view weights
+rectangle 180 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 181 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 182 0.0 0.48 1 white 2
+bigtext 183 0.0 0.88 1 white 7
+rectangle 184 -0.01 0.19 1.02 0.22 green outline
+rectangle 185 -0.01 0.59 1.02 0.22 green outline
+rectangle 186 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 187 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 188 0.1000 0.2500 1 black 2
+rectangle 189 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 190 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 191 0.1000 0.6500 1 black 2
+rectangle 192 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 193 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 194 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.5909 0.2667 0.0405 yellow solid
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+{
+vis bar3_7
+vis bar3_2
+vis benefit_ext
+}
+rectangle bar4_7 0.0 0.8182 0.6000 0.0405 blue solid
+move bar4_7 0.0 0.3182
+delete benefit_ext
+view weights
+rectangle 195 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 196 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 197 0.0 0.48 1 white 3
+bigtext 198 0.0 0.88 1 white 8
+rectangle 199 -0.01 0.19 1.02 0.22 green outline
+rectangle 200 -0.01 0.59 1.02 0.22 green outline
+rectangle 201 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 202 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 203 0.1000 0.2500 1 black 2
+rectangle 204 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 205 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 206 0.1000 0.6500 1 black 2
+rectangle 207 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 208 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 209 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.6364 0.2667 0.0405 yellow solid
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+{
+vis bar3_8
+vis bar3_3
+vis benefit_ext
+}
+rectangle bar4_8 0.0 0.8636 0.6000 0.0405 blue solid
+move bar4_8 0.0 0.3636
+delete benefit_ext
+view weights
+rectangle 210 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 211 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 212 0.0 0.48 1 white 4
+bigtext 213 0.0 0.88 1 white 9
+rectangle 214 -0.01 0.19 1.02 0.22 green outline
+rectangle 215 -0.01 0.59 1.02 0.22 green outline
+rectangle 216 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 217 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 218 0.1000 0.2500 1 black 2
+rectangle 219 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 220 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 221 0.1000 0.6500 1 black 2
+rectangle 222 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 223 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 224 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.6818 0.2667 0.0405 yellow solid
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+{
+vis bar3_9
+vis bar3_4
+vis benefit_ext
+}
+rectangle bar4_9 0.0 0.6818 0.6667 0.0405 blue solid
+move bar4_9 0.0 0.4091
+delete benefit_ext
+view weights
+rectangle 225 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 226 0.5 1.1 1 white Prior weights 2 2 6 
+bigtext 227 0.0 0.48 1 white 5
+bigtext 228 0.0 0.88 1 white 10
+rectangle 229 -0.01 0.19 1.02 0.22 green outline
+rectangle 230 -0.01 0.59 1.02 0.22 green outline
+rectangle 231 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 232 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 233 0.1000 0.2500 1 black 2
+rectangle 234 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 235 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 236 0.1000 0.6500 1 black 2
+rectangle 237 0.2000 0.6000 0.6000 0.2000 PaleGreen solid
+rectangle 238 0.2000 0.6000 0.6000 0.2000 black outline
+bigtext 239 0.5000 0.6500 1 black 6
+}
+view main
+rectangle benefit_ext 0.4000 0.7273 0.2667 0.0405 yellow solid
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+{
+vis bar3_10
+vis bar3_5
+vis benefit_ext
+}
+rectangle bar4_10 0.0 0.9545 0.7333 0.0405 blue solid
+move bar4_10 0.0 0.4545
+delete benefit_ext
+{
+alter toplabel With objects 1 through 4
+alter bottomlabel Testing object 5 with weight 4 and benefit 6
+jump bar3_0 -1.0 -1.0
+jumprelative bar4_0 0.0 0.5
+color bar4_0 red
+jump bar3_1 -1.0 -1.0
+jumprelative bar4_1 0.0 0.5
+color bar4_1 red
+jump bar3_2 -1.0 -1.0
+jumprelative bar4_2 0.0 0.5
+color bar4_2 red
+jump bar3_3 -1.0 -1.0
+jumprelative bar4_3 0.0 0.5
+color bar4_3 red
+jump bar3_4 -1.0 -1.0
+jumprelative bar4_4 0.0 0.5
+color bar4_4 red
+jump bar3_5 -1.0 -1.0
+jumprelative bar4_5 0.0 0.5
+color bar4_5 red
+jump bar3_6 -1.0 -1.0
+jumprelative bar4_6 0.0 0.5
+color bar4_6 red
+jump bar3_7 -1.0 -1.0
+jumprelative bar4_7 0.0 0.5
+color bar4_7 red
+jump bar3_8 -1.0 -1.0
+jumprelative bar4_8 0.0 0.5
+color bar4_8 red
+jump bar3_9 -1.0 -1.0
+jumprelative bar4_9 0.0 0.5
+color bar4_9 red
+jump bar3_10 -1.0 -1.0
+jumprelative bar4_10 0.0 0.5
+color bar4_10 red
+}
+rectangle bar5_0 0.0 0.0000 0.0000 0.0405 blue solid
+rectangle bar5_1 0.0 0.0455 0.0000 0.0405 blue solid
+rectangle bar5_2 0.0 0.0909 0.2000 0.0405 blue solid
+rectangle bar5_3 0.0 0.1364 0.2000 0.0405 blue solid
+view weights
+rectangle 240 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 241 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 242 0.0 0.48 1 white 0
+bigtext 243 0.0 0.88 1 white 4
+rectangle 244 -0.01 0.19 1.02 0.22 green outline
+rectangle 245 -0.01 0.59 1.02 0.22 green outline
+rectangle 246 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 247 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 248 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5000 0.4000 0.0405 yellow solid
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+{
+vis bar4_4
+vis bar4_0
+vis benefit_ext
+}
+rectangle bar5_4 0.0 0.6818 0.4000 0.0405 blue solid
+move bar5_4 0.0 0.1818
+delete benefit_ext
+view weights
+rectangle 249 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 250 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 251 0.0 0.48 1 white 1
+bigtext 252 0.0 0.88 1 white 5
+rectangle 253 -0.01 0.19 1.02 0.22 green outline
+rectangle 254 -0.01 0.59 1.02 0.22 green outline
+rectangle 255 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 256 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 257 0.1000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.0000 0.5455 0.4000 0.0405 yellow solid
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+{
+vis bar4_5
+vis bar4_1
+vis benefit_ext
+}
+rectangle bar5_5 0.0 0.7273 0.4000 0.0405 blue solid
+move bar5_5 0.0 0.2273
+delete benefit_ext
+view weights
+rectangle 258 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 259 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 260 0.0 0.48 1 white 2
+bigtext 261 0.0 0.88 1 white 6
+rectangle 262 -0.01 0.19 1.02 0.22 green outline
+rectangle 263 -0.01 0.59 1.02 0.22 green outline
+rectangle 264 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 265 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 266 0.1000 0.2500 1 black 2
+rectangle 267 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 268 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 269 0.1000 0.6500 1 black 2
+rectangle 270 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 271 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 272 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.5909 0.4000 0.0405 yellow solid
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+{
+vis bar4_6
+vis bar4_2
+vis benefit_ext
+}
+rectangle bar5_6 0.0 0.7727 0.6000 0.0405 blue solid
+move bar5_6 0.0 0.2727
+delete benefit_ext
+view weights
+rectangle 273 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 274 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 275 0.0 0.48 1 white 3
+bigtext 276 0.0 0.88 1 white 7
+rectangle 277 -0.01 0.19 1.02 0.22 green outline
+rectangle 278 -0.01 0.59 1.02 0.22 green outline
+rectangle 279 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 280 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 281 0.1000 0.2500 1 black 2
+rectangle 282 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 283 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 284 0.1000 0.6500 1 black 2
+rectangle 285 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 286 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 287 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.2000 0.6364 0.4000 0.0405 yellow solid
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+{
+vis bar4_7
+vis bar4_3
+vis benefit_ext
+}
+rectangle bar5_7 0.0 0.8182 0.6000 0.0405 blue solid
+move bar5_7 0.0 0.3182
+delete benefit_ext
+view weights
+rectangle 288 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 289 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 290 0.0 0.48 1 white 4
+bigtext 291 0.0 0.88 1 white 8
+rectangle 292 -0.01 0.19 1.02 0.22 green outline
+rectangle 293 -0.01 0.59 1.02 0.22 green outline
+rectangle 294 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 295 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 296 0.1000 0.2500 1 black 2
+rectangle 297 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 298 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 299 0.1000 0.6500 1 black 2
+rectangle 300 0.2000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 301 0.2000 0.6000 0.2000 0.2000 black outline
+bigtext 302 0.3000 0.6500 1 black 2
+}
+view main
+rectangle benefit_ext 0.4000 0.6818 0.4000 0.0405 yellow solid
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+{
+vis bar4_8
+vis bar4_4
+vis benefit_ext
+}
+rectangle bar5_8 0.0 0.6818 0.8000 0.0405 blue solid
+move bar5_8 0.0 0.3636
+delete benefit_ext
+view weights
+rectangle 303 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 304 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 305 0.0 0.48 1 white 5
+bigtext 306 0.0 0.88 1 white 9
+rectangle 307 -0.01 0.19 1.02 0.22 green outline
+rectangle 308 -0.01 0.59 1.02 0.22 green outline
+rectangle 309 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 310 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 311 0.1000 0.2500 1 black 2
+rectangle 312 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 313 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 314 0.1000 0.6500 1 black 2
+rectangle 315 0.2000 0.6000 0.5000 0.2000 PaleGreen solid
+rectangle 316 0.2000 0.6000 0.5000 0.2000 black outline
+bigtext 317 0.4500 0.6500 1 black 5
+}
+view main
+rectangle benefit_ext 0.4000 0.7273 0.4000 0.0405 yellow solid
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+{
+vis bar4_9
+vis bar4_5
+vis benefit_ext
+}
+rectangle bar5_9 0.0 0.7273 0.8000 0.0405 blue solid
+move bar5_9 0.0 0.4091
+delete benefit_ext
+view weights
+rectangle 318 -0.2 -0.2 1.4 1.4 black solid
+{
+bigtext 319 0.5 1.1 1 white Prior weights 2 2 6 5 
+bigtext 320 0.0 0.48 1 white 6
+bigtext 321 0.0 0.88 1 white 10
+rectangle 322 -0.01 0.19 1.02 0.22 green outline
+rectangle 323 -0.01 0.59 1.02 0.22 green outline
+rectangle 324 0.0000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 325 0.0000 0.2000 0.2000 0.2000 black outline
+bigtext 326 0.1000 0.2500 1 black 2
+rectangle 327 0.2000 0.2000 0.2000 0.2000 PaleGreen solid
+rectangle 328 0.2000 0.2000 0.2000 0.2000 black outline
+bigtext 329 0.3000 0.2500 1 black 2
+rectangle 330 0.0000 0.6000 0.2000 0.2000 PaleGreen solid
+rectangle 331 0.0000 0.6000 0.2000 0.2000 black outline
+bigtext 332 0.1000 0.6500 1 black 2
+rectangle 333 0.2000 0.6000 0.6000 0.2000 PaleGreen solid
+rectangle 334 0.2000 0.6000 0.6000 0.2000 black outline
+bigtext 335 0.5000 0.6500 1 black 6
+}
+view main
+rectangle benefit_ext 0.6000 0.7727 0.4000 0.0405 yellow solid
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+{
+vis bar4_10
+vis bar4_6
+vis benefit_ext
+}
+rectangle bar5_10 0.0 0.7727 1.0000 0.0405 blue solid
+move bar5_10 0.0 0.4545
+delete benefit_ext
+pause
+view weights
+rectangle 336 -0.2 -0.2 1.4 1.4 black solid
+view main
+rectangle foo -0.2 -0.2 1.4 1.4 black solid
+bigtext topfoo 0.5 1.1 1 white Traceback to recover weights
+{
+bigtext label_1 -0.1 0.0200 1 white 1 - wt 2
+rectangle wbar_1 0.0 0.0000 0.4000 0.1000 blue solid
+}
+{
+bigtext label_2 -0.1 0.2200 1 white 2 - wt 2
+rectangle wbar_2 0.0 0.2000 0.6000 0.1000 blue solid
+}
+{
+bigtext label_3 -0.1 0.4200 1 white 3 - wt 6
+rectangle wbar_3 0.0 0.4000 0.7333 0.1000 blue solid
+}
+{
+bigtext label_4 -0.1 0.6200 1 white 4 - wt 5
+rectangle wbar_4 0.0 0.6000 0.7333 0.1000 blue solid
+}
+{
+bigtext label_5 -0.1 0.8200 1 white 5 - wt 4
+rectangle wbar_5 0.0 0.8000 1.0000 0.1000 blue solid
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+{
+vis wbar_5
+vis wbar_4
+}
+color label_5 red
+vis label_5
+vis label_5
+vis label_5
+vis label_5
+vis label_5
+vis label_5
+vis label_5
+vis label_5
+{
+delete wbar_1
+rectangle wbar_1 0.0 0.0000 0.4000 0.1000 blue solid
+}
+{
+delete wbar_2
+rectangle wbar_2 0.0 0.2000 0.6000 0.1000 blue solid
+}
+{
+delete wbar_3
+rectangle wbar_3 0.0 0.4000 0.6000 0.1000 blue solid
+}
+{
+delete wbar_4
+rectangle wbar_4 0.0 0.6000 0.6000 0.1000 blue solid
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_4
+vis wbar_3
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_3
+vis wbar_2
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+{
+vis wbar_2
+vis wbar_1
+}
+color label_2 red
+vis label_2
+vis label_2
+vis label_2
+vis label_2
+vis label_2
+vis label_2
+vis label_2
+vis label_2
+{
+delete wbar_1
+rectangle wbar_1 0.0 0.0000 0.4000 0.1000 blue solid
+}
+vis wbar_1
+vis wbar_1
+vis wbar_1
+vis wbar_1
+vis wbar_1
+vis wbar_1
+vis wbar_1
+vis wbar_1
+color label_1 red
+vis label_1
+vis label_1
+vis label_1
+vis label_1
+vis label_1
+vis label_1
+vis label_1
+vis label_1

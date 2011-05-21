@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="s"/>/merge</call_stack>
+    <program_listing>
+	<signature>merge(list, lIndex, rIndex)</signature>
+	<line line_number="1">1   index = lIndex</line>
+	<line line_number="2">2   while(left child has more elements and right child has more elements)</line>
+	<line line_number="3">3      if(list[lIndex] &#38;#60; list[rIndex])</line>
+	<line line_number="4">4         list[index++] = list[lIndex++]</line>
+	<line line_number="5">5      else</line>
+	<line line_number="6">6         list[index++] = list[rIndex++]</line>
+	<line line_number="7">7   while(left child has more elements)</line>
+	<line line_number="8">8      list[index++] = list[lIndex++]</line>
+	<line line_number="9">9   while(right child has more elements)</line>
+	<line line_number="10">10     list[index++] = list[rIndex++]</line>
+    </program_listing>
+    <variables>
+        <variable>index = <replace var="index" /></variable>
+        <variable>lIndex = <replace var="lIndex" /></variable>
+        <variable>rIndex = <replace var="rIndex" /></variable>
+    </variables>
+</pseudocode>

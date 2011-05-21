@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>Enter sequence of operations here("rem" to remove or "addx" to add "x")</label_line>
+    <default_field>add1</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <combobox>
+    <label_line>Original Data</label_line>
+    <option>User-defined</option>
+    <option>Random</option>
+    <value_entered></value_entered>
+  </combobox>
+</input_panel>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>BubbleSort</call_stack>
+    <program_listing>
+	<signature>bubbleSort(list)</signature>
+	<line line_number="1">1    k = 0</line>
+	<line line_number="2">2    while( there has been a movement )</line>
+	<line line_number="3">3       k++</line>
+	<line line_number="4">4       for( x = 0; x &lt; list.length - k; x++ )</line>
+	<line line_number="5">5          if( list[x] &gt; list[x + 1] ) </line>
+	<line line_number="6">6             swap(list[x], list[x + 1])</line>
+    </program_listing>
+    <variables>
+        <variable>k = <replace var="k" /></variable>
+	<variable>x = <replace var="x" /></variable>
+    </variables>
+</pseudocode>

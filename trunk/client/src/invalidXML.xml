@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<!DOCTYPE quizResults SYSTEM "/home/naps/jhave2/server/src/quizResults.dtd">
+
+<quizResults quizId="hanoi" studentId="yoshi" numQuestions"1" numCorrect="0">
+    <question questionNumber="1" isCorrect="0">
+        <correctAnswer>"3"</correctAnswer>
+	<givenAnswer>"1"</givenAnswer>
+    </question>
+</quizResults>

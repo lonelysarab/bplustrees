@@ -1,0 +1,20 @@
+CHOICE
+Choose the number of disks on the initial pillar:
+3
+4
+2
+ENDCHOICE
+CHOICE
+Choose the task to accomplish: 
+From A To B Via C
+From A To C Via B
+From B To C Via A
+From B To A Via C
+From C To B Via A
+From C To A Via B
+ENDCHOICE
+CHOICE
+Ask question?
+Yes
+No
+ENDCHOICE

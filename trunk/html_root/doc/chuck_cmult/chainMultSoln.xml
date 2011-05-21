@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>chainMult/solnCM</call_stack>
+	<program_listing>
+		<signature>chainMultSoln(a, b)</signature>
+		<line line_number="1"> if (a == b)</line>
+		<line line_number="2">	  return "M" + a	</line>
+		<line line_number="3"> if (a + 1 == b) </line>
+		<line line_number="4">	  return "(M" + a + " * M" + b +")"	</line>
+		<line line_number="5">  y = s[a][b]</line>
+            	<line line_number="6">	str1 = chainMultSoln(a, y) </line>
+               	<line line_number="7">	str2 = chainMultSoln(y+1, b) </line>
+               	<line line_number="8">	return "(" + str1 + " * " + str2 + ")"	</line>
+	</program_listing>
+</pseudocode>

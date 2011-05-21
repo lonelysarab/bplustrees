@@ -1,0 +1,543 @@
+bg black
+coords -12.366203 -12.36620283126831 12.36620283126831 12.36620283126831
+bigtext label 0.0 -10.866203 1 white The Josephus Problem with 10 people counting off by 4.
+{
+circle head1 6.366203 0.0 1.0 white solid
+bigtext id1 8.36620283126831 0.0 1 white 1
+circle head2 5.150368 3.7419574 1.0 white solid
+bigtext id2 6.768402830873072 4.917527081778616 1 white 2
+circle head3 1.9672712 6.0546165 1.0 white solid
+bigtext id3 2.585307149881217 7.956728925760359 1 white 3
+circle head4 -1.967255 6.0546217 1.0 white solid
+bigtext id4 -2.5852859566379323 7.956735907064029 1 white 4
+circle head5 -5.150358 3.7419708 1.0 white solid
+bigtext id5 -6.768389865594827 4.917544535037791 1 white 5
+circle head6 -6.366203 1.613948E-5 1.0 white solid
+bigtext id6 -8.36620283126831 2.1209844257920958E-5 1 white 6
+circle head7 -5.1503773 -3.7419446 1.0 white solid
+bigtext id7 -6.768414798822221 -4.917510127183988 1 white 7
+circle head8 -1.9672858 -6.054612 1.0 white solid
+bigtext id8 -2.5853263484663103 -7.9567229417857845 1 white 8
+circle head9 1.9672397 -6.054627 1.0 white solid
+bigtext id9 2.5852657607237433 -7.956742389703152 1 white 9
+circle head10 5.150348 -3.741985 1.0 white solid
+bigtext id10 6.768376401652034 -4.917563484290611 1 white 10
+}
+bigtext p 4.6662025 0.0 1 red 1
+{
+color p red
+color head2 red
+color id2 red
+color id1 white
+alter p 2
+}
+move p 3.7750385 2.742723
+{
+color p red
+color head3 red
+color id3 red
+color id2 white
+color head2 white
+alter p 3
+}
+move p 1.4419405 4.437821
+{
+color p green
+color label green
+color head4 green
+color id4 green
+alter label Person number 4 has been chosen to die.
+color id3 white
+color head3 white
+alter p 4
+}
+move p -1.4419287 4.4378247
+{
+color p red
+color head5 red
+color id5 red
+color id4 SkyBlue
+color head4 blue
+alter label Person number 4 is dead.
+color label SkyBlue
+alter p 1
+}
+move p -3.7750313 2.7427328
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 2
+}
+move p -4.6662025 1.1829671E-5
+{
+color p red
+color head7 red
+color id7 red
+color id6 white
+color head6 white
+alter p 3
+}
+move p -3.7750452 -2.7427137
+{
+color p green
+color label green
+color head8 green
+color id8 green
+alter label Person number 8 has been chosen to die.
+color id7 white
+color head7 white
+alter p 4
+}
+move p -1.4419513 -4.4378176
+{
+color p red
+color head9 red
+color id9 red
+color id8 SkyBlue
+color head8 blue
+alter label Person number 8 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 1.4419174 -4.437828
+{
+color p red
+color head10 red
+color id10 red
+color id9 white
+color head9 white
+alter p 2
+}
+move p 3.775024 -2.7427433
+{
+color p red
+color id1 red
+color head1 red
+color id10 white
+color head10 white
+alter p 3
+}
+move p 4.6662025 -2.5884361E-5
+alter label 2 people die in round 1.
+vis id4
+delete id4
+{
+vis head4
+}
+delete head4
+vis id8
+delete id8
+{
+vis head8
+}
+delete head8
+coords -11.092962265014648 -11.092962265014648 11.092962265014648 11.092962265014648
+{
+move label 0.0 -9.592962
+move p 3.3929622 0.0
+move head1 5.0929623 0.0
+move id1 7.092962265014648 0.0
+move head2 3.6012704 3.601266
+move id2 5.015485012643808 5.015478671041365
+move head3 6.4557926E-6 5.0929623
+move id3 8.990974041772322E-6 7.092962265014648
+move head5 -3.6012614 3.601275
+move id5 -5.015472329438921 5.015491354246251
+move head6 -5.0929623 1.2911585E-5
+move id6 -7.092962265014648 1.7981948083544644E-5
+move head7 -3.6012797 -3.6012568
+move id7 -5.015497695848694 -5.015465987836478
+move head9 -1.9367377E-5 -5.0929623
+move id9 -2.6972921318940517E-5 -7.092962265014648
+move head10 3.6012523 -3.6012843
+move id10 5.015459646234035 -5.015504037451137
+}
+{
+color p green
+color label green
+color head2 green
+color id2 green
+alter label Person number 2 has been chosen to die.
+color id1 white
+color head1 white
+alter p 4
+}
+move p 2.3992002 2.399173
+{
+color p red
+color head3 red
+color id3 red
+color id2 SkyBlue
+color head2 blue
+alter label Person number 2 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 2.1504438E-5 3.3929622
+{
+color p red
+color head5 red
+color id5 red
+color id3 white
+color head3 white
+alter p 2
+}
+move p -2.3991697 2.3992033
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 3
+}
+move p -3.3929622 2.5805326E-5
+{
+color p green
+color label green
+color head7 green
+color id7 green
+alter label Person number 7 has been chosen to die.
+color id6 white
+color head6 white
+alter p 4
+}
+move p -2.3992064 -2.3991668
+{
+color p red
+color head9 red
+color id9 red
+color id7 SkyBlue
+color head7 blue
+alter label Person number 7 is dead.
+color label SkyBlue
+alter p 1
+}
+move p -3.0106214E-5 -3.3929622
+{
+color p red
+color head10 red
+color id10 red
+color id9 white
+color head9 white
+alter p 2
+}
+move p 2.3991637 -2.3992095
+{
+color p red
+color id1 red
+color head1 red
+color id10 white
+color head10 white
+alter p 3
+}
+move p 3.3929622 -3.44071E-5
+alter label 2 people die in round 2.
+vis id2
+delete id2
+{
+vis head2
+}
+delete head2
+vis id7
+delete id7
+{
+vis head7
+}
+delete head7
+coords -9.819721698760986 -9.819721698760986 9.819721698760986 9.819721698760986
+{
+move label 0.0 -8.319721
+move p 2.1197217 0.0
+move head1 3.8197217 0.0
+move id1 5.819721698760986 0.0
+move head3 1.9098636 3.3079746
+move id3 2.9098650119698277 5.040024662328307
+move head5 -1.9098555 3.307979
+move id5 -2.9098526976430463 5.040031599977198
+move head6 -3.8197217 9.683688E-6
+move id6 -5.819721698760986 1.475405190916833E-5
+move head9 -1.9098716 -3.3079698
+move id9 -2.909877152855387 -5.040017377796971
+move head10 1.9098479 -3.3079834
+move id10 2.909841077081154 -5.040038190743644
+}
+{
+color p green
+color label green
+color head3 green
+color id3 green
+alter label Person number 3 has been chosen to die.
+color id1 white
+color head1 white
+alter p 4
+}
+move p 1.0598706 1.8357272
+{
+color p red
+color head5 red
+color id5 red
+color id3 SkyBlue
+color head3 blue
+alter label Person number 3 is dead.
+color label SkyBlue
+alter p 1
+}
+move p -1.059849 1.8357396
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 2
+}
+move p -2.1197217 1.6121638E-5
+{
+color p red
+color head9 red
+color id9 red
+color id6 white
+color head6 white
+alter p 3
+}
+move p -1.0598769 -1.8357235
+{
+color p green
+color label green
+color head10 green
+color id10 green
+alter label Person number 10 has been chosen to die.
+color id9 white
+color head9 white
+alter p 4
+}
+move p 1.0598426 -1.8357434
+{
+color p red
+color id1 red
+color head1 red
+color id10 SkyBlue
+color head10 blue
+alter label Person number 10 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 2.1197217 -2.3517043E-5
+alter label 2 people die in round 3.
+vis id3
+delete id3
+{
+vis head3
+}
+delete head3
+vis id10
+delete id10
+{
+vis head10
+}
+delete head10
+coords -8.546481132507324 -8.546481132507324 8.546481132507324 8.546481132507324
+{
+move label 0.0 -7.046481
+move p 0.8464811 0.0
+move head1 2.5464811 0.0
+move id1 4.546481132507324 0.0
+move head5 3.2278963E-6 2.5464811
+move id5 5.7630778673960084E-6 4.546481132507324
+move head6 -2.5464811 6.4557926E-6
+move id6 -4.546481132507324 1.1526155734792017E-5
+move head9 -9.683688E-6 -2.5464811
+move id9 -1.7289233085312963E-5 -4.546481132507324
+}
+{
+color p red
+color head5 red
+color id5 red
+color id1 white
+color head1 white
+alter p 2
+}
+move p 5.3649583E-6 0.8464811
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 3
+}
+move p -0.8464811 6.4379497E-6
+{
+color p green
+color label green
+color head9 green
+color id9 green
+alter label Person number 9 has been chosen to die.
+color id6 white
+color head6 white
+alter p 4
+}
+move p -7.5109415E-6 -0.8464811
+{
+color p red
+color id1 red
+color head1 red
+color id9 SkyBlue
+color head9 blue
+alter label Person number 9 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 0.8464811 -8.583934E-6
+alter label One person dies in round 4.
+vis id9
+delete id9
+{
+vis head9
+}
+delete head9
+coords -7.909860849380493 -7.909860849380493 7.909860849380493 7.909860849380493
+{
+move label 0.0 -6.4098606
+move p 0 0
+move head1 1.9098608 0.0
+move id1 3.909860849380493 0.0
+move head5 -0.95492774 1.6539896
+move id5 -1.954924948112371 3.38604202269444
+move head6 -0.9549358 -1.6539849
+move id6 -1.9549413778459979 -3.386032467813891
+}
+{
+color p red
+color head5 red
+color id5 red
+color id1 white
+color head1 white
+alter p 2
+}
+move p 0 0
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 3
+}
+move p 0 0
+{
+color p green
+color label green
+color head1 green
+color id1 green
+alter label Person number 1 has been chosen to die.
+color id6 white
+color head6 white
+alter p 4
+}
+move p 0 0
+alter label No one dies in round 5.
+coords -7.909860849380493 -7.909860849380493 7.909860849380493 7.909860849380493
+{
+move label 0.0 -6.4098606
+move p 0 0
+move head1 1.9098608 0.0
+move id1 3.909860849380493 0.0
+move head5 -0.95492774 1.6539896
+move id5 -1.954924948112371 3.38604202269444
+move head6 -0.9549358 -1.6539849
+move id6 -1.9549413778459979 -3.386032467813891
+}
+{
+color p red
+color head5 red
+color id5 red
+color id1 SkyBlue
+color head1 blue
+alter label Person number 1 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 0 0
+{
+color p red
+color head6 red
+color id6 red
+color id5 white
+color head5 white
+alter p 2
+}
+move p 0 0
+{
+color p red
+color id5 red
+color head5 red
+color id6 white
+color head6 white
+alter p 3
+}
+move p 0 0
+alter label One person dies in round 6.
+vis id1
+delete id1
+{
+vis head1
+}
+delete head1
+coords -7.273240566253662 -7.273240566253662 7.273240566253662 7.273240566253662
+{
+move label 0.0 -5.7732406
+move p 0 0
+move head5 1.2732406 0.0
+move id5 3.273240566253662 0.0
+move head6 -1.2732406 3.2278963E-6
+move id6 -3.273240566253662 8.298259560415703E-6
+}
+{
+color p green
+color label green
+color head6 green
+color id6 green
+alter label Person number 6 has been chosen to die.
+color id5 white
+color head5 white
+alter p 4
+}
+move p 0 0
+{
+color p red
+color id5 red
+color head5 red
+color id6 SkyBlue
+color head6 blue
+alter label Person number 6 is dead.
+color label SkyBlue
+alter p 1
+}
+move p 0 0
+alter label One person dies in round 7.
+vis id6
+delete id6
+{
+vis head6
+}
+delete head6
+coords -6.636620283126831 -6.636620283126831 6.636620283126831 6.636620283126831
+{
+move label 0.0 -5.1366205
+move p 0 0
+move head5 0.6366203 0.0
+move id5 2.636620283126831 0.0
+}
+color head5 white
+{
+color label white
+alter label Person number 5 survives.
+color id5 white
+}
+vis p
+delete p

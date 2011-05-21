@@ -1,0 +1,15 @@
+CHOICE
+Should parameter aliasing be used?
+Yes
+No
+ENDCHOICE
+CHOICE
+Should global variables be used?
+Yes
+No
+ENDCHOICE
+CHOICE
+Should arrays be used?
+Yes
+No
+ENDCHOICE

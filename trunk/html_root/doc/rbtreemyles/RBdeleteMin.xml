@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>deleteMin(currentNode)</signature>
+	<line line_number="1">1	if(currentNode's left's left child is null)</line>
+	<line line_number="2">2		temp = currentNode.left.value</line>
+	<line line_number="3">3		currentNode.left = currentNode.left.right</line>
+	<line line_number="4">4		return temp</line>
+	<line line_number="5">5	else</line>
+	<line line_number="6">6		return deleteMin(currentNode.left)</line>
+    </program_listing>
+    <variables>
+        <variable>delItem = <replace var="item" /></variable>
+    </variables>
+</pseudocode>

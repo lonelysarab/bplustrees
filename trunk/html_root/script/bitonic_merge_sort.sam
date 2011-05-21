@@ -1,0 +1,1183 @@
+viewdef btms 500 500
+view btms
+bg color black
+view btms
+bigtext 1 0.25 0.6 1 DarkSeaGreen Array 
+view btms
+bigtext 2 0.38 0.6 1 SteelBlue Test 
+view btms
+bigtext 3 0.50 0.6 1 Red Action
+view btms
+{
+view btms
+bigtext pro0 0.1 0.06 1 grey PROC#0
+view btms
+bigtext ary0 0.11 0.91 1 RoyalBlue 8
+view btms
+bigtext pro1 0.1 0.13 1 grey PROC#1
+view btms
+bigtext ary1 0.21 0.89 1 RoyalBlue 7
+view btms
+bigtext pro2 0.1 0.19 1 grey PROC#2
+view btms
+bigtext ary2 0.31 0.88 1 RoyalBlue 6
+view btms
+bigtext pro3 0.1 0.25 1 grey PROC#3
+view btms
+bigtext ary3 0.41 0.87 1 RoyalBlue 5
+view btms
+bigtext pro4 0.1 0.31 1 grey PROC#4
+view btms
+bigtext ary4 0.51 0.85 1 RoyalBlue 4
+view btms
+bigtext pro5 0.1 0.38 1 grey PROC#5
+view btms
+bigtext ary5 0.61 0.84 1 RoyalBlue 3
+view btms
+bigtext pro6 0.1 0.44 1 grey PROC#6
+view btms
+bigtext ary6 0.71 0.83 1 RoyalBlue 2
+view btms
+bigtext pro7 0.1 0.50 1 grey PROC#7
+view btms
+bigtext ary7 0.81 0.81 1 RoyalBlue 1
+view btms
+}
+view btms
+{
+view btms
+delete line0
+view btms
+pointline line0 0.10 0.78 0.21 0.78 red medthick
+view btms
+{
+view btms
+delete line2
+view btms
+pointline line2 0.30 0.78 0.41 0.78 red medthick
+view btms
+{
+view btms
+delete line4
+view btms
+{
+view btms
+text dir0 0.13 0.75 0 Coral SORT
+view btms
+pointline line4 0.50 0.78 0.61 0.78 red medthick
+view btms
+delete line6
+view btms
+pointline line6 0.70 0.78 0.81 0.78 red medthick
+view btms
+text direc0 0.10 0.70 0 Coral ASCENDING
+view btms
+text dir2 0.33 0.75 0 tan SORT
+view btms
+text direc2 0.30 0.70 0 tan DESCENDING
+view btms
+text dir4 0.53 0.75 0 Coral SORT
+view btms
+text direc4 0.50 0.70 0 Coral ASCENDING
+view btms
+text dir6 0.73 0.75 0 tan SORT
+view btms
+}
+view btms
+text direc6 0.70 0.70 0 tan DESCENDING
+view btms
+}
+view btms
+}
+view btms
+}
+view btms
+bigtext prtn10 0.25 0.13 1 DarkSeaGreen 7
+view btms
+bigtext prtn01 0.25 0.06 1 DarkSeaGreen 8
+view btms
+bigtext prtn32 0.25 0.25 1 DarkSeaGreen 5
+view btms
+bigtext prtn23 0.25 0.19 1 DarkSeaGreen 6
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 8
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 7
+view btms
+bigtext prtn45 0.25 0.31 1 DarkSeaGreen 4
+view btms
+bigtext prtn54 0.25 0.38 1 DarkSeaGreen 3
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 6
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 5
+view btms
+bigtext prtn76 0.25 0.50 1 DarkSeaGreen 1
+view btms
+bigtext prtn67 0.25 0.44 1 DarkSeaGreen 2
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 3
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 4
+view btms
+text com1 0.6 0.13 0 Green IF TEST > ARRAY
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 2
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 1
+view btms
+text comm1 0.6 0.11 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text com2 0.6 0.19 0 Tomato2 IN CORRECT ORDER
+view btms
+delete prtn32
+delete test3
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text com4 0.6 0.31 0 Orange IF TEST < ARRAY
+view btms
+text com5 0.6 0.38 0 Green IF TEST > ARRAY
+view btms
+text comm2 0.6 0.16 0 Tomato2 NO ACTION REQUIRED
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 7
+swapid dupl0 prtn01
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 8
+swapid dupl1 prtn10
+view btms
+delete prtn76
+delete test7
+view btms
+text comm4 0.6 0.29 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text comm5 0.6 0.36 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text com6 0.6 0.44 0 Tomato2 IN CORRECT ORDER
+view btms
+delete com2
+delete comm2
+view btms
+bigtext dupl5 0.38 0.38 1 RoyalBlue 4
+swapid dupl5 prtn54
+view btms
+text comm6 0.6 0.41 0 Tomato2 NO ACTION REQUIRED
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+delete prtn23
+delete test2
+view btms
+bigtext dupl4 0.38 0.31 1 RoyalBlue 3
+swapid dupl4 prtn45
+view btms
+delete com6
+delete comm6
+view btms
+move prtn10 0.25 0.13
+delete dupl1
+view btms
+move prtn01 0.25 0.06
+delete dupl0
+view btms
+text commm4 0.43 0.29 0 Red OVERWRITTING 
+view btms
+text commm5 0.43 0.36 0 Red OVERWRITTING 
+view btms
+delete prtn67
+delete test6
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 8
+swapid dupl1 ary1
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 7
+swapid dupl0 ary0
+view btms
+move prtn45 0.25 0.31
+delete dupl4
+view btms
+move prtn54 0.25 0.38
+delete dupl5
+view btms
+move ary1 0.21 0.91
+delete dupl1
+view btms
+bigtext dupl5 0.25 0.38 1 RoyalBlue 4
+swapid dupl5 ary5
+view btms
+move ary0 0.11 0.89
+delete dupl0
+view btms
+bigtext dupl4 0.25 0.31 1 RoyalBlue 3
+swapid dupl4 ary4
+view btms
+move ary5 0.61 0.85
+delete dupl5
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+move ary4 0.51 0.84
+delete dupl4
+view btms
+delete prtn01
+delete test0
+view btms
+delete prtn10
+delete test1
+view btms
+delete com5
+delete comm5
+delete commm5
+view btms
+delete com4
+delete comm4
+delete commm4
+view btms
+{
+view btms
+delete prtn45
+delete test4
+view btms
+delete prtn54
+delete test5
+view btms
+delete line0
+view btms
+pointline line0 0.10 0.78 0.41 0.78 red medthick
+view btms
+{
+view btms
+delete line4
+view btms
+bigtext prtn13 0.25 0.13 1 DarkSeaGreen 8
+view btms
+bigtext prtn31 0.25 0.25 1 DarkSeaGreen 5
+view btms
+pointline line4 0.50 0.78 0.81 0.78 red medthick
+view btms
+delete dir0
+delete dir2
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 5
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 8
+view btms
+bigtext prtn57 0.25 0.38 1 DarkSeaGreen 4
+view btms
+bigtext prtn75 0.25 0.50 1 DarkSeaGreen 1
+view btms
+delete direc0
+delete direc2
+view btms
+text dir0 0.23 0.75 0 Coral SORT
+view btms
+delete dir4
+delete dir6
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 1
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 4
+view btms
+text com3 0.6 0.25 0 Green IF TEST > ARRAY
+view btms
+text direc0 0.20 0.70 0 Coral ASCENDING
+view btms
+text com1 0.6 0.13 0 Orange IF TEST < ARRAY
+view btms
+delete direc4
+delete direc6
+view btms
+text comm3 0.6 0.23 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text comm1 0.6 0.11 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text dir4 0.63 0.75 0 tan SORT
+view btms
+delete prtn75
+delete test7
+view btms
+}
+view btms
+text com5 0.6 0.38 0 Tomato2 IN CORRECT ORDER
+view btms
+bigtext dupl3 0.38 0.25 1 RoyalBlue 8
+swapid dupl3 prtn31
+view btms
+text direc4 0.60 0.70 0 tan DESCENDING
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 5
+swapid dupl1 prtn13
+view btms
+text comm5 0.6 0.34 0 Tomato2 NO ACTION REQUIRED
+view btms
+}
+view btms
+text commm3 0.43 0.23 0 Red OVERWRITTING 
+view btms
+delete com5
+delete comm5
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+move prtn31 0.25 0.25
+delete dupl3
+view btms
+delete prtn57
+delete test5
+view btms
+bigtext prtn02 0.25 0.06 1 DarkSeaGreen 7
+view btms
+move prtn13 0.25 0.13
+delete dupl1
+view btms
+bigtext prtn20 0.25 0.19 1 DarkSeaGreen 6
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 6
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 5
+swapid dupl1 ary1
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 7
+view btms
+bigtext dupl3 0.25 0.25 1 RoyalBlue 8
+swapid dupl3 ary3
+view btms
+bigtext prtn46 0.25 0.31 1 DarkSeaGreen 3
+view btms
+bigtext prtn64 0.25 0.44 1 DarkSeaGreen 2
+view btms
+move ary1 0.21 0.87
+delete dupl1
+view btms
+move ary3 0.41 0.91
+delete dupl3
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 2
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 3
+view btms
+text com2 0.6 0.19 0 Green IF TEST > ARRAY
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+text comm2 0.6 0.17 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+delete com3
+delete comm3
+delete commm3
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+delete prtn64
+delete test6
+view btms
+text com4 0.6 0.31 0 Tomato2 IN CORRECT ORDER
+view btms
+bigtext dupl2 0.38 0.19 1 RoyalBlue 7
+swapid dupl2 prtn20
+view btms
+delete prtn31
+delete test3
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 6
+swapid dupl0 prtn02
+view btms
+delete prtn13
+delete test1
+view btms
+text comm4 0.6 0.28 0 Tomato2 NO ACTION REQUIRED
+view btms
+text commm2 0.43 0.17 0 Red OVERWRITTING 
+view btms
+delete com4
+delete comm4
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+move prtn20 0.25 0.19
+delete dupl2
+view btms
+delete prtn46
+delete test4
+view btms
+bigtext prtn76 0.25 0.50 1 DarkSeaGreen 1
+view btms
+move prtn02 0.25 0.06
+delete dupl0
+view btms
+bigtext prtn67 0.25 0.44 1 DarkSeaGreen 2
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 2
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 6
+swapid dupl0 ary0
+view btms
+bigtext dupl2 0.25 0.19 1 RoyalBlue 7
+swapid dupl2 ary2
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 1
+view btms
+move ary0 0.11 0.88
+delete dupl0
+view btms
+move ary2 0.31 0.89
+delete dupl2
+view btms
+bigtext prtn45 0.25 0.31 1 DarkSeaGreen 3
+view btms
+bigtext prtn54 0.25 0.38 1 DarkSeaGreen 4
+view btms
+delete prtn76
+delete test7
+view btms
+text com6 0.6 0.44 0 Tomato2 IN CORRECT ORDER
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 4
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 3
+view btms
+delete com2
+delete comm2
+delete commm2
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+text comm6 0.6 0.41 0 Tomato2 NO ACTION REQUIRED
+view btms
+delete prtn20
+delete test2
+view btms
+delete com6
+delete comm6
+view btms
+delete prtn02
+delete test0
+view btms
+text com5 0.6 0.38 0 Orange IF TEST < ARRAY
+view btms
+text com4 0.6 0.31 0 Green IF TEST > ARRAY
+view btms
+delete prtn67
+delete test6
+view btms
+text comm5 0.6 0.36 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text comm4 0.6 0.29 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+bigtext dupl5 0.38 0.38 1 RoyalBlue 3
+swapid dupl5 prtn54
+view btms
+bigtext prtn32 0.25 0.25 1 DarkSeaGreen 8
+view btms
+bigtext dupl4 0.38 0.31 1 RoyalBlue 4
+swapid dupl4 prtn45
+view btms
+bigtext prtn01 0.25 0.06 1 DarkSeaGreen 6
+view btms
+bigtext prtn10 0.25 0.13 1 DarkSeaGreen 5
+view btms
+bigtext prtn23 0.25 0.19 1 DarkSeaGreen 7
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 7
+view btms
+text commm5 0.43 0.36 0 Red OVERWRITTING 
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 5
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 6
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 8
+view btms
+text commm4 0.43 0.29 0 Red OVERWRITTING 
+view btms
+move prtn54 0.25 0.38
+delete dupl5
+view btms
+move prtn45 0.25 0.31
+delete dupl4
+view btms
+text com1 0.6 0.13 0 Green IF TEST > ARRAY
+view btms
+delete prtn23
+delete test2
+view btms
+text com3 0.6 0.25 0 Tomato2 IN CORRECT ORDER
+view btms
+bigtext dupl4 0.25 0.31 1 RoyalBlue 4
+swapid dupl4 ary4
+view btms
+bigtext dupl5 0.25 0.38 1 RoyalBlue 3
+swapid dupl5 ary5
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+text comm1 0.6 0.11 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text comm3 0.6 0.22 0 Tomato2 NO ACTION REQUIRED
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+move ary4 0.51 0.85
+delete dupl4
+view btms
+move ary5 0.61 0.84
+delete dupl5
+view btms
+delete com3
+delete comm3
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 6
+swapid dupl1 prtn10
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 5
+swapid dupl0 prtn01
+view btms
+delete prtn32
+delete test3
+view btms
+delete com5
+delete comm5
+delete commm5
+view btms
+delete com4
+delete comm4
+delete commm4
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+delete prtn54
+delete test5
+view btms
+move prtn10 0.25 0.13
+delete dupl1
+view btms
+bigtext prtn26 0.25 0.19 1 DarkSeaGreen 7
+view btms
+delete prtn45
+delete test4
+view btms
+bigtext prtn62 0.25 0.44 1 DarkSeaGreen 2
+view btms
+move prtn01 0.25 0.06
+delete dupl0
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 2
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 7
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 5
+swapid dupl0 ary0
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 6
+swapid dupl1 ary1
+view btms
+bigtext prtn73 0.25 0.50 1 DarkSeaGreen 1
+view btms
+bigtext prtn37 0.25 0.25 1 DarkSeaGreen 8
+view btms
+move ary0 0.11 0.87
+delete dupl0
+view btms
+move ary1 0.21 0.88
+delete dupl1
+view btms
+text com2 0.6 0.19 0 Orange IF TEST < ARRAY
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 1
+view btms
+text com6 0.6 0.44 0 Green IF TEST > ARRAY
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 8
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+text comm2 0.6 0.17 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text comm6 0.6 0.42 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+delete prtn10
+delete test1
+view btms
+bigtext dupl2 0.38 0.19 1 RoyalBlue 2
+swapid dupl2 prtn26
+view btms
+bigtext dupl6 0.38 0.44 1 RoyalBlue 7
+swapid dupl6 prtn62
+view btms
+delete prtn01
+delete test0
+view btms
+text com7 0.6 0.50 0 Green IF TEST > ARRAY
+view btms
+text com3 0.6 0.25 0 Orange IF TEST < ARRAY
+view btms
+text comm7 0.6 0.48 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+{
+view btms
+text commm2 0.43 0.17 0 Red OVERWRITTING 
+view btms
+text comm3 0.6 0.23 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text commm6 0.43 0.42 0 Red OVERWRITTING 
+view btms
+delete line0
+view btms
+pointline line0 0.10 0.78 0.81 0.78 red medthick
+view btms
+bigtext dupl3 0.38 0.25 1 RoyalBlue 1
+swapid dupl3 prtn37
+view btms
+move prtn62 0.25 0.44
+delete dupl6
+view btms
+bigtext dupl7 0.38 0.50 1 RoyalBlue 8
+swapid dupl7 prtn73
+view btms
+move prtn26 0.25 0.19
+delete dupl2
+view btms
+bigtext dupl6 0.25 0.44 1 RoyalBlue 7
+swapid dupl6 ary6
+view btms
+bigtext dupl2 0.25 0.19 1 RoyalBlue 2
+swapid dupl2 ary2
+view btms
+text commm7 0.43 0.48 0 Red OVERWRITTING 
+view btms
+text commm3 0.43 0.23 0 Red OVERWRITTING 
+view btms
+bigtext prtn51 0.25 0.38 1 DarkSeaGreen 3
+view btms
+bigtext prtn15 0.25 0.13 1 DarkSeaGreen 6
+view btms
+move prtn73 0.25 0.50
+delete dupl7
+view btms
+move prtn37 0.25 0.25
+delete dupl3
+view btms
+move ary6 0.71 0.89
+delete dupl6
+view btms
+delete dir0
+delete dir4
+view btms
+move ary2 0.31 0.83
+delete dupl2
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 6
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 3
+view btms
+bigtext dupl7 0.25 0.50 1 RoyalBlue 8
+swapid dupl7 ary7
+view btms
+delete direc0
+delete direc4
+view btms
+bigtext dupl3 0.25 0.25 1 RoyalBlue 1
+swapid dupl3 ary3
+view btms
+delete com2
+delete comm2
+delete commm2
+view btms
+delete com6
+delete comm6
+delete commm6
+view btms
+text dir0 0.43 0.75 0 Coral SORT
+view btms
+move ary3 0.41 0.81
+delete dupl3
+view btms
+text com5 0.6 0.38 0 Green IF TEST > ARRAY
+view btms
+move ary7 0.81 0.91
+delete dupl7
+view btms
+text direc0 0.40 0.70 0 Coral ASCENDING
+view btms
+text com1 0.6 0.13 0 Orange IF TEST < ARRAY
+view btms
+delete prtn26
+delete test2
+view btms
+delete prtn62
+delete test6
+view btms
+text comm5 0.6 0.36 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+}
+view btms
+text comm1 0.6 0.11 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+delete com3
+delete comm3
+delete commm3
+view btms
+delete com7
+delete comm7
+delete commm7
+view btms
+bigtext dupl5 0.38 0.38 1 RoyalBlue 6
+swapid dupl5 prtn51
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 3
+swapid dupl1 prtn15
+view btms
+delete prtn73
+delete test7
+view btms
+delete prtn37
+delete test3
+view btms
+text commm5 0.43 0.36 0 Red OVERWRITTING 
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+bigtext prtn40 0.25 0.31 1 DarkSeaGreen 4
+view btms
+bigtext prtn04 0.25 0.06 1 DarkSeaGreen 5
+view btms
+move prtn15 0.25 0.13
+delete dupl1
+view btms
+move prtn51 0.25 0.38
+delete dupl5
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 5
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 4
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 3
+swapid dupl1 ary1
+view btms
+bigtext dupl5 0.25 0.38 1 RoyalBlue 6
+swapid dupl5 ary5
+view btms
+move ary5 0.61 0.88
+delete dupl5
+view btms
+move ary1 0.21 0.84
+delete dupl1
+view btms
+text com4 0.6 0.31 0 Green IF TEST > ARRAY
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+text comm4 0.6 0.29 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+delete com5
+delete comm5
+delete commm5
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+bigtext dupl4 0.38 0.31 1 RoyalBlue 5
+swapid dupl4 prtn40
+view btms
+delete prtn51
+delete test5
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 4
+swapid dupl0 prtn04
+view btms
+delete prtn15
+delete test1
+view btms
+text commm4 0.43 0.29 0 Red OVERWRITTING 
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+move prtn04 0.25 0.06
+delete dupl0
+view btms
+move prtn40 0.25 0.31
+delete dupl4
+view btms
+bigtext prtn75 0.25 0.50 1 DarkSeaGreen 8
+view btms
+bigtext prtn31 0.25 0.25 1 DarkSeaGreen 1
+view btms
+bigtext prtn57 0.25 0.38 1 DarkSeaGreen 6
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 4
+swapid dupl0 ary0
+view btms
+bigtext prtn13 0.25 0.13 1 DarkSeaGreen 3
+view btms
+bigtext dupl4 0.25 0.31 1 RoyalBlue 5
+swapid dupl4 ary4
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 6
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 3
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 8
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 1
+view btms
+move ary4 0.51 0.87
+delete dupl4
+view btms
+move ary0 0.11 0.85
+delete dupl0
+view btms
+delete com4
+delete comm4
+delete commm4
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+text com3 0.6 0.25 0 Green IF TEST > ARRAY
+view btms
+delete prtn57
+delete test5
+view btms
+text com7 0.6 0.50 0 Tomato2 IN CORRECT ORDER
+view btms
+text com1 0.6 0.13 0 Orange IF TEST < ARRAY
+view btms
+text comm3 0.6 0.23 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+delete prtn40
+delete test4
+view btms
+text comm7 0.6 0.47 0 Tomato2 NO ACTION REQUIRED
+view btms
+delete prtn04
+delete test0
+view btms
+text comm1 0.6 0.11 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+delete com7
+delete comm7
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 1
+swapid dupl1 prtn13
+view btms
+bigtext dupl3 0.38 0.25 1 RoyalBlue 3
+swapid dupl3 prtn31
+view btms
+delete prtn75
+delete test7
+view btms
+text commm3 0.43 0.23 0 Red OVERWRITTING 
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+bigtext prtn64 0.25 0.44 1 DarkSeaGreen 7
+view btms
+bigtext prtn20 0.25 0.19 1 DarkSeaGreen 2
+view btms
+move prtn31 0.25 0.25
+delete dupl3
+view btms
+bigtext prtn46 0.25 0.31 1 DarkSeaGreen 5
+view btms
+bigtext prtn02 0.25 0.06 1 DarkSeaGreen 4
+view btms
+move prtn13 0.25 0.13
+delete dupl1
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 5
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 4
+view btms
+bigtext dupl3 0.25 0.25 1 RoyalBlue 3
+swapid dupl3 ary3
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 7
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 2
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 1
+swapid dupl1 ary1
+view btms
+move ary1 0.21 0.81
+delete dupl1
+view btms
+move ary3 0.41 0.84
+delete dupl3
+view btms
+text com2 0.6 0.19 0 Green IF TEST > ARRAY
+view btms
+delete prtn46
+delete test4
+view btms
+text com6 0.6 0.44 0 Tomato2 IN CORRECT ORDER
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+text comm2 0.6 0.17 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+delete com3
+delete comm3
+delete commm3
+view btms
+text comm6 0.6 0.41 0 Tomato2 NO ACTION REQUIRED
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+delete com6
+delete comm6
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 2
+swapid dupl0 prtn02
+view btms
+bigtext dupl2 0.38 0.19 1 RoyalBlue 4
+swapid dupl2 prtn20
+view btms
+delete prtn31
+delete test3
+view btms
+delete prtn13
+delete test1
+view btms
+delete prtn64
+delete test6
+view btms
+bigtext prtn54 0.25 0.38 1 DarkSeaGreen 6
+view btms
+bigtext prtn45 0.25 0.31 1 DarkSeaGreen 5
+view btms
+text commm2 0.43 0.17 0 Red OVERWRITTING 
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+bigtext test5 0.38 0.38 1 SteelBlue 5
+view btms
+move prtn20 0.25 0.19
+delete dupl2
+view btms
+bigtext test4 0.38 0.31 1 SteelBlue 6
+view btms
+move prtn02 0.25 0.06
+delete dupl0
+view btms
+bigtext prtn76 0.25 0.50 1 DarkSeaGreen 8
+view btms
+bigtext dupl2 0.25 0.19 1 RoyalBlue 4
+swapid dupl2 ary2
+view btms
+bigtext prtn67 0.25 0.44 1 DarkSeaGreen 7
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 2
+swapid dupl0 ary0
+view btms
+text com5 0.6 0.38 0 Tomato2 IN CORRECT ORDER
+view btms
+bigtext test7 0.38 0.50 1 SteelBlue 7
+view btms
+delete prtn45
+delete test4
+view btms
+bigtext test6 0.38 0.44 1 SteelBlue 8
+view btms
+move ary0 0.11 0.83
+delete dupl0
+view btms
+move ary2 0.31 0.85
+delete dupl2
+view btms
+text comm5 0.6 0.34 0 Tomato2 NO ACTION REQUIRED
+view btms
+delete com5
+delete comm5
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+delete com2
+delete comm2
+delete commm2
+view btms
+delete prtn54
+delete test5
+view btms
+delete prtn67
+delete test6
+view btms
+text com7 0.6 0.50 0 Tomato2 IN CORRECT ORDER
+view btms
+delete prtn20
+delete test2
+view btms
+text comm7 0.6 0.47 0 Tomato2 NO ACTION REQUIRED
+view btms
+delete prtn02
+delete test0
+view btms
+delete com7
+delete comm7
+view btms
+delete prtn76
+delete test7
+view btms
+bigtext prtn23 0.25 0.19 1 DarkSeaGreen 4
+view btms
+bigtext prtn32 0.25 0.25 1 DarkSeaGreen 3
+view btms
+bigtext prtn01 0.25 0.06 1 DarkSeaGreen 2
+view btms
+bigtext prtn10 0.25 0.13 1 DarkSeaGreen 1
+view btms
+bigtext test1 0.38 0.13 1 SteelBlue 2
+view btms
+bigtext test2 0.38 0.19 1 SteelBlue 3
+view btms
+bigtext test3 0.38 0.25 1 SteelBlue 4
+view btms
+bigtext test0 0.38 0.06 1 SteelBlue 1
+view btms
+text com3 0.6 0.25 0 Green IF TEST > ARRAY
+view btms
+text com0 0.6 0.06 0 Orange IF TEST < ARRAY
+view btms
+text com1 0.6 0.13 0 Green IF TEST > ARRAY
+view btms
+text com2 0.6 0.19 0 Orange IF TEST < ARRAY
+view btms
+text comm3 0.6 0.23 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text comm0 0.6 0.04 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+text comm1 0.6 0.11 0 Green THEN OVERWRITE ARRAY VALUE
+view btms
+text comm2 0.6 0.17 0 Orange THEN OVERRIDE ARRAY VALUE
+view btms
+bigtext dupl1 0.38 0.13 1 RoyalBlue 2
+swapid dupl1 prtn10
+view btms
+bigtext dupl2 0.38 0.19 1 RoyalBlue 3
+swapid dupl2 prtn23
+view btms
+bigtext dupl3 0.38 0.25 1 RoyalBlue 4
+swapid dupl3 prtn32
+view btms
+bigtext dupl0 0.38 0.06 1 RoyalBlue 1
+swapid dupl0 prtn01
+view btms
+text commm2 0.43 0.17 0 Red OVERWRITTING 
+view btms
+text commm3 0.43 0.23 0 Red OVERWRITTING 
+view btms
+text commm0 0.43 0.04 0 Red OVERWRITTING 
+view btms
+text commm1 0.43 0.11 0 Red OVERWRITTING 
+view btms
+move prtn32 0.25 0.25
+delete dupl3
+view btms
+move prtn01 0.25 0.06
+delete dupl0
+view btms
+move prtn10 0.25 0.13
+delete dupl1
+view btms
+move prtn23 0.25 0.19
+delete dupl2
+view btms
+bigtext dupl3 0.25 0.25 1 RoyalBlue 4
+swapid dupl3 ary3
+view btms
+bigtext dupl1 0.25 0.13 1 RoyalBlue 2
+swapid dupl1 ary1
+view btms
+bigtext dupl2 0.25 0.19 1 RoyalBlue 3
+swapid dupl2 ary2
+view btms
+bigtext dupl0 0.25 0.06 1 RoyalBlue 1
+swapid dupl0 ary0
+view btms
+move ary3 0.41 0.85
+delete dupl3
+view btms
+move ary1 0.21 0.83
+delete dupl1
+view btms
+move ary2 0.31 0.84
+delete dupl2
+view btms
+move ary0 0.11 0.81
+delete dupl0
+view btms
+delete com1
+delete comm1
+delete commm1
+view btms
+delete com2
+delete comm2
+delete commm2
+view btms
+delete com3
+delete comm3
+delete commm3
+view btms
+delete com0
+delete comm0
+delete commm0
+view btms
+delete prtn10
+delete test1
+view btms
+delete prtn23
+delete test2
+view btms
+delete prtn32
+delete test3
+view btms
+delete prtn01
+delete test0
+sorted data
+         1
+         2
+         3
+         4
+         5
+         6
+         7
+         8
+
+SEQUENTIAL EXECUTION TIME: 24649
+PARALLEL EXECUTION TIME: 5174
+SPEEDUP:    4.76
+NUMBER OF PROCESSORS USED: 9

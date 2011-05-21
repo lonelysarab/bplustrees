@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="client" default="default" basedir="." xmlns:jhave="http://csf11.acs.uwosh.edu/ns/jhave">
+    <description>Builds, tests, and runs the project client.</description>
+    <import file="project/build-impl.xml"/>
+    
+    <!-- 
+    ======================
+    INITIALIZATION SECTION 
+    ======================
+    -->
+    <target name="-pre-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <target name="-post-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ===================
+    COMPILATION SECTION
+    ===================
+    -->
+    <target name="-pre-compile">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-compile">
+        <!-- Empty placeholder for easier customization. -->
+	<replace file="${build.classes.dir}/jhave/client/default.properties">
+	    <replacefilter token="SERVER_URL" value="${default.server.url}"/>
+	    <replacefilter token="SERVER_PORT" value="${default.port}"/>
+	    <replacefilter token="WEBROOT" value="${default.webroot}"/>
+	    <replacefilter token="CATEGORY" value="${default.category}"/>
+	</replace>
+    </target>
+    
+    <target name="-pre-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ====================
+    JAR BUILDING SECTION
+    ====================
+    -->
+    <target name="-pre-jar">
+        <!-- To make depenencies easier to deal with we are going to unjar the
+	     contents into the build/classes directory. -->
+        <jhave:unjar libjar="${lib.jdom}"/>
+        <jhave:unjar libjar="${lib.xml.parser}"/>
+        <jhave:unjar libjar="${lib.swingfx}"/>
+        <delete dir="${build.classes.dir}/META-INF"/>
+    </target>
+    <target name="-post-jar">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ===============
+    CLEANUP SECTION
+    ===============
+    -->
+    <target name="-post-clean">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+</project>

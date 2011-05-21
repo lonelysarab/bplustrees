@@ -1,0 +1,30 @@
+Chuck Leska 0-1 knapsack
+chuck_knap new_data_only gaigs
+****
+Christian Trefftz Re-casting of Chuck's LCS
+christian_dp_lcs new_data_only gaigs
+****
+Christian Trefftz Min Edit Distance via Template
+tn_dp_string_distance_via_design_pattern new_data_only gaigs
+****
+Christian Trefftz Original Min Edit Distance
+christian_dp new_data_only gaigs
+****
+Chuck Leska Longest Common Subsequence
+chuck_lcs new_data_only gaigs
+****
+Chuck Leska Fibonacci (Dynamic Prog)
+chuck_fibon new_data_only gaigs
+****
+Tom's LCS via Template Design Patterm
+tn_dp_lcs_via_design_pattern new_data_only gaigs
+****
+Myles McNally Sequence Alignment
+myles_seq_align new_data_only gaigs
+****
+Myles McNally Semiglobal Sequence Alignment
+myles_seq_align_semiglobal new_data_only gaigs
+****
+Myles McNally Local Sequence Alignment
+myles_seq_align_local new_data_only gaigs
+****

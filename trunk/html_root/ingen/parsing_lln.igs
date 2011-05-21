@@ -1,0 +1,114 @@
+TEXTFIELD
+Enter the expression to parse using letters for the tokens:
+A-(B*C^D-E/F)*(G-H)
+ENDTEXTFIELD
+CHOICE
+Infix Priority for '+':
+1
+2
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Stack Priority for '+':
+1
+2
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Infix Priority '-':
+1
+2
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Stack Priority '-':
+1
+2
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Infix Priority for '*':
+2
+1
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Stack Priority for '*':
+2
+1
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Infix Priority for '/':
+2
+1
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Stack Priority for '/':
+2
+1
+3
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Infix Priority for '^':
+3
+1
+2
+4
+5
+6
+7
+8
+ENDCHOICE
+CHOICE
+Stack Priority for '^':
+3
+1
+2
+4
+5
+6
+7
+8
+ENDCHOICE

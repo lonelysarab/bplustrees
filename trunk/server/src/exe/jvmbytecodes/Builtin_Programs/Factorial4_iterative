@@ -1,0 +1,10 @@
+class Factorial4_iterative {
+
+	public static void main(String[] args) {
+
+		int factorial = 1;
+		int i = 2;
+		while (i <= 4)
+			factorial *= i++;
+	}
+}

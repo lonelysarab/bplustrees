@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<project default="compile">
+
+    <target name="compile">
+        <javac srcdir="." destdir="../../../build/classes" classpath=".:../../../build/classes:../../../lib/jdom.jar" includes="*.java" /> 
+    </target>
+
+    <target name="run">
+        <!--  Run from the classes dir so it can find an input file named by the string exe/reu_bubsort/foo.xml  -->
+<!--     <java fork="true" dir="../../../build/classes" classpath="../../../build/classes:../../../lib/jdom.jar:../../../lib/jaxen-1.1.1.jar:." classname="exe.reu_bubsort.Sort">  -->
+       <java fork="true" dir="../../../build/classes" classpath="../../../build/classes:../../../lib/jdom.jar:../../../lib/jaxen.jar:." classname="exe.reu_bubsort.Sort"> 
+          <arg value="foo.sho" />  <!--  Name of the visualization script to produce as output -->
+          <arg value="10" />
+        </java> 
+    </target>
+
+    <target name="clean">
+        <echo>
+            Removing all class files
+        </echo>
+        <delete> 
+            <fileset dir="../../../build/classes/exe/reu_bubsort">
+                <include name="*.class" />
+            </fileset>
+        </delete>
+    </target>
+  
+</project>

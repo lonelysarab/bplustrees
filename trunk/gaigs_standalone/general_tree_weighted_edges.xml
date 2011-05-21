@@ -1,0 +1,66 @@
+<tree x_spacing = "1.25" y_spacing = "1.25">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<tree_node color = "##AAFFAA">
+<label>A</label>
+<tree_node color = "#FFAAFF">
+<label>B</label>
+<tree_node color = "#FFFFFF">
+<label>E</label>
+<tree_node color = "#FFFFFF">
+<label>J</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+<tree_node color = "#FFFFFF">
+<label>K</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+<tree_node color = "#AAAAAA">
+<label>C</label>
+<tree_node color = "#FFFFFF">
+<label>F</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+<tree_node color = "#FFFFFF">
+<label>G</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+<tree_node color = "#FFFFFF">
+<label>H</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+<tree_node color = "#ACBDAE">
+<label>D</label>
+<tree_node color = "#FFFFFF">
+<label>I</label>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+</tree_node>
+<tree_edge color = "#999999">
+<label>0.0</label>
+</tree_edge>
+</tree_node>
+</tree>

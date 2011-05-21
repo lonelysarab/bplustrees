@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+For the purpose of easier reading the script
+is divided into following sections:
+
+  - initialization
+  - compilation
+  - jar
+  - execution
+  - javadoc
+  - cleanup
+
+  Yes... this is a 80% verbatim copy of the build-impl.xml file that comes from
+  a NetBeans 4.1 project.
+-->
+<project name="client-impl" default="default" basedir=".." xmlns:jhave="http://csf11.acs.uwosh.edu/ns/jhave">
+    <target name="default" depends="jar,javadoc" description="Build and test whole project."/>
+    
+    <!-- 
+    ======================
+    INITIALIZATION SECTION 
+    ======================
+    -->
+    <target name="-init-user" depends="-pre-init">
+        <property file="user.properties"/>
+        <!-- The two properties below are usually overridden -->
+        <!-- by the active platform. Just a fallback. -->
+        <property name="javac.source" value="1.5"/>
+        <property name="javac.target" value="1.5"/>
+    </target>
+    <target name="-init-project" depends="-pre-init,-init-user">
+        <property file="project/build.properties"/>
+    </target>
+    
+    <target name="-do-init" depends="-pre-init,-init-user,-init-project">
+        <available file="${manifest.file}" property="manifest.available"/>
+        <condition property="manifest.available+main.class">
+            <and>
+                <isset property="manifest.available"/>
+                <isset property="main.class"/>
+                <not>
+                    <equals arg1="${main.class}" arg2="" trim="true"/>
+                </not>
+            </and>
+        </condition>
+        <condition property="have.tests">
+            <or>
+                <available file="${test.src.dir}"/>
+            </or>
+        </condition>
+        <condition property="no.javadoc.preview">
+            <isfalse value="${javadoc.preview}"/>
+        </condition>
+        <property name="run.jvmargs" value=""/>
+        <property name="javac.compilerargs" value=""/>
+        <property name="work.dir" value="${basedir}"/>
+        <condition property="no.deps">
+            <and>
+                <istrue value="${no.dependencies}"/>
+            </and>
+        </condition>
+    </target>
+    
+    <target name="-init-check" depends="-do-init">
+        <fail unless="src.dir">Must set src.dir</fail>
+        <fail unless="build.dir">Must set build.dir</fail>
+        <fail unless="dist.dir">Must set dist.dir</fail>
+        <fail unless="build.classes.dir">Must set build.classes.dir</fail>
+        <fail unless="dist.javadoc.dir">Must set dist.javadoc.dir</fail>
+        <fail unless="build.classes.excludes">Must set build.classes.excludes</fail>
+        <fail unless="dist.jar">Must set dist.jar</fail>
+    </target>
+    
+    <target name="-init-macrodef-javac">
+        <macrodef name="javac" uri="http://csf11.acs.uwosh.edu/ns/jhave">
+            <attribute name="srcdir" default="${src.dir}"/>
+            <attribute name="destdir" default="${build.classes.dir}"/>
+            <attribute name="classpath" default="${javac.classpath}"/>
+            <attribute name="debug" default="${javac.debug}"/>
+            <element name="customize" optional="true"/>
+            <sequential>
+                <javac srcdir="@{srcdir}" destdir="@{destdir}" debug="@{debug}"
+                    deprecation="${javac.deprecation}" source="${javac.source}"
+                    target="${javac.target}" fork="yes" 
+                    tempdir="${java.io.tmpdir}" includeantruntime="false">
+                    <classpath>
+                        <path path="@{classpath}"/>
+                    </classpath>
+                    <compilerarg line="${javac.compilerargs}"/>
+                    <customize/>
+                </javac>
+            </sequential>
+        </macrodef>
+    </target>
+    <target name="-init-macrodef-java">
+        <macrodef name="java" uri="http://csf11.acs.uwosh.edu/ns/jhave">
+            <attribute name="classname" default="${main.class}"/>
+            <element name="customize" optional="true"/>
+            <sequential>
+                <java fork="true" classname="@{classname}" dir="${work.dir}">
+                    <jvmarg line="${run.jvmargs}"/>
+                    <classpath>
+                        <path path="${run.classpath}"/>
+                    </classpath>
+                    <syspropertyset>
+                        <propertyref prefix="run-sys-prop."/>
+                        <mapper type="glob" from="run-sys-prop.*" to="*"/>
+                    </syspropertyset>
+                    <customize/>
+                </java>
+            </sequential>
+        </macrodef>
+    </target>
+    <target name="-init-presetdef-jar">
+        <presetdef name="jar" uri="http://csf11.acs.uwosh.edu/ns/jhave">
+            <jar jarfile="${dist.jar}" compress="${jar.compress}">
+                <jhave:fileset dir="${build.classes.dir}"/>
+            </jar>
+        </presetdef>
+    </target>
+    <target name="-init-macrodef-unjar">
+        <macrodef name="unjar" uri="http://csf11.acs.uwosh.edu/ns/jhave">
+            <attribute name="libjar"/>
+            <sequential>
+                <unjar src="@{libjar}" dest="${build.classes.dir}"/>
+            </sequential>
+        </macrodef>
+    </target>
+    <target name="init" depends="-pre-init,-init-user,-init-project,-do-init,
+        -post-init,-init-check,-init-macrodef-javac,-init-macrodef-java,
+        -init-presetdef-jar,-init-macrodef-unjar"/>
+    
+    <!--
+    ===================
+    COMPILATION SECTION
+    ===================
+    -->
+    <target name="deps-jar" depends="init" unless="no.deps">
+        <property name="no.deps" value="true"/>
+        <ant antfile="${project.core}/build.xml" target="jar" inheritall="false">
+            <property name="no.deps" value="true"/>
+        </ant>
+        <ant antfile="${project.gaigs}/build.xml" target="jar" inheritall="false">
+            <property name="no.deps" value="true"/>
+        </ant>
+    </target>
+    <target name="-pre-pre-compile" depends="init,deps-jar">
+        <mkdir dir="${build.classes.dir}"/>
+    </target>
+    
+    <target name="-do-compile" depends="init,deps-jar,-pre-pre-compile,-pre-compile">
+        <jhave:javac/>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${src.dir}" excludes="${build.classes.excludes}"/>
+        </copy>
+    </target>
+    <target name="compile" depends="init,deps-jar,-pre-pre-compile,-pre-compile,
+        -do-compile,-post-compile" description="Compile project."/>
+        
+    <!-- Compile single -->
+    <target name="-do-compile-single" depends="init,deps-jar,-pre-pre-compile">
+        <fail unless="javac.includes">Must select some files in the IDE or set javac.includes</fail>
+        <jhave:javac>
+            <customize>
+                <patternset includes="${javac.includes}"/>
+            </customize>
+        </jhave:javac>
+    </target>
+    <target name="compile-single" depends="init,deps-jar,-pre-pre-compile,
+        -pre-compile-single,-do-compile-single,-post-compile-single"/>
+    
+    <!--
+    ====================
+    JAR BUILDING SECTION
+    ====================
+    -->
+    <target name="-pre-pre-jar" depends="init">
+        <dirname property="dist.jar.dir" file="${dist.jar}"/>
+        <mkdir dir="${dist.jar.dir}"/>
+    </target>
+    <target name="-do-jar-without-manifest" depends="init,compile,-pre-pre-jar,
+        -pre-jar" unless="manifest.available">
+        <jhave:jar/>
+    </target>
+    <target name="-do-jar-with-manifest" depends="init,compile,-pre-pre-jar,
+        -pre-jar" if="manifest.available" unless="manifest.available+main.class">
+        <jhave:jar manifest="${manifest.file}"/>
+    </target>
+    <target name="-do-jar-with-mainclass" depends="init,compile,-pre-pre-jar,
+        -pre-jar" if="manifest.available+main.class">
+        <jhave:jar manifest="${manifest.file}">
+            <jhave:manifest>
+                <jhave:attribute name="Main-Class" value="${main.class}"/>
+            </jhave:manifest>
+        </jhave:jar>
+    </target>
+    <target name="jar" depends="init,compile,-pre-jar,-do-jar-with-manifest,
+    -do-jar-without-manifest,-do-jar-with-mainclass,-post-jar" description="Build JAR."/>
+
+    <!--
+    =================
+    EXECUTION SECTION
+    =================
+    -->
+    <target name="run" depends="init,compile" description="Run a main class.">
+<!--       <echo> running ${run.classpath} </echo> -->
+        <fail unless="main.class">Must set main.class</fail>
+        <jhave:java>
+            <customize>
+                <arg line="${application.args}"/>
+		<arg line="-debug"/>
+            </customize>
+        </jhave:java>
+    </target>
+    
+    <!--
+    ===============
+    JAVADOC SECTION
+    ===============
+    -->
+    <target name="-javadoc-build" depends="init">
+        <mkdir dir="${dist.javadoc.dir}"/>
+        <property name="javadoc.notree.opt" value=""/>
+        <condition property="javadoc.use.opt" value="-use">
+            <istrue value="${javadoc.use}"/>
+        </condition>
+        <property name="javadoc.use.opt" value=""/>
+        <condition property="javadoc.nonavbar.opt" value="-nonavbar">
+            <istrue value="${javadoc.nonavbar}"/>
+        </condition>
+        <property name="javadoc.nonavbar.opt" value=""/>
+        <condition property="javadoc.noindex.opt" value="-noindex">
+            <istrue value="${javadoc.noindex}"/>
+        </condition>
+        <property name="javadoc.noindex.opt" value=""/>
+        <condition property="javadoc.splitindex.opt" value="-splitindex">
+            <istrue value="${javadoc.splitindex}"/>
+        </condition>
+        <property name="javadoc.splitindex.opt" value=""/>
+        <condition property="javadoc.author.opt" value="-author">
+            <istrue value="${javadoc.author}"/>
+        </condition>
+        <property name="javadoc.author.opt" value=""/>
+        <condition property="javadoc.version.opt" value="-version">
+            <istrue value="${javadoc.version}"/>
+        </condition>
+        <property name="javadoc.version.opt" value=""/>
+        <condition property="javadoc.private.opt" value="-private">
+            <istrue value="${javadoc.private}"/>
+        </condition>
+        <property name="javadoc.private.opt" value=""/>
+        <condition property="javadoc.classpath.opt" value="&quot;&quot;">
+            <equals arg1="${javac.classpath}" arg2=""/>
+        </condition>
+        <path id="javadoc.classpath.temp">
+            <pathelement path="${javac.classpath}"/>
+        </path>
+        <property name="javadoc.classpath.opt" refid="javadoc.classpath.temp"/>
+        <javadoc destdir="${dist.javadoc.dir}" source="${javac.source}"
+            windowtitle="${javadoc.windowtitle}" sourcepath="${src.dir}"
+            classpath="${javadoc.classpath.opt}">
+            <arg line="${javadoc.notree.opt} ${javadoc.use.opt} 
+                ${javadoc.nonavbar.opt} ${javadoc.noindex.opt} 
+                ${javadoc.splitindex.opt} ${javadoc.author.opt} 
+                ${javadoc.version.opt} ${javadoc.private.opt} 
+                ${javadoc.additionalparam}"/>
+            <fileset dir="${src.dir}" includes="**/*.java"/>
+        </javadoc>
+    </target>
+    <target name="-javadoc-browse" if="netbeans.home" unless="no.javadoc.preview" depends="init,-javadoc-build">
+        <nbbrowse file="${dist.javadoc.dir}/index.html"/>
+    </target>
+    <target name="javadoc" depends="init,-javadoc-build,-javadoc-browse" description="Build Javadoc."/>
+
+    <!--
+    ===============
+    CLEANUP SECTION
+    ===============
+    -->
+    <target name="deps-clean" depends="init" unless="no.deps">
+        <ant antfile="${project.core}/build.xml" target="clean" inheritall="false">
+            <property name="no.deps" value="true"/>
+        </ant>
+        <ant antfile="${project.gaigs}/build.xml" target="clean" inheritall="false">
+            <property name="no.deps" value="true"/>
+        </ant>
+    </target>
+    <target name="-do-clean" depends="init">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+    <target name="clean" depends="init,deps-clean,-do-clean,-post-clean" description="Clean build products."/>
+</project>

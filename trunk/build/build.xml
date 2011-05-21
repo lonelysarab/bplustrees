@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file builds all of the distributables. -->
+<project name="build" default="all" basedir=".">
+    <description>Builds, tests, and runs the project core.</description>
+    
+    <target name="all" depends="-init,server-release,web-release,standalone-release"/>
+    
+    <target name="server-release" depends="-init,-clean-server,-jar-core,-jar-server" 
+        description="Package the server for distribution.">
+        <mkdir dir="${server.dir}"/>
+        <mkdir dir="${server.work.dir}"/>
+        
+        <copy todir="${server.work.dir}">
+            <fileset dir="${server.reference}/dist"/>
+        </copy>
+        
+        <!-- Now we create some archives of the distributable -->
+        <!-- Zip -->
+        <zip basedir="${server.work.dir}" destfile="${server.archive.file}.zip"/>
+        
+        <!-- Tar GZip -->
+        <tar basedir="${server.work.dir}" destfile="${server.archive.file}.tar.gz" compression="gzip"/>
+        
+        <!-- Tar BZip2 -->
+        <tar basedir="${server.work.dir}" destfile="${server.archive.file}.tar.bz2" compression="bzip2"/>
+        
+        <!-- Remove the work directory -->
+        <delete dir="${server.work.dir}"/>
+    </target>
+    
+    <target name="web-release" depends="-init,-init-check-webstart,-clean-webstart,-jar-core,-jar-gaigs,-jar-client"
+        description="Package the client for webstart release.">
+        <mkdir dir="${webstart.dir}"/>
+        
+        <copy todir="${webstart.dir}">
+            <!-- Libraries -->
+            <fileset file="${core.jar}"/>
+            <fileset file="${gaigs.jar}"/>
+
+            <fileset file="${Animal-2.3.7.jar}"/>
+
+            <fileset file="${xaal.jar}"/>
+            <fileset file="${xaal-core.jar}"/>
+
+            <fileset file="${matrix.jar}"/>
+            <fileset file="${matrixjhave.jar}"/>
+
+            <fileset file="${client.jar}"/>
+
+            <!--Added for Catalog Manager, TLN -->
+            <fileset file="CatalogManager.jar"/>
+            <fileset file="resolver-1.0.jar"/>
+
+            <!--Added for audio text, TLN -->
+            <fileset file="jsapi.jar"/>
+            <fileset file="freetts.jar"/>
+            <fileset file="en_us.jar"/>
+            <fileset file="cmutimelex.jar"/>
+            <fileset file="cmu_us_kal.jar"/>
+            <fileset file="cmulex.jar"/>
+            <fileset file="cmudict04.jar"/>
+            <fileset file="cmu_time_awb.jar"/>
+            
+            <!-- Jhave JNLP Definition -->
+            <fileset file="${jhave.jnlp}"/>
+            <fileset file="${jhave.php}"/>
+        </copy>
+        
+        <!-- Replace all of the WEBSTART_CODEBASE instances in the JNLP files with the webroot -->
+        <replace token="WEBSTART_CODEBASE" value="${webstart.codebase}" dir="${webstart.dir}">
+            <include name="*.jnlp"/>
+        </replace>
+        
+        <replace token="ANIMAL_JAR" value="${webstart.animalref}" dir="${webstart.dir}">
+            <include name="*.jnlp"/>
+        </replace>
+        
+        <!-- Replace all of the WEBSTART_CODEBASE instances in the dynamc JNLP files with the webroot -->
+        <replace token="WEBSTART_CODEBASE" value="${webstart.codebase}" dir="${webstart.dir}">
+            <include name="*.php"/>
+        </replace>
+        
+        <replace token="ANIMAL_JAR" value="${webstart.animalref}" dir="${webstart.dir}">
+            <include name="*.php"/>
+        </replace>
+        
+        <!-- We need to sign all of the extensions that are in the client.jnlp file -->
+        <!-- They must also be signed with the same certificate -->
+        
+        <!-- Client -->
+        <signjar jar="${webstart.dir}/client.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <!-- Gaigs -->
+        <signjar jar="${webstart.dir}/gaigs.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <!-- Animal -->
+
+        <signjar jar="${webstart.dir}/Animal-2.3.7.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <!-- Xaal -->
+
+        <signjar jar="${webstart.dir}/xaal.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <signjar jar="${webstart.dir}/xaal-core.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <!-- Matrix -->
+
+        <signjar jar="${webstart.dir}/matrix.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <signjar jar="${webstart.dir}/matrixjhave.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+            
+        <!-- Core -->
+        <signjar jar="${webstart.dir}/core.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <!-- resolver, added by TLN -->
+        <signjar jar="${webstart.dir}/resolver-1.0.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <!-- CatalogManager, added by TLN -->
+        <signjar jar="${webstart.dir}/CatalogManager.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <!-- Audio text files, added by TLN -->
+        <signjar jar="${webstart.dir}/jsapi.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/freetts.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/en_us.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/cmutimelex.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/cmu_us_kal.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/cmulex.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/cmudict04.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+        <signjar jar="${webstart.dir}/cmu_time_awb.jar" keystore="${sign.keystore}" 
+            storepass="${sign.storepass}" alias="${sign.alias}" keypass="${sign.keypass}"/>
+
+    </target>
+    
+    <target name="standalone-release" depends="-init,-clean-stand-alone,-jar-core,-jar-gaigs,-jar-client"
+        description="Package the client for stand alone release.">
+        <mkdir dir="${standalone.dir}"/>
+        <mkdir dir="${standalone.work.dir}"/>
+        
+        <!-- Copy all the needed jars to the dist/standalone directory -->
+        <copy todir="${standalone.dir}">
+            <fileset file="${core.jar}"/>
+            <fileset file="${gaigs.jar}"/>
+            <fileset file="${Animal-2.3.7.jar}"/>
+            <fileset file="${xaal.jar}"/>
+            <fileset file="${xaal-core.jar}"/>
+            <fileset file="${matrix.jar}"/>
+            <fileset file="${matrixjhave.jar}"/>
+            <fileset file="${client.jar}"/>
+            <fileset file="CatalogManager.jar"/>
+            <fileset file="resolver-1.0.jar"/>
+            <!--Added for audio text, TLN -->
+            <fileset file="jsapi.jar"/>
+            <fileset file="freetts.jar"/>
+            <fileset file="en_us.jar"/>
+            <fileset file="cmutimelex.jar"/>
+            <fileset file="cmu_us_kal.jar"/>
+            <fileset file="cmulex.jar"/>
+            <fileset file="cmudict04.jar"/>
+            <fileset file="cmu_time_awb.jar"/>
+        </copy>
+        
+        <!-- Unjar all the jars to the work directory -->
+        <unjar dest="${standalone.work.dir}">
+            <fileset dir="${standalone.dir}" includes="*.jar"/>
+        </unjar>
+        
+        <!-- Clean out the jars. -->
+        <delete>
+            <fileset dir="${standalone.dir}" includes="*.jar"/>
+        </delete>
+        
+        <!-- Jar the standalone version -->
+        <jar basedir="${standalone.work.dir}" jarfile="${standalone.jar}" compress="${jar.compress}" 
+            manifest="${client.reference}/manifest.mf"/>
+        
+        <!-- Clean up the work directory -->
+        <delete dir="${standalone.work.dir}"/>
+    </target>
+    
+    <!-- Targets for jaring the pieces -->
+    <target name="-jar-core">
+        <ant antfile="${core.reference}/build.xml" target="jar" inheritall="false"/>
+    </target>
+    <target name="-jar-gaigs" depends="-jar-core">
+        <ant antfile="${gaigs.reference}/build.xml" target="jar" inheritall="false"/>
+    </target>
+    <target name="-jar-client" depends="-jar-core,-jar-gaigs">
+        <ant antfile="${client.reference}/build.xml" target="jar" inheritall="false"/>
+    </target>
+    <target name="-jar-server" depends="-jar-core">
+        <ant antfile="${server.reference}/build.xml" target="jar" inheritall="false"/>
+    </target>
+    
+    <!-- -->
+    <target name="-init">
+        <property file="user.properties"/>
+        <property file="project/build.properties"/>
+    </target>
+    
+    <target name="-init-check-webstart" depends="-init">
+        <fail unless="sign.keystore">Need to set the key store for signing the webstart jar</fail>
+        <fail unless="sign.storepass">Need to set the key store password for signing the webstart jar</fail>
+        <fail unless="sign.alias">Need to set the alias for signing the webstart jar</fail>
+        <fail unless="sign.keypass">Need to set the key password for signing the webstart jar</fail>
+        <fail unless="webstart.codebase">Need to set the webstart code base</fail>
+    </target>
+    
+    <!-- Targets for cleaning the various distributables -->
+    <target name="-clean-server">
+        <delete dir="${server.dir}"/>
+    </target>
+    
+    <target name="-clean-stand-alone">
+        <delete dir="${standalone.dir}"/>
+    </target>
+    
+    <target name="-clean-webstart">
+        <delete dir="${webstart.dir}"/>
+    </target>
+    
+    <target name="clean" depends="-init" description="Clean all of the distributables">
+        <delete dir="${dist.dir}"/>
+    </target>
+</project>

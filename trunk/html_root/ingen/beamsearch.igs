@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <combobox>
+    <label_line>Choose search graph:</label_line>
+    <option>perfect1</option>
+    <option>perfect2</option>
+    <option>perfect3</option>
+    <option>perfect4</option>
+    <option>errant1</option>
+    <option>errant2</option>
+    <option>errant3</option>
+    <option>errant4</option>
+    <option>errant5</option>
+    <option>errant6</option>
+    <option>errant7</option>
+    <option>errant8</option>
+    <option>end1</option>
+    <option>end2</option>
+    <option>end3</option>
+    <option>end4</option>
+    <option_entered>null</option_entered>
+  </combobox>
+  <combobox>
+    <label_line>Choose beam width (B):</label_line>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option_entered>null</option_entered>
+  </combobox>
+  <combobox>
+    <label_line>Choose memory size (M):</label_line>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option_entered>null</option_entered>
+  </combobox>
+  <combobox>
+    <label_line>Choose level of detail:</label_line>
+    <option>High</option>
+    <option>Low</option>
+    <option_entered>null</option_entered>
+  </combobox>
+</input_panel>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<pseudocode>
+  <stack><replace var="s" /></stack>
+  <code>
+    <signature>BubbleSort(items)</signature>
+    <line num="1">for(int pass = 1; pass &lt; arraySize; pass++)</line>
+    <line num="2" indent="1">for(int i = 0; i &lt; arraySize - pass; i++)</line>
+    <line num="3" indent="2">if(items[i] &gt; items[i+1])</line>
+    <line num="4" indent="3">swap(i, i+1);</line>
+  </code>
+  <vars>
+    <var>pass = <replace var="pass" /></var>
+    <var>i = <replace var="i" /></var>
+  </vars>
+</pseudocode>

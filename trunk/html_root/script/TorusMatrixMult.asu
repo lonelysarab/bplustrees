@@ -1,0 +1,398 @@
+% Animal 1.4
+ title "TORUS MATRIX MULTIPLICATION"
+ author "Justin C. Miller (neonprimetime) neonprimetime.geo@yahoo.com"
+{
+rectangle "matrixA2_0-0" (20,50) (55,85) color blue4 depth 5
+text "matrixA2-text_0-0" "5" offset (0,0) from "matrixA2_0-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_0-1" (55,50) (90,85) color blue4 depth 5
+text "matrixA2-text_0-1" "1" offset (0,0) from "matrixA2_0-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_0-2" (90,50) (125,85) color blue4 depth 5
+text "matrixA2-text_0-2" "9" offset (0,0) from "matrixA2_0-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-0" (20,85) (55,120) color blue4 depth 5
+text "matrixA2-text_1-0" "0" offset (0,0) from "matrixA2_1-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-1" (55,85) (90,120) color blue4 depth 5
+text "matrixA2-text_1-1" "8" offset (0,0) from "matrixA2_1-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-2" (90,85) (125,120) color blue4 depth 5
+text "matrixA2-text_1-2" "4" offset (0,0) from "matrixA2_1-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-0" (20,120) (55,155) color blue4 depth 5
+text "matrixA2-text_2-0" "7" offset (0,0) from "matrixA2_2-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-1" (55,120) (90,155) color blue4 depth 5
+text "matrixA2-text_2-1" "5" offset (0,0) from "matrixA2_2-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-2" (90,120) (125,155) color blue4 depth 5
+text "matrixA2-text_2-2" "3" offset (0,0) from "matrixA2_2-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-0" (20,50) (55,85) color blue4 depth 5
+text "matrixA-text_0-0" "5" offset (0,0) from "matrixA_0-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-1" (55,50) (90,85) color blue4 depth 5
+text "matrixA-text_0-1" "1" offset (0,0) from "matrixA_0-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-2" (90,50) (125,85) color blue4 depth 5
+text "matrixA-text_0-2" "9" offset (0,0) from "matrixA_0-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-0" (20,85) (55,120) color blue4 depth 5
+text "matrixA-text_1-0" "0" offset (0,0) from "matrixA_1-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-1" (55,85) (90,120) color blue4 depth 5
+text "matrixA-text_1-1" "8" offset (0,0) from "matrixA_1-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-2" (90,85) (125,120) color blue4 depth 5
+text "matrixA-text_1-2" "4" offset (0,0) from "matrixA_1-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-0" (20,120) (55,155) color blue4 depth 5
+text "matrixA-text_2-0" "7" offset (0,0) from "matrixA_2-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-1" (55,120) (90,155) color blue4 depth 5
+text "matrixA-text_2-1" "5" offset (0,0) from "matrixA_2-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-2" (90,120) (125,155) color blue4 depth 5
+text "matrixA-text_2-2" "3" offset (0,0) from "matrixA_2-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-0" (140,50) (175,85) color blue4 depth 5
+text "matrixB2-text_0-0" "1" offset (0,0) from "matrixB2_0-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-1" (175,50) (210,85) color blue4 depth 5
+text "matrixB2-text_0-1" "2" offset (0,0) from "matrixB2_0-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-2" (210,50) (245,85) color blue4 depth 5
+text "matrixB2-text_0-2" "7" offset (0,0) from "matrixB2_0-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-0" (140,85) (175,120) color blue4 depth 5
+text "matrixB2-text_1-0" "0" offset (0,0) from "matrixB2_1-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-1" (175,85) (210,120) color blue4 depth 5
+text "matrixB2-text_1-1" "0" offset (0,0) from "matrixB2_1-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-2" (210,85) (245,120) color blue4 depth 5
+text "matrixB2-text_1-2" "7" offset (0,0) from "matrixB2_1-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-0" (140,120) (175,155) color blue4 depth 5
+text "matrixB2-text_2-0" "8" offset (0,0) from "matrixB2_2-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-1" (175,120) (210,155) color blue4 depth 5
+text "matrixB2-text_2-1" "8" offset (0,0) from "matrixB2_2-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-2" (210,120) (245,155) color blue4 depth 5
+text "matrixB2-text_2-2" "6" offset (0,0) from "matrixB2_2-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-0" (140,50) (175,85) color blue4 depth 5
+text "matrixB-text_0-0" "1" offset (0,0) from "matrixB_0-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-1" (175,50) (210,85) color blue4 depth 5
+text "matrixB-text_0-1" "2" offset (0,0) from "matrixB_0-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-2" (210,50) (245,85) color blue4 depth 5
+text "matrixB-text_0-2" "7" offset (0,0) from "matrixB_0-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-0" (140,85) (175,120) color blue4 depth 5
+text "matrixB-text_1-0" "0" offset (0,0) from "matrixB_1-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-1" (175,85) (210,120) color blue4 depth 5
+text "matrixB-text_1-1" "0" offset (0,0) from "matrixB_1-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-2" (210,85) (245,120) color blue4 depth 5
+text "matrixB-text_1-2" "7" offset (0,0) from "matrixB_1-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-0" (140,120) (175,155) color blue4 depth 5
+text "matrixB-text_2-0" "8" offset (0,0) from "matrixB_2-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-1" (175,120) (210,155) color blue4 depth 5
+text "matrixB-text_2-1" "8" offset (0,0) from "matrixB_2-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-2" (210,120) (245,155) color blue4 depth 5
+text "matrixB-text_2-2" "6" offset (0,0) from "matrixB_2-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-0" (90,255) (125,290) color blue4 depth 5
+text "destmatrix-text_0-0" "0" offset (0,0) from "destmatrix_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-1" (125,255) (160,290) color blue4 depth 5
+text "destmatrix-text_0-1" "0" offset (0,0) from "destmatrix_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-2" (160,255) (195,290) color blue4 depth 5
+text "destmatrix-text_0-2" "0" offset (0,0) from "destmatrix_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-0" (90,290) (125,325) color blue4 depth 5
+text "destmatrix-text_1-0" "0" offset (0,0) from "destmatrix_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-1" (125,290) (160,325) color blue4 depth 5
+text "destmatrix-text_1-1" "0" offset (0,0) from "destmatrix_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-2" (160,290) (195,325) color blue4 depth 5
+text "destmatrix-text_1-2" "0" offset (0,0) from "destmatrix_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-0" (90,325) (125,360) color blue4 depth 5
+text "destmatrix-text_2-0" "0" offset (0,0) from "destmatrix_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-1" (125,325) (160,360) color blue4 depth 5
+text "destmatrix-text_2-1" "0" offset (0,0) from "destmatrix_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-2" (160,325) (195,360) color blue4 depth 5
+text "destmatrix-text_2-2" "0" offset (0,0) from "destmatrix_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-0" (90,255) (125,290) color blue4 depth 5
+text "destmatrix2-text_0-0" "0" offset (0,0) from "destmatrix2_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-1" (125,255) (160,290) color blue4 depth 5
+text "destmatrix2-text_0-1" "0" offset (0,0) from "destmatrix2_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-2" (160,255) (195,290) color blue4 depth 5
+text "destmatrix2-text_0-2" "0" offset (0,0) from "destmatrix2_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-0" (90,290) (125,325) color blue4 depth 5
+text "destmatrix2-text_1-0" "0" offset (0,0) from "destmatrix2_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-1" (125,290) (160,325) color blue4 depth 5
+text "destmatrix2-text_1-1" "0" offset (0,0) from "destmatrix2_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-2" (160,290) (195,325) color blue4 depth 5
+text "destmatrix2-text_1-2" "0" offset (0,0) from "destmatrix2_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-0" (90,325) (125,360) color blue4 depth 5
+text "destmatrix2-text_2-0" "0" offset (0,0) from "destmatrix2_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-1" (125,325) (160,360) color blue4 depth 5
+text "destmatrix2-text_2-1" "0" offset (0,0) from "destmatrix2_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-2" (160,325) (195,360) color blue4 depth 5
+text "destmatrix2-text_2-2" "0" offset (0,0) from "destmatrix2_2-2" C color red depth 0 font Serif size 12.0  bold
+text "matrixA-title" "Matrix A" offset (1,-15) from "matrixA-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+text "matrixB-title" "Matrix B" offset (1,-15) from "matrixB-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+text "destmatrix-title" "A * B" offset (1,-15) from "destmatrix-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+square "P0" (330,100) 70 color blue depth 5
+text "Ptext0" "P0" offset (3,12) from "P0" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft0" (330,135) (313,135) (313,83) (697,83) (697,135) (680,135)  color red depth 5 fwarrow
+square "P1" (470,100) 70 color blue depth 5
+text "Ptext1" "P1" offset (3,12) from "P1" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft1" (470,135) (400,135) color red depth 5 fwarrow
+square "P2" (610,100) 70 color blue depth 5
+text "Ptext2" "P2" offset (3,12) from "P2" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft2" (610,135) (540,135) color red depth 5 fwarrow
+square "P3" (330,240) 70 color blue depth 5
+text "Ptext3" "P3" offset (3,12) from "P3" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft3" (330,275) (295,275) (295,65) (715,65) (715,275) (680,275)  color red depth 5 fwarrow
+polyline "ChannelUp3" (365,240) (365,170) color green4 depth 5 fwarrow
+square "P4" (470,240) 70 color blue depth 5
+text "Ptext4" "P4" offset (3,12) from "P4" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft4" (470,275) (400,275) color red depth 5 fwarrow
+polyline "ChannelUp4" (505,240) (505,170) color green4 depth 5 fwarrow
+square "P5" (610,240) 70 color blue depth 5
+text "Ptext5" "P5" offset (3,12) from "P5" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft5" (610,275) (540,275) color red depth 5 fwarrow
+polyline "ChannelUp5" (645,240) (645,170) color green4 depth 5 fwarrow
+square "P6" (330,380) 70 color blue depth 5
+text "Ptext6" "P6" offset (3,12) from "P6" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft6" (330,415) (278,415) (278,48) (732,48) (732,415) (680,415)  color red depth 5 fwarrow
+polyline "ChannelUp6" (365,380) (365,310) color green4 depth 5 fwarrow
+square "P7" (470,380) 70 color blue depth 5
+text "Ptext7" "P7" offset (3,12) from "P7" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft7" (470,415) (400,415) color red depth 5 fwarrow
+polyline "ChannelUp7" (505,380) (505,310) color green4 depth 5 fwarrow
+square "P8" (610,380) 70 color blue depth 5
+text "Ptext8" "P8" offset (3,12) from "P8" NW color blue4 depth 0 font Serif size 12.0  bold
+polyline "ChannelLeft8" (610,415) (540,415) color red depth 5 fwarrow
+polyline "ChannelUp8" (645,380) (645,310) color green4 depth 5 fwarrow
+}
+delay 3000
+{
+text "ctotal_0-0" "C(0,0)=" offset (1,-2) from "P0" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_0-0" "B =  " offset (1,-22) from "P0" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_0-0" "A = " offset (1,-42) from "P0" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-0" offset (0,0) from "destmatrix-text_0-0" SW offset (1,0) from "ctotal_0-0" SE color green4 depth 5 hidden
+line "bline_0-0" offset (0,0) from "matrixB2-text_0-0" SW offset (1,0) from "btotal_0-0" SE color green4 depth 5 hidden
+line "aline_0-0" offset (0,0) from "matrixA2-text_0-0" SW offset (1,0) from "atotal_0-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-0"
+move "destmatrix2-text_0-0" via "moveline2_0-0" after 10 ms within 1000 ms
+move "matrixA2-text_0-0" via "aline_0-0" after 10 ms within 1000 ms
+move "matrixB2-text_0-0" via "bline_0-0" after 10 ms within 1000 ms
+text "ctotal_0-1" "C(1,0)=" offset (1,-2) from "P1" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_0-1" "B =  " offset (1,-22) from "P1" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_0-1" "A = " offset (1,-42) from "P1" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-1" offset (0,0) from "destmatrix-text_0-1" SW offset (1,0) from "ctotal_0-1" SE color green4 depth 5 hidden
+line "bline_0-1" offset (0,0) from "matrixB2-text_0-1" SW offset (1,0) from "btotal_0-1" SE color green4 depth 5 hidden
+line "aline_0-1" offset (0,0) from "matrixA2-text_0-1" SW offset (1,0) from "atotal_0-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-1"
+move "destmatrix2-text_0-1" via "moveline2_0-1" after 10 ms within 1000 ms
+move "matrixA2-text_0-1" via "aline_0-1" after 10 ms within 1000 ms
+move "matrixB2-text_0-1" via "bline_0-1" after 10 ms within 1000 ms
+text "ctotal_0-2" "C(2,0)=" offset (1,-2) from "P2" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_0-2" "B =  " offset (1,-22) from "P2" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_0-2" "A = " offset (1,-42) from "P2" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-2" offset (0,0) from "destmatrix-text_0-2" SW offset (1,0) from "ctotal_0-2" SE color green4 depth 5 hidden
+line "bline_0-2" offset (0,0) from "matrixB2-text_0-2" SW offset (1,0) from "btotal_0-2" SE color green4 depth 5 hidden
+line "aline_0-2" offset (0,0) from "matrixA2-text_0-2" SW offset (1,0) from "atotal_0-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-2"
+move "destmatrix2-text_0-2" via "moveline2_0-2" after 10 ms within 1000 ms
+move "matrixA2-text_0-2" via "aline_0-2" after 10 ms within 1000 ms
+move "matrixB2-text_0-2" via "bline_0-2" after 10 ms within 1000 ms
+text "ctotal_1-0" "C(0,1)=" offset (1,-2) from "P3" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_1-0" "B =  " offset (1,-22) from "P3" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_1-0" "A = " offset (1,-42) from "P3" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-0" offset (0,0) from "destmatrix-text_1-0" SW offset (1,0) from "ctotal_1-0" SE color green4 depth 5 hidden
+line "bline_1-0" offset (0,0) from "matrixB2-text_1-0" SW offset (1,0) from "btotal_1-0" SE color green4 depth 5 hidden
+line "aline_1-0" offset (0,0) from "matrixA2-text_1-0" SW offset (1,0) from "atotal_1-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-0"
+move "destmatrix2-text_1-0" via "moveline2_1-0" after 10 ms within 1000 ms
+move "matrixA2-text_1-0" via "aline_1-0" after 10 ms within 1000 ms
+move "matrixB2-text_1-0" via "bline_1-0" after 10 ms within 1000 ms
+text "ctotal_1-1" "C(1,1)=" offset (1,-2) from "P4" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_1-1" "B =  " offset (1,-22) from "P4" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_1-1" "A = " offset (1,-42) from "P4" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-1" offset (0,0) from "destmatrix-text_1-1" SW offset (1,0) from "ctotal_1-1" SE color green4 depth 5 hidden
+line "bline_1-1" offset (0,0) from "matrixB2-text_1-1" SW offset (1,0) from "btotal_1-1" SE color green4 depth 5 hidden
+line "aline_1-1" offset (0,0) from "matrixA2-text_1-1" SW offset (1,0) from "atotal_1-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-1"
+move "destmatrix2-text_1-1" via "moveline2_1-1" after 10 ms within 1000 ms
+move "matrixA2-text_1-1" via "aline_1-1" after 10 ms within 1000 ms
+move "matrixB2-text_1-1" via "bline_1-1" after 10 ms within 1000 ms
+text "ctotal_1-2" "C(2,1)=" offset (1,-2) from "P5" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_1-2" "B =  " offset (1,-22) from "P5" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_1-2" "A = " offset (1,-42) from "P5" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-2" offset (0,0) from "destmatrix-text_1-2" SW offset (1,0) from "ctotal_1-2" SE color green4 depth 5 hidden
+line "bline_1-2" offset (0,0) from "matrixB2-text_1-2" SW offset (1,0) from "btotal_1-2" SE color green4 depth 5 hidden
+line "aline_1-2" offset (0,0) from "matrixA2-text_1-2" SW offset (1,0) from "atotal_1-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-2"
+move "destmatrix2-text_1-2" via "moveline2_1-2" after 10 ms within 1000 ms
+move "matrixA2-text_1-2" via "aline_1-2" after 10 ms within 1000 ms
+move "matrixB2-text_1-2" via "bline_1-2" after 10 ms within 1000 ms
+text "ctotal_2-0" "C(0,2)=" offset (1,-2) from "P6" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_2-0" "B =  " offset (1,-22) from "P6" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_2-0" "A = " offset (1,-42) from "P6" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-0" offset (0,0) from "destmatrix-text_2-0" SW offset (1,0) from "ctotal_2-0" SE color green4 depth 5 hidden
+line "bline_2-0" offset (0,0) from "matrixB2-text_2-0" SW offset (1,0) from "btotal_2-0" SE color green4 depth 5 hidden
+line "aline_2-0" offset (0,0) from "matrixA2-text_2-0" SW offset (1,0) from "atotal_2-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-0"
+move "destmatrix2-text_2-0" via "moveline2_2-0" after 10 ms within 1000 ms
+move "matrixA2-text_2-0" via "aline_2-0" after 10 ms within 1000 ms
+move "matrixB2-text_2-0" via "bline_2-0" after 10 ms within 1000 ms
+text "ctotal_2-1" "C(1,2)=" offset (1,-2) from "P7" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_2-1" "B =  " offset (1,-22) from "P7" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_2-1" "A = " offset (1,-42) from "P7" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-1" offset (0,0) from "destmatrix-text_2-1" SW offset (1,0) from "ctotal_2-1" SE color green4 depth 5 hidden
+line "bline_2-1" offset (0,0) from "matrixB2-text_2-1" SW offset (1,0) from "btotal_2-1" SE color green4 depth 5 hidden
+line "aline_2-1" offset (0,0) from "matrixA2-text_2-1" SW offset (1,0) from "atotal_2-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-1"
+move "destmatrix2-text_2-1" via "moveline2_2-1" after 10 ms within 1000 ms
+move "matrixA2-text_2-1" via "aline_2-1" after 10 ms within 1000 ms
+move "matrixB2-text_2-1" via "bline_2-1" after 10 ms within 1000 ms
+text "ctotal_2-2" "C(2,2)=" offset (1,-2) from "P8" SW color green4 depth 0 font Serif size 12.0  bold
+text "btotal_2-2" "B =  " offset (1,-22) from "P8" SW color green4 depth 0 font Serif size 12.0  bold
+text "atotal_2-2" "A = " offset (1,-42) from "P8" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-2" offset (0,0) from "destmatrix-text_2-2" SW offset (1,0) from "ctotal_2-2" SE color green4 depth 5 hidden
+line "bline_2-2" offset (0,0) from "matrixB2-text_2-2" SW offset (1,0) from "btotal_2-2" SE color green4 depth 5 hidden
+line "aline_2-2" offset (0,0) from "matrixA2-text_2-2" SW offset (1,0) from "atotal_2-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-2"
+move "destmatrix2-text_2-2" via "moveline2_2-2" after 10 ms within 1000 ms
+move "matrixA2-text_2-2" via "aline_2-2" after 10 ms within 1000 ms
+move "matrixB2-text_2-2" via "bline_2-2" after 10 ms within 1000 ms
+}
+delay 1
+{
+hideCode "destmatrix2-text_0-0"
+hideCode "matrixA2-text_0-0"
+hideCode "matrixB2-text_0-0"
+text "runningtotal_0-0" "0" offset (1,-3) from "ctotal_0-0" SE color red depth 0 font Serif size 12.0  bold
+text "b_0-0" "1" offset (1,-3) from "btotal_0-0" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_0-0" "5" offset (1,-3) from "atotal_0-0" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_0-1"
+hideCode "matrixA2-text_0-1"
+hideCode "matrixB2-text_0-1"
+text "runningtotal_0-1" "0" offset (1,-3) from "ctotal_0-1" SE color red depth 0 font Serif size 12.0  bold
+text "b_0-1" "2" offset (1,-3) from "btotal_0-1" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_0-1" "1" offset (1,-3) from "atotal_0-1" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_0-2"
+hideCode "matrixA2-text_0-2"
+hideCode "matrixB2-text_0-2"
+text "runningtotal_0-2" "0" offset (1,-3) from "ctotal_0-2" SE color red depth 0 font Serif size 12.0  bold
+text "b_0-2" "7" offset (1,-3) from "btotal_0-2" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_0-2" "9" offset (1,-3) from "atotal_0-2" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-0"
+hideCode "matrixA2-text_1-0"
+hideCode "matrixB2-text_1-0"
+text "runningtotal_1-0" "0" offset (1,-3) from "ctotal_1-0" SE color red depth 0 font Serif size 12.0  bold
+text "b_1-0" "0" offset (1,-3) from "btotal_1-0" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_1-0" "0" offset (1,-3) from "atotal_1-0" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-1"
+hideCode "matrixA2-text_1-1"
+hideCode "matrixB2-text_1-1"
+text "runningtotal_1-1" "0" offset (1,-3) from "ctotal_1-1" SE color red depth 0 font Serif size 12.0  bold
+text "b_1-1" "0" offset (1,-3) from "btotal_1-1" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_1-1" "8" offset (1,-3) from "atotal_1-1" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-2"
+hideCode "matrixA2-text_1-2"
+hideCode "matrixB2-text_1-2"
+text "runningtotal_1-2" "0" offset (1,-3) from "ctotal_1-2" SE color red depth 0 font Serif size 12.0  bold
+text "b_1-2" "7" offset (1,-3) from "btotal_1-2" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_1-2" "4" offset (1,-3) from "atotal_1-2" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-0"
+hideCode "matrixA2-text_2-0"
+hideCode "matrixB2-text_2-0"
+text "runningtotal_2-0" "0" offset (1,-3) from "ctotal_2-0" SE color red depth 0 font Serif size 12.0  bold
+text "b_2-0" "8" offset (1,-3) from "btotal_2-0" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_2-0" "7" offset (1,-3) from "atotal_2-0" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-1"
+hideCode "matrixA2-text_2-1"
+hideCode "matrixB2-text_2-1"
+text "runningtotal_2-1" "0" offset (1,-3) from "ctotal_2-1" SE color red depth 0 font Serif size 12.0  bold
+text "b_2-1" "8" offset (1,-3) from "btotal_2-1" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_2-1" "5" offset (1,-3) from "atotal_2-1" SE color blue4 depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-2"
+hideCode "matrixA2-text_2-2"
+hideCode "matrixB2-text_2-2"
+text "runningtotal_2-2" "0" offset (1,-3) from "ctotal_2-2" SE color red depth 0 font Serif size 12.0  bold
+text "b_2-2" "6" offset (1,-3) from "btotal_2-2" SE color blue4 depth 0 font Serif size 12.0  bold
+text "a_2-2" "3" offset (1,-3) from "atotal_2-2" SE color blue4 depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "P0"
+hideCode "Ptext0"
+hideCode "ctotal_0-0"
+hideCode "btotal_0-0"
+hideCode "atotal_0-0"
+hideCode "b_0-0"
+hideCode "a_0-0"
+line "moveline_0-0" offset (0,0) from "runningtotal_0-0" SW offset (-5,0) from "destmatrix-text_0-0" SW color blue4 depth 5 hidden
+move "runningtotal_0-0" via "moveline_0-0" after 10 ms within 1000 ms
+hideCode "P1"
+hideCode "Ptext1"
+hideCode "ChannelLeft1"
+hideCode "ctotal_0-1"
+hideCode "btotal_0-1"
+hideCode "atotal_0-1"
+hideCode "b_0-1"
+hideCode "a_0-1"
+line "moveline_0-1" offset (0,0) from "runningtotal_0-1" SW offset (-5,0) from "destmatrix-text_0-1" SW color blue4 depth 5 hidden
+move "runningtotal_0-1" via "moveline_0-1" after 10 ms within 1000 ms
+hideCode "P2"
+hideCode "Ptext2"
+hideCode "ChannelLeft2"
+hideCode "ctotal_0-2"
+hideCode "btotal_0-2"
+hideCode "atotal_0-2"
+hideCode "b_0-2"
+hideCode "a_0-2"
+line "moveline_0-2" offset (0,0) from "runningtotal_0-2" SW offset (-5,0) from "destmatrix-text_0-2" SW color blue4 depth 5 hidden
+move "runningtotal_0-2" via "moveline_0-2" after 10 ms within 1000 ms
+hideCode "P3"
+hideCode "Ptext3"
+hideCode "ChannelUp3"
+hideCode "ctotal_1-0"
+hideCode "btotal_1-0"
+hideCode "atotal_1-0"
+hideCode "b_1-0"
+hideCode "a_1-0"
+line "moveline_1-0" offset (0,0) from "runningtotal_1-0" SW offset (-5,0) from "destmatrix-text_1-0" SW color blue4 depth 5 hidden
+move "runningtotal_1-0" via "moveline_1-0" after 10 ms within 1000 ms
+hideCode "P4"
+hideCode "Ptext4"
+hideCode "ChannelLeft4"
+hideCode "ChannelUp4"
+hideCode "ctotal_1-1"
+hideCode "btotal_1-1"
+hideCode "atotal_1-1"
+hideCode "b_1-1"
+hideCode "a_1-1"
+line "moveline_1-1" offset (0,0) from "runningtotal_1-1" SW offset (-5,0) from "destmatrix-text_1-1" SW color blue4 depth 5 hidden
+move "runningtotal_1-1" via "moveline_1-1" after 10 ms within 1000 ms
+hideCode "P5"
+hideCode "Ptext5"
+hideCode "ChannelLeft5"
+hideCode "ChannelUp5"
+hideCode "ctotal_1-2"
+hideCode "btotal_1-2"
+hideCode "atotal_1-2"
+hideCode "b_1-2"
+hideCode "a_1-2"
+line "moveline_1-2" offset (0,0) from "runningtotal_1-2" SW offset (-5,0) from "destmatrix-text_1-2" SW color blue4 depth 5 hidden
+move "runningtotal_1-2" via "moveline_1-2" after 10 ms within 1000 ms
+hideCode "P6"
+hideCode "Ptext6"
+hideCode "ChannelUp6"
+hideCode "ctotal_2-0"
+hideCode "btotal_2-0"
+hideCode "atotal_2-0"
+hideCode "b_2-0"
+hideCode "a_2-0"
+line "moveline_2-0" offset (0,0) from "runningtotal_2-0" SW offset (-5,0) from "destmatrix-text_2-0" SW color blue4 depth 5 hidden
+move "runningtotal_2-0" via "moveline_2-0" after 10 ms within 1000 ms
+hideCode "P7"
+hideCode "Ptext7"
+hideCode "ChannelLeft7"
+hideCode "ChannelUp7"
+hideCode "ctotal_2-1"
+hideCode "btotal_2-1"
+hideCode "atotal_2-1"
+hideCode "b_2-1"
+hideCode "a_2-1"
+line "moveline_2-1" offset (0,0) from "runningtotal_2-1" SW offset (-5,0) from "destmatrix-text_2-1" SW color blue4 depth 5 hidden
+move "runningtotal_2-1" via "moveline_2-1" after 10 ms within 1000 ms
+hideCode "P8"
+hideCode "Ptext8"
+hideCode "ChannelLeft8"
+hideCode "ChannelUp8"
+hideCode "ctotal_2-2"
+hideCode "btotal_2-2"
+hideCode "atotal_2-2"
+hideCode "b_2-2"
+hideCode "a_2-2"
+line "moveline_2-2" offset (0,0) from "runningtotal_2-2" SW offset (-5,0) from "destmatrix-text_2-2" SW color blue4 depth 5 hidden
+move "runningtotal_2-2" via "moveline_2-2" after 10 ms within 1000 ms
+}

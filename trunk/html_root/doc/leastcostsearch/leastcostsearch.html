@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<h1>Least-Cost Search Algorithm</h1>
+<p>The Least-Cost Search Algorithm is an optimal uninformed graph-searching algorithm. This algorithm maintains an open queue of nodes that is sorted in ascending order according to the costs to reach those nodes. Thus, when a node is taken off the front of the open queue and added to the closed list, it is guaranteed that the shortest path to that node has been found. For this reason, the Least-Cost Search Algorithm will always find the shortest path from the start node to the goal node in a graph. However, since it does not use a heuristic to guide its search, Least-Cost Search will often close more nodes and will therefore take longer than comparable heuristic searches.</p>
+
+<p>This animation shows the execution of the Least-Cost Search Algorithm in two ways. On the left, the search graph is displayed with changing node colors to indicate opening and closing nodes (more information on the color-coding appears in the next paragraph). The right side of the window contains a search tree that is built dynamically to show the progress of the Least-Cost Search Algorithm in searching the graph. The coloring of the tree is coordinated with the coloring of the graph. The numbers under the node names in the search tree are the costs to reach each node along the current path in the tree. Additionally, the open queue and the closed list are displayed at the top of the viewing window. Open nodes are displayed with the node name first followed by (in parentheses) the name of the node's predecessor and the node's cost at the time it was added to the open queue. Therefore, the nodes in the open queue are ordered by this number in parenthesis (with alphabetical order used to break ties). The closed nodes are presented in a similar format, with the closing node's name appearing first followed by (in parentheses) the name of the node's predecessor and the current closing cost of the node. Furthermore, the pseudocode window tracks the algorithm by highlighting the section of code that produced the most recent change in the animation.</p>
+
+<p>The coloring scheme is used to highlight open and closed nodes and also shows recent changes in executing the Least-Cost Search Algorithm. The <b><font color=#44FF44>darker green</b></font color=#44FF44> node in the graph and tree indicates the node that has just been closed in the current loop. The <b><font color=#AAFFAA>paler green</b></font color=#AAFFAA> nodes are nodes that have been closed in previous loops. <b><font color=#00A1F4>Darker blue</b></font color=#00A1F4> nodes are nodes that have just been added to the open queue in the current loop. Notice that these nodes will always be connected directly to the <b><font color=#44FF44>darker green</b></font color=#44FF44> node by an edge. Nodes that have faded to a <b><font color=#88E6F4>paler hue of blue</b></font color=#88E6F4> are nodes that are still on the open queue but were added in previous loops. In this way, the blue nodes (both <b><font color=#00A1F4>dark</b></font color=#00A1F4> and <b><font color=#88E6F4>light</b></font color=#88E6F4>) in the search tree comprise the entire open queue, making it easy to find the path to the next node that will be closed. Since a node can be added to the open queue from multiple predecessors, a node sometimes is added to the open queue multiple times. When the duplicate node with the lowest cost is taken off the open queue and closed, the other duplicate nodes remain in the open queue until they are removed from the front. When an already-closed node is taken off the open queue in this manner, the search tree removes the <b><font color=#88E6F4>blue shading</b></font color=#88E6F4> from this node, indicating that it is no longer in the open queue. Finally, when a node is closed, the current shortest path to the closing node's predecessor in the graph is highlighted in <b><font color=#FFFF00>yellow</b></font color=#FFFF00> to show the current path being probed in the search graph.</p>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</body>
+</html>

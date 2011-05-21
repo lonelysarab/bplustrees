@@ -1,0 +1,44 @@
+TEXTFIELD
+Instack Priority + (1-10)
+1
+ENDTEXTFIELD
+TEXTFIELD
+Instack Priority - (1-10)
+1
+ENDTEXTFIELD
+TEXTFIELD
+Instack Priority * (1-10)
+2
+ENDTEXTFIELD
+TEXTFIELD
+Instack Priority / (1-10)
+2
+ENDTEXTFIELD
+TEXTFIELD
+Instack Priority ^ (1-10)
+3
+ENDTEXTFIELD
+TEXTFIELD
+Infix Priority + (1-10)
+1
+ENDTEXTFIELD
+TEXTFIELD
+Infix Priority - (1-10)
+1
+ENDTEXTFIELD
+TEXTFIELD
+Infix Priority * (1-10)
+2
+ENDTEXTFIELD
+TEXTFIELD
+Infix Priority / (1-10)
+2
+ENDTEXTFIELD
+TEXTFIELD
+Infix Priority ^
+3
+ENDTEXTFIELD
+TEXTFIELD
+Expression to be parsed:
+2+3^4/5-1
+ENDTEXTFIELD

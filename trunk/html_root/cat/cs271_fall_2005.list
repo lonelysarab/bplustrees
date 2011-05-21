@@ -1,0 +1,51 @@
+Depth First Search
+dfsrichard new_data_only gaigs
+**** 
+Breadth First Search
+bfsrichard new_data_only gaigs
+**** 
+Dijkstra Shortest Path
+dijkstrarichard new_data_only gaigs
+**** 
+Floyd's Algo -- (loads slower than others)
+floydrichard new_data_only gaigs
+**** 
+Prim Minimal Spanning Tree
+primrichard new_data_only gaigs
+**** 
+Kruskal Minimal Spanning Tree
+kruskalrichard new_data_only gaigs
+**** 
+Topological sort
+topoalex dynamic gaigs
+**** 
+Hashing with linear probing
+linearhashing new_data_only gaigs
+****
+Hashing with quadratic probing
+quadhashing new_data_only gaigs
+****
+Double hashing (Rehashing)
+doublehashing new_data_only gaigs
+****
+Hashing with chained probing
+chainedhashing new_data_only gaigs
+****
+Heap Sort
+heapmyles new_data_only gaigs
+**** 
+Huffman Encoding
+huffmanEncoding new_data_only gaigs
+****
+Huffman Decoding 
+huffmanDecoding new_data_only gaigs 
+****
+Red-black Tree 
+rbtreealex new_data_only gaigs
+**** 
+Red-black Tree (greater detail)
+rbtreemyles new_data_only gaigs
+**** 
+Stack-based Parsing
+parsing_lln dynamic gaigs
+**** 

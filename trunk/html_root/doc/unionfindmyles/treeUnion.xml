@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <program_listing>
+	<signature>treeUnion(Array list, set1, set2)</signature>
+	<line line_number="1">1   list[set2] = set1</line>
+    </program_listing>
+    <variables>
+        <variable>set1 = <replace var="set1" /></variable>
+	<variable>set2 = <replace var="set2" /></variable>
+    </variables>
+</pseudocode>

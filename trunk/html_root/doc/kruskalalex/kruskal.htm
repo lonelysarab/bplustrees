@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Kruskal's MST Visualization </TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="CREATED" CONTENT="20010724;13471800">
+	<META NAME="CHANGEDBY" CONTENT=" ">
+	<META NAME="CHANGED" CONTENT="20010724;13532000">
+</HEAD>
+<BODY BGCOLOR="#99ccff">
+<P>In the visualization of Kruskal's minimum spanning tree algorithm
+you are watching here</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in">Red is used to highlight the edges
+	that have been included in the MST. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Blue highlights those edges that
+	are in the priority queue ordered by edgeweight. 
+	</P>
+	<LI><P>Edges that are black have been removed from the priority
+	queue but have not been added to the MST because they join vertices
+	that are already in a connected component. 
+	</P>
+</UL>
+<P>As you step through the algorithm, always try to predict the next
+edge that will be included. Remember the selection criterion employed
+at each stage of the Kruskal algorithm -- select the first edge from
+the priority queue that joins two vertices between which a path does
+not already exist.   In the visualization you are watching here,
+should two edges in the priority queue have the same edge weight, the
+one with a smaller vertex number  will always come first.  For
+example, if edges connecting vertices 2 to 4 and 3 to 5 both have
+edgeweight 12, the edge connecting 2 to 4 will come first in the
+queue.</P>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

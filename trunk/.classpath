@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="xaal/src"/>
+	<classpathentry kind="src" path="matrix/src"/>
+	<classpathentry kind="src" path="core/src"/>
+	<classpathentry kind="src" path="server/src"/>
+	<classpathentry kind="src" path="gaigs/src"/>
+	<classpathentry kind="src" path="client/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="animal/dist/Animal-2.0.1e.jar"/>
+	<classpathentry kind="lib" path="client/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="client/lib/swingfx.jar"/>
+	<classpathentry kind="lib" path="client/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="build/CatalogManager.jar"/>
+	<classpathentry kind="lib" path="build/resolver-1.0.jar"/>
+	<classpathentry kind="lib" path="client/lib/CatalogManager.jar"/>
+	<classpathentry kind="lib" path="client/lib/cmu_time_awb.jar"/>
+	<classpathentry kind="lib" path="client/lib/cmu_us_kal.jar"/>
+	<classpathentry kind="lib" path="client/lib/cmudict04.jar"/>
+	<classpathentry kind="lib" path="client/lib/cmulex.jar"/>
+	<classpathentry kind="lib" path="client/lib/cmutimelex.jar"/>
+	<classpathentry kind="lib" path="client/lib/en_us.jar"/>
+	<classpathentry kind="lib" path="client/lib/freetts.jar"/>
+	<classpathentry kind="lib" path="client/lib/jsapi.jar"/>
+	<classpathentry kind="lib" path="client/lib/resolver-1.0.jar"/>
+	<classpathentry kind="lib" path="server/lib/activation.jar"/>
+	<classpathentry kind="lib" path="server/lib/mail.jar"/>
+	<classpathentry kind="lib" path="server/lib/mysql-connector-java-3.1.8-bin.jar"/>
+	<classpathentry kind="lib" path="server/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="server/lib/xmlrpc-1.2-b1.jar"/>
+	<classpathentry kind="lib" path="matrix/lib/matrix.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

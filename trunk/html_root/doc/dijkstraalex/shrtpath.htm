@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Dijkstra's Shortest Path Visualization </TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFCCFF">
+
+<P>In the shortest path algorithm visualized here, the shortest path will be found from the red node to every other
+node in the weighted graph. For each node, the top number in the node's circle is the node's identifying number,
+and the bottom number (if there is one) is the shortest distance that Dijkstra's greedy algorithm has found up
+to the present point of the algorithm's execution. Green highlights the nodes for which the shortest distance from
+the red node has <I>definitely</I> been found, that is, those nodes that have been added to the closed list.  Yellow
+highlights those nodes that have been opened but for which we are not yet sure of the shortest distance. When a
+node switches from yellow to green, the shortest path from the start node to the newly closed node is highlighted
+in red. As you step through the algorithm, always try to predict (1) the next node that will be closed and (2)
+whether the distances to other nodes will change.  Whether these other distances change is dependent on whether
+or not we have discovered a path through the newly closed node that is better than what had been the best distance
+prior to closing this node.
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

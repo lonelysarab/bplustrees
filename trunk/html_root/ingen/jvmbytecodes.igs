@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <combobox>
+    <label_line>You may pick a built-in sample program from the drop-down list on the right. Then, click OK.</label_line>
+    <option>Type in or load your own source file above</option>
+    <option>Builtin_Program_Factorial4_iterative</option>
+    <option>Builtin_Program_Factorial4_recursive</option>
+    <option>Builtin_Program_Fibonacci4_iterative</option>
+    <option>Builtin_Program_Fibonacci4_recursive</option>
+    <option>Builtin_Program_Byte</option>
+    <option>Builtin_Program_Character</option>
+    <option>Builtin_Program_Factorial4_Long</option>
+    <option>Builtin_Program_If</option>
+    <option>Builtin_Program_Short</option>
+    <value_entered></value_entered>
+  </combobox>
+  <jvm_text_area>
+    <label_line>You may load one of your Java source files (and if so, make sure to replace 'EMPTY' with its name), or pick a built-in program below.</label_line>
+    <default_field></default_field>
+    <value_entered></value_entered>
+  </jvm_text_area>
+
+</input_panel>
+
+

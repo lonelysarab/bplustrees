@@ -1,0 +1,19 @@
+<!ELEMENT quizResults (question)+>
+<!ATTLIST quizResults quizId CDATA #REQUIRED
+                      studentId CDATA #REQUIRED
+                      numQuestions CDATA #REQUIRED
+                      numCorrect CDATA #REQUIRED
+		      HUTstudentID CDATA #IMPLIED     
+                      HUTquizID CDATA #IMPLIED
+		      HUTcourseID CDATA #IMPLIED
+		      HUTnormalizedScore CDATA #IMPLIED
+		      HUTseed CDATA #IMPLIED
+                      startTime CDATA #REQUIRED
+                      endTime CDATA #REQUIRED>
+<!ELEMENT question (correctAnswer, givenAnswer)>
+<!ATTLIST question questionNumber CDATA #REQUIRED
+                   isCorrect CDATA #REQUIRED
+                   questionType CDATA #REQUIRED>
+<!ELEMENT correctAnswer (#PCDATA)>
+<!ELEMENT givenAnswer (#PCDATA)>
+

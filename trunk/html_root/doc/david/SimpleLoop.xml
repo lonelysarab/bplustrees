@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+<call_stack>Array Practice</call_stack>
+<program_listing>
+<signature></signature>
+<line line_number="1">1   int[] <replace var="an" /> = <replace var="av" />;</line>
+<line line_number="2">2   </line>
+<line line_number="3">3   for( int <replace var="vn" /> = <replace var="fi" />; <replace var="vn" /> <replace var="to" /> <replace var="li" />; <replace var="vn" /> = <replace var="vn" /> <replace var="io" /> <replace var="iv" /> )</line>
+<line line_number="4">4   {</line>
+<line line_number="5">5       <replace var="a" /></line>
+<line line_number="6">6   }</line>
+</program_listing>
+<variables>
+<variable><replace var="vn" /> = <replace var="vv" /></variable>
+</variables>
+</pseudocode>

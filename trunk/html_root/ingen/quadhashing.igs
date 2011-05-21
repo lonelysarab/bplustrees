@@ -1,0 +1,10 @@
+CHOICE
+Choose the number of slots in the hash table: (must be a prime of the form 4n+3)
+7
+11
+3
+ENDCHOICE
+TEXTFIELD
+Enter the number of keys to insert: (must not be greater than the table size)
+7
+ENDTEXTFIELD

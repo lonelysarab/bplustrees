@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="s"/></call_stack>
+    <program_listing>
+	<signature>quickSort(list, low, high) </signature>
+	<line line_number="1">1   if(low &#38;#60; high)</line>
+<!-- 	<line line_number="1">1   if(low &lt; high)</line> -->
+<!--	<line line_number="1">1   if(low &amp;lt; high)</line> -->
+	<line line_number="2">2      int p = pivot(list, low + 1, high)</line>
+	<line line_number="3">3      quickSort(list, low, p - 1)</line>
+	<line line_number="4">4      quickSort(list, p + 1, high)</line>
+    </program_listing>
+    <variables>
+        <variable>low = <replace var="low" /></variable>
+        <variable>high = <replace var="high" /></variable>
+        <variable>p = <replace var="p" /></variable>
+    </variables>
+</pseudocode>

@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Stack Class</call_stack>
+<program_listing>
+<line line_number = "1"> // Pop an item from the stack
+if stack.size() is less than 1 throw EmptyStackException
+else return top element</line>
+<line line_number = "2">// Adding an item to the stack
+push new item onto top of stack</line>
+</program_listing>
+</pseudocode>

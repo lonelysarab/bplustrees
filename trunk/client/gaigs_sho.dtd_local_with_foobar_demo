@@ -1,0 +1,243 @@
+<!-- continue to support named colors.. -->
+<!-- some of our color formatting is done using character escapes, like in titles -->
+<!-- leaving like that for now, possibly change to xml later -->
+
+
+<!ELEMENT show (snap+, questions?)>
+
+  <!-- add other structure types to the (x|y|z)* part of snap -->
+<!ELEMENT snap (title, doc_url?, pseudocode_url?, audio_text?, (text|tree|array|graph|stack|queue|linkedlist|bargraph|node|no3darray|linkedlistnonull|no3dlinkedlist|legend|refstructroot|hashstructroot|index|foobar)*, question_ref?)>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title fontsize CDATA "0.03">
+
+<!ELEMENT name  (#PCDATA)>
+<!ATTLIST name fontsize CDATA "0.03">
+
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT doc_url (#PCDATA)>
+<!ELEMENT pseudocode_url (#PCDATA)>
+<!ELEMENT audio_text (#PCDATA)>
+
+<!ELEMENT bounds (EMPTY)>
+<!ATTLIST bounds x1 CDATA #REQUIRED
+                 y1 CDATA #REQUIRED
+		 x2 CDATA #REQUIRED
+		 y2 CDATA #REQUIRED
+		 fontsize CDATA "0.03">
+
+     <!-- FOOBAR -->
+
+<!ELEMENT foobar (name?, bounds?, nodelabel)>
+<!ATTLIST foobar x CDATA "0.5"
+               y CDATA "0.5"
+	       color CDATA "white">
+<!ELEMENT nodelabel (EMPTY)>
+<!ATTLIST nodelabel text CDATA "">
+
+     <!-- TEXT -->
+<!ELEMENT text (#PCDATA)>
+<!ATTLIST text x CDATA #REQUIRED
+               y CDATA #REQUIRED
+               halign CDATA #REQUIRED
+               valign CDATA #REQUIRED
+               fontsize CDATA "0.03"
+               color CDATA "#000000">
+
+
+     <!-- NODE -->
+
+<!ELEMENT node (name?, bounds?, nodelabel?)>
+<!ATTLIST node x CDATA "0.5"
+               y CDATA "0.5"
+	       color CDATA "white">
+<!ELEMENT nodelabel (EMPTY)>
+<!ATTLIST nodelabel text CDATA "">
+
+
+     <!-- GENERAL/BINARY TREE -->
+
+<!ELEMENT tree (name?, bounds?, (tree_node|binary_node)? )>
+<!ATTLIST tree x_spacing CDATA "1.5"
+	       y_spacing CDATA "1.5">
+
+<!ELEMENT tree_node (label?, (tree_node,tree_edge?)* )>
+<!ATTLIST tree_node color CDATA "white">
+
+<!ELEMENT binary_node (label?, (left_node,tree_edge?)?, (right_node,tree_edge?)? )>
+<!ATTLIST binary_node color CDATA "white">
+
+<!ELEMENT left_node (label?, (left_node,tree_edge?)?, (right_node,tree_edge?)? )>
+<!ATTLIST left_node color CDATA "white">
+
+<!ELEMENT right_node (label?, (left_node,tree_edge?)?, (right_node,tree_edge?)? )>
+<!ATTLIST right_node color CDATA "white">
+
+<!ELEMENT tree_edge (label?)>
+<!ATTLIST tree_edge color CDATA "black">
+
+
+
+     <!-- GRAPH -->
+
+<!ELEMENT graph (name?, bounds?, vertex*)>
+<!ATTLIST graph weighted (true|false) "false">
+
+<!ELEMENT vertex (label?, position?, edge*)>
+<!ATTLIST vertex color CDATA "white"
+	         id CDATA #REQUIRED>
+
+<!ELEMENT position (EMPTY)>
+<!ATTLIST position x CDATA #REQUIRED
+                   y CDATA #REQUIRED>
+
+<!ELEMENT edge (label?)>
+<!-- target is matched with vertex.id: -->
+<!ATTLIST edge target CDATA #REQUIRED
+               directed (true|false) "false"
+	       color CDATA "#999999"> <!-- grey -->
+
+     <!-- REFSTRUCT -->
+
+<!ELEMENT refstructroot (name?, bounds?, (refbox)+)>
+
+<!ELEMENT refstruct ((refbox)+)>
+
+<!ELEMENT refbox ((refstruct)?)>
+<!ATTLIST refbox color CDATA "black"
+                 boxname CDATA ""
+		 boxdata CDATA ""
+		 hasarrow CDATA "false">
+
+     <!-- END OF REFSTRUCT -->
+
+     <!-- HASHSTRUCT -->
+     
+<!ELEMENT hashstructroot (name?, bounds?, hashbox)>
+
+<!ELEMENT hashbox ((hashstruct)?,(hashlist)?,(EMPTY))>
+<!ATTLIST hashbox boxname CDATA ""
+                  color CDATA "black">
+
+<!ELEMENT hashstruct ((hashbox)+)>
+
+<!ELEMENT hashlist ((hashlistnode)*)>
+
+<!ELEMENT hashlistnode (EMPTY)>
+<!ATTLIST hashlistnode boxdata CDATA ""
+                       color CDATA "black">
+
+     <!-- END OF HASHSTRUCT -->
+
+     <!-- INDEXSTRUCT -->
+
+<!ELEMENT index (name?, bounds?, (indexstructroot)+,(indexitem)*)>
+
+<!ELEMENT namesortedroot (EMPTY)>
+<!ATTLIST namesortedroot boxname CDATA ""
+                         color CDATA "black">
+
+<!ELEMENT valsortedroot (EMPTY)>
+<!ATTLIST valsortedroot boxname CDATA ""
+                        color CDATA "black">                        
+
+<!ELEMENT indexitemlist ((indexitem)*,(EMPTY))>
+
+<!ELEMENT indexitem (EMPTY)>
+<!ATTLIST indexitem name CDATA ""
+                    value CDATA ""
+                    color CDATA "black">
+
+     <!-- END OF INDEXSTRUCT -->
+
+     <!-- ARRAY (1 or 2-D) -->
+
+<!ELEMENT array (name?, bounds?, row_label*, column_label*, column*)>
+
+<!ELEMENT row_label (#PCDATA)> <!-- put in empty titles if you want to skip titling some rows -->
+<!ELEMENT column_label (#PCDATA)>
+
+<!ELEMENT column (list_item*)>
+
+     <!-- Array with no 3D -->
+
+<!ELEMENT no3darray (name?, bounds?, row_label?, coulumn_label*, colum*)>
+
+<!ELEMENT row_label (#PCDATA)>
+<!ELEMENT column_label (#PCDATA)>
+
+<!ELEMENT column (list_item*)>
+
+
+     <!-- LIST_ITEM (used in array,stack,queue,linkedlist) -->
+
+<!ELEMENT list_item (label)>
+<!ATTLIST list_item color CDATA "#FFFFFF">
+
+
+
+     <!-- STACK -->
+
+<!ELEMENT stack (name?, bounds?, list_item*)>
+
+
+
+     <!-- QUEUE -->
+
+<!ELEMENT queue (name?, bounds?, list_item*)>
+
+
+
+     <!-- LINKEDLIST -->
+
+<!ELEMENT linkedlist (name?, bounds?, list_item*)>
+
+     <!-- LINKEDLIST WITHOUT SLASH -->
+
+<!ELEMENT linkedlistnonull (name?, bounds?, list_item*)>
+
+     <!-- LINKEDLIST WITHOUT 3D -->
+
+<!ELEMENT no3dlinkedlist (name?, bounds?, list_item*)>
+
+
+
+     <!-- BARGRAPH -->
+
+<!ELEMENT bargraph (name?, bounds?, bar*)>
+
+<!ELEMENT bar (label)>
+<!ATTLIST bar magnitude CDATA #REQUIRED
+              color CDATA "#000000">
+
+
+
+     <!-- LEGEND -->
+
+<!ELEMENT legend (name?, bounds?, column*)>
+
+
+
+     <!-- QUESTIONS -->
+
+<!ELEMENT question_ref (EMPTY)>
+<!ATTLIST question_ref ref CDATA #REQUIRED>
+   <!-- question_ref matches/points to a question.id -->
+
+<!ELEMENT questions (question*)>
+
+<!ELEMENT question (question_text,answer_option*)>
+<!ATTLIST question type CDATA #REQUIRED
+		   id CDATA #REQUIRED>
+  <!-- type: MCQUESTION|TFQUESTION|FIBQUESTION|MSQUESTION -->
+
+<!ELEMENT question_text (#PCDATA)> <!-- the question to ask the user -->
+
+<!ELEMENT answer_option (#PCDATA)>
+   <!-- TFQuestion: use text "true" or "false" (no quotes) for the correct answer -->
+<!ATTLIST answer_option is_correct (yes|no) "no">
+  <!-- specify "yes" only if it is a MC/MSQuestion. otherwise, ignored -->
+
+
+
+

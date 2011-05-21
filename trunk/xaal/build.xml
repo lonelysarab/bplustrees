@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="xaal" default="default" basedir=".">
+    <description>Builds, tests, and runs the project xaal.</description>
+    <import file="project/build-impl.xml"/>
+    
+    <!-- 
+    ======================
+    INITIALIZATION SECTION 
+    ======================
+    -->
+    <target name="-pre-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <target name="-post-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ===================
+    COMPILATION SECTION
+    ===================
+    -->
+    <target name="-pre-compile">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-compile">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <target name="-pre-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ====================
+    JAR BUILDING SECTION
+    ====================
+    -->
+    <target name="-pre-jar">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-jar">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ===============
+    CLEANUP SECTION
+    ===============
+    -->
+    <target name="-post-clean">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+</project>

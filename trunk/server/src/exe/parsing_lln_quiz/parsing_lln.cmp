@@ -1,0 +1,22 @@
+[Main]
+Type=1
+Targ=E:\summer99\james\GaigsServer\exe\parsing_lln\parsing_lln.exe
+Icon=
+[Other Files]
+Count=0
+[Options]
+TechWebPage=
+RunHidden=0
+[Version Info]
+Comments=
+CompanyName=
+FileDescription=parsing_lln
+FileVersion=1.0
+InternalName=parsing_lln.exe
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=parsing_lln.exe
+ProductName=parsing_lln
+ProductVersion=1.0
+[Extenders]
+Count=0

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <program_listing>
+	<signature>arrayUnion(Array list, Array weights, set1, set2)</signature>
+	<line line_number="1">1   for(x = 0; x < list.length; x++)</line>	     	  
+	<line line_number="2">2      if(weights[set1] >= weights[set2])</line>
+	<line line_number="3">3         if(list[x] == set2)</line>
+	<line line_number="4">4            list[x] = set1</line>
+	<line line_number="5">5            weights[set1]++</line>
+	<line line_number="6">6      else</line>
+	<line line_number="7">7         if(list[x] == set1)</line>
+	<line line_number="8">8            list[x] = set2</line>
+	<line line_number="9">9            weights[set2]++</line>
+    </program_listing>
+    <variables>
+        <variable>set1 = <replace var="set1" /></variable>
+	<variable>set2 = <replace var="set2" /></variable>
+    </variables>
+</pseudocode>

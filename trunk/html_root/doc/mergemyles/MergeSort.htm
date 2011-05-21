@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<title>Untitled Document</title>
+
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {font-size: 12px}
+.style3 {color: #FFFFFF; font-size: 12px; }
+-->
+</style>
+</head>
+
+<body>
+<h1>Merge Sort</h1>
+<p>Merge sort is a recursively designed algorithm. It executes in the following fashion:</p>
+<ol>
+  <li>Return if input is a single data element.</li>
+  <li>If multiple data items are in input, split in half and sort each half. </li>
+  <li>Merge the sorted halves back together. </li>
+</ol>
+<p>This algorithm is known as a divide-and-conquer technique. It divides the set in half and then attacks each half independantly. Within each half it repeats itself dividing the set again in half and attacking each half.. Thus, if the list to be sorted consisted of eight items, merge sort would break the set up into sets of four, then sets of two, then sets of one. Then it would merge each set back together, placing items in appropriate order according to the set they are currently in and the set they are being merged with. The structure looks as follows:</p>
+<table width="20%"  border="1">
+  <tr bgcolor="#666666">
+    <td colspan="8"><div align="center" class="style1 style2">All Items </div></td>
+  </tr>
+  <tr>
+    <td colspan="4" bgcolor="#0033FF"><div align="center" class="style3">1/2</div></td>
+    <td colspan="4" bgcolor="#FF0000"><div align="center" class="style3">1/2</div></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#0033FF"><div align="center" class="style3">1/4</div></td>
+    <td colspan="2" bgcolor="#00FFFF"><div align="center" class="style3">1/4</div></td>
+    <td colspan="2" bgcolor="#FF0000"><div align="center" class="style3">1/4</div></td>
+    <td colspan="2" bgcolor="#CC9933"><div align="center" class="style3">1/4</div></td>
+  </tr>
+  <tr>
+    <td width="12%" bgcolor="#0033FF"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="12%" bgcolor="#0099FF"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="12%" bgcolor="#00FFFF"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="12%" bgcolor="#00FF99"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="12%" bgcolor="#FF0000"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="12%" bgcolor="#FF6600"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="14%" bgcolor="#CC9933"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+    <td width="14%" bgcolor="#CC6666"><div align="center"><span class="style1"><span class="style2">1/8</span></span></div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

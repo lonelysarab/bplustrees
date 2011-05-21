@@ -1,0 +1,139 @@
+<graph weighted = "true" heuristics = "true">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<vertex color = "#FFFFFF">
+<label>A
+3</label>
+<position x = "0.5133419842152497" y = "0.5479231114176769"/>
+<edge target = "B" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>B
+2</label>
+<position x = "0.7651824461808459" y = "0.5041060249910173"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>C
+2</label>
+<position x = "0.611863854631928" y = "0.05"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>D
+3</label>
+<position x = "0.37364506213521775" y = "0.25527449181606104"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>E
+6</label>
+<position x = "0.05" y = "0.5348414046402058"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA">
+<label>F
+0</label>
+<position x = "0.8564581350240625" y = "0.20685972392662755"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>G
+5</label>
+<position x = "0.5437252913681593" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF">
+<label>H
+4</label>
+<position x = "0.9500000000000001" y = "0.7990346251767706"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+</graph>

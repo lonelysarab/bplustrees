@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Chain Mult Info Page</title>
+</head>
+<body>
+      <h2>The Chain Multiplication Algorithm </h2>
+
+      <p> The basic chain matrix multiplication problem computes the matrix product A<sub>1</sub>  * 
+A<sub>2</sub> * ... * A<sub>n</sub> performing the minimum amount of scalar multiplications.
+The optimal solution requires the determination of the order in which to multiply the "pairs" of matrices
+making up the product together. </p>
+<p>In order for the multiplication to take place, each contiguous pair of matrices A<sub>i</sub>
+and A<sub>i+1</sub> must be conformable for multiplication.  The number of columns of A<sub>i</sub> must 
+equal the number of rows of A<sub>i+1</sub>.  The dimension of each matrix A<sub>j</sub> is p<sub>j-1</sub> rows
+by p<sub>j</sub> columns, for j = 1, 2, ..., n.
+</p>
+<p>The final computation of the optimal solution has the form</p>
+
+<p><center><h2>
+A<sub>1..k</sub> * A<sub>k+1..n</sub>
+</center></h2></p>
+
+<p>for some k = 1,2,..n-1.</p>
+
+<p>This product, since optimal, has the fewest possible total multiplications. The number of scalar multiplications for this optimal solution is:</p>
+
+<p><center><h3>
+# of scalar multiplications to compute A<sub>1..k</sub></p>
+<p> 
++ # scalar multiplications to compute A<sub>k+1..n</sub></p>
+<p>
++ P<sub>0</sub> * P<sub>k</sub> *P<sub>n</sub>
+</center></h3></p>
+<p>This computation partitions the original problem into two smaller sub-problems.  Our dynamic programming
+algorithm is structured to use this formulation for all sub-problems. The computations are performed so that the two sub-problem computations are
+known and recorded in the dynamic programming matrix before the computation of the expanded sub-problem.  For example, when computing
+A<sub>1..3</sub>, the values for A<sub>1..2</sub> and A<sub>2..3</sub> will be available in the matrix.
+<p>Hence, we can conclude that the number of calculations necessary to compute A<sub>1..k</sub> and A<sub>k+1..n</sub> must be optimal; otherwise we could improve the overall (optimal) solution by making improvments to the computation. </p>
+To calculate the number of scalar multiplications required to compute A<sub>1..3</sub>, one needs to calculate A<sub>1..2</sub> * A<sub>3</sub> and A<sub>1</sub> * 
+A<sub>2..3</sub> and select the option which results in the fewer number of scalar multiplications.
+</p>
+
+<h3>Comments on the visualization</h3>
+
+<p>The visualization intially displays the recursive call tree for the chain multiplication problem.  Then the visualization continues with the dynamic programming matrix with all its
+cells set to 0. On the left of the screen the matrices to be multiplied and their dimensions are displayed.  As illustrated in the example above, the algorithm first fills in the 2-band, 3-band, ..., n-band cell by cell in that order.  
+For each entry in the current x-band the algorithm tests all possible ways
+to compute the number of scalar multiplications for the product of the x matrices.  Below the dynamic programming matrix, the visualization displays the current ordering of the multiplication
+and in the active cell, whose background is colored red, the minimum number of scalar multiplications required for the currently tested orderings.  When the computation for the cell is complete
+the cell is colored yellow and the cell contains the minimum number of scalar multiplications for product of the x matrices used for that matrix product.</p>
+<p>
+Finally, the visualization displays the final optimal number of scalar multiplications (red background) and in the message area below the dynamic programming matrix the 
+parenthesized optimal matrix product is displayed.</p>
+</body>
+</html>

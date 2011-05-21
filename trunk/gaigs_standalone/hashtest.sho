@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+<snap>
+  <title>Hashtable Test Slide 1</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 2</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 3</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+   
+<snap>
+  <title>Hashtable Test Slide 4</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+            <hashlistnode boxdata="nate"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 5</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+            <hashlistnode boxdata="nate"></hashlistnode>
+            <hashlistnode boxdata="andrew"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 6</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+            <hashlistnode boxdata="nate"></hashlistnode>
+            <hashlistnode boxdata="andrew"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="mike"></hashlistnode>
+          </hashlist> 
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox></hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 7</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+            <hashlistnode boxdata="nate"></hashlistnode>
+            <hashlistnode boxdata="andrew"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="mike"></hashlistnode>
+          </hashlist> 
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="joe"></hashlistnode>
+          </hashlist>
+        </hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+<snap>
+  <title>Hashtable Test Slide 8</title>
+  <hashstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <hashbox boxname="table">
+      <hashstruct>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="tom"></hashlistnode>
+            <hashlistnode boxdata="nate"></hashlistnode>
+            <hashlistnode boxdata="andrew"></hashlistnode>
+          </hashlist>
+        </hashbox>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="mike"></hashlistnode>
+          </hashlist> 
+        </hashbox>
+        <hashbox></hashbox>
+        <hashbox>
+          <hashlist>
+            <hashlistnode boxdata="joe"></hashlistnode>
+            <hashlistnode boxdata="myles"></hashlistnode>
+          </hashlist>
+        </hashbox>
+      </hashstruct>
+    </hashbox>
+  </hashstructroot>
+</snap>
+
+</show>

@@ -1,0 +1,24 @@
+JHAVEPOP Add at end
+memorymanager/add_at_end new_data_only gaigs
+**** 
+JHAVEPOP Duplicate
+memorymanager/duplicate new_data_only gaigs
+**** 
+JHAVEPOP Remove A
+memorymanager/remove_a new_data_only gaigs
+**** 
+JHAVEPOP Remove A and delete
+memorymanager/remove_a_and_delete new_data_only gaigs
+**** 
+JHAVEPOP Remove A with bug
+memorymanager/remove_a_with_bug new_data_only gaigs
+**** 
+JHAVEPOP Reverse
+memorymanager/reverse new_data_only gaigs
+**** 
+JHAVEPOP Rotate
+memorymanager/rotate new_data_only gaigs
+**** 
+JHAVEPOP Empty Template 
+memorymanager/empty new_data_only gaigs
+**** 

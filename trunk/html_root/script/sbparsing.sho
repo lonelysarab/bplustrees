@@ -1,0 +1,236 @@
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+Take note of the following values;
+you will need them to answer stop-and-think quiz questions.
+The infix priority for '(' is 9, and the stack priority for '(' is 0.
+The infix priority for ')' is 0, and the stack priority for ')' is undefined.
+The infix priority for '+' is 1, and the stack priority for '+' is 1.
+The infix priority for '-' is 1, and the stack priority for '-' is 1.
+The infix priority for '*' is 2, and the stack priority for '*' is 2.
+The infix priority for '/' is 2, and the stack priority for '/' is 2.
+The infix priority for '^' is 3, and the stack priority for '^' is 3.
+***\***
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: A+(C-B)/A^B
+The current token 'A' is not an operator,
+so append it to the postfix expression.
+The postfix expression is: A.
+***\***
+\R#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: +(C-B)/A^B
+The current token '+' is an operator with infix priority of 1.
+Pop '#' off the operator stack to compare with this token.
+***\***
+\R#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: +(C-B)/A^B
+'#' has a stack priority of 0.
+This is less than the infix priority of '+',
+so push '#' and the current token '+' on to the operator stack.
+***\***
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: (C-B)/A^B
+The current token '(' is an operator with infix priority of 9.
+Pop '+' off the operator stack to compare with this token.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: (C-B)/A^B
+'+' has a stack priority of 1.
+This is less than the infix priority of '(',
+so push '+' and the current token '(' on to the operator stack.
+***\***
+\R#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: C-B)/A^B
+The current token 'C' is not an operator,
+so append it to the postfix expression.
+The postfix expression is: AC.
+***\***
+\R(
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: -B)/A^B
+The current token '-' is an operator with infix priority of 1.
+Pop '(' off the operator stack to compare with this token.
+***\***
+\R(
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: -B)/A^B
+'(' has a stack priority of 0.
+This is less than the infix priority of '-',
+so push '(' and the current token '-' on to the operator stack.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: B)/A^B
+The current token 'B' is not an operator,
+so append it to the postfix expression.
+The postfix expression is: ACB.
+***\***
+\R-
+(
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: )/A^B
+When we reach a closing parenthesis
+we pop items off the stack and append them to the postfix expression
+until we find an opening parenthesis.
+The postfix expression is: ACB-.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: /A^B
+The current token '/' is an operator with infix priority of 2.
+Pop '+' off the operator stack to compare with this token.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: /A^B
+'+' has a stack priority of 1.
+This is less than the infix priority of '/',
+so push '+' and the current token '/' on to the operator stack.
+***\***
+\R#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: A^B
+The current token 'A' is not an operator,
+so append it to the postfix expression.
+The postfix expression is: ACB-A.
+***\***
+\R/
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: ^B
+The current token '^' is an operator with infix priority of 3.
+Pop '/' off the operator stack to compare with this token.
+***\***
+\R/
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: ^B
+'/' has a stack priority of 2.
+This is less than the infix priority of '^',
+so push '/' and the current token '^' on to the operator stack.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+The infix expression is: B
+The current token 'B' is not an operator,
+so append it to the postfix expression.
+The postfix expression is: ACB-AB.
+***\***
+\R^
+/
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+Since the infix expression is empty,
+pop the rest of the operators off the stack and
+append them to the postfix expression.
+***\***
+\R^
+/
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+Pop '^' off the stack and append to the postfix expression.
+The postfix expression is: ACB-AB^.
+***\***
+\R/
++
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+Pop '/' off the stack and append to the postfix expression.
+The postfix expression is: ACB-AB^/.
+***\***
+\R+
+#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+Pop '+' off the stack and append to the postfix expression.
+The postfix expression is: ACB-AB^/+.
+***\***
+\R#
+***^***
+VIEW WINDOWS 1
+Stack 0.015 0.015 HeavyBold
+1
+We're done.
+The initial infix expression was A+(C-B)/A^B.
+The final postfix expression is: ACB-AB^/+.
+***\***
+\R#
+***^***

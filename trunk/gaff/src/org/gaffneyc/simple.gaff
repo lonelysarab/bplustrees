@@ -1,0 +1,45 @@
+Res:org/gaffneyc/image1.jpg tf
+Res:org/gaffneyc/image2.jpg mc
+Res:org/gaffneyc/image3.jpg ms
+Res:org/gaffneyc/image4.jpg fib
+
+STARTQUESTIONS
+TFQUESTION tf
+This is a binary search tree
+ENDTEXT
+ANSWER
+F
+ENDANSWER
+MCQUESTION mc
+If this is to be a binary search tree, which value could appear in the blank circle?
+ENDTEXT
+50
+ENDCHOICE
+70
+ENDCHOICE
+90
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MSQUESTION ms
+If this is to be a binary search tree, which values could appear in the blank circle?
+ENDTEXT
+30
+ENDCHOICE
+50
+ENDCHOICE
+70
+ENDCHOICE
+80
+ENDCHOICE
+ANSWER
+3 4
+ENDANSWER
+FIBQUESTION fib
+If this is to be a binary search tree, which (integer) value could appear in the blank circle?
+ENDTEXT
+ANSWER
+80
+ENDANSWER
+

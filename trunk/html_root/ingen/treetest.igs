@@ -1,0 +1,9 @@
+TEXTFIELD
+Enter operations: b | g {bin or gen} (((addlx,y|addrx,y) | (addx,y) {add x to parent y - l and r for bin}) | remx | colx,y {color x hex string y})*
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+User-defined
+Random
+ENDCHOICE

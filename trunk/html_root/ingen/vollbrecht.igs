@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>How many pairs to match?</label_line>
+    <default_field>6</default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>
+

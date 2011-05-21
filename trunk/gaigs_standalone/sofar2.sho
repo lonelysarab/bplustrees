@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+<snap>
+<title fontsize="0.08">trees, scaled 150%, 75% (w/ 150% fontsize), 50%</title>
+<tree x_spacing="2.0" y_spacing="2.0">
+<name fontsize="0.06">A name for this binary tree in font 0.06
+This second line should work..</name>
+<bounds x1 = "-0.25" y1 = "-0.75" x2 = "1.25" y2 = "0.75"/>
+<binary_node>
+<label>A</label>
+<left_node>
+<label>B</label>
+</left_node>
+</binary_node>
+</tree>
+<tree x_spacing="2.0" y_spacing="2.0">
+<bounds x1 = "-0.05" y1 = "-0.25" x2 = "0.70" y2 = "0.5" fontsize="0.045"/>
+<binary_node>
+<label>A</label>
+<left_node>
+<label>B</label>
+</left_node>
+</binary_node>
+</tree>
+<tree x_spacing="2.0" y_spacing="2.0">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "0.5" y2 = "0.5"/>
+<binary_node>
+<label>A</label>
+<left_node>
+<label>B</label>
+</left_node>
+</binary_node>
+</tree>
+<question_ref ref="abc"/>
+</snap>
+
+<snap>
+<title>1-lined stack, scaled 150% but with 50% normal fontsize</title>
+<stack>
+<bounds x1 = "-0.25" y1 = "-0.25" x2 = "1.25" y2 = "1.25" fontsize="0.015"/>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</stack>
+<question_ref ref="fib"/>
+</snap>
+
+<snap>
+<title>1-lined stack, scaled 50% w/ 133% text, 25%, 13%</title>
+<stack>
+<bounds x1 = "0.0" y1 = "0.0" x2 = "0.5" y2 = "0.5" fontsize="0.04"/>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</stack>
+<stack>
+<bounds x1 = "0.5" y1 = "0.5" x2 = "0.75" y2 = "0.75"/>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</stack>
+<stack>
+<bounds x1 = "0.75" y1 = "0.75" x2 = "0.875" y2 = "0.875"/>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</stack>
+</snap>
+
+<snap>
+<title>bargraph, scaled 150%</title>
+<bargraph>
+<bounds x1 = "-0.25" y1 = "-0.25" x2 = "1.25" y2 = "1.25"/>
+<bar magnitude="60" color="#00B800"><label></label></bar>
+<bar magnitude="70" color="#00C000"><label></label></bar>
+<bar magnitude="30" color="#00C800"><label></label></bar>
+<bar magnitude="40" color="#00D000"><label></label></bar>
+<bar magnitude="50" color="#00D800"><label></label></bar>
+<bar magnitude="35" color="#00E000"><label></label></bar>
+<bar magnitude="60" color="#00E800"><label></label></bar>
+<bar magnitude="80" color="#00F000"><label></label></bar>
+<bar magnitude="50" color="#00F800"><label></label></bar>
+<bar magnitude="40" color="#00FF00"><label></label></bar>
+</bargraph>
+</snap>
+
+<snap>
+<title>array 1d, scaled 150%</title>
+<array>
+<bounds x1="-0.25" y1="-0.25" x2="1.25" y2="1.25" fontsize="0.015"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+</snap>
+
+<snap>
+<title>array 1d, 50%, 25% w/ 217% text, 13%</title>
+<array>
+<bounds x1="0.0" y1="0.0" x2="0.5" y2="0.5"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+<array>
+<bounds x1="0.5" y1="0.5" x2="0.75" y2="0.75" fontsize="0.065"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+<array>
+<bounds x1="0.75" y1="0.75" x2="0.875" y2="0.875"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+</snap>
+
+<snap>
+<title>array 1d, 100%</title>
+<array>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+</snap>
+
+<snap>
+<title>array 1d, 50%, 25%, 13%</title>
+<array>
+<bounds x1="0.0" y1="0.0" x2="0.5" y2="0.5"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+<array>
+<bounds x1="0.5" y1="0.5" x2="0.75" y2="0.75"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+<array>
+<bounds x1="0.75" y1="0.75" x2="0.875" y2="0.875"/>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+</array>
+</snap>
+
+<snap>
+<title>array 2d</title>
+<array>
+<row_label>A</row_label>
+<row_label>B</row_label>
+<row_label>C</row_label>
+<column_label>A</column_label>
+<column_label>B</column_label>
+<column_label>C</column_label>
+<column>
+<list_item color="#400000">
+<label>Aardvark
+and Advocado</label>
+</list_item>
+<list_item color="#800000">
+<label>Apple</label>
+</list_item>
+<list_item color="#C00000">
+<label>Arc</label>
+</list_item>
+</column>
+<column>
+<list_item color="#500000">
+<label>Bumble</label>
+</list_item>
+<list_item color="#900000">
+<label>Baffle</label>
+</list_item>
+<list_item color="#D00000">
+<label>Bliss</label>
+</list_item>
+</column>
+<column>
+<list_item color="#600000">
+<label>Carol</label>
+</list_item>
+<list_item color="#A00000">
+<label>Climbing</label>
+</list_item>
+<list_item color="#E00000">
+<label>Crew</label>
+</list_item>
+</column>
+</array>
+</snap>
+
+<snap>
+<title>bargraph</title>
+<bargraph>
+<bounds x1 = "0.05" y1 = "0.05" x2 = "0.95" y2 = "0.93"/>
+<bar magnitude="60" color="#00B800"/>
+<bar magnitude="70" color="#00C000"/>
+<bar magnitude="30" color="#00C800"/>
+<bar magnitude="40" color="#00D000"/>
+<bar magnitude="50" color="#00D800"/>
+<bar magnitude="35" color="#00E000"/>
+<bar magnitude="60" color="#00E800"/>
+<bar magnitude="80" color="#00F000"/>
+<bar magnitude="50" color="#00F800"/>
+<bar magnitude="40" color="#00FF00"/>
+</bargraph>
+</snap>
+
+<snap>
+<title>1-lined linkedlist</title>
+<linkedlist>
+<!-- <bounds x1 = "0.2" y1 = "0.0" x2 = "0.8" y2 = "1.0"/> -->
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line here</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</linkedlist>
+</snap>
+
+<snap>
+<title>1-lined queue</title>
+<queue>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</queue>
+</snap>
+
+<snap>
+<title>1-lined stack</title>
+<stack>
+<list_item color="#00AA00">
+<label>1line</label>
+</list_item>
+<list_item color="#009900">
+<label>aline</label>
+</list_item>
+<list_item color="#00BB00">
+<label>single line</label>
+</list_item>
+<list_item color="#008800">
+<label>just 1</label>
+</list_item>
+<list_item color="#00CC00">
+<label>end</label>
+</list_item>
+</stack>
+</snap>
+
+<snap>
+<title>queue</title>
+<queue>
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<list_item color="#AA4433">
+<label>A
+aardvark</label>
+</list_item>
+<list_item color="#22FF44">
+<label>B
+bunny</label>
+</list_item>
+<list_item color="#ABCDEF">
+<label>C
+canteloupe</label>
+</list_item>
+<list_item color="#123456">
+<label>D
+dove</label>
+</list_item>
+</queue>
+</snap>
+
+<snap>
+<title>stack</title>
+<stack>
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<list_item color="#AA4433">
+<label>A
+aardvark</label>
+</list_item>
+<list_item color="#22FF44">
+<label>B
+bunny</label>
+</list_item>
+<list_item color="#ABCDEF">
+<label>C
+canteloupe</label>
+</list_item>
+<list_item color="#123456">
+<label>D
+dove</label>
+</list_item>
+</stack>
+</snap>
+
+<snap>
+<title>linkedlist</title>
+<linkedlist>
+<!-- <bounds x1 = "0.2" y1 = "0.0" x2 = "0.8" y2 = "1.0" fontsize="0.05"/> -->
+<list_item color="#AA4433">
+<label>A
+aardvark</label>
+</list_item>
+<list_item color="#22FF44">
+<label>B
+bunny</label>
+</list_item>
+<list_item color="#ABCDEF">
+<label>C
+canteloupe</label>
+</list_item>
+<list_item color="#123456">
+<label>D
+dove</label>
+</list_item>
+</linkedlist>
+</snap>
+
+<snap>
+<title>random_unweighted_graph.xml</title>
+
+<graph weighted = "false" heuristics = "false">
+<bounds x1 = "0.05" y1 = "0.05" x2 = "0.95" y2 = "0.93"/>
+<!-- <bounds x1 = "0.0" y1 = "0.0" x2 = "0.5" y2 = "0.5"/> -->
+<vertex id="A" color = "#44BBFF">
+<label>A</label>
+<position x = "0.5937003814135556" y = "0.4304447394716228"/>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex id="B" color = "red">
+<label>B</label>
+<position x = "0.9500000000000001" y = "0.06480854271628235"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C</label>
+<position x = "0.17499927963369455" y = "0.05"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D</label>
+<position x = "0.2905173149922872" y = "0.5859154799672157"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E</label>
+<position x = "0.05" y = "0.34634803562719746"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="F" color = "#FFFFFF">
+<label>F</label>
+<position x = "0.5022961650097888" y = "0.09099536835423816"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G</label>
+<position x = "0.5740928349512656" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+</vertex>
+</graph>
+</snap>
+
+<!-- BREAK -->
+
+<snap>
+<title>random_heuristic_graph.xml</title>
+<graph weighted = "true" heuristics = "true">
+<bounds x1 = "0.05" y1 = "0.05" x2 = "0.95" y2 = "0.93"/>
+<vertex id="A" color = "#FFFFFF">
+<label>A
+3</label>
+<position x = "0.5133419842152497" y = "0.5479231114176769"/>
+<edge target = "B" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="B" color = "#FFFFFF">
+<label>B
+2</label>
+<position x = "0.7651824461808459" y = "0.5041060249910173"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C
+2</label>
+<position x = "0.611863854631928" y = "0.05"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D
+3</label>
+<position x = "0.37364506213521775" y = "0.25527449181606104"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E
+6</label>
+<position x = "0.05" y = "0.5348414046402058"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="F" color = "#AAFFAA">
+<label>F
+0</label>
+<position x = "0.8564581350240625" y = "0.20685972392662755"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G
+5</label>
+<position x = "0.5437252913681593" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="H" color = "#FFFFFF">
+<label>H
+4</label>
+<position x = "0.9500000000000001" y = "0.7990346251767706"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+
+<!-- BREAK -->
+
+<snap>
+<title>random_noheuristic_graph.xml</title>
+<graph weighted = "true" heuristics = "false">
+<bounds x1 = "0.05" y1 = "0.05" x2 = "0.95" y2 = "0.93"/>
+<vertex id="A" color = "#FFFFFF">
+<label>A</label>
+<position x = "0.4534915783595551" y = "0.5234957142584847"/>
+<edge target = "B" color = "#999999">
+<label>7</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="B" color = "#FFFFFF">
+<label>B</label>
+<position x = "0.8642419892383673" y = "0.19141519591901135"/>
+<edge target = "A" color = "#999999">
+<label>7</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>1</label>
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C</label>
+<position x = "0.5425579790796836" y = "0.05"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D</label>
+<position x = "0.05" y = "0.22448750719175375"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E</label>
+<position x = "0.40404349364871256" y = "0.20970391865091437"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>11</label>
+</edge>
+</vertex>
+<vertex id="F" color = "#FFFFFF">
+<label>F</label>
+<position x = "0.7064550372383529" y = "0.5341086416929379"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>8</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>6</label>
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G</label>
+<position x = "0.24298335860200182" y = "0.8593770247752546"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="H" color = "#FFFFFF">
+<label>H</label>
+<position x = "0.6015175456567101" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+<vertex id="I" color = "#FFFFFF">
+<label>I</label>
+<position x = "0.9500000000000001" y = "0.7952710888074932"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+
+<!-- BREAK -->
+
+<snap>
+<title>binary_tree_noweighted_edges.xml</title>
+<tree x_spacing = "1.25" y_spacing = "1.25">
+<!-- bounds left out -->
+<binary_node color = "#AAFFAA">
+<label>A</label>
+<left_node color = "#FFAAFF">
+<label>B</label>
+<left_node color = "#886644">
+<label>D</label>
+</left_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</left_node>
+<tree_edge color = "#999999">
+</tree_edge>
+<right_node color = "#446688">
+<label>C</label>
+<right_node color = "#FFFFFF">
+<label>E</label>
+</right_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</right_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</binary_node>
+</tree>
+
+</snap>
+
+<snap>
+<title>binary_tree_noweighted_edges.xml plus a label
+and edge highlight</title>
+
+<tree x_spacing = "3.25" y_spacing = "3.25">
+<!-- bounds left out -->
+<binary_node color = "#AAFFAA">
+  <label>A</label>
+  <left_node color = "#FFAAFF">
+    <label>B</label>
+    <left_node color = "#886644">
+      <label>D</label>
+    </left_node>
+    <tree_edge color = "#999999">
+    <label>2r</label>
+    </tree_edge>
+  </left_node>
+  <tree_edge color = "#FF0000">
+    <label>PI</label>
+  </tree_edge>
+  <right_node color = "#446688">
+    <label>C</label>
+    <right_node color = "#FFFFFF">
+      <label>E</label>
+    </right_node>
+    <tree_edge color = "green">
+      <label>Longer Label</label>
+    </tree_edge>
+  </right_node>
+  <tree_edge color = "#999999">
+  <label>K2</label>
+  </tree_edge>
+</binary_node>
+</tree>
+
+</snap>
+
+<snap>
+<title>general_tree_weighted_edges.xml</title>
+
+<tree x_spacing = "2.0" y_spacing = "2.0">
+  <!-- bounds left out -->
+  <tree_node color = "#AAFFAA">
+    <label>A</label>
+    <tree_node color = "#FFAAFF">
+      <label>B</label>
+      <tree_node color = "#FFFFFF">
+        <label>E</label>
+        <tree_node color = "#FFFFFF">
+          <label>J</label>
+        </tree_node>
+        <tree_edge color = "#999999">
+          <label>0.0</label>
+        </tree_edge>
+        <tree_node color = "#FFFFFF">
+          <label>K</label>
+        </tree_node>
+        <tree_edge color = "#999999">
+          <label>0.0</label>
+        </tree_edge>
+      </tree_node>
+      <tree_edge color = "#999999">
+        <label>0.0</label>
+      </tree_edge>
+    </tree_node>
+    <tree_edge color = "#999999">
+      <label>0.0</label>
+    </tree_edge>
+    <tree_node color = "#AAAAAA">
+      <label>C</label>
+      <tree_node color = "#FFFFFF">
+        <label>F</label>
+      </tree_node>
+      <tree_edge color = "#999999">
+        <label>0.0</label>
+      </tree_edge>
+      <tree_node color = "#FFFFFF">
+        <label>G</label>
+      </tree_node>
+      <tree_edge color = "#999999">
+        <label>0.0</label>
+      </tree_edge>
+      <tree_node color = "#FFFFFF">
+        <label>H</label>
+      </tree_node>
+      <tree_edge color = "#999999">
+        <label>0.0</label>
+      </tree_edge>
+    </tree_node>
+    <tree_edge color = "#999999">
+      <label>0.0</label>
+    </tree_edge>
+    <tree_node color = "#ACBDAE">
+      <label>D</label>
+      <tree_node color = "#FFFFFF">
+        <label>I</label>
+      </tree_node>
+      <tree_edge color = "#999999">
+        <label>0.0</label>
+      </tree_edge>
+    </tree_node>
+    <tree_edge color = "#999999">
+      <label>0.0</label>
+    </tree_edge>
+  </tree_node>
+</tree>
+
+</snap>
+
+<questions>
+STARTQUESTIONS
+TFQUESTION abc
+This panel works.
+ENDTEXT
+ANSWER
+T
+ENDANSWER
+FIBQUESTION fib
+The reason this frame looks bad is:
+ENDTEXT
+ANSWER
+happy happy joy joy
+happy*2 + joy*2
+happpy happpy jooy jooy
+happpy*2 + jooy*2
+ENDANSWER
+</questions>
+
+</show>

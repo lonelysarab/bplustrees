@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<pseudocode>
+  <stack><replace var="current_function" /></stack>
+  <code>
+    <signature>Pseudocode</signature>
+    <line num="1"> delete(x) { </line>
+    <line num="2" indent="1"> while(current != null) {//traverse down to leaf</line>
+    <line num="3" indent="2"> index = 0</line>
+    <line num="4" indent="2"> while (x &gt; currentNode(index) AND index &lt; currentNode.size)</line>
+    <line num="5" indent="3"> index = index+1</line>
+    <line num="6" indent="3"> parentNode = currentNode</line>
+    <line num="7" indent="3"> if (x &gt;= parentNode(index))</line>
+    <line num="8" indent="4"> currentNode = parentNode(index).getRightDownPointer</line>
+    <line num="9" indent="3"> else</line>
+    <line num="10" indent="4">currentNode = parentNode(index).getLeftDownPointer</line>
+    <line num="11" indent="1">} </line>
+    <line num="12" indent="1">//now parent represents a leaf</line>
+    <line num="13" indent="1">if(parent(index) != obj) { //object exist. delete it.</line>
+    <line num="14" indent="2">parent.remove(index)</line>
+    <line num="15" indent="2">if (parent.size &lt; minimumCapacity) {</line>
+    <line num="16" indent="3">if (parent.rightLeaf != null AND parent.parentPointer != null AND parent.parentPointer(0) == parent.rightLeaf.parentPointer(0) AND parent.rightLeaf.size() &lt; minimumCapacity) {</line>
+    <line num="17" indent="4">median = round(parent.size/2)</line>
+    <line num="18" indent="4">for (i=0; i&lt;median; i++) {</line>
+    <line num="19" indent="5">parent.add(parent.rightLeaf(0))</line>
+    <line num="20" indent="5">parent.rightLeaf.remove(0)</line>
+    <line num="21" indent="4">} </line>
+    <line num="22" indent="4">//getIndexInNode is an outside helper function and it is not</line>
+    <line num="23" indent="4">//necessary to know the details.</line>
+    <line num="24" indent="4">adjacentLeafIndex = getIndexInNode(parent.parentPointer,parent(0))+1</line>
+    <line num="25" indent="4">parent.parentPointer.set(adjacentLeafIndex,parent(0)) </line>
+    <line num="26" indent="3">} else { //distributing the elements cannot be done. there are too few elements</line>
+    <line num="27" indent="4">for (i=0; i&lt;parent.rightLeaf.size(); i++)</line>
+    <line num="28" indent="5">parent.add(parent.rightLeaf(i));</line>
+    <line num="29" indent="4">keyToRemove = getIndexInNode(parent.parentPointer,parent(0))+1</line>
+    <line num="30" indent="4">parent.parentPointer.remove(keyToRemove)</line>
+    <line num="31" indent="4">if (parent.rightLeaf.rightLeaf != null) {</line>
+    <line num="32" indent="5">parent.rightLeaf.rightLeaf = parent</line>
+    <line num="33" indent="5">parent.rightLeaf = parent.rightLeaf.rightLeaf</line>
+    <line num="34" indent="4">} </line>
+    <line num="35" indent="4">else</line>
+    <line num="36" indent="5">parent.rightLeaf = null</line>
+    <line num="37" indent="3">} </line>
+    <line num="38" indent="2">} </line>
+    <line num="39" indent="1">} </line>
+    <line num="40" indent="1">else</line>
+    <line num="41" indent="2">return false//x was not in the leaf</line>
+    <line num="42" indent="1">return true//x was successfully deleted. </line>
+    <line num="43">}</line>
+  </code>
+  <vars><var>x = <replace var="x" /></var></vars>
+</pseudocode>

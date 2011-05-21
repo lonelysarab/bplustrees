@@ -1,0 +1,6 @@
+Compile:  javac -cp .:support.jar DAGraphTest.java
+Sample Run with 6 nodes, 10 edges: java -cp .:support.jar DAGraphTest foo.sho 6 10
+View: java -jar jhave.jar -debug
+Then load the script foo.sho produced above
+
+ 

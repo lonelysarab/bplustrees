@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Floyd's Shortest Path Visualization </TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFCCFF">
+
+<P>Whereas Dijkstra's shortest path algorithm finds the shortest path from a single source vertex to all other
+vertices, Floyd shortest path algorithm is an <I>all-pairs</I> shortest path algorithm since it determines the
+(length of) the shortest path between all pairs of vertices in a network. Here you see an adjacency matrix representation
+of the edges in a connected network. Floyd's algorithm keeps track of the lengths of the shortest paths between
+vertices in an auxiliary <I>distance </I>array. The distance array is initialized as follows: <FONT SIZE="4" FACE="Arial, Helvetica">distance[i,j]
+=</FONT></P>
+
+<UL>
+	<LI><FONT FACE="Arial, Helvetica">0 if i = j</FONT>
+	<LI><FONT FACE="Arial, Helvetica">edgeweight(i, j) if such an edge exists</FONT>
+	<LI><FONT FACE="Arial, Helvetica">UNDEFINED otherwise</FONT>
+</UL>
+
+<P>View the next snapshot to see the initialized distance array corresponding to this adjacency matrix.
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+  <snap>
+    <title>An example bargraph</title>
+    <bargraph>
+      <bounds x1="0.2" y1="0.1" x2="0.8" y2="0.75"/>
+      <bar magnitude="64"  color="red"/>
+      <bar magnitude="255" color="green"/>
+      <bar magnitude="128" color="blue"/>
+    </bargraph>
+  </snap>
+
+  <snap>
+    <title>An example general tree</title>
+    <tree>
+      <tree_node color="blue">
+        <label>A</label>
+        <tree_node>
+          <label>B1</label>
+          <tree_node>
+	    <label>C</label>
+          </tree_node>
+        </tree_node>
+        <tree_node>
+          <label>B2</label>
+        </tree_node>
+      </tree_node>
+    </tree>
+  </snap>
+
+  <snap>
+    <title>An example binary tree</title>
+    <tree x_spacing="2.0" y_spacing="2.0">
+      <binary_node>
+        <label>-</label>
+	<left_node>
+	  <label>0</label>
+	  <right_node>
+	    <label>01</label>
+	  </right_node>
+	  <tree_edge color="red">
+	    <label>1</label>
+	  </tree_edge>
+	</left_node>
+	<tree_edge>
+	  <label>0</label>
+	</tree_edge>
+	<right_node>
+	  <label>1</label>
+	</right_node>
+	<tree_edge>
+	  <label>1</label>
+	</tree_edge>
+      </binary_node>
+    </tree>
+  </snap>
+
+  <snap>
+    <title>An example stack</title>
+    <stack>
+      <list_item color="#000000">
+        <label>Item A</label>
+      </list_item>
+      <list_item color="#888888">
+        <label>Item B</label>
+      </list_item>
+      <list_item color="#888888">
+        <label>Item C</label>
+      </list_item>
+    </stack>
+  </snap>
+
+  <snap>
+    <title>Hello World</title>
+  </snap>
+
+  <snap>
+    <title>An example 3x2 array</title>
+    <array>
+      <row_label>Row 0</row_label>
+      <row_label>Row 1</row_label>
+      <row_label>Row 2</row_label>
+      <column_label>Col0</column_label>
+      <column_label>Col2</column_label>
+      <column>
+        <list_item>
+	  <label>[0][0]</label>
+        </list_item>
+        <list_item>
+	  <label>[1][0]</label>
+	</list_item>
+        <list_item color="red">
+	  <label>[2][0]</label>
+	</list_item>
+      </column>
+      <column>
+        <list_item>
+	  <label>[0][1]</label>
+	</list_item>
+        <list_item>
+	  <label>[1][1]</label>
+	</list_item>
+        <list_item>
+	  <label>[2][1]</label>
+	</list_item>
+      </column>
+    </array>
+  </snap>
+
+  <snap>
+    <title>An example weighted graph (network)</title>
+    <graph weighted="true">
+      <vertex color="#FF8855" id="A">
+        <label>A</label>
+	<position x="0.2" y="0.2"/>
+	<edge target="B" color="#00FF00">
+	  <label>5</label>
+	</edge>
+	<edge target="C" directed="true">
+	  <label>8</label>
+	</edge>
+      </vertex>
+      <vertex color="#FF2222" id="B">
+        <label>B</label>
+	<position x="0.7" y="0.7"/>
+	<edge target="B" color="red">
+	  <label>1</label>
+	</edge>
+	<edge target="D">
+	  <label>3</label>
+	</edge>
+      </vertex>
+      <vertex color="#DD9922" id="C">
+        <label>C</label>
+	<position x="0.2" y="0.7"/>
+      </vertex>
+      <vertex color="#AA77AA" id="D">
+        <label>D</label>
+	<position x="0.7" y="0.2"/>
+      </vertex>
+    </graph>
+  </snap>
+</show>

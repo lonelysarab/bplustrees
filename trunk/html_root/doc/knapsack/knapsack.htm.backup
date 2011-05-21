@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#CCFFCC">
+
+<P ALIGN="CENTER"><FONT SIZE="5">The Lawrence Algorithm Visualization Web Server</FONT></P>
+<P>After a summer off-line due to installation of a campus firewall and a complete rewrite of our algorithm visualization
+software, the Lawrence Algorithm Visualization Web Server is back on-line. If you're not in a Lawrence computer
+science course and just want to get a glimpse of what the new environment looks like follow the link below. Right
+now you'll only find two algorithms to play with here -- the 0/1 Knapsack problem and the Knuth-Morris-Pratt string
+search algorithm. This is because we're still in the process of beta testing the system. However, once we confirm
+that everything is working correctly both inside and outside the firewall, we anticipate that more algorithms will
+appear in the very near future. In the meantime, we'd appreciate your feedback on the algortihms we do have. Send
+e-mail to thomas.naps@lawrence.edu.</P>
+<P ALIGN="CENTER"><A HREF="beta_test/AVClient.html">Algorithms not connected with Lawrence CS course</A></P>
+<P>
+<HR ALIGN="CENTER" SIZE="5">
+</P>
+<P><BR>
+<FONT SIZE="6" COLOR="red">Images for </FONT><A HREF="cmsc32/finalex/finalex.htm"><FONT SIZE="6">Questions 12 &amp;
+13</FONT></A><FONT SIZE="6" COLOR="red"> on final exam</FONT></P>
+
+<P><BR>
+For students in <FONT COLOR="red">computer</FONT> <FONT COLOR="green">graphics</FONT> (CMSC32), follow this <A
+HREF="cmsc32/cmsc32.html">link</A> to resources for the course.</P>
+<P>The on-line documentation for the POV Raytracer is available <A HREF="cmsc32/POVDOC/Povray.htm">here</A>.</P>
+<P><BR>
+
+<HR ALIGN="CENTER" SIZE="5">
+</P>
+<P><BR>
+For students in <FONT COLOR="#9900CC">software engineering</FONT> (CMSC25):</P>
+
+<UL>
+	<LI>Follow this <A HREF="cmsc25_2000/Intersection/MyIntersection.html">link</A> to the traffic intersection simulation.
+	<LI>Go <A HREF="cmsc25_2000/graphics/risk_graphics.htm">here</A> to view the graphics available for RISK. All of
+	these files can be copied from the folder <I>graphics_for_risk </I>in the class pickup directory
+	<LI>Browse all the documentation for the<A HREF="cmsc25_2000/javadoc/index-all.html"> </A><I><A HREF="cmsc25_2000/javadoc/index-all.html">junit</A></I><A
+	HREF="cmsc25_2000/javadoc/index-all.html">&nbsp;automated testing package</A>
+</UL>
+
+<P>
+<HR ALIGN="CENTER" SIZE="5">
+</P>
+<P><BR>
+If you're enrolled in CMSC34 (Algorithms &amp; Data Structures) you'll want to follow the link below. In addition
+to helping you learn some of the algorithms we're studying, it should also help you maximize your quiz grade. Why?
+If you can answer correctly the questions asked while you're watching, the visualization of an algorithm, they
+will prepare you for the kinds of questions you'll be asked in quizzes!</P>
+<P ALIGN="CENTER"><A HREF="cmsc34/AVClient.html">Algorithms for CMSC34</A></P>
+<P ALIGN="CENTER"><A HREF="cmsc34/primes.htm">Results of Sieve race</A></P>
+<P ALIGN="CENTER"><A HREF="cmsc34/project.html">Find out if the project you want is still available</A></P>
+<P><I><FONT COLOR="#CC0000">For students in CMSC34, you can play with the compression algorithms that we have been
+studying in class using the &quot;LZ&quot; Java application developed by Prof. Sami Khuri of San Jose State. To
+run this application on the Briggs 419 workstations, merely manuever to the LZ directory and run the program LZ.exe.
+If you want to use this application on your personal computer, copy the contents of the LZ directory to a similar
+directory on your machine and then start the java application via &quot;java LZ&quot;.</FONT></I></P>
+<P>
+<HR ALIGN="CENTER" SIZE="5">
+</P>
+<P><BR>
+If you're enrolled in CMSC05, click <A HREF="cmsc05/project.htm">here</A> to see what projects people have already
+selected. To practice with the algorithms for Lab 8, follow the link below.</P>
+<P ALIGN="CENTER"><A HREF="cmsc05/AVClient.html">Stable marriage and binary search tree algorithms for Lab 8</A>
+
+</BODY>
+
+</HTML>

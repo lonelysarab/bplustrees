@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>deleteMin(currentNode)</signature>
+	<line line_number="1">1	1</line>
+	<line line_number="2">2		2</line>
+	<line line_number="3">3		3</line>
+	<line line_number="4">4		4</line>
+	<line line_number="5">5	else</line>
+	<line line_number="6">6		return deleteMin(currentNode.left)</line>
+    </program_listing>
+    <variables>
+        <variable>delItem = <replace var="item" /></variable>
+    </variables>
+</pseudocode>

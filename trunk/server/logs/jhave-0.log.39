@@ -1,0 +1,55 @@
+5/20/11 5:11 PM - INFO: Using WEBROOT = http://localhost:8080/
+5/20/11 5:11 PM - INFO: Using Script Root of /home/wc/Desktop/trunk/server/build/classes/
+5/20/11 5:11 PM - INFO: Using User Script Directory of /home/wc/Desktop/trunk/
+5/20/11 5:11 PM - INFO: JHAVE Server started. Listening on port 7004
+5/20/11 5:11 PM - INFO: Accepted connection 1 from 127.0.0.1
+5/20/11 5:11 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 5:11 PM - INFO: Object: Thread[Thread-1,5,main]
+5/20/11 5:11 PM - INFO: Accepted connection 2 from 127.0.0.1
+5/20/11 5:11 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 5:11 PM - INFO: Object: Thread[Thread-2,5,main]
+5/20/11 5:11 PM - INFO: 1 bplus_tree no_username
+5/20/11 5:11 PM - FINER: ENTRY
+5/20/11 5:11 PM - FINE: sendtoClient - 100 Client and server connected with user login no_username
+5/20/11 5:11 PM - SEVERE: getObject
+java.io.EOFException
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2553)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1296)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:350)
+	at jhave.server.ClientConnection.getObject(ClientConnection.java:134)
+	at jhave.server.ClientConnection.run(ClientConnection.java:123)
+5/20/11 5:11 PM - FINE: killConnection: Communication Error.
+5/20/11 5:11 PM - FINE: sendtoClient - 101 Communication Error.
+5/20/11 5:11 PM - FINE: Killing client 1
+5/20/11 5:11 PM - SEVERE: getObject
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.net.SocketInputStream.read(SocketInputStream.java:182)
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2248)
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:2541)
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2551)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1296)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:350)
+	at jhave.server.ClientConnection.getObject(ClientConnection.java:134)
+	at jhave.server.ClientConnection.run(ClientConnection.java:123)
+5/20/11 5:11 PM - FINE: killConnection: Communication Error.
+5/20/11 5:11 PM - FINE: sendtoClient - 101 Communication Error.
+5/20/11 5:11 PM - SEVERE: sendtoClient
+java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1847)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1756)
+	at java.io.ObjectOutputStream.writeNonProxyDesc(ObjectOutputStream.java:1257)
+	at java.io.ObjectOutputStream.writeClassDesc(ObjectOutputStream.java:1211)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1395)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1158)
+	at java.io.ObjectOutputStream.writeFatalException(ObjectOutputStream.java:1547)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:333)
+	at jhave.server.ClientConnection.sendtoClient(ClientConnection.java:723)
+	at jhave.server.ClientConnection.killConnection(ClientConnection.java:660)
+	at jhave.server.ClientConnection.getObject(ClientConnection.java:144)
+	at jhave.server.ClientConnection.run(ClientConnection.java:123)
+5/20/11 5:11 PM - FINE: Killing client 2
+5/20/11 5:11 PM - FINE: Killing client 2

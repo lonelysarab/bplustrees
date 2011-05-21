@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+<snap>
+<title>Time to Test some Text</title>
+<text x="0.2" y="0.5" halign="0" valign="0" fontsize="0.04" color="#000000">Centered
+Vertically
+and
+Horizontally
+about (0.2, 0.5)</text>
+<text x="0.4" y="0.5" halign="1" valign="1" fontsize="0.04" color="#000000">Left Aligned 
+and
+Bottom Aligned 
+to (0.4, 0.5)</text>
+<text x="0.6" y="0.5" halign="2" valign="2" fontsize="0.04" color="#000000">Right Aligned
+and 
+Top Aligned 
+to (0.6, 0.5)</text>
+</snap>
+</show>

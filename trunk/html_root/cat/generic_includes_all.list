@@ -1,0 +1,116 @@
+The Alma Red-Black Trees
+rbtreemyles new_data_only gaigs
+**** 
+The Alma Union-Find
+unionfindmyles new_data_only gaigs
+**** 
+Richard's Dijkstra (UWO)
+dijkstrarichard new_data_only gaigs
+**** 
+Richard's Prim (UWO)
+primrichard new_data_only gaigs
+**** 
+Richard's Kruskal (UWO)
+kruskalrichard new_data_only gaigs
+**** 
+Richard's DFS --  (UWO)
+dfsrichard new_data_only gaigs
+**** 
+Richard's BFS --  (UWO)
+bfsrichard new_data_only gaigs
+**** 
+Richard's Floyd --  (UWO)
+floydrichard new_data_only gaigs
+**** 
+The Alma Heap Sort
+heapmyles new_data_only gaigs
+**** 
+The Alma Insertion Sort
+insertionmyles new_data_only gaigs
+**** 
+The Alma Selection Sort
+selectionmyles new_data_only gaigs
+**** 
+The Alma Bubble Sort
+bubblemyles new_data_only gaigs
+**** 
+The Alma Shell Sort
+shellmyles new_data_only gaigs
+**** 
+Parameter Passing - Reference
+parampassing dynamic gaigs
+Parameter Passing - Copy Restore
+parampassing2 dynamic gaigs
+****
+Parameter Passing - Name 
+parampassing3 dynamic gaigs
+Parameter Passing - Macro
+parampassing4 dynamic gaigs
+****
+Towers Of Hanoi in Animal
+hanoi dynamic animal
+**** 
+Bubble Sort in Animal
+bubblesortmike dynamic animal
+**** 
+Insertion Sort in Animal
+insertionsortmike dynamic animal
+**** 
+Selection Sort in Animal
+selectionsortmike dynamic animal
+**** 
+Quick Sort in Animal
+quicksortalex dynamic animal
+**** 
+Kevin's Patricia Tree (caution -loads slowly)
+patricia dynamic animal
+****
+Heap Sort
+heapsort_lln new_data_only gaigs
+****
+Red-black Tree 
+rbtreealex new_data_only gaigs
+**** 
+Splay Tree 
+splaytreealex new_data_only gaigs
+**** 
+234 Tree 
+tree234alex new_data_only gaigs
+**** 
+Binary Search Tree 
+bstreealex new_data_only gaigs
+**** 
+Topological sort
+topoalex dynamic gaigs
+**** 
+Dijkstra's Shortest path algo
+dijkstraalex dynamic gaigs
+Prim's minimal spanning tree
+primalex  dynamic gaigs 
+Kruskal's minimal spanning tree
+kruskalalex dynamic gaigs
+****
+Floyd's Algo
+floydalex dynamic gaigs
+**** 
+Huffman Encoding
+huffmanEncoding new_data_only gaigs
+****
+Huffman Decoding 
+huffmanDecoding new_data_only gaigs 
+****
+Hashing with linear probing
+linearhashing new_data_only gaigs
+****
+Hashing with quadratic probing
+quadhashing new_data_only gaigs
+****
+Double hashing (Rehashing)
+doublehashing new_data_only gaigs
+****
+Hashing with chained probing
+chainedhashing new_data_only gaigs
+****
+Stack-based Parsing
+parsing_lln dynamic gaigs
+**** 

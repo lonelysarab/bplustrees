@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>LCS Info Page</title>
+</head>
+<body>
+      <h2>The Longest Common Subsequence Algorithm </h2>
+
+      <p>You are given two ordered sequences of characters, for example seq1 = ['B', 'C', 'A', 'B'] and 
+	seq2 = ['D', 'B', 'B', 'C'].  A <u>common subsequence</u> is given by ['B', 'C'] - the subsequence is
+	found in bold in the rewrite of the two original sequences -
+	[<b>'B', 'C'</b>, 'A', 'B'] and ['D', <b>'B'</b>, 'B', <b>'C'</b>].  In this simple example ['B', 'C']
+	is one of the longest common subsequences - ['B', 'B'] is a second solution.  Note that the order of the
+elements in a common subsequence must match their order in the original sequences.
+</p>
+	<p> To solve this problem, any problem that seeks a dynamic programming solution, one looks for
+an idea that expresses the solution in terms of subproblems of the original problem.  This idea is typically expressed recursively.
+For the longest common subsequence problem, one approach is to observe that if the "last" element in each of the
+subsequences are the same, that element will appear in the solution to the problem and the problem can be reduced to
+finding the longest common subequence from the two sequences with their last item removed and adding the "last" element to the
+solution of the reduced probelm.  Let LCS(m,n) to be
+the optimal solution to the longest common subsequence problem where m = seq1.length and n = seq.length.  The 
+the observation can be expressed as LCS(m, n) = LCS(m-1, n-1) + 1.  If the "last" elements are not equal then
+the solution can be expressed as max{ LCS(m, n-1), LCS (n, m-1)} - where the two subproblems in turn eliminate the
+non-matching "last" element from their respective sequences.  For a complete recursive formulation, a base case is needed.  The base cases come from  
+observing that the when either of the sequences is empty the longest common subsequence has length 0.
+</p>
+<p>The complete recursive formulation of the solution<br />
+<pre>
+	LCS(m, n) = LCS(m-1, n-1)			if seq1[m] = seq2[n]
+	LCS(m, n) = max { LCS(m, n-1), LCS (n, m-1) }	if seq1[m] /= seq2[n]
+	LCS(m, 0) = 0
+	LCS(0, n) = 0
+</pre>
+<p>Implementing the solution using recursion often leads to a exponential algorithm; in this case a nearly complete binary
+tree - the tree has two children for every non-matching comparison.  To improve the efficiency of computing a solution, dynamic programming
+ replaces the recursive calls
+with an iterative algorithm that builds a 2-dimensional matrix.  The matrix has a initial row and column which reflect the
+base cases - the entries will be 0 representing the length of the longest common subsequence when one of the two sequences
+seq1 for row 0 and seq2 for column 0 is an empty sequence.  The matrix has one row for each element of seq1 and one column for each element 
+of seq2.
+</p>
+<p>The row i entries represent solutions to the following subproblems: find the longest common subsequence of the first i entries of seq1
+and, for each column j, the first j entries of seq2.  If i = 1, then the length of the longest common subsequence is at most 1 
+(the first subsequence has one element); it will be
+achieved if seq1[0] is equal to seq[j] for some j = 0, 1, ..., n-1 where n = seq2.length.
+<h3>Comments on the visualization</h3>
+<p>The visualization was designed with a particular pair of sequences in mind.  So when a different pair of sequences
+are chosen the Recursive Call Tree is not likely to fit the visualization window very well.  Move the tree and
+use the zoom in feature to see the tree in its entirety and the messages at the bottom of the screen.</p>
+
+<p>The visualization intially displays the recursive call tree for the two sequences chosen - a good test case is
+seq1 generated from "ABCBDAB" and seq2 generated from "BDCABA".  These sequences have a sufficient number of
+non-matching characters in each row to create an awesome recursive call tree.  The next stage, as you progress through
+the visualization, will first illustrate the dynamic programming matrix with the row and column of the empty subsequence
+entries, 0, filled in - after initialization.  Then it proceeds to evaluate each of the cells in the matrix - with color, and some audio, messages 
+that indicate the action taken.  For each entry into the dynamic programming matrix, the visualization displays the case you are in by displaying in
+blue the cell or cells from which the current entry will be computed - the current entry cell is colored  yellow.
+Finally, the visualization works through the filled dynamic programming matrix and finds the characters
+that make up the longest common subsequence as in the Longest Common Subsequence notes.</p>
+<p />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</body>
+</html>

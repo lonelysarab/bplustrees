@@ -1,0 +1,80 @@
+% Animal 1.3
+{
+  polygon "polygon" (35, 40) (35, 120) (45, 120) (45, 40) color black filled fillColor dark Gray
+  polygon "polygon0" (110, 40) (110, 120) (120, 120) (120, 40) color black filled fillColor dark Gray
+  polygon "polygon1" (185, 40) (185, 120) (195, 120) (195, 40) color black filled fillColor dark Gray
+  text "codeline[0]" "public void hanoi(int n, int from, int to, int via) {" at (20, 160) color black font Monospaced size 16
+  text "codeline[1]" "if (n == 1)" at (40, 178)
+  text "codeline[2]" "move(n, from, to);" at (60, 196)
+  text "codeline[3]" "else {" at (40, 214)
+  text "codeline[4]" "hanoi(n-1, from, via, to);" at (60, 232)
+  text "codeline[5]" "move(n, from, to);" at (60, 250)
+  text "codeline[6]" "hanoi(n-1, via, to, from);" at (60, 268)
+  text "codeline[7]" "}" at (40, 286)
+  text "codeline[8]" "}" at (20, 304)
+  polygon "polygon2" (30, 90) (30, 100) (50, 100) (50, 90) color black filled fillColor gold
+  polygon "polygon3" (25, 100) (25, 110) (55, 110) (55, 100) color black filled fillColor gold
+  polygon "polygon4" (20, 110) (20, 120) (60, 120) (60, 110) color black filled fillColor gold
+}
+DOCUMENTATION "http://csf11.acs.uwosh.edu/"
+{
+  polyline "polyline"  (35, 90) (35, 20) (110, 20) (110, 110) color black hidden
+  move "polygon2" via "polyline" after 0 ticks within 10 ticks
+}
+MCQUESTION "mc"
+{
+  polyline "polyline0"  (35, 100) (35, 20) (185, 20) (185, 110) color black hidden
+  move "polygon3" via "polyline0" after 0 ticks within 10 ticks
+}
+FIBQUESTION "fib"
+{
+  polyline "polyline1"  (110, 110) (110, 20) (185, 20) (185, 100) color black hidden
+  move "polygon2" via "polyline1" after 0 ticks within 10 ticks
+}
+TFQUESTION "tf"
+{
+  polyline "polyline2"  (35, 110) (35, 20) (110, 20) (110, 110) color black hidden
+  move "polygon4" via "polyline2" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline3"  (185, 100) (185, 20) (35, 20) (35, 110) color black hidden
+  move "polygon2" via "polyline3" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline4"  (185, 110) (185, 20) (110, 20) (110, 100) color black hidden
+  move "polygon3" via "polyline4" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline5"  (35, 110) (35, 20) (110, 20) (110, 90) color black hidden
+  move "polygon2" via "polyline5" after 0 ticks within 10 ticks
+}
+text "tText" "# Moves: 6" at (113, 140) centered font SansSerif size 16 bold
+STARTQUESTIONS
+TFQUESTION "tf"
+"This is a true-or-false question."
+ENDTEXT
+ANSWER 
+T
+ENDANSWER
+FIBQUESTION "fib"
+"Name a visualizer engine that is or will be supported by JHAVE."
+ENDTEXT
+ANSWER
+"animal"
+"gaigs"
+"g.a.i.g.s."
+"samba"
+"jsamba"
+ENDANSWER
+MCQUESTION "mc"
+"Which of the following algorithm visualizers does not show smooth animations?"
+ENDTEXT
+"Animal"
+ENDCHOICE
+"Gaigs"
+ENDCHOICE
+"Samba"
+ENDCHOICE
+ANSWER
+2
+ENDANSWER

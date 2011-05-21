@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+<snap>
+<title>List Test</title>
+<linkedlistnonull>
+<bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.05"/>
+<list_item color="red">
+<label>1</label>
+</list_item>
+</linkedlistnonull>
+</snap>
+
+<snap>
+<title>List Test</title>
+<linkedlistnonull>
+<bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.05"/>
+<list_item color="red">
+<label>1</label>
+</list_item>
+<list_item color="blue">
+<label>2</label>
+</list_item>
+</linkedlistnonull>
+</snap>
+
+<snap>
+<title>List Test</title>
+<linkedlistnonull>
+<bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.05"/>
+<list_item color="red">
+<label>1</label>
+</list_item>
+<list_item color="blue">
+<label>2</label>
+</list_item>
+<list_item color="red">
+<label>3</label>
+</list_item>
+</linkedlistnonull>
+</snap>
+
+<questions>
+</questions>
+</show>

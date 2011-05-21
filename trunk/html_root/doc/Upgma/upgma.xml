@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>UPGMA</call_stack>
+    <program_listing> 
+	<signature>UPGMA</signature>
+	<line line_number="1">1   while the distance Matrix is not a 1 by 1 matrix.</line>
+	<line line_number="2">2       Find smallest entry in Matrix.</line>
+	<line line_number="3">3       Make a new ancestor using the smallest entry.</line>
+	<line line_number="4">4       Recompute a new distance matrix.</line>
+    </program_listing>
+</pseudocode>
+

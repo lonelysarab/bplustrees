@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<P>The <I>0/1 knapsack problem</I> can be defined in terms of a thief who enters the place she will rob with a
+single knapsack to carry away her spoils. This knapsack has a specified limit on the weight it can support without
+tearing. We will designate this weight capacity as <B>cap</B>. After cracking open the safe, the thief finds that
+it contains <B>n</B> items, each with a specific weight and value. We will designate the weight and value of the
+<I>ith</I> item as <B>wt<SUB>i</SUB></B> and <B>value<SUB>i</SUB></B> respectively. For reasons that will soon
+become clear, it is necessary that these weights and values be integers. The problem of the thief is to maximize
+the total value of the set of items that she takes without going over the weight limit <B>cap</B>. The &quot;0/1&quot;
+binary qualifier on the name of this problem denotes that each item must be entirely accepted or rejected, that
+is, the thief cannot subdivide an item and take a portion of it.</P>
+
+<P>The solution to the 0/1 knapsack problem is initially formulated in recursive fashion. The actual implementation
+of the algorithm is then done by filling in a matrix in which the values in each row are defined in terms of values
+in the previous row. To understand this approach, we will employ the following notation:</P>
+
+<UL>
+	<LI><B>v(i,c), i &lt;=n, c &lt;= cap </B>denotes the total value of the optimal solution to a version of the problem
+	in which <B>c</B> is the capacity of the knapsack and only items 1, 2, 3, ... , <B>i</B> are considered. In the matrix
+	you will observe, <B>v(i,c)</B> is the value at row <B>i</B> and column <B>c</B>.
+</UL>
+
+<P>The key to our algorithm will be to define <B>v(i,c) </B>recursively for all <B>i &lt;=n, c &lt;= cap</B> and
+then note in particular that, when <B>i = n</B> and <B>c = cap</B>, we have a solution to the original problem.</P>
+<P>Let us first consider how <B>v(i, c)</B> can be defined when <B>i </B>= 1. In this case, we are asking for the
+total value of an optimal solution when only the first item is involved and the knapsack has a capacity of <B>c</B>.
+Here it is trivial to define <B>v(1, c)</B> =</P>
+
+<UL>
+	<LI><B>value<SUB>1 </SUB></B>if <B>wt<SUB>1</SUB></B> &lt;= <B>c</B>
+	<LI>0 otherwise since the knapsack cannot accommodate <B>wt<SUB>1</SUB></B>
+</UL>
+
+<P>&nbsp;Next we will consider how to define <B>v(i, c)</B> in terms of smaller parameter values when <B>i</B>
+&gt; 1. We will break down this definition along the following lines:&nbsp;</P>
+
+<OL>
+	<LI>If <B>wt<SUB>i</SUB></B> &gt; <B>c</B>, then <B>v(i, c) </B>must be the same as v(i - 1, c) since the
+	knapsack cannot possibly accommodate item <B>i</B>.
+	<LI>Otherwise to determine whether or not the solution contains item <B>i</B>, we must compare the:
+	<OL Type="a" STYLE="List-Style-Type : Lower-Alpha">
+		<LI>The optimal solution to the capacity <B>c</B> version of the problem when only items 1, 2, 3, ... <B>i</B> -1
+		are used, that is, v(i – 1, c), and
+		<LI>The optimal solution to:
+	</OL>
+</OL>
+
+
+<BLOCKQUOTE>
+	<BLOCKQUOTE>
+		<BLOCKQUOTE>
+			<P>(i) the capacity <B>c - wt<SUB>i</SUB></B> version of the problem when only items 1, 2, 3, ... <B>i</B> –1 are
+			used</P>
+			<P><I>plus</I>&nbsp;</P>
+			<P>(ii) <B>value<SUB>i</SUB></B>&nbsp;</P>
+		</BLOCKQUOTE>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<P>that is <B>v(i – 1, c - wt<SUB>i</SUB>) + value<SUB>i</SUB></B>. Why? Because if item <B>i</B> is to be included
+		in the optimal solution for the capacity <B>c</B> version of the problem with items chosen from among 1, 2, 3,
+		…, <B>i</B>, then the total value of that solution will be the value of the <B>i</B><I>th</I> item plus the optimal
+		solution to a smaller version of the problem in which items 1, 2, 3, ..., <B>i</B> – 1 are used to fill a knapsack
+		of capacity <B>c- wt<SUB>i</SUB></B>.</P>
+		<P>Whichever is the larger of (a) and (b) above represents the solution to the capacity <B>c</B> problem for items
+		chosen from among 1, 2, 3, ..., <B>i</B>. If (a) is larger, we know that item <B>i </B>should not be included. If
+		(b) is larger, then item <B>i</B> should be included.</P>
+	</UL>
+</UL>
+
+<P><FONT COLOR="red" FACE="Arial">When you are ready to watch the animation of this algorithn, merely press the
+&quot;Resume&quot; button on the controls.&nbsp;</FONT></P>
+
+<UL>
+	<UL>
+		<P>&nbsp;</P>
+
+		<P>&nbsp;
+	</UL>
+</UL>
+
+
+</BODY>
+
+</HTML>

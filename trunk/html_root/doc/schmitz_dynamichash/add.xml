@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>Extensible Hashing/Add Element</call_stack>
+	<program_listing>
+		<signature>Add Element</signature>
+
+		<line line_number="1">V = Number to be inserted
+HV = hash value of the element to be inserted
+DA = most significant dd bits of HV</line>
+		<line line_number="2">If directory element at DA is null then
+  create a new bucket
+  CD = smallest possible bucket depth that is assigned to created bucket's bd
+  //pointer adjustments
+  have all directory elements that share same most significant CD bits as HV point to created bucket
+  add V to the bucket</line>
+		<line line_number="3">Else
+  load into memory the bucket that directory element at address DA refers to
+  If the bucket is not full then</line>
+		<line line_number="4">    add V to the bucket</line>
+		<line line_number="5">  Else  //bucket split occurs
+    SB = the number of most significant bits shared by all elements in the splitting bucket and HV
+    CD = SB + 1
+    create a new bucket with bucket depth equal to CD
+    All elements in the bucket with bit value 1 at the CD most significant bit are moved to the new bucket
+    Add V to the appropriate bucket based on its CD most significant bit as well
+    If CD > Directory Depth Then  //directory expansion
+      expand the directory to 2 raised to the CD power elements
+      change the Directory Depth to CD
+      adjust pointers to point to the correct buckets
+    End If
+  End If
+End If</line>
+
+
+	</program_listing>
+	<variables>
+		<variable>V = Element Inserting
+
+hashvalue(<replace var="firstvalue" />)=<replace var="firsthash" /></variable> 
+		<variable>
+Elements in the Full Bucket 
+
+hashvalue(<replace var="secondvalue" />)=<replace var="secondhash" /></variable>
+		<variable>hashvalue(<replace var="thirdvalue" />)=<replace var="thirdhash" /></variable>
+
+	</variables>
+
+</pseudocode>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>The c array</label_line>
+    <default_field>7 5 3 1</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>The a array</label_line>
+    <default_field>4 3 2 1</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>The max weight b</label_line>
+    <default_field>6</default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>
+

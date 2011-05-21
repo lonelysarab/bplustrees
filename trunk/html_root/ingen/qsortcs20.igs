@@ -1,0 +1,8 @@
+CHOICE
+Array Order:
+RandomData
+DataInOrder
+DataInReverseOrder
+DataAlmostInOrder
+ENDCHOICE
+

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="s"/>/pivot</call_stack>
+    <program_listing>
+	<signature>pivot(list, left, right)</signature>
+	<line line_number="1">1   p = left - 1</line>
+<!-- 	<line line_number="2">2   while(left &lt;= right) </line>
+	<line line_number="3">3      while(left &lt;= right and list[left] &lt;= list[p]) </line> -->
+	<line line_number="2">2   while(left &#38;#60;= right) </line>
+	<line line_number="3">3      while(left &#38;#60;= right and list[left] &#38;#60;= list[p]) </line>
+	<line line_number="4">4         left++</line>
+<!-- 	<line line_number="5">5      while(left &lt;= right and list[right] &gt;= list[p]) </line> -->
+	<line line_number="5">5      while(left &#38;#60;= right and list[right] &#62;= list[p]) </line>
+	<line line_number="6">6         right--</line>
+<!-- 	<line line_number="7">7      if(left &lt; right)  </line> -->
+	<line line_number="7">7      if(left &#38;#60; right)  </line>
+	<line line_number="8">8         swap(left, right)</line>
+	<line line_number="9">9   swap(p, right)</line>
+	<line line_number="10">10  return right</line>
+    </program_listing>
+    <variables>
+        <variable>left = <replace var="left" /></variable>
+        <variable>right = <replace var="right" /></variable>
+        <variable>p = <replace var="p" /></variable>
+    </variables>
+</pseudocode>

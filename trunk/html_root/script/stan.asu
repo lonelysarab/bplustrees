@@ -1,0 +1,174 @@
+%Animal 2
+title Towers Of Hanoi
+author tom naps
+{
+documentation "http://calab02.acs.uwosh.edu/jhave/html_root/doc/hanoi/hanoi.html"
+polygon "tower0" (35, 40) (35, 120) (45, 120) (45, 40) color black filled fillColor dark Gray
+polygon "tower1" (110, 40) (110, 120) (120, 120) (120, 40) color black filled fillColor dark Gray
+polygon "tower2" (185, 40) (185, 120) (195, 120) (195, 40) color black filled fillColor dark Gray
+text "A" "A" at (40, 140) centered font SansSerif size 16 bold
+text "B" "B" at (115, 140) centered font SansSerif size 16 bold
+text "C" "C" at (190, 140) centered font SansSerif size 16 bold
+codegroup "hanoicode" at (20,145) font Monospaced size 14
+addCodeLine "void hanoi(int N, char From, char To, char Via) {" to "hanoicode"
+addCodeLine "  if (N == 1)" to "hanoicode"
+addCodeLine "    move(From, To);" to "hanoicode"
+addCodeLine "  else {" to "hanoicode"
+addCodeLine "    hanoi(N-1, From, Via, To);" to "hanoicode"
+addCodeLine "    move(From, To);   // Return Pt. 1" to "hanoicode"
+addCodeLine "    hanoi(N-1, Via, To, From);" to "hanoicode"
+addCodeLine "  }                   " to "hanoicode"
+addCodeLine "  return;             // Return Pt. 2" to "hanoicode"
+addCodeLine "}" to "hanoicode"
+rectangle "disk0" offset (-25,-0) from "tower0" S offset (25,-10) from "tower0" S color black filled fillColor gold
+rectangle "disk1" offset (-20,-10) from "tower0" S offset (20,-20) from "tower0" S color black filled fillColor gold
+rectangle "disk2" offset (-15,-20) from "tower0" S offset (15,-30) from "tower0" S color black filled fillColor gold
+array "stack" (20,330) color black fillColor white elementColor black elemHighlight red cellHighlight blue vertical length 3  ""  "" "N: 3 | From: A | To: B | Via: C | Ret Pt: MAIN" font Monospaced size 12
+}
+highlightCode on "hanoicode" line 1
+{
+arrayPut "N: 2 | From: A | To: C | Via: B | Ret Pt:  -1-" on "stack" position 1
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 4
+}
+unhighlightCode on "hanoicode" line 4
+highlightCode on "hanoicode" line 1
+{
+FIBQUESTION "0"
+}
+{
+arrayPut "N: 1 | From: A | To: B | Via: C | Ret Pt:  -1-" on "stack" position 0
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 4
+}
+unhighlightCode on "hanoicode" line 4
+highlightCode on "hanoicode" line 1
+{
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 2
+}
+{
+polyline "0" (35, 80) (35, 20) (110, 20) (110, 100) color black hidden
+move "disk2" via "0" after 0 ticks within 10 ticks
+}
+unhighlightCode on "hanoicode" line 2
+highlightCode on "hanoicode" line 8
+{
+arrayPut "                                              " on "stack" position 0
+unhighlightCode on "hanoicode" line 8
+highlightCode on "hanoicode" line 5
+}
+{
+polyline "1" (35, 90) (35, 20) (185, 20) (185, 100) color black hidden
+move "disk1" via "1" after 0 ticks within 10 ticks
+}
+{
+FIBQUESTION "1"
+}
+{
+arrayPut "N: 1 | From: B | To: C | Via: A | Ret Pt:  -2-" on "stack" position 0
+unhighlightCode on "hanoicode" line 5
+highlightCode on "hanoicode" line 6
+}
+unhighlightCode on "hanoicode" line 6
+highlightCode on "hanoicode" line 1
+{
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 2
+}
+{
+polyline "2" (110, 100) (110, 20) (185, 20) (185, 90) color black hidden
+move "disk2" via "2" after 0 ticks within 10 ticks
+}
+unhighlightCode on "hanoicode" line 2
+highlightCode on "hanoicode" line 8
+{
+arrayPut "                                              " on "stack" position 0
+}
+{
+arrayPut "                                              " on "stack" position 1
+unhighlightCode on "hanoicode" line 8
+highlightCode on "hanoicode" line 5
+}
+{
+polyline "3" (35, 100) (35, 20) (110, 20) (110, 100) color black hidden
+move "disk0" via "3" after 0 ticks within 10 ticks
+}
+{
+FIBQUESTION "2"
+}
+{
+arrayPut "N: 2 | From: C | To: B | Via: A | Ret Pt:  -2-" on "stack" position 1
+unhighlightCode on "hanoicode" line 5
+highlightCode on "hanoicode" line 6
+}
+unhighlightCode on "hanoicode" line 6
+highlightCode on "hanoicode" line 1
+{
+arrayPut "N: 1 | From: C | To: A | Via: B | Ret Pt:  -1-" on "stack" position 0
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 4
+}
+unhighlightCode on "hanoicode" line 4
+highlightCode on "hanoicode" line 1
+{
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 2
+}
+{
+polyline "4" (185, 90) (185, 20) (35, 20) (35, 100) color black hidden
+move "disk2" via "4" after 0 ticks within 10 ticks
+}
+unhighlightCode on "hanoicode" line 2
+highlightCode on "hanoicode" line 8
+{
+arrayPut "                                              " on "stack" position 0
+unhighlightCode on "hanoicode" line 8
+highlightCode on "hanoicode" line 5
+}
+{
+polyline "5" (185, 100) (185, 20) (110, 20) (110, 90) color black hidden
+move "disk1" via "5" after 0 ticks within 10 ticks
+}
+{
+arrayPut "N: 1 | From: A | To: B | Via: C | Ret Pt:  -2-" on "stack" position 0
+unhighlightCode on "hanoicode" line 5
+highlightCode on "hanoicode" line 6
+}
+unhighlightCode on "hanoicode" line 6
+highlightCode on "hanoicode" line 1
+{
+unhighlightCode on "hanoicode" line 1
+highlightCode on "hanoicode" line 2
+}
+{
+polyline "6" (35, 100) (35, 20) (110, 20) (110, 80) color black hidden
+move "disk2" via "6" after 0 ticks within 10 ticks
+}
+unhighlightCode on "hanoicode" line 2
+highlightCode on "hanoicode" line 8
+{
+arrayPut "                                              " on "stack" position 0
+}
+{
+arrayPut "                                              " on "stack" position 1
+}
+STARTQUESTIONS
+FIBQUESTION "0"
+"In the space below indicate what the argument values will be in the next recursive call.  For example, the response 4 C B A would indicate that 'N' will be 4, 'From' will be C, 'To' will be B, and 'Via' will be A"
+ENDTEXT
+ANSWER
+"1 A B C"
+ENDANSWER
+FIBQUESTION "1"
+"In the space below indicate what the argument values will be in the next recursive call.  For example, the response 4 C B A would indicate that 'N' will be 4, 'From' will be C, 'To' will be B, and 'Via' will be A"
+ENDTEXT
+ANSWER
+"1 B C A"
+ENDANSWER
+FIBQUESTION "2"
+"In the space below indicate what the argument values will be in the next recursive call.  For example, the response 4 C B A would indicate that 'N' will be 4, 'From' will be C, 'To' will be B, and 'Via' will be A"
+ENDTEXT
+ANSWER
+"2 C B A"
+ENDANSWER

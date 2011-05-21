@@ -1,0 +1,51 @@
+EREW Matrix Transposition
+ErewTransposition.asu static AnimalScript
+****
+Mesh Matrix Transposition
+MeshTransposition.asu static AnimalScript
+****
+Shuffle Matrix Transposition
+ShuffleTransposition.asu static AnimalScript
+****
+Mesh Matrix Multiplication
+MeshMultiplication.asu static AnimalScript
+****
+Torus Matrix Multiplication
+TorusMatrixMult.asu static AnimalScript
+****
+Bubble Sort 1
+bubbleSortAsc.aml static Animal
+****
+Bubble Sort 2
+bubbleSortDesc.aml static Animal
+****
+Bubble Sort 3
+bubbleSortRand.aml static Animal
+****
+Bubble Sort 4
+bubbleSortZigZag.aml static Animal
+****
+Insertion Sort 1
+insertionSortAsc.aml static Animal
+****
+Insertion Sort 2
+insertionSortDesc.aml static Animal
+****
+Insertion Sort 3
+insertionSortRand.aml static Animal
+****
+Insertion Sort 4
+insertionSortZigZag.aml static Animal
+****
+Selection Sort 1
+selectionSortAsc.aml static Animal
+****
+Selection Sort 2
+selectionSortDesc.aml static Animal
+****
+Selection Sort 3
+selectionSortRand.aml static Animal
+****
+Selection Sort 4
+selectionSortZigZag.aml static Animal
+****

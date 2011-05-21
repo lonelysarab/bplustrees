@@ -1,0 +1,9 @@
+Name-Value Index Structure Demo
+indextest new_data_only gaigs
+**** 
+Hash Structure Demo
+hashstructdemo new_data_only gaigs
+**** 
+Reference Structure Demo
+refstructdemo new_data_only gaigs
+**** 

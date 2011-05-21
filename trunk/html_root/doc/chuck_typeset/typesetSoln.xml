@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>typeSet/solnTS</call_stack>
+	<program_listing>
+		<signature>solnTS(L, C, n, Llen)</signature>
+		<line line_number="1">1	 [0, n] is the initial subproblem - k = 0; curr = n;  </line>
+		<line line_number="2">2  While subproblems remain 	</line>
+		<line line_number="3">3		find first i that satisifies C[k, i] + C[i+1][curr]  for the subproblem [k, curr] </line>
+							if (i &lt; curr)
+		<line line_number="4">4				if L[k][i] &lt; Llen </line>		
+		<line line_number="5">5					the word index set {k, ..., i} is a line in an optimal solution to the problem </line>
+		<line line_number="6">6				else  </line>
+		<line line_number="7">7					[k, i] is a new subproblem </line>
+		<line line_number="8">8				if L[i+1][curr] &lt; Llen	</line>
+		<line line_number="9">9					the word index set {i+1, ..., curr} is a line in an optimal solution to the problem </line>
+		<line line_number="10">10			else	</line>
+		<line line_number="11">11				[i+1, curr] is a new subproblem  </line>
+		<line line_number="12">12		else	</line>
+		<line line_number="13">13			the word index set {i, ..., curr} is a line in an optimal solution to the problem </line>
+	</program_listing>
+</pseudocode>

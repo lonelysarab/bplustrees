@@ -1,0 +1,9 @@
+TEXTFIELD
+Enter master string
+which_finally_halts.__at_that
+ENDTEXTFIELD
+TEXTFIELD
+Enter substring to search for
+at_that
+ENDTEXTFIELD
+

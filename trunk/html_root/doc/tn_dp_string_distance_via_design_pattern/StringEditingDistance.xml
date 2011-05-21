@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<pseudocode>
+ <call_stack> 
+ <!--
+  This is useful to keep track of the activation frame
+ -->
+ </call_stack>
+ <program_listing>
+ <signature>Calculating the Minimum Editing Distance Matrix between two strings.</signature> 
+ 
+ 
+ <line line_number="1"> // m is the length of the source String  </line>
+ <line line_number="2"> // n is the length of the target String  </line>
+ <line line_number="3"> for(i = 0; i less than or equal to m; i++) { </line>
+ <line line_number="4">   for(j = 0; j less than or equal to n; j++) { </line>
+ <line line_number="5">     if ( i == 0)  { // Entries on first row </line>
+ <line line_number="6">        mat[i][j] = j; </line>
+ <line line_number="7">     }    </line>
+ <line line_number="8">     else if ( j == 0)  { // Entries on first column</line>
+ <line line_number="9">        mat[i][j] = i; </line>
+ <line line_number="10">    }    </line>
+ <line line_number="11">    else if (source[i] == target[j]) {  // Same character on both strings</line>
+ <line line_number="12">        mat[i][j] = min((mat[i-1][j-1]),(mat[i-1][j]+1),(mat[i][j-1]+1)); </line> 
+ <line line_number="13">    } </line>
+ <line line_number="14">    else if (source[i] != target[j]) {  // Different characters on both strings</line>
+ <line line_number="15">        mat[i][j] = min((mat[i-1][j-1]+2),(mat[i-1][j]+1),(mat[i][j-1]+1)); </line>
+ <line line_number="16">    } </line>
+ <line line_number="17">  } // end for j  </line>
+ <line line_number="18"> } // end for i          { </line>
+</program_listing>
+</pseudocode>

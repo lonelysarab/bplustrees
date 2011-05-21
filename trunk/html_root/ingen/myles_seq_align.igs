@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>First string</label_line>
+    <default_field>AATCTATA</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>Second string</label_line>
+    <default_field>AAGATA</default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>
+

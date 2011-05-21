@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd"> -->
+<!DOCTYPE show SYSTEM "gaigs_sho.dtd_local_with_foobar_demo">
+
+<show>
+  <snap>
+    <title>An example of a simple foobar</title>
+    <foobar x="0.25" y="0.25" color="#FF0000">
+      <name>foobar1</name>
+      <bounds x1="0.2" y1="0.1" x2="0.8" y2="0.75"  fontsize="0.1"/>
+      <nodelabel text="The first foobar"/>
+    </foobar>
+  </snap>
+
+  <snap>
+    <title>An example of two simple foobars</title>
+    <foobar x="0.25" y="0.25" color="#0000FF">
+      <name>foobar2</name>
+      <bounds x1="0.0" y1="0.0" x2="0.45" y2="0.45"  fontsize="0.1"/>
+      <nodelabel text="The second"/>
+    </foobar>
+    <foobar x="0.25" y="0.25" color="#00FF00">
+      <name>foobar3</name>
+      <bounds x1="0.45" y1="0.45" x2="0.9" y2="0.9" fontsize="0.1"/>
+      <nodelabel text="The third"/>
+    </foobar>
+  </snap>
+
+</show>
