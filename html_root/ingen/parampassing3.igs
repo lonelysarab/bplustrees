@@ -1,0 +1,10 @@
+CHOICE
+Should global variables be used?
+Yes
+No
+ENDCHOICE
+CHOICE
+Should arrays be used?
+Yes
+No
+ENDCHOICE

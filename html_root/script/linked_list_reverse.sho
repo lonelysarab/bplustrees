@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+ 
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 1 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">Algorithm to reverse a linked list in place</title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 2 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">While ( yetToReverse != NULL ) { ... </title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF" line_thickness="bold"/>
+	      <arrow row="0" col="0"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="bold" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="000000" fill_color="#FFFFFF" line_thickness="bold"/>
+	      <arrow row="1" col="0"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 3 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">temp = soFar; </title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#FF0000"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 4 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">soFar = yetToReverse; </title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0" line_color="#FF0000"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#000000"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 5 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">yetToReverse = soFar->next; </title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#FF0000"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0" line_color="#000000"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#000000"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 6 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">soFar->next = temp;</title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </left_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#FF0000"/>
+	  </next>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="0" line_color="#000000"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#000000"/>
+	  </right_ref>
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>		    else    // arrow pointing to another group
+
+			drawArrow(
+			    left + 6*boxWidth + 0.5*boxWidth,
+			    bottom + 0.6*rowWidth + 0.75*boxWidth,
+			    destCol*colWidth + 3*boxWidth,
+			    destRow*rowWidth + bMargin + 0.75*boxWidth, 
+			    0.2*boxWidth,
+			    colorStringToInt(arrowColor),
+			    thingsToRender, drawerObj);
+      </group>
+
+      <group row="1" col="1">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 7 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05"> ... }</title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+
+      <group row="0" col="0">
+          <left_ref>
+	      <ref_label>yetToReverse</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="0" col="1" line_color="#000000"/>
+	  </left_ref>
+      </group>
+
+      <group row="0" col="1">
+          <data value="D">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+
+
+      <group row="1" col="0">
+          <left_ref>
+	      <ref_label position="left">soFar</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="0" line_color="#000000"/>
+	  </left_ref>
+          <right_ref>
+	      <ref_label>temp</ref_label>
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </right_ref>
+          <data value="C">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="1" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="1">
+          <data value="B">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow row="1" col="2" line_color="#000000"/>
+	  </next>
+      </group>
+
+      <group row="1" col="2">
+          <data value="A">
+	      <box line_color="#000000" fill_color="#FFFFFF"/>
+	  </data>
+          <next>
+	      <box line_color="#000000" line_thickness="normal" 
+                   fill_color="#FFFFFF"/>
+	      <arrow type="null" line_color="#000000"/>
+	  </next>
+      </group>
+    </memorylayout>
+  </snap>
+
+
+
+</show>

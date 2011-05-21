@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Heap Sort Visualization </TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#CCFFCC">
+
+<P>In the heap sort algorithm being visualized here, you see the array represented as a binary tree. That is, you
+are viewing the binary tree that is implicitly embedded in the array. There are two numbers in each tree node.
+The top number is the array index (based on array indices starting at 0) and the bottom number is the datum in
+that array index. The rule for this embedding is:</P>
+
+<OL>
+	<LI><FONT COLOR="black">Store the root in the first location of the array.</FONT>
+	<LI><FONT COLOR="black">If a node is in location n of the array, store its left child at location (2n + 1), and
+	its right child at location (2n + 2).</FONT>
+</OL>
+
+<P>The goal of the first phase of the algorithm is to sort the data elements along each path from leaf node level
+to the root node. After phase 1, the tree will be a heap. That is, the data item at each node will be greater than
+or equal to both of its children. To achieve this, we take the following steps: 
+
+<OL>
+	<LI>Process the node that is the parent of the rightmost node on the lowest level as follows: If its value is less
+	than the value of its largest child, swap these values; otherwise do nothing.
+	<LI>Move left on the same level. Compare the value of the parent node with the values of the children. If the parent
+	is smaller than the largest child, swap them.
+	<LI>When the left end of this level is reached, move up a level, and, beginning with the rightmost parent node,
+	repeat step 2. Continue swapping the original parent with the larger of its children until it is larger than its
+	children. In effect, the original parent is being walked down the tree in a fashion that ensures all numbers will
+	be in increasing order along the path.
+	<LI>Repeat step 3 until the root node has been processed.
+</OL>
+
+<P>Phase 2 of the heap sort finds the node with the largest value in the tree and cuts it from the tree. This is
+then repeated to find the second largest value, which is also removed from the tree. The process continues until
+only two nodes are left in the tree; they are then exchanged if necessary. The precise steps for phase 2 are as
+follows: 
+
+<OL>
+	<LI>Swap the root node with the bottom rightmost child, and sever this new bottom rightmost child from the tree.
+	This is the largest value.
+	<LI>Continue swapping the new root value with the larger of its children until it is not exceeded by either child.
+	In effect, this new root value is now being walked down a path in the tree to ensure that all paths retain values
+	arranged in ascending order from leaf node to root node. That is, the tree is being restored to a heap.
+	<LI>Repeat steps 1 and 2 until only one element is left.
+</OL>
+
+<P>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

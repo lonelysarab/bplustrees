@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: Java Platform API Specification
+Specification-Version: 1.4
+Implementation-Title: Java Runtime Environment
+Implementation-Version: 1.4.2
+Implementation-Vendor: Sun Microsystems, Inc.
+Specification-Vendor: Sun Microsystems, Inc.
+Main-Class: jhave.server.GaigsServer
+Class-Path: lib/mm.mysql-2.0.4-bin.jar lib/postgresql.jar lib/xercesImpl.jar lib/xml-apis.jar

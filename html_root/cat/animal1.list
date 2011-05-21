@@ -1,0 +1,18 @@
+animal LZW
+LZWEncode.aml static Animal
+**** 
+animal vigenere1
+vigenereEncryptEN.aml static Animal
+**** 
+animal vigenere2
+vigenere_eng.aml static Animal
+**** 
+animal hanoi with questions
+hanoi_3q.asu static AnimalScript
+****
+animal hanoi without questions
+hanoi_3.asu static AnimalScript
+**** 
+animal quicksort
+quicksort.aml static Animal
+**** 

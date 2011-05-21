@@ -1,0 +1,293 @@
+* TO CHECK OUT THE REPOSITORY
+----------------------------------------
+
+svn co https://openalgoviz.svn.sourceforge.net/svnroot/openalgoviz/JHAVE/trunk  jhave2
+
+The above will put everything in a directory called jhave2,
+corresponding to the last command line arg -- this can be adjusted to
+a directory name of your choice.  Without it the directory will just
+be called trunk
+
+*  The jhave2 directory should then include the following:
+----------------------------------------
+
+client -- the client's directory
+core -- class libraries shared by everything
+CVS -- used by the version control system
+
+gaff -- a simple Visualizer written by Chris Gaffney of GVSU --
+  intended only to illustrate how to write a new Visualizer
+
+gaigs -- directory for the GAIGS scripting language
+
+gaigs_standalone -- a quick-and-dirty way to run in GAIGS-only
+   standalone mode -- right now dependent on a UNIX-style makefile.
+   In general, the recommended way to run standalone (supported by all
+   OS's) is to run the client in debug mode, which allows you to load
+   a script without having to connect to the server
+
+html_root -- documentation and pseudo-code files
+README -- this file
+server -- the server's directory
+
+wiki.html -- a self-contained WIKI containing documentation.  If you
+  make changes to it that you would like to see incorporated into the
+  CVS distribution, please send me your new wiki.html file, and I will
+  review the changes and upload them to the repository.
+
+* HOW TO TEST THE JHAVE SERVER AND CLIENT USING THE LIGHTWEIGHT
+REATTORE WEB-SERVER INCLUDED IN THE DISTRIBUTION
+------------------------------------------------------- 
+
+When the Jhave client and server communicate, they need a Web-server
+where the the JHAVE server can deposit visualization scripts for the
+client.  For full-scale installations, you would want to use a
+heavyweight Web server such as Apache.  However, the distribution
+contains the lightweight webserver Reattore
+(http://reattore.sourceforge.net/) developed by Michael Hope for
+low-volume testing of whether the client and server are interacting
+properly.  Getting everything running requires that you start
+Reattore, then the JHAVE server, then the JHAVE client.
+
+To start Reattore: cd to the server directory and issue the command
+"ant start-webserver".
+
+To start the JHAVE server: (1) cd to the server directory, (2) cp the
+user.properties_for_lightweight_reattore_setup to user.properties, (3) in
+the user.properties file edit the -u parameter to be the full path
+name to your jhave2 directory below which the html_root directory
+resides, and (4) issue the command "ant run"
+
+To start the JHAVE client: (1) cd to the client directory, (2) cp the
+user.properties_for_lightweight_reattore_setup to user.properties, and
+(3) issue the command "ant run"
+
+
+* HOW TO GET JHAVE UP AND RUNNING UNDER APACHE AFTER CHECKING OUT THE jhave2 DIRECTORY
+----------------------------------------
+
+Requirements: Java 1.5 and ant to compile and run the client.  Apache
+  and php needed to run the server.  mysql needed to run the server in
+  "for-real" quiz mode.
+
+First, you'll need to locate the html_root directory in your Apache
+   tree.  This can be done by copying the html_root directory in this
+   jhave2 directory to that tree or by using symbolic links.  For
+   instance, in my particular set-up, I've located it in:
+
+/var/www/html_root
+
+To compile the code for the various components, you will find a
+  similar structure in each of the client, core, gaigs, gaff, and
+  server directories.  There will be a build.xml file and project,
+  src, and perhaps a lib subdirectory.  The project subdirectory
+  contains detailed build scripts for the ant compilation process.
+  The src directory contains the java source code.  The lib directory,
+  if it exists, contains various library files, such as jdom.jar,
+  needed by that component.
+
+To compile each component, cd to that directory and issue the command
+  "ant".  This will invoke the build.xml file, which will look into
+  the project directory to determine the details for
+  compiling/building that particular component.  This build process
+  will create two new subdirectories -- build and dist.  The former
+  contains the class files produced by the build, and the latter
+  contains a jar file distributable.  You can always delete and then
+  re-create these two directories by re-issuing the "ant" command to
+  re-build all the source files.  Should you wish to override any of
+  the default build properties in the project subdirectory of a
+  component, you should create a user.properties file in the main
+  directory of that component.  For instance, here is the one-line
+  user.properties file I use in the server directory:
+
+application.args=-r=http://localhost/ -s=/home/naps/sandboxes/jhave2/server/build/classes/ -u=/var/www/
+
+  This establishes the command line arguments that are passed to the
+  server when it runs -- see the wiki.html file for a description of
+  these arguments.
+
+  Similarly, here is the six-line user.properties file that I have in
+  the client directory:
+
+default.server.url=localhost
+default.server.port=7004
+default.local.port=7004
+default.webroot=http://localhost/html_root/
+default.category=generic
+application.args=-debug
+
+  The first five lines establish my system-specific properties for
+  launching the client in localhost mode.  The application.args line
+  runs the client in debug mode, which allows the client to open a
+  script on the local file system without connecting to a server
+  (standalone mode).  To disable the debug menu, merely comment out
+  the application.args line by beginning the line with a "#".  More
+  details on the user.properties file for the client component can be
+  found in the wiki.html
+
+
+YOU'RE READY TO BUILD EVERYTHING AND TAKE IT FOR A SPIN
+----------------------------------------
+
+Just cd into each of the core, gaff, gaigs, client, and server
+  directories and issue the "ant" command.  (For linux/unix, you'll
+  find a Makefile in jhave2 to take care of all five of these builds.)
+
+Then, in the server directory, start the server by typing "ant run".
+
+To launch the client, in the client directory type "ant run"
+
+
+HOW TO INSTALL YOUR OWN SCRIPT PRODUCING-PROGRAMS ON THE SERVER
+------------------------------------------------------------
+
+0.  Preconditions: You have a program that, when executed, will produce
+    a script file.  Although this program could be written in any
+    language, the rest of these instructions will assume that it is
+    written in java.  
+
+    That program should take at least one command line parameter that
+    is a file name to which the script should be output.  It can also
+    take other command-line parameters that represent input to the
+    program's algorithm.  The values for these other command-line
+    parameters will typically come from an input generator (see
+    1 below).
+
+    That program should have a package statement of the form:
+
+    package exe.xxxxxx;
+
+    where xxxxxx is a name of your choice.  If your Java program is
+    prepared to do all of the parsing of the server-generated command
+    line itself, then xxxxxx should be the name of the class
+    containing the main method.  Since this parsing can involve a lot
+    of string processing, you will find that most of the present
+    script-producing programs are launched by a short front-end
+    program that acts as an intermediary between the "launch" command
+    generated by the server and the Java program that produces the
+    script.  The rest of these instructions assume that you will use
+    such a front-end program (the details for writing one are
+    described below).  If that is the case your front-end program
+    should be named xxxxxx.java and the name of the Java class
+    containing the main method in what you think of as your
+    script-producing program should be named something other than
+    xxxxxx.  Using these naming conventions will insure that the
+    server starts the right program, that is, the front-end program
+    that will feed data to your script-producing program in the form
+    it wants.  All of the source code (front-end and script-producing
+    program) should be placed in the directory
+
+    jhave2/server/src/exe/xxxxxx
+
+    The build process for the server, under the control of ant, will
+    compile this source code and place the compiled class files in the
+    directory
+
+    jhave2/server/build/classes/exe/xxxxxx
+
+    If things are set up correctly, all of this will happen
+    "auto-magically".
+
+    As a final precondition, any documentation/pseudo-code HTML/PHP
+    files your script refers to should be located in the
+    html_root/doc/xxxxxx directory mentioned in the installation procedure
+    for JHAVE above.
+
+1.  Will your script-producing program by using an input generator to
+    let the viewer generate input for the run?  If not, you can skip
+    directly to Step 2b below.  If you are going to use a input
+    generator, they display a panel that allows textfield or
+    choice-menu selection.  The input generator for algorithm xxxxxx
+    should be placed in a file called xxxxxx.igs in the directory
+    html_root/ingen.  Input generators for a program are specified by
+    XML using the syntactical structure specified in the following
+    DTD:
+
+********************************************************************************
+
+<!ELEMENT input_panel ( (textfield | combobox)* )>
+
+<!ELEMENT textfield (label_line*, default_field, value_entered)>
+<!ELEMENT label_line (#PCDATA)>
+<!ELEMENT default_field (#PCDATA)>
+<!ELEMENT value_entered (#PCDATA)>
+
+<!ELEMENT combobox (label_line*, option*, option_entered)>
+<!ELEMENT option (#PCDATA)>
+<!ELEMENT option_entered (#PCDATA)>
+
+
+********************************************************************************
+
+     Examining the existing input generator stacktest.igs in
+     the html_root/ingen directory should clarify the syntax
+     description.
+
+2a.  If an input generator was used, the server will launch the
+     front-end program with a command of the form
+
+java -classpath ../../lib/jdom.jar:. exe.stacktest.stacktest /srv/www/htdocs/jhave/html_root/uid/name-of-scriptfile * /srv/www/htdocs/jhave/html_root/uid/xml-string-containing-input-from-generator
+
+     Here the first parameter following the front-end program name is
+     the name of the script file to generate, the second parameter is
+     an asterisk unless the script-producing program is to read its
+     input from an existing file.  The last parameter is the name of
+     an xml file that contains the parsed input generator data that
+     may be read by your front-end program and consequently fed to the
+     script-producing program.  To grab the string data associated
+     with a label in the igs file, you may use a hash table where the
+     key is the text of the label, and the data associated with the
+     key is what the user has entered in the corresponding field of
+     the input generator.  See server/src/exe/stacktest/stacktest.java
+     for an example of how the data that would be generated by the
+     stacktest.igs input generator is obtained from the hash table by
+     this front-end program and then fed to the real script-producing
+     program.
+
+     Next go to step 3.
+
+2b.  If an input generator was not used, the task of the front-end
+     program that launches your Java script-producing program is
+     simpler because there are no strings from the input generator to
+     be parsed.  In this case, the front-end program merely needs to
+     get the name of the script file.  See
+     src/exe/christian_trefftz/christian_trefftz.java for an example.
+
+3.  The last step is to make your algorithm appear in the client's
+     pull-down list of visualizations for a particular category.  To
+     do this, for a category named "foo", you need to add your
+     algorithm to the foo.list file in the directory html/cat.  In
+     general, each entry in this file will be three lines of the form:
+
+     Label-to-appear-in-menu
+     xxxxxx new_data_only visualizer-name
+     ****
+
+     the **** on the last line is merely a delimiter.  The
+     new_data_only signals that this algorithm does not read is input
+     from an existing data file.  Generally new_data_only is what you
+     will want, but here is a description of the other possibilities
+     as found in documentation from the Algorithm.java file.  
+
+  /**
+   * This allows the client to set all the pertinent information about the algorithm.
+   * "static" means the script is fixed, so the algorithm cannot share data/has no friends.
+   * "new_data_only" means that a script file is generated for the algorithm each time,
+   * but new data must always be generated for it.
+   * "dynamic" means that the algorithm has a script generated for it and it may share
+   * its data with itself and the algorithms in its friend vector.
+   * "dynamic-ingen" means the same as dynamic, but if the algorithm requires an input
+   * generator the server needs to send it only when new data when the user
+   * requests new data be generated.
+   */
+
+     The visualizer-name should be gaigs or animal.
+
+     See the generic.list file in the html_root/cat directory for
+     examples.
+
+
+
+
+
+

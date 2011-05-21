@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+<snap>
+<title>Hey, \yColors \#FFFF00 \#FFAA00are \#FF0000Fun!</title>
+<array>
+<bounds x1="0.0" y1="0.0" x2="1.0" y2="0.8" fontsize="0.05"/>
+<row_label>\rRed \xand \#FFAA00Orange</row_label>
+<row_label>\bBlue \xand \gGreen</row_label>
+<row_label>\mMagenta \xand \lCyan</row_label>
+<column_label>\gGreen \xand \yYellow</column_label>
+<column_label>\#888888Gray \xand \bBlue</column_label>
+<column>
+<list_item color="#AAAAAA">
+<label>\#FF0000Red</label>
+</list_item>
+<list_item color="#AAAAAA">
+<label>\#FFFFFFWhite</label>
+</list_item>
+<list_item color="#AAAAAA">
+<label>\#0000FFand Blue</label>
+</list_item>
+</column>
+<column>
+<list_item color="#AAAAAA">
+<label>\rH\yu\br\xr\la\my</label>
+</list_item>
+<list_item color="#AAAAAA">
+<label>\#FFFFFFf\xo\#FFAAFFr</label>
+</list_item>
+<list_item color="#AAAAAA">
+<label>\rC\yo\gl\wo\#FFFF00r\m!</label>
+</list_item>
+</column>
+</array>
+</snap>
+</show>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>Tavutusalgoritmi</call_stack>
+    <program_listing>
+        <signature>Tavuta sana</signature>
+        <line line_number="1">Ota k&#228;sitelt&#228;v&#228;ksi sanan ensimm&#228;inen kirjain</line>
+        <line line_number="2">WHILE ei olla sanan lopussa DO</line>
+        <line line_number="3">    IF k&#228;sitelt&#228;v&#228;n&#228; on vokaali ja sit&#228; seuraa konsonantti THEN</line>
+        <line line_number="4">        IF viimeisen per&#228;kk&#228;in olevan konsonantin per&#228;ss&#228; on vokaali THEN</line>
+        <line line_number="5">            Sijoita tavuviiva ennen viimeist&#228; konsonanttia</line>
+        <line line_number="6">    ELSE</line>
+        <line line_number="7">        IF k&#228;sitelt&#228;v&#228;n&#228; on vokaali ja sit&#228; seuraa vokaali THEN</line>
+        <line line_number="8">            IF k&#228;sitelt&#228;v&#228; ja seuraava eiv&#228;t ole tuplavokaali tai diftongi THEN</line>
+        <line line_number="9">                Sijoita tavuviiva k&#228;sitelt&#228;v&#228;n vokaalin j&#228;lkeen</line>
+        <line line_number="10">        ELSE</line>
+        <line line_number="11">            IF k&#228;sitelt&#228;v&#228; ja seuraava ovat tuplavokaali tai diftongi THEN</line>
+        <line line_number="12">                IF tuplavokaalia tai diftongia seuraa vokaali THEN</line>
+        <line line_number="13">                    Sijoita tavuviiva tuplavokaalin tai diftongin j&#228;lkeen</line>
+        <line line_number="14">    Siirry k&#228;sittelem&#228;&#228;n seuraavaa kirjainta</line>
+        <line line_number="15">Tulosta koko sana tavuviivoineen</line>
+    </program_listing>
+</pseudocode>

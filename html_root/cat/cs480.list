@@ -1,0 +1,24 @@
+Beam Search (Andrew)
+beamsearch new_data_only gaigs
+**** 
+Best First Search (Andrew)
+bestfirstsearch new_data_only gaigs
+**** 
+A-star (Andrew)
+astarsearch new_data_only gaigs
+**** 
+Least Cost Search (Andrew)
+leastcostsearch new_data_only gaigs
+**** 
+Depth First Search
+dfsrichard new_data_only gaigs
+**** 
+Breadth First Search
+bfsrichard new_data_only gaigs
+**** 
+Topological sort
+topoalex dynamic gaigs
+**** 
+Dijkstra Shortest Path
+dijkstrarichard new_data_only gaigs
+**** 

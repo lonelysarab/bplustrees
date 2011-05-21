@@ -1,0 +1,14 @@
+public class Byte {
+
+	//main method
+	public static void main(String[] args) {
+		range();	
+	}
+
+	//calculates the range of the primitive type byte
+	static void range() {
+		byte b1 = -128;
+		byte b2 = 127;
+		int range = b2 - b1;
+	}
+}

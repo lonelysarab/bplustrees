@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Floyd's Shortest Path Visualization </TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFF99">
+
+<P>Once the distance array is initialized, Floyd's algorithm uses a dynamic programming algorithm to complete the
+determination of the entries in it. For each matrix entry at row M and column P, we determine the length of the
+shortest path from vertex M to vertex P along a path whose interior vertices are chosen from among 1, 2, ... N,
+... V, where V is the number of vertices in the network. The V<SUP>3</SUP> loop to fill in the distance array is
+given by:</P>
+<PRE></PRE>
+<PRE><FONT SIZE="1" FACE="Arial, Helvetica">for N = 1 to V do
+  for M = 1 to V do
+    for P = 1 to V do
+      /* Determine the distance of the shortest path from M to P through vertex N */
+      distance[M,P] = min(distance[M,P], distance[M,N] + distance[N,P])
+    endfor
+  endfor
+endfor</FONT></PRE>
+<P>As you watch the algorithm progress, yellow is used to highlight the distance entry that will change (<I><FONT
+FACE="Arial, Helvetica"> </FONT><FONT SIZE="2" FACE="Arial, Helvetica">distance[M,P]</FONT></I> ) because the sum
+of the two red values (<I><FONT SIZE="2" FACE="Arial, Helvetica">distance[M,N] + distance[N,P]</FONT></I> ) is
+less than the previous value stored at the yellow entry. As the snapshots progress, you will be asked to predict
+the next value that will change in the distance array as the algorithm progresses.
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

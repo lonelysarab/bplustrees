@@ -1,0 +1,6 @@
+Use the build file in this directory to compile your own new
+script-producing program.  Such a program must be in its own package
+(that is, directory) under the exe package (directory).  The sample
+ant run target in the build file runs the reu_bubsort program we start
+with for our REU students.
+

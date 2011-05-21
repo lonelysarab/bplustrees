@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<pseudocode>
+ <call_stack> 
+ <!--
+  This is useful to keep track of the activation frame
+ -->
+ </call_stack>
+ <program_listing>
+ <signature>recover_aligns(mat, r, c)</signature> 
+ <line line_number="1"> // MATCH_SCORE IS +1 </line>
+ <line line_number="2"> // MISMATCH_SCORE IS 0 </line>
+ <line line_number="3"> // GAP_PENALTY IS -1 </line>
+ <line line_number="4"> if (c &amp;gt; 0) </line>
+ <line line_number="5">     if (mat[r, c] == mat[r,c-1] + GAP_PENALTY) </line>
+ <line line_number="6">         // Calling recursively</line>
+ <line line_number="7">         recover_aligns(mat, r, c-1) </line>
+ <line line_number="8">         // Returning</line>
+ <line line_number="9"> if (r &amp;gt; 0) </line>
+ <line line_number="10">     if (mat[r, c] == mat[r-1,c] + GAP_PENALTY) </line>
+ <line line_number="11">         // Calling recursively</line>
+ <line line_number="12">         recover_aligns(mat, r-1, c);</line>
+ <line line_number="13">         // Returning</line>
+ <line line_number="14"> if (r &amp;gt; 0 AND c &amp;gt; 0)</line>
+ <line line_number="15">     if (((S1[r-1] == S2[c-1]) AND (mat[r, c] == mat[r-1,c-1] + MATCH_SCORE))</line>
+ <line line_number="16">         OR ((S1[r-1] != S2[c-1]) AND (mat[r, c] == mat[r-1,c-1] + MISMATCH_SCORE))) </line>
+ <line line_number="17">         // Calling recursively</line>
+ <line line_number="18">         recover_aligns(mat, r-1, c-1);</line>
+ <line line_number="19">         // Returning</line>
+</program_listing>
+    <variables>
+        <variable>r = <replace var="r" /></variable>
+	<variable>c = <replace var="c" /></variable>
+    </variables>
+</pseudocode>

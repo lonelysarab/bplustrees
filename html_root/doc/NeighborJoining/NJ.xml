@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>Neighbor Joining</call_stack>
+    <program_listing> 
+	<signature>Neighbor Joining</signature>
+	<line line_number="1">1   while the distance matrix is not a 1 by 1 matrix.</line>
+	<line line_number="2">2       Create a Q matrix.</line>
+	<line line_number="3">3       Find the smallest entry in the Q matrix.</line>
+	<line line_number="4">4       Find weights of the new edges.</line>
+    <line line_number="5">5       Create ancestor node.</line>
+    <line line_number="6">6       Recalculate distance matrix.</line>
+    </program_listing>
+</pseudocode>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textarea>
+    <label_line>Enter your Java or C++ source code below:</label_line>
+    <default_field>remove consecutive identical data elements
+// gridsize 2 8 C++ 0 smallfont
+Node *head = createList( 'A','A','B','C','C','C','D','D', "tail" );
+Node *p1 = head; // 0 2
+Node *p2;        // 0 4</default_field>
+    <value_entered></value_entered>
+  </textarea>
+</input_panel>

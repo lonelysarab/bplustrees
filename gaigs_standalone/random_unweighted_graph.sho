@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+<snap>
+<title>random_unweighted_graph.xml</title>
+
+<graph weighted = "false" heuristics = "false">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<!-- <bounds x1 = "0.0" y1 = "0.0" x2 = "0.5" y2 = "0.5"/> -->
+<vertex id="A" color = "#44BBFF">
+<label>A</label>
+<position x = "0.5937003814135556" y = "0.4304447394716228"/>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex id="B" color = "red">
+<label>B</label>
+<position x = "0.9500000000000001" y = "0.06480854271628235"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C</label>
+<position x = "0.17499927963369455" y = "0.05"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D</label>
+<position x = "0.2905173149922872" y = "0.5859154799672157"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+<edge target = "G" color = "#999999">
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E</label>
+<position x = "0.05" y = "0.34634803562719746"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "F" color = "#999999">
+</edge>
+</vertex>
+<vertex id="F" color = "#FFFFFF">
+<label>F</label>
+<position x = "0.5022961650097888" y = "0.09099536835423816"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "B" color = "#999999">
+</edge>
+<edge target = "C" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+<edge target = "E" color = "#999999">
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G</label>
+<position x = "0.5740928349512656" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+</edge>
+<edge target = "D" color = "#999999">
+</edge>
+</vertex>
+</graph>
+<!-- BREAK -->
+</snap>
+<snap>
+<title>random_heuristic_graph.xml</title>
+<graph weighted = "true" heuristics = "true">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<vertex id="A" color = "#FFFFFF">
+<label>A
+3</label>
+<position x = "0.5133419842152497" y = "0.5479231114176769"/>
+<edge target = "B" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="B" color = "#FFFFFF">
+<label>B
+2</label>
+<position x = "0.7651824461808459" y = "0.5041060249910173"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C
+2</label>
+<position x = "0.611863854631928" y = "0.05"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D
+3</label>
+<position x = "0.37364506213521775" y = "0.25527449181606104"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E
+6</label>
+<position x = "0.05" y = "0.5348414046402058"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="F" color = "#AAFFAA">
+<label>F
+0</label>
+<position x = "0.8564581350240625" y = "0.20685972392662755"/>
+<edge target = "A" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G
+5</label>
+<position x = "0.5437252913681593" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="H" color = "#FFFFFF">
+<label>H
+4</label>
+<position x = "0.9500000000000001" y = "0.7990346251767706"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+<!-- BREAK -->
+<snap>
+<title>random_noheuristic_graph.xml</title>
+<graph weighted = "true" heuristics = "false">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<vertex id="A" color = "#FFFFFF">
+<label>A</label>
+<position x = "0.4534915783595551" y = "0.5234957142584847"/>
+<edge target = "B" color = "#999999">
+<label>7</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex id="B" color = "#FFFFFF">
+<label>B</label>
+<position x = "0.8642419892383673" y = "0.19141519591901135"/>
+<edge target = "A" color = "#999999">
+<label>7</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>1</label>
+</edge>
+</vertex>
+<vertex id="C" color = "#FFFFFF">
+<label>C</label>
+<position x = "0.5425579790796836" y = "0.05"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "D" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+<vertex id="D" color = "#FFFFFF">
+<label>D</label>
+<position x = "0.05" y = "0.22448750719175375"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex id="E" color = "#FFFFFF">
+<label>E</label>
+<position x = "0.40404349364871256" y = "0.20970391865091437"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>11</label>
+</edge>
+</vertex>
+<vertex id="F" color = "#FFFFFF">
+<label>F</label>
+<position x = "0.7064550372383529" y = "0.5341086416929379"/>
+<edge target = "A" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "B" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "C" color = "#999999">
+<label>8</label>
+</edge>
+<edge target = "E" color = "#999999">
+<label>11</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>6</label>
+</edge>
+</vertex>
+<vertex id="G" color = "#FFFFFF">
+<label>G</label>
+<position x = "0.24298335860200182" y = "0.8593770247752546"/>
+<edge target = "A" color = "#999999">
+<label>9</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex id="H" color = "#FFFFFF">
+<label>H</label>
+<position x = "0.6015175456567101" y = "0.9500000000000001"/>
+<edge target = "A" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "G" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "I" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+<vertex id="I" color = "#FFFFFF">
+<label>I</label>
+<position x = "0.9500000000000001" y = "0.7952710888074932"/>
+<edge target = "A" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "F" color = "#999999">
+<label>6</label>
+</edge>
+<edge target = "H" color = "#999999">
+<label>8</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+
+</show>

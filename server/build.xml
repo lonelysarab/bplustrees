@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="server" default="default" basedir=".">
+    <description>Builds, tests, and runs the project server.</description>
+    <import file="project/build-impl.xml"/>
+
+    <condition property="this.is.unix">
+    <os family="unix"/>
+    </condition>
+    <condition property="this.is.windows">
+    <os family="windows"/>
+    </condition>    
+    <fixcrlf srcdir="../html_root/cat"/>
+    <fixcrlf srcdir="../html_root/ingen"/>
+    
+    <!-- 
+    ======================
+    INITIALIZATION SECTION 
+    ======================
+    -->
+    <target name="-pre-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <target name="-post-init">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+
+    <target name="-pre-compile">
+    <antcall target="is.this.unix.pre"/>
+    <antcall target="is.this.windows.pre"/>
+    </target>
+    
+    <target name="-post-compile">
+    <antcall target="is.this.unix.post"/>
+    <antcall target="is.this.windows.post"/>
+    </target>
+    <!--
+    ===================
+    COMPILATION SECTION
+    ===================
+    -->
+    <target name="is.this.windows.pre" if="this.is.windows">
+        <echo message="You are running Windows"/>
+    </target>
+        <target name="is.this.windows.post" if="this.is.windows">
+        <echo message="You are running Windows"/>
+    </target>
+
+    <target name="is.this.unix.pre" if="this.is.unix">
+        <echo message="You are running Unix"/>
+        
+        <echo message="-- Starting compile of C++ script generators --"/>
+        <exec dir="${src.dir}/exe/parsing_lln" executable="make"/>
+        <exec dir="${src.dir}/exe/topoalex" executable="make"/>
+        <echo message="-- Completed compile of C++ script generators --"/>
+    </target>        
+
+    <target name="is.this.unix.post" if="this.is.unix">
+        <echo message="You are running Unix"/>
+        <echo message="-- Cleaning C++ script generators --"/>
+        <exec dir="${src.dir}/exe/parsing_lln" executable="make">
+            <arg value="clean"/>
+        </exec>
+        <exec dir="${build.dir}/classes/exe/parsing_lln" executable="chmod">
+            <arg value="744"/>
+            <arg value="sbparsing"/>
+        </exec>
+        <exec dir="${src.dir}/exe/topoalex" executable="make">
+            <arg value="clean"/>
+        </exec>
+        <exec dir="${build.dir}/classes/exe/topoalex" executable="chmod">
+            <arg value="744"/>
+            <arg value="grapdriv"/>
+        </exec>
+        <echo message="-- Completed cleaning C++ script generators --"/>
+    </target>
+    <target name="-pre-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    <target name="-post-compile-single">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <!--
+    ====================
+    JAR BUILDING SECTION
+    ====================
+    -->
+    <target name="-pre-jar">
+        <!-- Move the exe directory into the dist directory so it is not jar'd. -->
+        <move todir="${dist.dir}/exe">
+            <fileset dir="${build.classes.dir}/exe"/>
+        </move>
+    </target>
+    <target name="-post-jar">
+        <!-- Copy it back so we don't break anything else. -->
+        <copy todir="${build.classes.dir}/exe">
+            <fileset dir="${dist.dir}/exe"/>
+        </copy>
+        
+        <!-- Copy over logging stuff -->
+        <mkdir dir="${dist.dir}/logs"/>
+        <copy todir="${dist.dir}/logs">
+            <fileset dir="logs/" excludes="*.log"/>
+        </copy>
+        
+        <!-- Copy over the library dependencies -->
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy todir="${dist.dir}/lib">
+            <fileset dir="lib/" includes="*.jar"/>
+        </copy>
+    </target>
+    
+    <!--
+    ===============
+    CLEANUP SECTION
+    ===============
+    -->
+    <target name="-post-clean">
+        <!-- Empty placeholder for easier customization. -->
+    </target>
+    
+    <target name="test-server" description="Start the server with a test setup">
+        <property name="application.args" 
+            value="-r=http://localhost:8080/ -s=./build/classes/ -u=../"/>
+        <antcall target="run"/>
+    </target>
+    
+    <target name="start-webserver" description="Start the test webserver">
+        <java fork="true" jar="lib/httpd/lib/reattore.jar">
+            <arg value="lib/httpd/etc/ant-config.xml"/>
+            <classpath>
+                <fileset dir="lib/httpd/ext">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+    
+    <target name="sql-start" description="Start the SQL Server">
+        <java fork="true" classname="org.hsqldb.Server">
+            <arg line="-database lib/sql/jhave"/>
+            <classpath>
+                <fileset file="lib/sql/hsqldb.jar"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <target name="sql-manager" description="Start the SQL Database Manager">
+        <java fork="true" classname="org.hsqldb.util.DatabaseManagerSwing">
+            <classpath>
+                <fileset file="lib/sql/hsqldb.jar"/>
+            </classpath>
+        </java>
+    </target>
+</project>

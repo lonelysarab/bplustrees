@@ -1,0 +1,21 @@
+Graph Test
+graphtest new_data_only gaigs
+****
+Tree Test
+treetest new_data_only gaigs
+****
+Bar Graph Test
+bargraphtest new_data_only gaigs
+****
+Array Test
+arraytest new_data_only gaigs
+****
+Linked List Test
+linkedlisttest new_data_only gaigs
+****
+Queue Test
+queuetest new_data_only gaigs
+****
+Stack Test
+stacktest new_data_only gaigs
+****

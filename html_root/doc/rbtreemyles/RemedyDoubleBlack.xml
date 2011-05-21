@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>remedyDoubleBlack(deleteNode)</signature>
+	<line line_number="1">1    BinaryNode X, Y, Z</line>
+	<line line_number="2">2    int oldColor</line>
+	<line line_number="3">3    X = deleteNode.parent</line>
+	<line line_number="4">4    Y = deleteNode.sibling</line>
+	<line line_number="5">5    if(Y is not red)</line>
+	<line line_number="6">6          Z = Y.redChild</line>
+	<line line_number="7">7          if (Z is not null)</line>
+	<line line_number="8">8          	oldColor = X.color</line>
+	<line line_number="9">9                 Z = restructure(Z)</line>
+	<line line_number="10">10   		Z.color = oldColor</line>
+	<line line_number="11">11        	deleteNode.color = black;</line>
+	<line line_number="12">12        	Z.left.color = black</line>
+	<line line_number="13">13   		Z.right.color = black</line>
+	<line line_number="14">14        	return</line>
+	<line line_number="15">15        deleteNode.color = black</line>
+	<line line_number="16">16        Y.color = red</line>
+	<line line_number="17">17        if(X is not red)</line>
+	<line line_number="18">18             if(X is not the root)</line>
+	<line line_number="19">19             	remedyDoubleBlack(X)</line>
+	<line line_number="20">20             return</line>
+	<line line_number="21">21        X.color = black</line>
+	<line line_number="22">22        return</line>
+	<line line_number="23">23   if(Y is X's right child)</line>
+	<line line_number="24">24        Z = Y.right</line>
+	<line line_number="25">25   else</line>
+	<line line_number="26">26        Z = Y.left</line>
+	<line line_number="27">27   restructure(Z)</line>
+	<line line_number="28">28   Y.color = black</line>
+	<line line_number="29">29   X.color = red</line>
+	<line line_number="30">30   remedyDoubleBlack(r)</line>
+
+    </program_listing>
+    <variables>
+        <variable>deleteNode = <replace var="item" /></variable>
+        <variable>x = <replace var="x" /></variable>
+        <variable>y = <replace var="y" /></variable>
+        <variable>z = <replace var="v" /></variable>
+    </variables>
+</pseudocode>

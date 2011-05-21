@@ -1,0 +1,663 @@
+% Animal 1.3
+{
+  polygon "polygon" (55, 40) (55, 160) (65, 160) (65, 40) color black filled fillColor dark Gray
+  polygon "polygon0" (190, 40) (190, 160) (200, 160) (200, 40) color black filled fillColor dark Gray
+  polygon "polygon1" (325, 40) (325, 160) (335, 160) (335, 40) color black filled fillColor dark Gray
+  text "codeline[0]" "public void hanoi(int n, int from, int to, int via) {" at (20, 200) color black font Monospaced size 16
+  text "codeline[1]" "if (n == 1)" at (40, 218)
+  text "codeline[2]" "move(n, from, to);" at (60, 236)
+  text "codeline[3]" "else {" at (40, 254)
+  text "codeline[4]" "hanoi(n-1, from, via, to);" at (60, 272)
+  text "codeline[5]" "move(n, from, to);" at (60, 290)
+  text "codeline[6]" "hanoi(n-1, via, to, from);" at (60, 308)
+  text "codeline[7]" "}" at (40, 326)
+  text "codeline[8]" "}" at (20, 344)
+  polygon "polygon2" (50, 90) (50, 100) (70, 100) (70, 90) color black filled fillColor gold
+  polygon "polygon3" (45, 100) (45, 110) (75, 110) (75, 100) color black filled fillColor gold
+  polygon "polygon4" (40, 110) (40, 120) (80, 120) (80, 110) color black filled fillColor gold
+  polygon "polygon5" (35, 120) (35, 130) (85, 130) (85, 120) color black filled fillColor gold
+  polygon "polygon6" (30, 130) (30, 140) (90, 140) (90, 130) color black filled fillColor gold
+  polygon "polygon7" (25, 140) (25, 150) (95, 150) (95, 140) color black filled fillColor gold
+  polygon "polygon8" (20, 150) (20, 160) (100, 160) (100, 150) color black filled fillColor gold
+}
+{
+  polyline "polyline"  (55, 90) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon2" via "polyline" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline0"  (55, 100) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon3" via "polyline0" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline1"  (190, 150) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline1" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline2"  (55, 110) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon4" via "polyline2" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline3"  (325, 140) (325, 20) (55, 20) (55, 110) color black hidden
+  move "polygon2" via "polyline3" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline4"  (325, 150) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline4" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline5"  (55, 110) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline5" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline6"  (55, 120) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon5" via "polyline6" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline7"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline7" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline8"  (190, 140) (190, 20) (55, 20) (55, 120) color black hidden
+  move "polygon3" via "polyline8" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline9"  (325, 140) (325, 20) (55, 20) (55, 110) color black hidden
+  move "polygon2" via "polyline9" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline10"  (190, 150) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon4" via "polyline10" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline11"  (55, 110) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon2" via "polyline11" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline12"  (55, 120) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline12" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline13"  (190, 150) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline13" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline14"  (55, 130) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon6" via "polyline14" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline15"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline15" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline16"  (325, 130) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline16" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline17"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline17" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline18"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon4" via "polyline18" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline19"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline19" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline20"  (190, 140) (190, 20) (55, 20) (55, 120) color black hidden
+  move "polygon3" via "polyline20" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline21"  (325, 140) (325, 20) (55, 20) (55, 110) color black hidden
+  move "polygon2" via "polyline21" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline22"  (325, 150) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon5" via "polyline22" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline23"  (55, 110) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline23" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline24"  (55, 120) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon3" via "polyline24" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline25"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline25" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline26"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon4" via "polyline26" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline27"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline27" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline28"  (325, 150) (325, 20) (190, 20) (190, 120) color black hidden
+  move "polygon3" via "polyline28" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline29"  (55, 130) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon2" via "polyline29" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline30"  (55, 140) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon7" via "polyline30" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline31"  (190, 110) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline31" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline32"  (190, 120) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline32" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline33"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline33" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline34"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon4" via "polyline34" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline35"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline35" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline36"  (55, 140) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline36" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline37"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline37" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline38"  (190, 140) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon5" via "polyline38" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline39"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline39" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline40"  (325, 130) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline40" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline41"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline41" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline42"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon4" via "polyline42" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline43"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline43" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline44"  (190, 140) (190, 20) (55, 20) (55, 120) color black hidden
+  move "polygon3" via "polyline44" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline45"  (325, 140) (325, 20) (55, 20) (55, 110) color black hidden
+  move "polygon2" via "polyline45" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline46"  (190, 150) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon6" via "polyline46" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline47"  (55, 110) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon2" via "polyline47" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline48"  (55, 120) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline48" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline49"  (190, 150) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline49" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline50"  (55, 130) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon4" via "polyline50" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline51"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline51" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline52"  (325, 130) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline52" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline53"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline53" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline54"  (55, 140) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon5" via "polyline54" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline55"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline55" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline56"  (190, 140) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline56" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline57"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline57" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline58"  (190, 150) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon4" via "polyline58" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline59"  (55, 130) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon2" via "polyline59" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline60"  (55, 140) (55, 20) (325, 20) (325, 110) color black hidden
+  move "polygon3" via "polyline60" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline61"  (190, 150) (190, 20) (325, 20) (325, 100) color black hidden
+  move "polygon2" via "polyline61" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline62"  (55, 150) (55, 20) (190, 20) (190, 150) color black hidden
+  move "polygon8" via "polyline62" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline63"  (325, 100) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon2" via "polyline63" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline64"  (325, 110) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline64" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline65"  (55, 150) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline65" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline66"  (325, 120) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon4" via "polyline66" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline67"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline67" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline68"  (190, 140) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline68" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline69"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline69" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline70"  (325, 130) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon5" via "polyline70" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline71"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline71" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline72"  (55, 140) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline72" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline73"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline73" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline74"  (55, 150) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon4" via "polyline74" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline75"  (325, 120) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon2" via "polyline75" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline76"  (325, 130) (325, 20) (190, 20) (190, 120) color black hidden
+  move "polygon3" via "polyline76" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline77"  (55, 150) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon2" via "polyline77" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline78"  (325, 140) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon6" via "polyline78" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline79"  (190, 110) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline79" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline80"  (190, 120) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline80" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline81"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline81" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline82"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon4" via "polyline82" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline83"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline83" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline84"  (55, 140) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline84" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline85"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline85" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline86"  (190, 140) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon5" via "polyline86" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline87"  (325, 120) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline87" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline88"  (325, 130) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon3" via "polyline88" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline89"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline89" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline90"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon4" via "polyline90" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline91"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline91" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline92"  (190, 140) (190, 20) (55, 20) (55, 120) color black hidden
+  move "polygon3" via "polyline92" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline93"  (325, 140) (325, 20) (55, 20) (55, 110) color black hidden
+  move "polygon2" via "polyline93" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline94"  (325, 150) (325, 20) (190, 20) (190, 140) color black hidden
+  move "polygon7" via "polyline94" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline95"  (55, 110) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline95" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline96"  (55, 120) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon3" via "polyline96" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline97"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline97" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline98"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon4" via "polyline98" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline99"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline99" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline100"  (325, 150) (325, 20) (190, 20) (190, 120) color black hidden
+  move "polygon3" via "polyline100" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline101"  (55, 130) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon2" via "polyline101" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline102"  (55, 140) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon5" via "polyline102" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline103"  (190, 110) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline103" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline104"  (190, 120) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline104" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline105"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline105" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline106"  (190, 130) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon4" via "polyline106" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline107"  (55, 130) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon2" via "polyline107" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline108"  (55, 140) (55, 20) (325, 20) (325, 130) color black hidden
+  move "polygon3" via "polyline108" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline109"  (190, 130) (190, 20) (325, 20) (325, 120) color black hidden
+  move "polygon2" via "polyline109" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline110"  (55, 150) (55, 20) (190, 20) (190, 130) color black hidden
+  move "polygon6" via "polyline110" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline111"  (325, 120) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon2" via "polyline111" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline112"  (325, 130) (325, 20) (190, 20) (190, 120) color black hidden
+  move "polygon3" via "polyline112" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline113"  (55, 150) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon2" via "polyline113" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline114"  (325, 140) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon4" via "polyline114" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline115"  (190, 110) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline115" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline116"  (190, 120) (190, 20) (55, 20) (55, 140) color black hidden
+  move "polygon3" via "polyline116" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline117"  (325, 140) (325, 20) (55, 20) (55, 130) color black hidden
+  move "polygon2" via "polyline117" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline118"  (325, 150) (325, 20) (190, 20) (190, 120) color black hidden
+  move "polygon5" via "polyline118" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline119"  (55, 130) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon2" via "polyline119" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline120"  (55, 140) (55, 20) (325, 20) (325, 150) color black hidden
+  move "polygon3" via "polyline120" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline121"  (190, 110) (190, 20) (325, 20) (325, 140) color black hidden
+  move "polygon2" via "polyline121" after 0 ticks within 10 ticks
+}
+delay 500 ms
+delay 500 ms
+{
+  polyline "polyline122"  (55, 150) (55, 20) (190, 20) (190, 110) color black hidden
+  move "polygon4" via "polyline122" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline123"  (325, 140) (325, 20) (55, 20) (55, 150) color black hidden
+  move "polygon2" via "polyline123" after 0 ticks within 10 ticks
+}
+delay 500 ms
+{
+  polyline "polyline124"  (325, 150) (325, 20) (190, 20) (190, 100) color black hidden
+  move "polygon3" via "polyline124" after 0 ticks within 10 ticks
+}
+{
+  polyline "polyline125"  (55, 150) (55, 20) (190, 20) (190, 90) color black hidden
+  move "polygon2" via "polyline125" after 0 ticks within 10 ticks
+}
+text "tText" "# Moves: 126" at (193, 180) centered font SansSerif size 16 bold

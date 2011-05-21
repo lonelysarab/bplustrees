@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+
+<input_panel>
+  
+  <textfield>
+    
+	<label_line>The dimension array p</label_line>
+    
+	<default_field>5 10 20 2 50</default_field>
+    
+	<value_entered></value_entered>
+  
+  </textfield>
+  
+</input_panel>
+

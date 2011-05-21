@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>typeSet/solveTS</call_stack>
+	<program_listing>
+		<signature>solveTS(L, M, C)</signature>
+		<line line_number="1">1	  Compute the matrix L[][] of word sequence lengths for a line - the matrix size is n x n</line>
+		<line line_number="2">2	  Compute the misfit matrix M[][] of "extra" space needs of size n x n	</line>
+		<line line_number="3">3   Initialize diagonal of C to that of M</line>
+		<line line_number="4">4	  For each column j of C</line>
+		<line line_number="5">5	    For rows i from  j-1 down to 0 </line>
+		<line line_number="6">6	       min = M[i][j]</line>
+		<line line_number="7">7	       For k running from i up to but not including j</line>
+		<line line_number="8">8     	  val = M[i][k] + C[k+1][j]</line>
+		<line line_number="9">9     	  if (val < min)</line>
+		<line line_number="10">10     	     min = val</line>
+		<line line_number="11">11      C[i][j] = min</line>
+		<line line_number="12">12  C[0][n-1] contains the minimum required stretching/compressing space required to typeset the word sequence.	</line>
+	</program_listing>
+</pseudocode>

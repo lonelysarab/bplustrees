@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>         
+<project default="compile">
+
+    <target name="compile">
+        <javac debug="true" srcdir="." destdir="../../../build/classes" classpath=".:../../../build/classes:../../../lib/jdom.jar" includes="*.java" /> 
+    </target>
+
+    <target name="run">
+      <java fork="true" dir="../../../build/classes" classpath="../../../build/classes:../../../lib/jdom.jar:../../../lib/jaxen.jar:." classname="exe.jvmbytecodes.jvmbytecodes"> 
+       	  <arg value="../../../html_root/uid/1" />  
+          <arg value="ignored with the new input generator" />
+       	  <arg value="../../../html_root/uid/1.xml" />  
+        </java> 
+
+    </target>
+
+    <target name="clean">
+        <echo>
+            Removing all class files
+        </echo>
+        <delete> 
+            <fileset dir="../../../build/classes/exe/jvmbytecodes">
+                <include name="*.class" />
+            </fileset>
+            <fileset dir="./">
+                <include name="*.class" />
+            </fileset>
+        </delete>
+      <delete> 
+            <fileset dir="../../../../html_root/uid">
+                <include name="**/*" />
+                <exclude name="uid" />
+                <exclude name=".*" />
+            </fileset>
+        </delete>
+    </target>
+  
+</project>

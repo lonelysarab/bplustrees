@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>Stable Marriage Problem</call_stack>
+    <program_listing> 
+	<signature>StableMarriage(menList, womenList)</signature>
+	<line line_number="1">1   while (UnmatchedMenExist(menList))</line>
+	<line line_number="2">2      currentMan = UnmatchedManIndex(menList)</line>
+	<line line_number="3">3      woman = NextPotentialMatch(currentMan)</line>
+	<line line_number="4">4      if (IsAlreadyMatched(woman))</line>
+	<line line_number="5">5         if (Prefers(woman, currentMan))</line>
+	<line line_number="6">6            UnAssign(woman)</line>
+	<line line_number="7">7            TentativelyAssign(woman, currentMan)</line>
+	<line line_number="8">8      else</line>
+	<line line_number="9">9         TentativelyAssign(woman, currentMan)</line>
+    </program_listing>
+    <variables>
+        <variable>currentMan = <replace var="currentMan" /></variable>
+		<variable>woman = <replace var="woman" /></variable>
+    </variables>
+</pseudocode>

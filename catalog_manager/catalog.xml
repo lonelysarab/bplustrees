@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<public publicId="-//JHAVE//DTD GAIGS SHO//EN" uri="gaigs/gaigs_sho.dtd"/>
+<public publicId="-//JHAVE//DTD INPUT PANEL//EN" uri="input_gen/input_panel.dtd"/>
+</catalog>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+<snap>
+<title>3D Must Be Destroyed</title>
+<no3darray>
+<bounds x1="0.0" y1="0.0" x2="1.0" y2="0.8" fontsize="0.05"/>
+<row_label>No</row_label>
+<row_label>More</row_label>
+<row_label>3D</row_label>
+<column_label>No</column_label>
+<column_label>3D</column_label>
+<column>
+<list_item>
+<label>Death</label>
+</list_item>
+<list_item>
+<label>3</label>
+</list_item>
+<list_item>
+<label>HA</label>
+</list_item>
+</column>
+<column>
+<list_item>
+<label>To</label>
+</list_item>
+<list_item>
+<label>D</label>
+</list_item>
+<list_item>
+<label>HA</label>
+</list_item>
+</column>
+</no3darray>
+</snap>
+</show>

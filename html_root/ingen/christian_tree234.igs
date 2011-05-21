@@ -1,0 +1,9 @@
+TEXTFIELD
+If you choose user-defined, enter numbers here:
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+Random
+User-defined
+ENDCHOICE

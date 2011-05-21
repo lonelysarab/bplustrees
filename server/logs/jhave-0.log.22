@@ -1,0 +1,32 @@
+5/20/11 6:48 PM - INFO: Using WEBROOT = http://localhost:8080/
+5/20/11 6:48 PM - INFO: Using Script Root of /home/wc/Desktop/trunk/server/build/classes/
+5/20/11 6:48 PM - INFO: Using User Script Directory of /home/wc/Desktop/trunk/
+5/20/11 6:48 PM - INFO: JHAVE Server started. Listening on port 7004
+5/20/11 6:48 PM - INFO: Accepted connection 1 from 127.0.0.1
+5/20/11 6:48 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 6:48 PM - INFO: Object: Thread[Thread-1,5,main]
+5/20/11 6:48 PM - INFO: 1 bplus_tree no_username
+5/20/11 6:48 PM - FINER: ENTRY
+5/20/11 6:48 PM - FINE: sendtoClient - 100 Client and server connected with user login no_username
+5/20/11 6:48 PM - INFO: 4 bplus_tree new <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+<input_panel>
+  <textfield>
+    <label_line>Please enter the order of the tree (2, 3, or 4)</label_line>
+    <default_field>4</default_field>
+    <value_entered>4</value_entered>
+  </textfield>
+</input_panel>
+5/20/11 6:48 PM - FINER: ENTRY
+5/20/11 6:48 PM - FINER: ENTRY
+5/20/11 6:48 PM - INFO: /home/wc/Desktop/trunk/html_root/uid/1 *
+5/20/11 6:48 PM - FINE: Up front with user  no_username looking for -- exe/bplus_tree/bplus_tree
+5/20/11 6:48 PM - FINER: Executing -- java -classpath ../../lib/jdom.jar:../../lib/jaxen.jar:. exe.bplus_tree.bplus_tree /home/wc/Desktop/trunk/html_root/uid/1 * /home/wc/Desktop/trunk/html_root/uid/1.xml
+5/20/11 6:48 PM - FINE: exec(java -classpath ../../lib/jdom.jar:../../lib/jaxen.jar:. exe.bplus_tree.bplus_tree /home/wc/Desktop/trunk/html_root/uid/1 * /home/wc/Desktop/trunk/html_root/uid/1.xml)
+..........with script root /home/wc/Desktop/trunk/server/build/classes/
+5/20/11 6:48 PM - FINE: Process started
+5/20/11 6:48 PM - FINE: And completed
+5/20/11 6:48 PM - FINE: Loading dynamic script: /home/wc/Desktop/trunk/html_root/uid/1.sho
+5/20/11 6:48 PM - FINE: http://localhost:8080/html_root/uid/1.sho
+5/20/11 6:48 PM - FINE: sendtoClient - 400 bplus_tree gaigs
+5/20/11 6:48 PM - FINE: sendtoClient - http://localhost:8080/html_root/uid/1.sho

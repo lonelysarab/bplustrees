@@ -1,0 +1,80 @@
+<html>
+<head>
+<style type="text/css">
+	<!--
+		body
+		{
+			background-color: #FFFFFF;
+		}
+
+		font.closing_node
+		{
+			font-weight: bold;
+			color: #00FF00;
+		}
+
+		font.text
+		{
+			font-weight: bold;
+			background-color: #6666FF;
+			color: #0000FF;
+		}
+
+		font.updating_node
+		{
+			font-weight: bold;
+			color: #61C3F4;
+		}
+
+		font.orange2
+		{
+			font-weight: bold;
+			color: #FFCC33;
+		}
+
+		table
+		{
+			padding : 4;
+			border : 1px solid black;
+			text-align : center;
+		}
+
+		th
+		{
+			border : 1px solid black;
+			padding : 8;
+		}
+
+		td
+		{
+			border : 1px solid black;
+		}
+	-->
+</style>
+</head>
+<body>
+<h2>Breadth First Graph Search Algorithm</h2>
+
+<p>The following pseudo code describes the breadth first graph search algorithm:</p>
+<table align=center cellpadding=4>
+<tr align=left><td><code>
+<pre>
+
+1. /* initialization */
+2. queue openList = { startVertex }
+3. /* loop */
+4. while ( closedNodes != numberOfNodes &amp;&amp; !openList.empty())
+   {
+5.   while (openList.front() is a closed vertex) openList.pop()
+6.   <font class=closing_node>closingVertex</font> = openList.pop();
+7.   for each non-closed <font class=updating_node>vertex</font> not in openList with an edge to it from <font class=closing_node>closingVertex</font>
+     {
+8.      openList.push_back( <font class=updating_node>vertex</font> );
+     }
+   }
+</pre>
+</code></td></tr></table>
+<p>
+Note:  When the inner for loop above goes through vertices connected to a node, it goes through them in alphabetical order.
+</body>
+</html>

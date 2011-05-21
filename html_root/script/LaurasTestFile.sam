@@ -1,0 +1,89 @@
+coords -100 -100 100 100
+circle C 0 0 90 WhiteSmoke solid
+rectangle frog 10 10 10 10 green solid
+move frog 20 20
+text T 0 -85 1 black Happy Happy Joy Joy!!
+move frog 20 -20
+bg PapayaWhip
+MCQUESTION mc
+triangle tri 20 30 40 20 30 40 blue solid
+move frog -20 20
+circle theCircle -30 10.0 8 orange solid
+color frog red
+move frog 30 30
+move frog -30 -30
+FIBQUESTION fib
+color theCircle purple
+move tri 10 90
+move T 0 -45
+move frog 30 -30
+alter T Happy Happy Happy Joy Joy Joy!!!
+polygon poly 6 pink solid -5 5 0 15 15 15 10 5 15 -5 0 -5
+move frog -30 30
+swapid poly frog
+color frog chocolate
+move T 0 -75
+delete frog
+circle frog 0 0 20 black outline
+move frog -50 -50
+circle one -5 5 3 black solid
+circle two -15 15 4 black solid
+circle three -25 25 5 black solid
+move one -15 15
+move two -25 25
+move three -35 35
+documentation http://gaigs.cmsc.lawrence.edu/
+TFQUESTION tf
+set CS 3 one two three
+move theCircle -80 -90
+coords -200 -200 200 200
+move CS -30 -40
+color poly yellow
+{
+move CS 30 40
+move theCircle 0 0
+move frog 0 0
+move T 0 0
+move tri 0 0
+move poly 0 0
+}
+raise poly
+raise tri
+raise theCircle
+raise T
+color C red
+color T white
+pause
+STARTQUESTIONS
+TFQUESTION tf
+This is a true-or-false question.
+ENDTEXT
+ANSWER
+T
+ENDANSWER
+FIBQUESTION fib
+Name a visualizer engine that is or will be supported by JHAVE.
+ENDTEXT
+ANSWER
+animal
+gaigs
+g.a.i.g.s
+samba
+jsamba
+ENDANSWER
+MCQUESTION mc
+Which of the following algorithm visualizers does not show smooth animations?
+ENDTEXT
+Animal
+ENDCHOICE
+Gaigs
+ENDCHOICE
+Samba
+ENDCHOICE
+ANSWER
+2
+ENDANSWER
+
+
+
+

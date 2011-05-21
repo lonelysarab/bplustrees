@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<pseudocode>
+  <stack><replace var="current_function" /></stack>
+  <code>
+    <signature>Pseudocode</signature>
+    <line num="1"> split(Node n) {</line>
+    <line num="2" indent="1"> median = round(node.size/2)</line>
+    <line num="3" indent="1"> if (n(0).leftDownPointer == null)//node is leaf </line>
+    <line num="4" indent="2"> newLeaf //make a new leaf to the right of n</line>
+    <line num="5" indent="2"> newLeaf(0) = n(median)</line>
+    <line num="6" indent="2"> newLeaf.rightLeaf = n.rightLeaf //create a pointer to the adjacent leaf</line>
+    <line num="7" indent="2"> if (newLeaf.rightLeaf != null)</line>
+    <line num="8" indent="3"> newLeafNode.rightLeaf.leftLeaf = newLeaf</line>
+    <line num="9" indent="2"> index = 1</line>
+    <line num="10" indent="2">while(n.size > median) {</line>
+    <line num="11" indent="3">tempValue = n(index)</line>
+    <line num="12" indent="3">n(index).remove</line>
+    <line num="13" indent="3">index++</line>
+    <line num="14" indent="2">}</line>
+    <line num="15" indent="2">n.rightLeaf = newLeaf</line>
+    <line num="16" indent="2">if (n.parent == null) {//a new parent is made</line>
+    <line num="17" indent="3">Node newParent //creation of newParent</line>
+    <line num="18" indent="3">newParent(0) = newLeaf(0)</line>
+    <line num="19" indent="3">newParent(0).leftDownPointer = n</line>
+    <line num="21" indent="3">newParent(0).rightDownPointer = newLeaf</line>
+    <line num="22" indent="3">n.parent = newParent</line>
+    <line num="23" indent="3">root = newParent</line>
+    <line num="24" indent="3">}</line>
+    <line num="25" indent="2">else { //pass the number x up</line>
+    <line num="26" indent="3">n.parent.add(newLeaf(0))</line>
+    <line num="27" indent="3">if(n.parent.size == order)</line>
+    <line num="28" indent="4">split(n)</line>
+    <line num="29" indent="2">}</line>
+    <line num="30" indent="1">}</line>
+    <line num="31" indent="1">else { //split a node</line>
+    <line num="32" indent="2">newNode //make a new node to the right of the node</line>
+    <line num="33" indent="2">newNode(0) = n(median)</line>
+    <line num="34" indent="2">n.remove(median)</line>
+    <line num="35" indent="2">newNode.parent = n.parent</line>
+    <line num="36" indent="2">newNode.rightLeaf = null</line>
+    <line num="37" indent="2">newNode.leftLeaf = null</line>
+    <line num="38" indent="2">while(n.size > median) {</line>
+    <line num="39" indent="3">newNode.add(n(median))</line>
+    <line num="40" indent="3">n(median).remove</line>
+    <line num="41" indent="2">}</line>
+    <line num="42" indent="2">n.rightLeaf = null</line>
+    <line num="43" indent="2">n.leftLeaf = null</line>
+    <line num="44" indent="2">if(n.parent == null) {//a new parent is made</line>
+    <line num="45" indent="3">newParent(0) = newNode(0)</line>
+    <line num="46" indent="3">newParent(0).leftDownPointer = n</line>
+    <line num="47" indent="3">newParent(0).rightDownPointer = newNode</line>
+    <line num="48" indent="3">n.parent = newParent</line>
+    <line num="49" indent="3">root = newParent</line>
+    <line num="50" indent="2">} else {</line>
+    <line num="51" indent="3">n.parent.add(newNode(0))</line>
+    <line num="52" indent="3">if (n.parent.size == order)</line>
+    <line num="53" indent="4">split(n.parent)</line>
+    <line num="54" indent="2">}</line>
+    <line num="55" indent="1">}</line>
+    <line num="56" indent="1">return</line>
+    <line num="57" >}</line>
+  </code>
+  <vars>
+    <var>x = <replace var="x" /></var>
+  </vars>
+</pseudocode>

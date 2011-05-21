@@ -1,0 +1,21 @@
+CHOICE
+Choose your example
+ByReference1
+ByCopyRestore1
+ByReference2
+ByCopyRestore2
+ByReference3
+ByCopyRestore3
+ByReference4
+ByCopyRestore4
+ByName1
+ByMacro1
+ByName2
+ByMacro2
+ByName3
+ByMacro3
+ByName4
+ByMacro4ERROR
+ByName5
+ByMacro5ERROR
+ENDCHOICE

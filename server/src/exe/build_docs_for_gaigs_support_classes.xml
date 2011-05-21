@@ -1,0 +1,24 @@
+<project name="Produce java docs for GAIGS support classes" default="docs-for-GAIGS-support" basedir=".">
+<!--   Invoke with ant -f build_docs_for_gaigs_support_classes.xml -->
+
+  <property name="java.src"     value="." />
+  <property name="docs.dir"     value="../../../GAIGS_support_docs" />
+  
+  <target name="init">
+    <mkdir dir="${docs.dir}"/>
+  </target>
+  
+  <target name="clean">
+    <delete dir="${docs.dir}"/>
+  </target>
+
+  <target name="docs-for-GAIGS-support" depends="init">
+    <javadoc  destdir="${docs.dir}" classpath=".:../../lib/jdom.jar:../../lib/jaxen.jar:../../build/classes">
+      <fileset dir="${java.src}" defaultexcludes="yes">
+	<include name="*.java"/>
+	<include name="pseudocode/*.java"/>
+      </fileset>
+    </javadoc>
+  </target>
+
+</project>

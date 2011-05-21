@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <combobox>
+    <label_line>Choose binary or general tree:</label_line>
+    <option>Binary</option>
+    <option>General</option>
+    <option_entered></option_entered>
+  </combobox>
+  <textfield>
+    <label_line>Enter name for root node:</label_line>
+    <default_field>root</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>Enter more operations (((addlx,y | addrx,y) | (addx,y) {add x to parent y - l and r for binary}) | remx | colx,y {color x hex string y})*</label_line>
+    <default_field>None</default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>

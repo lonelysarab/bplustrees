@@ -1,0 +1,38 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="../php_inc/program_listing.css">
+
+</head>
+<body>
+<h1><center>Red Black Trees</center></h1>
+<p>Like their cousin, the binary search tree, Red Black trees continue to have a binary search property where all nodes larger than the current node are to the right and all nodes smaller are to the left. The difference is, however, that Red Black trees incorporate a self balancing technique when adding and deleting nodes in order to keep the tree fairly well balanced.</p> 
+<p>The properties of a Red Black tree are as follows:<br>
+<ul>
+<li>The root is always black,</li>
+<li>Every external node is black,</li>
+<li>Both children of a red node must be black, and</li>
+<li>all external nodes will have the same black depth (number of black ancestors minus one).</li>
+</ul>
+
+<p>Adhering to these properties causes the insert and delete methods to modify the tree whenever a rule is broken after a node is inserted or deleted.</p>
+
+<p>With insert there are two basic situations that it must handle:<br>
+<ol>
+<li>The uncle of the added node is black, which will cause a restructuring of the nodes.</li>
+<li>The uncle of the added node is red, which causes a recoloring of the structure.</li>
+</ol></p>
+
+<p>With delete we must examine the location of where the deleted node got its new value from (what node took the deleted nodes place). And with this there are three cases to consider:<br>
+<ol>
+<li>Original sibling of node that took deleted nodes place is black and has a red child, which causes a need for restructuring of the sibling its parent and its with the final root of the adjusting subtree being black.</li>
+<li>The original sibling of the node that replaced the deleted node is black and has no red children, this causes a need for recoloring only, however, the tree will have to be traversed up to make sure recoloring didn't cause other &#34;double black&#34; problems.</li>
+<li>The original sibling of node that replaced the deleted node is red, this causes a need for restructuring of the sibling its child and its parent with the final root of the adjusting subtree being red.</li>
+</ol></p>
+
+<p>With a Red Black tree the operations on it end up having the following times:<br>
+Search: O(log n)<br>
+insert: O(log n)<br>
+delete: O(log n) </p> 
+
+</body>
+</html>

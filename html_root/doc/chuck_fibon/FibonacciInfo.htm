@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Fibonacci Number Info Page</title>
+</head>
+<body>
+      <h2>Computing Fibonacci Numbers </h2>
+      <p>Given a pair of base values f<sub>0</sub> and f<sub>1</sub> to initiate the computation, the k'th fibonacci
+number can be computed by <br /><center>f<sub>k</sub> = f<sub>k-1</sub> + f<sub>k-2</sub> for k >= 2.</center>  <br />This gives immediate rise to
+the recursive formulation to compute fibon(n):</p>
+<pre>
+	fibon(n) = fibon(n-1) + fibon(n-2)	if n >= 2
+	fibon(0) = 1
+	fibon(1) = 1
+</pre>
+<p> An iterative solution is also immediately apparent and in the classic sense a prototypical, albeit straight-forward,
+ solution to a dynamic programming problem.
+</p>
+<pre>
+	fibon[0] = 1;
+	fibon[1] = 1;
+	for (int j = 2; j <= n; j++)
+		fibon[j] = fibon[j-1] + fibon[j-2];
+</pre>
+</p>
+
+<p> In our visualization the recursive call tree for some modest value of n is produced.  In the call tree, a number of calls
+are repeated - recursion does not "remember" values it has previously computed.  An array whose dimension depends upon the number
+of parameters of the problem (in this case just one - the fibonacci number n) can be used to serve as a memory for the recursion OR more typically in dynamic programming problems
+lead directly to a solution which includes an array - as demonstrated above. </p>
+
+
+
+<h3>Dynamic Programming</h3>
+<p>
+The fundamental idea behind dynamic programming is to solve a given problem by solving a series of subproblems.
+The series of subproblems is conceived in a manner that permits a subsequent subproblem to be solved by combining the 
+solutions of one or more of the subproblems already solved - making dynamic programming a <strong>bottom-up</strong> approach.  
+The intermediate solutions are held in an array to eliminate repeating work.  
+</p>
+
+<h3>The Visualizaton</h3>
+<p>
+The most dramatic impact of the visualization is, for small n, the sheer size (a nearly complete binary tree) of the recursive call tree compared to the
+1-dimensional matrix that is needed for the dynamic programming solution.  As the dynamic programming matrix is filled, for 
+position k the solution requires that the sum of the entries at the indices k-1 and k-2 be calculated - the two cells whose values are added are shown in blue
+each step of the execution.  At the same time, in the recursive call tree, each of the calls made to f(k-1) and f(k-2) are shown by coloring those nodes blue.  This provides an
+illustration of the savings of the dynamic programming approach.
+</p>
+<p>
+Before executing the visualization the user is allowed to decide whether they want to alter the base case for computing the fibonacci number.  This is done through
+a dialog window. 
+</p>
+
+
+
+  
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</body>
+</html>

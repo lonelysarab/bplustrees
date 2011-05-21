@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<h1>Shell Sort</h1>
+<p>Shell Sort is primarily an extension of the Insertion Sort algorithm. Shell sort takes advantage of the high efficiency of Insertion Sort on almost ordered lists by recursively calling a modified version of Insertion Sort with increasingly smaller jumps of items eventually performing a standard (single location movement) Insertion Sort.</p>
+<p>For example: If Shell sort is given the input of twelve unordered items it may use a increment of four locations. Thus, the Insertion Sort would compare items at location 0 and 4, 1 and 5, and so on. These comparisons would lead to swaps as in standard Insertion Sort and once the algorithm had completed one pass at the data, the increment would be reduced  and the process repeated.</p>
+<p>The procedure for finding the best increment is a log based algorithm as follows:</p>
+<ul>
+  <li>K is found through the log base 2 of the number items in the list</li>
+  <li>The increment is then derived as K^2 - 1</li>
+  <li>After each full pass through the data the increment is recalibrating after K is decremented by one.</li>
+</ul>
+<p>Eventually this algorithm will produce an increment of one in which case the sort is standard Insertion Sort. However, since the list will already be close to sorted, the Insertion Sort algorithm will be highly efficient and quickly finish sorting the list.</p>
+</body>
+</html>

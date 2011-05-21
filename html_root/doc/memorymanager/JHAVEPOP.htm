@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>JHAVEPOP</title>
+</head>
+
+<body>
+
+<center><img src="images/jhavepopSmall.png"></center><BR>
+
+<H2>Overview</H2>
+
+JHAVEPOP visualizes pointer (or reference) operations embedded in C++
+or Java programs. In the left pane, each square box represents a
+memory location. A pointer or reference to an
+object is thus portrayed as a single box. JHAVEPOP also assumes that a
+<i>Node</i> class has already been defined. Each instance of the
+<i>Node</i> class contains a "data" or "info" field of type
+<i>char</i>, and a "next" pointer or reference to another <i>Node</i>
+instance. Therefore, a <i>Node</i> object is portrayed as two adjacent
+boxes, with the "next" box positioned to the right of the "data" box.
+
+<BR><BR> 
+
+After you input a program, its source code appears in
+the pseudo-code pane. JHAVEPOP automatically produces a snapshot that
+visualizes the state of memory after each program step is
+executed. Both the code segment for the current step and the effect it
+had on memory are <b>highlighted in red</b>.
+
+<BR><BR>
+
+The next two sections describe the additional drawing conventions that
+are used to visualize Java and C++ code, respectively.
+
+<H2>Visualization of Java code</H2>
+
+<table>
+
+<tr>
+<td>When a <i>Node</i> variable, for example: <i>node1</i>, is being
+declared, an empty box is created, labelled with the name of the variable.
+</td>
+<td><img src="images/emptyrefJ.png" width="40" height="40"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr>
+<td> If the variable is assigned the <i>null</i> reference, the box
+is crossed with a diagonal line</td>
+<td><img src="images/nullrefJ.png"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr> <td>If the variable is assigned a <i>Node</i> instance, for 
+example with data value <i>'A'</i> and a <i>null</i> value as its 
+<i>next</i> reference, an arrow is drawn from the variable to the 
+<i>Node</i> instance. When the value of the variable is changed, 
+the arrow changes its destination <i>Node</i> accordingly.</td> 
+<td><img src="images/assignJ.png"></td> </tr>
+</table>
+
+<BR>
+
+<table>
+
+<tr>
+<td>When a boolean expression is being evaluated, for example:
+<br> 
+<center><i>( node1.next != null )</i></center><BR>
+JHAVEPOP highlights the reference(s) involved in the comparison.<td>
+<img src="images/bool1J.png"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr>
+<td>When the value of a <i>Node</i>'s <i>info</i> field is being compared 
+to a <i>char</i> literal or to another <i>Node</i>'s <i>info</i> field value,
+ for example:
+<BR><center><i>( node1.info == node1.next.info )</i></center>
+<BR>JHAVEPOP highlights the corresponding <i>char</i> values.</td>
+<td><img src="images/bool2J.png"></td> 
+</tr>
+
+</table>
+
+</table>
+
+
+
+
+
+<H2>Visualization of C++ code</H2>
+
+
+<table>
+
+<tr>
+<td>When a pointer to a <i>Node</i>, for example: <i>node1</i>, is being
+declared, an empty box is created, labelled with the name of the pointer 
+variable.
+</td>
+<td><img src="images/emptyrefJ.png" width="40" height="40"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr>
+<td> If the pointer variable is assigned the <i>NULL</i> pointer, the box
+is crossed with a diagonal line</td>
+<td><img src="images/nullrefJ.png"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr> <td>If the pointer variable is assigned a <i>Node</i> instance, for 
+example with data value <i>'A'</i> and a <i>NULL</i> value as its 
+<i>next</i> reference, an arrow is drawn from the pointer variable to the 
+<i>Node</i> instance. When the value of the pointer variable is changed, 
+the arrow changes its destination <i>Node</i> accordingly.</td> 
+<td><img src="images/assignJ.png"></td> </tr>
+</table>
+
+<BR><BR>
+
+<table>
+
+<tr>
+<td>When a boolean expression is being evaluated, for example:<br> 
+<center><i>( node1->next != NULL )</i></center><BR>
+JHAVEPOP highlights the pointer(s) involved in the comparison.
+</td>
+<td><img src="images/bool1J.png"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr>
+<td>When the value of a <i>Node</i>'s <i>info</i> field is being compared 
+to a <i>char</i> literal or to another <i>Node</i>'s <i>info</i> field value,
+ for example:<BR>
+<center><i>( node1->info == node1->next->info )</i></center><BR>
+JHAVEPOP highlights the corresponding <i>char</i> values.</td>
+<td><img src="images/bool2J.png"></td> 
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr><td>A <b>memory leak</b> occurs when the memory allocated to a
+<i>Node</i> instance has not been reclaimed, even though no pointer is
+currently (or ever will be) pointing to the <i>Node</i>
+instance. Such a memory leak may be the consequence of executing an
+assignment statement, for example:<BR>
+<center><i> node1 = node1->next;</i></center></td>
+<td><img src="images/leak.png"></td>
+</tr>
+
+<tr><td>&nbsp</td><td></td></tr>
+
+<tr valign=top>
+<td>or using the <i>delete</i> operator, for example<BR>
+<center><i> delete node1;</i></center><BR>
+
+In this example, both pointers <i>node1</i> and <i>node2</i> were
+initially pointing to the same node.<BR><BR>
+
+
+Leaked node(s) appear in <b>light gray</b> and are thus differentiated
+from regular nodes, which are drawn in <b>black</b> (or <b>red</b>, if they
+are participating in the current operation).<BR><BR>
+
+Finally, <b>dangling pointers</b> are shown in <b>blue</b>. Such
+pointers should not be dereferenced because the node they were
+pointing to was deallocated, and the memory it occupied might have been
+reallocated to a different node.</td>
+
+<td><BR><BR><img src="images/dangling.png"></td>
+</tr>
+
+
+</table>
+
+
+
+</table>
+
+
+</body>
+
+
+</html>

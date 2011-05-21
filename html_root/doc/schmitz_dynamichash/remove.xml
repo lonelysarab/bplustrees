@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>Extensible Hashing/Remove Element</call_stack>
+	<program_listing>
+		<signature>Remove Element</signature>
+
+		<line line_number="1">V = Number to be removed
+HV = Get the hash value of V
+DA = rightmost dd bits of HV</line>
+		<line line_number="2">If directory element at DA is null then
+  If V to be removed does not exist then element removal is finished</line>
+		<line line_number="3">Else
+  load into memory the bucket that directory element at address DA refers to
+  search for then remove V from the bucket</line>
+		<line line_number="4">  If the bucket is not empty then
+    element removal is finished</line>
+		<line line_number="5">  Else  //bucket merge occurs
+    deallocate bucket from memory
+    adjust pointers of the directory and bucket depths of the buckets
+    LD = largest bucket depth of all the buckets
+    If LD &gt; Directory Depth Then
+      shrink the directory to 2 to the LD power elements
+      change the Directory Depth to LD
+      adjust pointers to point to the correct buckets
+    End If
+  End If
+End If </line>
+
+
+	</program_listing>
+	<variables>
+		<variable>Element Removing 
+hashvalue(<replace var="firstvalue" />)=<replace var="firsthash" /></variable> 
+
+	</variables>
+
+</pseudocode>

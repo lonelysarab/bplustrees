@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pseudocode>
+        <call_stack>longComSeq/dynProgLCS</call_stack>
+        <program_listing>
+                <signature>dynProgLCS(seq1, seq2)</signature>
+                <line line_number="1">1 Initialize first row and first column of dynamic programming matrix to 0</line>
+                <line line_number="2">2 For each element of the row sequence    </line>
+                <line line_number="3">3    For each element of the column sequence</line>
+                <line line_number="4">4         If seq1[i] equals seq[j]</line>
+                <line line_number="5">5            m[i,j] = m[i-1,j-1] + 1      </line>
+                <line line_number="6">6         Else  </line>
+                <line line_number="7">7            m[i,j] = max {m[i-1, j], m[i, j-1]}  </line>
+        </program_listing>
+</pseudocode>

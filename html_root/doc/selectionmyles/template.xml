@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pseudocode>
+     <call_stack>SelectionSort</call_stack>
+     <program_listing>
+	<signature>selectionSort(list)</signature>
+	<line line_number="1">1   for (i = 0; i &#38;#60; list.length-1; i++)</line>
+	<line line_number="2">2     minIndex = i</line>
+	<line line_number="3">3      for (j = i+1; j &#38;#60; list.length; j++)</line>
+	<line line_number="4">4         if (list[j] &#38;#60;  list[minIndex])</line>
+	<line line_number="5">5            minIndex = j</line>
+	<line line_number="6">6      swap(i, minIndex)</line>
+    </program_listing>
+    <variables>
+        <variable>minIndex = <replace var="minIndex" /></variable>
+	<variable>i = <replace var="i" /></variable>
+	<variable>j = <replace var="j"/></variable>
+    </variables>
+</pseudocode>

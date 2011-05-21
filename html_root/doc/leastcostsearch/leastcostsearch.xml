@@ -1,0 +1,35 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Least-Cost Search Algorithm</call_stack>
+<program_listing>
+<line line_number = "1">/* initialization */
+ startVertex.cost = 0;
+ startVertex.pred = null;
+ HashTable closed = { };
+ PriorityQueue open = { start_node };</line>
+<line line_number = "2">/* main loop */
+ while(!open.empty()){
+   closingVertex = open.remove_front();</line>
+<line line_number = "10">  if(closingVertex == goalVertex){
+     closed.add(closingVertex);</line>
+<line line_number = "11">    use pred values and closed list to construct a backtrace of the shortest path;
+     return the backtrace of the shortest path;
+   }</line>
+<line line_number = "4">  if(closingVertex is not in closed){
+     closed.add(closingVertex);</line>
+<line line_number = "5">    /* inner loop */
+     for(each connectingVertex with an edge from closingVertex){</line>
+<line line_number = "6">      if(connectingVertex is not in closed){
+         connectingVertex.cost = (closingVertex.cost + edge weight from closingVertex to connectingVertex);
+         connectingVertex.pred = closingVertex;
+         open.add(connectingVertex);
+       }</line>
+<line line_number = "7">    }</line>
+<line line_number = "8">  }// else ignore closingVertex and continue to next loop</line>
+<line line_number = "3">}</line>
+<line line_number = "9">// goalVertex was not found, and open list is empty - Least-Cost failed to find the goal
+ return failure;</line>
+</program_listing>
+</pseudocode>
+

@@ -1,0 +1,9 @@
+TEXTFIELD
+Enter master string
+kokokomo
+ENDTEXTFIELD
+TEXTFIELD
+Enter substring to search for
+kokomo
+ENDTEXTFIELD
+

@@ -1,0 +1,4014 @@
+<?xml version = "1.0" encoding = "UT-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+<show>
+<snap>
+<title>Best-First Search Initial State with Start Node H and Goal Node G:</title>
+<doc_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/bestfirstsearch.html</doc_url>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?</pseudocode_url>
+<audio_text>we are testing audio 1</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "0.95" fontsize = "0.03"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+<snap>
+<title>open = { H(~-0+7) }
+closed = { empty }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=1</pseudocode_url>
+<audio_text>we are testing audio 2</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#00A1F4">
+<label>H
+0</label>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { empty }
+closed = { H(~-0) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=4</pseudocode_url>
+<audio_text>we are testing audio 3</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#44FF44">
+<label>H
+0</label>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { E(H-1+5) }
+closed = { H(~-0) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 4</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#44FF44">
+<label>H
+0</label>
+<tree_node color = "#00A1F4">
+<label>E
+1</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { E(H-1+5) F(H-5+5) }
+closed = { H(~-0) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 5</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#00A1F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#44FF44">
+<label>H
+0</label>
+<tree_node color = "#00A1F4">
+<label>E
+1</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { E(H-1+5) F(H-5+5) J(H-2+7) }
+closed = { H(~-0) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 6</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#00A1F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#44FF44">
+<label>H
+0</label>
+<tree_node color = "#00A1F4">
+<label>E
+1</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+<question_ref ref = "0"/>
+</snap>
+<snap>
+<title>open = { F(H-5+5) J(H-2+7) }
+closed = { H(~-0) E(H-1) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=4</pseudocode_url>
+<audio_text>we are testing audio 7</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#FFFFFF" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#44FF44">
+<label>E
+1</label>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { A(E-2+4) F(H-5+5) J(H-2+7) }
+closed = { H(~-0) E(H-1) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 8</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#00A1F4" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#44FF44">
+<label>E
+1</label>
+<tree_node color = "#00A1F4">
+<label>A
+2</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { A(E-2+4) F(H-5+5) F(E-5+5) J(H-2+7) }
+closed = { H(~-0) E(H-1) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 9</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#00A1F4" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#44FF44">
+<label>E
+1</label>
+<tree_node color = "#00A1F4">
+<label>A
+2</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { A(E-2+4) F(H-5+5) F(E-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 10</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#00A1F4" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#44FF44">
+<label>E
+1</label>
+<tree_node color = "#00A1F4">
+<label>A
+2</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+<question_ref ref = "1"/>
+</snap>
+<snap>
+<title>open = { F(H-5+5) F(E-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=4</pseudocode_url>
+<audio_text>we are testing audio 11</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#44FF44" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#44FF44">
+<label>A
+2</label>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { C(A-6+3) F(H-5+5) F(E-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 12</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#44FF44" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#44FF44">
+<label>A
+2</label>
+<tree_node color = "#00A1F4">
+<label>C
+6</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { C(A-6+3) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 13</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#44FF44" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#44FF44">
+<label>A
+2</label>
+<tree_node color = "#00A1F4">
+<label>C
+6</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=4</pseudocode_url>
+<audio_text>we are testing audio 14</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#44FF44">
+<label>C
+6</label>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { D(C-8+4) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 15</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#44FF44">
+<label>C
+6</label>
+<tree_node color = "#00A1F4">
+<label>D
+8</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { I(C-9+1) D(C-8+4) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 16</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#00A1F4">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#44FF44">
+<label>C
+6</label>
+<tree_node color = "#00A1F4">
+<label>D
+8</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+<tree_node color = "#00A1F4">
+<label>I
+9</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+<question_ref ref = "2"/>
+</snap>
+<snap>
+<title>open = { D(C-8+4) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) I(C-9) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=4</pseudocode_url>
+<audio_text>we are testing audio 17</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#AAFFAA">
+<label>C
+6</label>
+<tree_node color = "#88E6F4">
+<label>D
+8</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#44FF44">
+<label>I
+9</label>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { G(I-12+0) D(C-8+4) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) I(C-9) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=6</pseudocode_url>
+<audio_text>we are testing audio 18</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#00A1F4" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#00A1F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#AAFFAA">
+<label>C
+6</label>
+<tree_node color = "#88E6F4">
+<label>D
+8</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#44FF44">
+<label>I
+9</label>
+<tree_node color = "#00A1F4">
+<label>G
+12</label>
+</tree_node>
+<tree_edge color = "#00A1F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>open = { D(C-8+4) F(H-5+5) F(E-5+5) F(A-5+5) J(H-2+7) J(E-4+7) }
+closed = { H(~-0) E(H-1) A(E-2) C(A-6) I(C-9) G(I-12) }</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=10</pseudocode_url>
+<audio_text>we are testing audio 19</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.2" x2 = "0.51" y2 = "0.9" fontsize = "0.04"/>
+<vertex color = "#AAFFAA" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#FFFF00">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#FFFF00">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#88E6F4">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#AAFFAA" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#FFFF00">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#88E6F4" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#88E6F4">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#88E6F4">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+<tree x_spacing = "1.3" y_spacing = "1.3">
+<bounds x1 = "0.575" y1 = "0.3" x2 = "1.085" y2 = "1.0" fontsize = "0.04"/>
+<tree_node color = "#AAFFAA">
+<label>H
+0</label>
+<tree_node color = "#AAFFAA">
+<label>E
+1</label>
+<tree_node color = "#AAFFAA">
+<label>A
+2</label>
+<tree_node color = "#AAFFAA">
+<label>C
+6</label>
+<tree_node color = "#88E6F4">
+<label>D
+8</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#AAFFAA">
+<label>I
+9</label>
+<tree_node color = "#44FF44">
+<label>G
+12</label>
+</tree_node>
+<tree_edge color = "#44FF44">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+4</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+<tree_edge color = "#AAFFAA">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>F
+5</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+<tree_node color = "#88E6F4">
+<label>J
+2</label>
+</tree_node>
+<tree_edge color = "#88E6F4">
+</tree_edge>
+</tree_node>
+</tree>
+<array>
+<bounds x1 = "0.0" y1 = "-0.2" x2 = "1.02" y2 = "0.4" fontsize = "0.04"/>
+<column_label>Color Key</column_label>
+<column>
+<list_item color = "#00A1F4">
+<label>New Open</label>
+</list_item>
+<list_item color = "#88E6F4">
+<label>Old Open</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#44FF44">
+<label>New Closed</label>
+</list_item>
+<list_item color = "#AAFFAA">
+<label>Old Closed</label>
+</list_item>
+</column>
+<column>
+<list_item color = "#FFFF00">
+<label>Current Path</label>
+</list_item>
+<list_item color = "#999999">
+<label>Unvisited Path</label>
+</list_item>
+</column>
+</array>
+</snap>
+<snap>
+<title>Best-First Search Shortest Path from Start Node H to Goal Node G:</title>
+<pseudocode_url>http://jhave.org/jhave/html_root/doc/bestfirstsearch/index.php?line=11</pseudocode_url>
+<audio_text>we are testing audio 20</audio_text>
+<graph weighted = "true">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "0.95" fontsize = "0.03"/>
+<vertex color = "#44FF44" id = "0">
+<label>A
+4</label>
+<position x = "0.588125176514828" y = "0.5959679396382324"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "1">
+<label>B
+5</label>
+<position x = "0.7909814350109566" y = "0.05"/>
+<edge target = "3" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "2">
+<label>C
+3</label>
+<position x = "0.4923576470198226" y = "0.37817453916787536"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>4</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "8" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "3">
+<label>D
+4</label>
+<position x = "0.7077628728231062" y = "0.26836263888082196"/>
+<edge target = "1" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "2" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "4">
+<label>E
+5</label>
+<position x = "0.7388098876226076" y = "0.7563414153423136"/>
+<edge target = "0" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "5">
+<label>F
+5</label>
+<position x = "0.8128913994736805" y = "0.5326779080833907"/>
+<edge target = "0" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "3" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "4" directed = "false" color = "#999999">
+<label>4</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "6">
+<label>G
+0</label>
+<position x = "0.05" y = "0.2783005944539757"/>
+<edge target = "8" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "7">
+<label>H
+7</label>
+<position x = "0.9500000000000001" y = "0.7591718431839783"/>
+<edge target = "4" directed = "false" color = "#44FF44">
+<label>1</label>
+</edge>
+<edge target = "5" directed = "false" color = "#999999">
+<label>5</label>
+</edge>
+<edge target = "9" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+<vertex color = "#44FF44" id = "8">
+<label>I
+1</label>
+<position x = "0.2661771965867065" y = "0.32421583404914434"/>
+<edge target = "2" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+<edge target = "6" directed = "false" color = "#44FF44">
+<label>3</label>
+</edge>
+</vertex>
+<vertex color = "#FFFFFF" id = "9">
+<label>J
+7</label>
+<position x = "0.8431711392135252" y = "0.9500000000000001"/>
+<edge target = "4" directed = "false" color = "#999999">
+<label>3</label>
+</edge>
+<edge target = "7" directed = "false" color = "#999999">
+<label>2</label>
+</edge>
+</vertex>
+</graph>
+</snap>
+<questions>
+<question type = "FIBQUESTION" id = "0">
+<question_text>How many nodes will be added to the open queue in the next time through the while loop?</question_text>
+<answer_option is_correct = "yes">3</answer_option>
+</question>
+<question type = "FIBQUESTION" id = "1">
+<question_text>What will be the cost of the next node that is closed?</question_text>
+<answer_option is_correct = "yes">2</answer_option>
+</question>
+<question type = "FIBQUESTION" id = "2">
+<question_text>How many nodes will be added to the open queue in the next time through the while loop?</question_text>
+<answer_option is_correct = "yes">1</answer_option>
+</question>
+</questions>
+</show>

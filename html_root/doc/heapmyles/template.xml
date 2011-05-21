@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>heapSort</call_stack>
+    <program_listing>
+	<signature>heapSort(list)</signature>
+	<line line_number="1">1   for( x = last internal node; x &#62;= 0; x-- )</line>
+	<line line_number="2">2      currentNode = nodeAt(x)</line>
+	<line line_number="3">3      shiftDown(list, currentNode) </line>
+	<line line_number="4">4   for( x = last node; x &#62;= 1; x-- )</line>
+	<line line_number="5">5      swap(nodeAt(x), nodeAt(0))</line>
+	<line line_number="6">6      shiftDown(list, nodeAt(0))</line>
+    </program_listing>
+    <variables>
+        <variable>x is <replace var="x" /></variable>
+    </variables>
+</pseudocode>

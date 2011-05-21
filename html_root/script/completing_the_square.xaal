@@ -1,0 +1,1487 @@
+<xaal version="1.0" xmlns="http://www.cs.hut.fi/Research/SVG/XAAL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cs.hut.fi/Research/SVG/XAAL xaal.xsd">
+    <initial>
+        <text id="A">
+            <coordinate x="40" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="X2">
+            <coordinate x="60" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>x</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="SQ">
+            <coordinate x="80" y="290"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="20"/>
+            </style>
+        </text>
+        <text id="+1">
+            <coordinate x="100" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>+</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="B">
+            <coordinate x="135" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>b</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="X1">
+            <coordinate x="155" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>x</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="-1" hidden="true">
+            <coordinate x="275" y="220"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>-</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="+2">
+            <coordinate x="190" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>+</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="C">
+            <coordinate x="220" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>c</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="=">
+            <coordinate x="270" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>=</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="0">
+            <coordinate x="310" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>0</contents>
+            <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div1" hidden="true">
+             <coordinate x="40" y="305"/>
+	     <coordinate x="170" y="305"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="A2" hidden="true">
+            <coordinate x="103" y="328"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div2" hidden="true">
+             <coordinate x="327" y="305"/>
+	     <coordinate x="337" y="305"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="A3" hidden="true">
+            <coordinate x="325" y="328"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="A2b" hidden="true">
+            <coordinate x="103" y="328"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="A2c" hidden="true">
+            <coordinate x="103" y="328"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div3" hidden="true">
+             <coordinate x="40" y="305"/>
+	     <coordinate x="55" y="305"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <line id="div4" hidden="true">
+             <coordinate x="137" y="305"/>
+	     <coordinate x="150" y="305"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="+3" hidden="true">
+            <coordinate x="180" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>+</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="+4" hidden="true">
+            <coordinate x="350" y="300"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>+</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="(L" hidden="true">
+            <coordinate x="200" y="310"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>(</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>	
+                <font size="70"/>
+            </style>
+        </text>
+        <text id=")L" hidden="true">
+            <coordinate x="250" y="310"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>)</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="70"/>
+            </style>
+        </text>
+        <text id="BL" hidden="true">
+            <coordinate x="228" y="285"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>b</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="2A" hidden="true">
+            <coordinate x="219" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div5" hidden="true">
+             <coordinate x="220" y="291"/>
+	     <coordinate x="250" y="291"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="SQ2L" hidden="true">
+            <coordinate x="265" y="270"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="20"/>
+            </style>
+        </text>
+        <text id="(R" hidden="true">
+            <coordinate x="375" y="310"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>(</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="70"/>
+            </style>
+        </text>
+        <text id=")R" hidden="true">
+            <coordinate x="425" y="310"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>)</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="70"/>
+            </style>
+        </text>
+        <text id="BR" hidden="true">
+            <coordinate x="403" y="285"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>b</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="2R" hidden="true">
+            <coordinate x="394" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="AR" hidden="true">
+            <coordinate x="410" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div6" hidden="true">
+             <coordinate x="395" y="291"/>
+	     <coordinate x="425" y="291"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="SQ2R" hidden="true">
+            <coordinate x="440" y="270"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="20"/>
+            </style>
+        </text>
+
+        <text id="SQ3R" hidden="true">
+            <coordinate x="380" y="270"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="20"/>
+            </style>
+        </text>
+        <text id="4" hidden="true">
+            <coordinate x="331" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>4</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="4T" hidden="true">
+            <coordinate x="393" y="285"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>4</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="4B" hidden="true">
+            <coordinate x="397" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>4</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="SQ4R" hidden="true">
+            <coordinate x="428" y="308"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="20"/>
+            </style>
+        </text>
+        <text id="AR2" hidden="true">
+            <coordinate x="410" y="285"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>a</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <line id="div7" hidden="true">
+             <coordinate x="394" y="291"/>
+	     <coordinate x="438" y="291"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <line id="div8" hidden="true">
+             <coordinate x="335" y="291"/>
+	     <coordinate x="438" y="291"/>
+             <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="+5" hidden="true">
+            <coordinate x="280" y="294"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>+</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="-2" hidden="true">
+            <coordinate x="280" y="309"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>-</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="black"/>
+                <font size="40"/>
+            </style>
+        </text>
+        <polyline id="SQRT1" hidden="true">
+             <coordinate x="310" y="300"/>
+	     <coordinate x="320" y="320"/>
+	     <coordinate x="340" y="250"/>
+	     <coordinate x="438" y="250"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+             </style>
+        </polyline>
+        <polyline id="SQRT2" hidden="true">
+             <coordinate x="318" y="265"/>
+	     <coordinate x="328" y="285"/>
+	     <coordinate x="340" y="250"/>
+	     <coordinate x="438" y="250"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+             </style>
+        </polyline>
+        <line id="div9" hidden="true">
+             <coordinate x="290" y="291"/>
+	     <coordinate x="438" y="291"/>
+             <style>
+                <color name="black"/>
+                <fill-color name="black"/>
+                <font size="30"/>
+            </style>
+        </line>
+        <text id="2" hidden="true">
+            <coordinate x="369" y="317"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>2</contents>
+            <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </text>
+        <text id="-3" hidden="true">
+            <coordinate x="226" y="212"/>
+            <alignment value="left"/>
+            <boxed value="true"/>
+            <contents>-</contents>
+            <style>
+                <color name="red"/>
+                <font size="35"/>
+            </style>
+        </text>
+        <line id="div10" hidden="true">
+             <coordinate x="250" y="291"/>
+	     <coordinate x="438" y="291"/>
+             <style>
+                <color name="red"/>
+                <fill-color name="red"/>
+                <font size="30"/>
+            </style>
+        </line>
+
+    </initial>
+    <animation>
+        <seq>
+            <narrative>Move c to the right side</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="+2"/>
+                    <object-ref id="C"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+	    </par>
+            <par>
+                <move type="translate">
+                    <object-ref id="C"/>
+                    <coordinate x="75" y="-80"/>
+                </move>
+                <move type="translate">
+                    <object-ref id="+2"/>
+                    <coordinate x="80" y="-80"/>
+                </move>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="200" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="+2"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="400" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="+2"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="400" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="+2"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="400" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="+2"/>
+                </show>
+	    </par>
+            <par>
+	         <move type="move">
+                    <coordinate x="400" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="+2"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="400" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="+2"/>
+                </show>
+	    </par>
+            <par>
+                <hide type="selected">
+                    <object-ref id="+2"/>
+                </hide>
+                <show type="selected">
+                    <object-ref id="-1"/>
+                </show>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="500" y="0"/>
+		 </move>
+	    </par>
+            <par>
+                <move type="translate">
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <coordinate x="65" y="80"/>
+                </move>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="200" y="0"/>
+		 </move>
+	    </par>
+            <par>
+                <hide type="selected">
+                    <object-ref id="0"/>
+                </hide>
+            </par>
+            <par>
+                <move type="translate">
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <coordinate x="-35" y="0"/>
+                </move>
+            </par>
+	     <par>
+                <change-style>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>
+	</seq>
+	<seq>
+            <narrative>Divide both sides by a, then simplify</narrative>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1500" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="div1"/>
+                    <object-ref id="A2"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1500" y="0"/>
+		 </move>
+	    </par>
+
+	    <par>
+                <show type="selected">
+                    <object-ref id="A2b"/>
+                    <object-ref id="A2c"/>
+                </show>
+                <hide type="selected">
+                    <object-ref id="A2"/>
+                </hide>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="div1"/>
+                </hide>
+                <show type="selected">
+                    <object-ref id="div3"/>
+                    <object-ref id="div4"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-63" y="0"/>
+                    <object-ref id="A2b"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="34" y="0"/>
+                    <object-ref id="A2c"/>
+		 </move>
+	    </par>
+            <par>
+	         <move type="move">
+                    <coordinate x="500" y="0"/>
+		 </move>
+	    </par>
+	     <par>
+                <change-style>
+                    <object-ref id="div4"/>                    
+		    <object-ref id="A2c"/>
+		    <object-ref id="div2"/>
+		    <object-ref id="A3"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+                <change-style>
+                    <object-ref id="A"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="A"/>
+                    <object-ref id="div3"/>
+                    <object-ref id="A2b"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	     <par>
+                <change-style>
+                    <object-ref id="B"/>
+                    <object-ref id="div4"/>                    
+		    <object-ref id="A2c"/>
+		    <object-ref id="C"/>
+		    <object-ref id="div2"/>
+		    <object-ref id="A3"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="0" y="-14"/>
+                    <object-ref id="B"/>
+                    <object-ref id="div4"/>
+                    <object-ref id="A2c"/>
+                    <object-ref id="C"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+		 </move>
+            </par>
+	     <par>
+                <change-style>
+                    <object-ref id="B"/>
+                    <object-ref id="div4"/>                    
+		    <object-ref id="A2c"/>
+		    <object-ref id="C"/>
+		    <object-ref id="div2"/>
+		    <object-ref id="A3"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>
+	</seq>  
+	<seq>
+	    <narrative>Add a well-chosen constant to both sides</narrative>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="+3"/>
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="2A"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="SQ2L"/>
+                    <object-ref id="+4"/>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="+3"/>
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="2A"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="SQ2L"/>
+                    <object-ref id="+4"/>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+	     </par>
+	</seq>
+	<seq>
+	    <narrative>Factor the left side</narrative>
+	    <par>
+                <change-style>
+                   <object-ref id="+3"/>
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="2A"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="SQ2L"/>
+                    <object-ref id="X2"/>
+                    <object-ref id="SQ"/>                    
+		    <object-ref id="+1"/>
+		    <object-ref id="B"/>
+		    <object-ref id="X1"/>
+		    <object-ref id="div4"/>
+		    <object-ref id="A2c"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+	     </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="SQ"/>
+                    <object-ref id="+1"/>
+                    <object-ref id="B"/>
+                    <object-ref id="A2c"/>
+                    <object-ref id="div4"/>
+                    <object-ref id="X1"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="110" y="0"/>
+                    <object-ref id="X2"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="-45" y="0"/>
+                    <object-ref id="(L"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="10" y="0"/>
+                    <object-ref id="+3"/>
+		 </move>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+	         <change-style>
+		    <object-ref id="+3"/>
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="2A"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="SQ2L"/>
+                    <object-ref id="X2"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>
+	</seq>
+	<seq>
+            <narrative>Reorder the terms on the right side</narrative>
+           <par>
+		<change-style>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+           </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="+4"/>
+                </hide>
+	    </par>
+
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-30" y="60"/>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="50" y="-60"/>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+		 </move>
+            </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-30" y="-60"/>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="50" y="60"/>
+                    <object-ref id="C"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="45" y="60"/>
+                    <object-ref id="-1"/>
+		 </move>
+            </par>
+           <par>
+		<change-style>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="BR"/>
+                    <object-ref id="2R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="SQ2R"/>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <object-ref id="div2"/>
+                    <object-ref id="A3"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+           </par>
+        </seq>
+	<seq>
+            <narrative>Square the numerator and denominator separately</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                    <object-ref id="SQ2R"/>                    
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="(R"/>
+                    <object-ref id=")R"/>
+                </hide>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="SQ3R"/>
+                </show>
+	    </par>
+            <par>
+	         <move type="translate">
+                    <coordinate x="-21" y="0"/>
+                    <object-ref id="SQ2R"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="-17" y="39"/>
+                    <object-ref id="SQ3R"/>
+		 </move>
+            </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="2R"/>
+                </hide>
+                <show type="selected">
+                    <object-ref id="4"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="SQ2R"/>
+                    <object-ref id="SQ3R"/>
+                    <object-ref id="4"/>                    
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>
+	</seq>
+	<seq>
+            <narrative>Multiply both terms of the highlighted fraction by 4a</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <object-ref id="A3"/>
+                    <object-ref id="div2"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <object-ref id="-1"/>
+                    <coordinate x="-25" y="0"/>
+		 </move>
+	         <move type="translate">
+                    <object-ref id="A3"/>
+                    <coordinate x="-11" y="3"/>
+		 </move>
+	    </par>
+	    <par>
+                <show type="selected">
+                    <object-ref id="4T"/>
+                    <object-ref id="4B"/>
+                    <object-ref id="SQ4R"/>
+                    <object-ref id="AR2"/>
+                </show>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="div2"/>
+                </hide>
+                <show type="selected">
+                    <object-ref id="div7"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="4T"/>
+                    <object-ref id="4B"/>
+                    <object-ref id="SQ4R"/>
+                    <object-ref id="AR2"/>
+                    <object-ref id="-1"/>
+                    <object-ref id="C"/>
+                    <object-ref id="A3"/>
+                    <object-ref id="div7"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	</seq>
+	<seq>
+            <narrative>Combine terms on the right side over a common denominator</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="4"/>
+                    <object-ref id="SQ3R"/>
+                    <object-ref id="AR"/>
+                    <object-ref id="4B"/>
+                    <object-ref id="SQ4R"/>
+                    <object-ref id="A3"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="div7"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+
+            <par>
+	         <move type="translate">
+                    <object-ref id="4"/>
+                    <object-ref id="SQ3R"/>
+                    <object-ref id="AR"/>
+                    <coordinate x="35" y="0"/>
+		 </move>
+	         <move type="translate">
+                    <object-ref id="4B"/>
+                    <object-ref id="SQ4R"/>
+                    <object-ref id="A3"/>
+                    <coordinate x="-30" y="0"/>
+		 </move>
+
+	         <move type="translate">
+                    <object-ref id="-1"/>
+                    <coordinate x="-4" y="-13"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="4B"/>
+                    <object-ref id="SQ4R"/>
+                    <object-ref id="A3"/>
+                    <object-ref id="div6"/>
+                    <object-ref id="div7"/>
+                </hide>
+		<show type="selected">
+                    <object-ref id="div8"/>
+                </show>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="4"/>
+                    <object-ref id="SQ3R"/>
+                    <object-ref id="AR"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	</seq>
+	<seq>
+            <narrative>Take the square root of each side</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="SQ2L"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <hide type="selected">
+                    <object-ref id="(L"/>
+                    <object-ref id=")L"/>
+                    <object-ref id="SQ2L"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-15" y="0"/>
+                    <object-ref id="="/>
+		 </move>
+	    </par>
+	    <par>
+		<show type="selected">
+                    <object-ref id="+5"/>
+                    <object-ref id="-2"/>
+                    <object-ref id="SQRT1"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="+5"/>
+                    <object-ref id="-2"/>
+                    <object-ref id="SQRT1"/>
+                    <style>
+                        <color name="black"/>
+                        <fill-color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	</seq>
+	<seq>
+            <narrative>Simplify the right side</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="+5"/>
+                    <object-ref id="-2"/>
+                    <object-ref id="SQRT1"/>
+                    <style>
+                        <color name="red"/>
+                        <fill-color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="10" y="-15"/>
+                    <object-ref id="-2"/>
+                    <object-ref id="+5"/>
+		 </move>
+	    </par>
+	    <par>
+		<hide type="selected">
+                    <object-ref id="SQRT1"/>
+                    <object-ref id="div8"/>
+                </hide>
+		<show type="selected">
+                    <object-ref id="SQRT2"/>
+                    <object-ref id="div9"/>
+                </show>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="4"/>
+                    <object-ref id="SQ3R"/>
+                    <object-ref id="AR"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+                <change-style>
+                    <object-ref id="+5"/>
+                    <object-ref id="-2"/>
+                    <object-ref id="SQRT2"/>
+                    <style>
+                        <color name="black"/>
+                        <fill-color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+		<show type="selected">
+                    <object-ref id="2"/>
+                </show>
+		<hide type="selected">
+                    <object-ref id="4"/>
+                    <object-ref id="SQ3R"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-20" y="0"/>
+                    <object-ref id="2"/>
+                    <object-ref id="AR"/>
+		 </move>
+	    </par>
+	    <par>
+	         <move type="move">
+                    <coordinate x="1000" y="0"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="2"/>
+                    <object-ref id="AR"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+	     </par>
+	</seq>
+	<seq>
+            <narrative>Move the highlighted fraction to the right side and simplify</narrative>
+	    <par>
+                <change-style>
+                    <object-ref id="+3"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="2A"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="translate">
+                    <coordinate x="30" y="-90"/>
+                    <object-ref id="+3"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="2A"/>
+		 </move>
+	    </par>
+            <par>
+                <change-style>
+                    <object-ref id="="/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="translate">
+                    <coordinate x="-60" y="0"/>
+                    <object-ref id="="/>
+		 </move>
+	    </par>
+	    <par>
+		<show type="selected">
+                    <object-ref id="-3"/>
+                </show>
+		<hide type="selected">
+                    <object-ref id="+3"/>
+                </hide>
+	    </par>
+	    <par>
+	         <move type="translate">
+                    <coordinate x="0" y="90"/>
+                    <object-ref id="-3"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="2A"/>
+		 </move>
+	    </par>
+            <par>
+                <change-style>
+                    <object-ref id="="/>
+                    <object-ref id="-3"/>
+                    <object-ref id="BL"/>
+                    <object-ref id="div5"/>
+                    <object-ref id="2A"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+                <change-style>
+                    <object-ref id="-3"/>
+                    <object-ref id="BL"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="translate">
+                    <coordinate x="10" y="0"/>
+                    <object-ref id="BL"/>
+		 </move>
+	         <move type="translate">
+                    <coordinate x="22" y="-14"/>
+                    <object-ref id="-3"/>
+		 </move>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="-3"/>
+                    <object-ref id="BL"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+		<hide type="selected">
+                    <object-ref id="div9"/>
+                    <object-ref id="div5"/>
+                </hide>
+		<show type="selected">
+                    <object-ref id="div10"/>
+                </show>
+	    </par>
+	    <par>
+                <change-style>
+                    <object-ref id="2A"/>
+                    <object-ref id="2"/>
+                    <object-ref id="AR"/>
+                    <style>
+                        <color name="red"/>
+                    </style>
+                </change-style>
+            </par>	
+	    <par>
+	         <move type="translate">
+                    <coordinate x="80" y="0"/>
+                    <object-ref id="2A"/>
+		 </move>
+		 <move type="translate">
+                    <coordinate x="-20" y="0"/>
+                    <object-ref id="2"/>
+                    <object-ref id="AR"/>
+		 </move>
+	    </par>
+	    <par>
+		<hide type="selected">
+                    <object-ref id="2"/>
+                    <object-ref id="AR"/>
+                </hide>
+                <change-style>
+                    <object-ref id="2A"/>
+                    <object-ref id="div10"/>
+                    <style>
+                        <color name="black"/>
+                    </style>
+                </change-style>
+	    </par>
+
+	</seq>
+    </animation>
+</xaal>

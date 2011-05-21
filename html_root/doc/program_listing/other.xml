@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<program_listing>
+	<line line_number="1">1 int greatestCommonDivisor(int x, int y)</line>
+	<line line_number="2">2 {</line>
+	<line line_number="3">3 	if(<replace var="y" /> &lt; <replace var="x" />)</line>
+	<line line_number="4">4 	...</line>
+	<line line_number="5">5 	return gcd;</line>
+	<line line_number="6">6 }</line>
+</program_listing>

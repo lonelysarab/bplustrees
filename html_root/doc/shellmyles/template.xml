@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>shellSort</call_stack>
+    <program_listing>
+	<signature>shellSort(list)</signature>
+	<line line_number="1">1   k = log list.length</line>
+	<line line_number="2">2   while(k &#62;= 1)</line>
+	<line line_number="3">3      increment  = (k^2) - 1</line>
+	<line line_number="4">4      for(index = increment; index &#38;#60; list.length; index++)</line>
+	<line line_number="5">5         inSort(list, increment, index)</line>
+	<line line_number="6">6     k--</line>
+    </program_listing>
+    <variables>
+	<variable>k = <replace var="k" /></variable>
+	<variable>increment = <replace var="increment" /></variable>
+	<variable>index = <replace var="index"/></variable>
+    </variables>
+</pseudocode>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <program_listing>
+	<signature>arrayFind(Array list, index)</signature>	
+	<line line_number="1">1   return list[index]</line>
+    </program_listing>
+    <variables>
+        <variable>index = <replace var="index" /></variable>
+    </variables>
+</pseudocode>

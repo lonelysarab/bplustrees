@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+<snap>
+  <title>Reference Structure Test Slide 1</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=1</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment">
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 2</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=2</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start">
+        </refbox>
+        <refbox boxname="finish">
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 3</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=3</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+        <refbox boxname="finish">
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 4</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=4</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+	</refbox>
+        <refbox boxname="finish" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 5</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=5</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="2">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+        <refbox boxname="finish" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 6</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=6</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="2">
+            </refbox>
+            <refbox boxname="y" boxdata="3">
+            </refbox>
+          </refstruct>
+        </refbox>
+        <refbox boxname="finish" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 7</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=7</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="2">
+            </refbox>
+            <refbox boxname="y" boxdata="3">
+            </refbox>
+          </refstruct>
+	</refbox>
+        <refbox boxname="finish" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="3">
+            </refbox>
+            <refbox boxname="y">
+            </refbox>
+          </refstruct>
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+<snap>
+  <title>Reference Structure Test Slide 8</title>
+  <pseudocode_url>http://localhost/html_root/doc/refstructdemo/index.php?line=8</pseudocode_url>
+  <refstructroot>
+    <bounds x1="0.0" y1="0.0" x2="1.0" y2="1.0" fontsize="0.5"/>
+    <refbox boxname="segment" hasarrow="true">
+      <refstruct>
+        <refbox boxname="start" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="2">
+            </refbox>
+            <refbox boxname="y" boxdata="3">
+            </refbox>
+          </refstruct>
+        </refbox>
+        <refbox boxname="finish" hasarrow="true">
+          <refstruct>
+            <refbox boxname="x" boxdata="3">
+            </refbox>
+            <refbox boxname="y" boxdata="5">
+            </refbox>
+          </refstruct>
+        </refbox>
+      </refstruct>
+    </refbox>
+  </refstructroot>
+</snap>
+
+</show>

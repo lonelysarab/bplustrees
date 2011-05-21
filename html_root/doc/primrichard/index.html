@@ -1,0 +1,132 @@
+<html>
+<head>
+<style type="text/css">
+	<!--
+		body
+		{
+			background-color: #FFFFFF;
+		}
+
+		font.closing_node
+		{
+			font-weight: bold;
+			color: #00FF00;
+		}
+
+		font.text
+		{
+			font-weight: bold;
+			background-color: #6666FF;
+			color: #0000FF;
+		}
+
+		font.updating_node
+		{
+			font-weight: bold;
+			color: #61C3F4;
+		}
+
+		font.orange2
+		{
+			font-weight: bold;
+			color: #FFCC33;
+		}
+
+		table
+		{
+			padding : 4;
+			border : 1px solid black;
+			text-align : center;
+		}
+
+		th
+		{
+			border : 1px solid black;
+			padding : 8;
+		}
+
+		td
+		{
+			border : 1px solid black;
+		}
+	-->
+</style>
+</head>
+<body>
+<h2>Prim's Algorithm</h2>
+<p>
+<p>Here is pseudo code describing Prim's algorithm:</p>
+<table align=center cellpadding=4>
+<tr align=left><td><code>
+<pre>
+
+1. /* initialization */
+2. PriorityQueue openList = { startVertex }
+3. /* loop */
+4. while ( all vertices not closed )
+   {
+5.    <font class=closing_node>closingVertex</font> = vertex in openList with
+6.       edge of minimum weight connecting it to a closed vertex
+7.       (or just the startVertex the first time through the loop);
+8.    remove <font class=closing_node>closingVertex</font> from openList;
+
+9.    for each non-closed <font class=updating_node>vertex</font> with an edge from <font class=closing_node>closingVertex</font>
+10.      put <font class=updating_node>vertex</font> into openList;
+   }
+</pre>
+</code></td></tr></table>
+<p>
+Note:  When the inner for loop above goes through vertices connected to a node, it goes through them in alphabetical order.
+
+<!--
+<p></p>
+<hr>
+<p>
+Color test
+<font class=updating_node>updating_node</font><br>
+<font class=orange2>orange2</font><br>
+</p>
+<table align=center><tr><td><img src=1.gif></td></tr></table>
+<p>
+<font class=test>BLUE</font>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=2.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=3.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=4.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=5.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=6.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=7.gif></td></tr></table>
+<p>
+</p>
+<hr>
+-->
+</body>
+</html>

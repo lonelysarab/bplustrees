@@ -1,0 +1,348 @@
+coords 0.0 0.0 100.0 100.0
+bg linen
+bigtext whatshappening 50.0 5.0 1 blue Radix Sort on 10 base 3 numbers.
+text Binlabel0 61.11111 97.166664 0 red 0 bin
+rectangle Bin0 61.11111 70.0 27.777779 26.666666 white solid
+rectangle BinEdge0 61.11111 70.0 27.777779 26.666666 red outline
+text Binlabel1 61.11111 67.166664 0 red 1 bin
+rectangle Bin1 61.11111 40.0 27.777779 26.666666 white solid
+rectangle BinEdge1 61.11111 40.0 27.777779 26.666666 red outline
+text Binlabel2 61.11111 37.166664 0 red 2 bin
+rectangle Bin2 61.11111 10.0 27.777779 26.666666 white solid
+rectangle BinEdge2 61.11111 10.0 27.777779 26.666666 red outline
+text Binlabel3 11.111111 97.166664 0 black list to sort:
+rectangle Bin3 11.111111 10.0 27.777779 86.666664 white solid
+rectangle BinEdge3 11.111111 10.0 27.777779 86.666664 black outline
+text letter00 26.666666 97.166664 0 blue 0
+text letter01 28.333334 97.166664 0 blue 1
+text letter02 30.0 97.166664 0 blue 1
+text letter03 31.666666 97.166664 0 blue 1
+set word0 4 letter00 letter01 letter02 letter03
+color word0 black
+move word0 25.0 89.166664
+text letter10 26.666666 97.166664 0 blue 1
+text letter11 28.333334 97.166664 0 blue 1
+text letter12 30.0 97.166664 0 blue 2
+text letter13 31.666666 97.166664 0 blue 1
+set word1 4 letter10 letter11 letter12 letter13
+color word1 black
+move word1 25.0 81.666664
+text letter20 26.666666 97.166664 0 blue 0
+text letter21 28.333334 97.166664 0 blue 0
+text letter22 30.0 97.166664 0 blue 0
+text letter23 31.666666 97.166664 0 blue 2
+set word2 4 letter20 letter21 letter22 letter23
+color word2 black
+move word2 25.0 74.166664
+text letter30 26.666666 97.166664 0 blue 1
+text letter31 28.333334 97.166664 0 blue 1
+text letter32 30.0 97.166664 0 blue 2
+text letter33 31.666666 97.166664 0 blue 2
+set word3 4 letter30 letter31 letter32 letter33
+color word3 black
+move word3 25.0 66.666664
+text letter40 26.666666 97.166664 0 blue 0
+text letter41 28.333334 97.166664 0 blue 0
+text letter42 30.0 97.166664 0 blue 0
+text letter43 31.666666 97.166664 0 blue 0
+set word4 4 letter40 letter41 letter42 letter43
+color word4 black
+move word4 25.0 59.166664
+text letter50 26.666666 97.166664 0 blue 0
+text letter51 28.333334 97.166664 0 blue 2
+text letter52 30.0 97.166664 0 blue 2
+text letter53 31.666666 97.166664 0 blue 2
+set word5 4 letter50 letter51 letter52 letter53
+color word5 black
+move word5 25.0 51.666664
+text letter60 26.666666 97.166664 0 blue 1
+text letter61 28.333334 97.166664 0 blue 2
+text letter62 30.0 97.166664 0 blue 2
+text letter63 31.666666 97.166664 0 blue 1
+set word6 4 letter60 letter61 letter62 letter63
+color word6 black
+move word6 25.0 44.166664
+text letter70 26.666666 97.166664 0 blue 1
+text letter71 28.333334 97.166664 0 blue 1
+text letter72 30.0 97.166664 0 blue 2
+text letter73 31.666666 97.166664 0 blue 0
+set word7 4 letter70 letter71 letter72 letter73
+color word7 black
+move word7 25.0 36.666664
+text letter80 26.666666 97.166664 0 blue 1
+text letter81 28.333334 97.166664 0 blue 1
+text letter82 30.0 97.166664 0 blue 2
+text letter83 31.666666 97.166664 0 blue 0
+set word8 4 letter80 letter81 letter82 letter83
+color word8 black
+move word8 25.0 29.166664
+text letter90 26.666666 97.166664 0 blue 0
+text letter91 28.333334 97.166664 0 blue 0
+text letter92 30.0 97.166664 0 blue 2
+text letter93 31.666666 97.166664 0 blue 2
+set word9 4 letter90 letter91 letter92 letter93
+color word9 black
+move word9 25.0 21.666664
+speed 60
+delay 60
+alter whatshappening Sort numbers into bins according to 1st digit.
+speed 100
+color word0 black
+color letter03 red
+color word1 black
+color letter13 red
+color word2 black
+color letter23 red
+color word3 black
+color letter33 red
+color word4 black
+color letter43 red
+color word5 black
+color letter53 red
+color word6 black
+color letter63 red
+color word7 black
+color letter73 red
+color word8 black
+color letter83 red
+color word9 black
+color letter93 red
+speed 60
+move word0 75.0 64.166664
+move word1 75.0 61.666664
+move word2 75.0 34.166664
+move word3 75.0 31.666664
+move word4 75.0 94.166664
+move word5 75.0 29.166664
+move word6 75.0 59.166664
+move word7 75.0 91.666664
+move word8 75.0 89.166664
+move word9 75.0 26.666664
+alter whatshappening Collect numbers from bins.
+{
+speed 100
+color word4 black
+color word7 black
+color word8 black
+speed 60
+move word4 25.0 89.166664
+move word7 25.0 81.666664
+move word8 25.0 74.166664
+}
+{
+speed 100
+color word0 black
+color word1 black
+color word6 black
+speed 60
+move word0 25.0 66.666664
+move word1 25.0 59.166664
+move word6 25.0 51.666664
+}
+{
+speed 100
+color word2 black
+color word3 black
+color word5 black
+color word9 black
+speed 60
+move word2 25.0 44.166664
+move word3 25.0 36.666664
+move word5 25.0 29.166664
+move word9 25.0 21.666664
+}
+alter whatshappening Sort numbers into bins according to 2nd digit.
+speed 100
+color word4 black
+color letter42 red
+color word7 black
+color letter72 red
+color word8 black
+color letter82 red
+color word0 black
+color letter02 red
+color word1 black
+color letter12 red
+color word6 black
+color letter62 red
+color word2 black
+color letter22 red
+color word3 black
+color letter32 red
+color word5 black
+color letter52 red
+color word9 black
+color letter92 red
+speed 60
+move word4 75.0 94.166664
+move word7 75.0 34.166664
+move word8 75.0 31.666664
+move word0 75.0 64.166664
+move word1 75.0 29.166664
+move word6 75.0 26.666664
+move word2 75.0 91.666664
+move word3 75.0 24.166664
+move word5 75.0 21.666664
+move word9 75.0 19.166664
+alter whatshappening Collect numbers from bins.
+{
+speed 100
+color word4 black
+color word2 black
+speed 60
+move word4 25.0 89.166664
+move word2 25.0 81.666664
+}
+{
+speed 100
+color word0 black
+speed 60
+move word0 25.0 74.166664
+}
+{
+speed 100
+color word7 black
+color word8 black
+color word1 black
+color word6 black
+color word3 black
+color word5 black
+color word9 black
+speed 60
+move word7 25.0 66.666664
+move word8 25.0 59.166664
+move word1 25.0 51.666664
+move word6 25.0 44.166664
+move word3 25.0 36.666664
+move word5 25.0 29.166664
+move word9 25.0 21.666664
+}
+alter whatshappening Sort numbers into bins according to 3rd digit.
+speed 100
+color word4 black
+color letter41 red
+color word2 black
+color letter21 red
+color word0 black
+color letter01 red
+color word7 black
+color letter71 red
+color word8 black
+color letter81 red
+color word1 black
+color letter11 red
+color word6 black
+color letter61 red
+color word3 black
+color letter31 red
+color word5 black
+color letter51 red
+color word9 black
+color letter91 red
+speed 60
+move word4 75.0 94.166664
+move word2 75.0 91.666664
+move word0 75.0 64.166664
+move word7 75.0 61.666664
+move word8 75.0 59.166664
+move word1 75.0 56.666664
+move word6 75.0 34.166664
+move word3 75.0 54.166664
+move word5 75.0 31.666664
+move word9 75.0 89.166664
+alter whatshappening Collect numbers from bins.
+{
+speed 100
+color word4 black
+color word2 black
+color word9 black
+speed 60
+move word4 25.0 89.166664
+move word2 25.0 81.666664
+move word9 25.0 74.166664
+}
+{
+speed 100
+color word0 black
+color word7 black
+color word8 black
+color word1 black
+color word3 black
+speed 60
+move word0 25.0 66.666664
+move word7 25.0 59.166664
+move word8 25.0 51.666664
+move word1 25.0 44.166664
+move word3 25.0 36.666664
+}
+{
+speed 100
+color word6 black
+color word5 black
+speed 60
+move word6 25.0 29.166664
+move word5 25.0 21.666664
+}
+alter whatshappening Sort numbers into bins according to 4th digit.
+speed 100
+color word4 black
+color letter40 red
+color word2 black
+color letter20 red
+color word9 black
+color letter90 red
+color word0 black
+color letter00 red
+color word7 black
+color letter70 red
+color word8 black
+color letter80 red
+color word1 black
+color letter10 red
+color word3 black
+color letter30 red
+color word6 black
+color letter60 red
+color word5 black
+color letter50 red
+speed 60
+move word4 75.0 94.166664
+move word2 75.0 91.666664
+move word9 75.0 89.166664
+move word0 75.0 86.666664
+move word7 75.0 64.166664
+move word8 75.0 61.666664
+move word1 75.0 59.166664
+move word3 75.0 56.666664
+move word6 75.0 54.166664
+move word5 75.0 84.166664
+alter whatshappening Collect numbers from bins.
+{
+speed 100
+color word4 black
+color word2 black
+color word9 black
+color word0 black
+color word5 black
+speed 60
+move word4 25.0 89.166664
+move word2 25.0 81.666664
+move word9 25.0 74.166664
+move word0 25.0 66.666664
+move word5 25.0 59.166664
+}
+{
+speed 100
+color word7 black
+color word8 black
+color word1 black
+color word3 black
+color word6 black
+speed 60
+move word7 25.0 51.666664
+move word8 25.0 44.166664
+move word1 25.0 36.666664
+move word3 25.0 29.166664
+move word6 25.0 21.666664
+}
+alter whatshappening Finished sorting.

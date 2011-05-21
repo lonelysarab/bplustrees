@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>InsertionSort</call_stack>
+    <program_listing>
+	<signature>insertionSort(list)</signature>
+	<line line_number="1">1   for( index = 1; index &#38;#60; list.length; index++ )</line>
+	<line line_number="2">2      temp = list[index]</line>
+	<line line_number="3">3      vacant = index</line>
+	<line line_number="4">4      while( vacant not at start of list and there has been a change )</line>
+	<line line_number="5">5         if( list[vacant - 1] &#62; temp )</line>
+	<line line_number="6">6            swap(vacant, vacant - 1)</line>
+	<line line_number="7">7         vacant--</line>
+	<line line_number="8">8      list[vacant] = temp</line>
+    </program_listing>
+    <variables>
+        <variable>index = <replace var="index" /></variable>
+	<variable>temp = <replace var="current" /></variable>
+	<variable>vacant = <replace var="vacant" /></variable>
+    </variables>
+</pseudocode>

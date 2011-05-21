@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h2>Huffman Decoding</h2>
+<p>Given a Huffman tree and a bit sequence to decode, we process the sequence one bit at a time. Starting at the root of the tree, if the bit we are currently looking at is zero, we go left. If it is 1, we go right. We continue to process the bits in this fashion until we reach a leaf node. When we do, the character in that leaf node is the decoding of the bits we have processed in walking down the tree from the root to this leaf node. So that character is appended to the decoded string, and we move back up to the root of the tree, whence we continue walking through the  bit sequence from where we left off.</p>
+<p>&nbsp;</p>
+</body>
+</html>

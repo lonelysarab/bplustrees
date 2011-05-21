@@ -1,0 +1,102 @@
+Temporarily put your set-up files in this directory.  Then,
+file-by-file ...
+
+Use the emacs macro jp (below) on a jhavepop set-up file to transform
+it into the input generator, the the "Rename text file by pattern
+description below" to rename it to igs
+
+;; Bigger and better than jp1 -- this initially replaces XML chars < >
+;; & before adding the beginning and ending XML templates
+(fset 'jp
+   [?\C-x ?h ?\M-x ?r ?e ?p ?l ?a ?c ?e ?- ?h ?t ?m ?l ?- ?c ?h ?a ?r ?s ?\C-m ?\M-< ?\C-x ?i ?t ?e ?m ?p ?l ?a ?t ?e ?_ ?s ?t ?a ?r ?t ?. ?x ?m ?l ?\C-m ?\C-s ?i ?e ?l ?d ?> ?\C-m ?\C-k ?\M-> ?\C-x ?i ?t ?e ?m ?p ?l ?a ?t ?e ?_ ?e ?n ?d ?. ?x ?m ?l ?\C-m ?\C-x ?\C-s])
+
+(defun replace-html-chars (start end)
+  "Replace < to &lt; and other chars in HTML.
+This works on the current selection."
+  (interactive "r")
+  (save-restriction 
+    (narrow-to-region start end)
+    (goto-char (point-min))
+    (while (search-forward "&" nil t) (replace-match "&amp;" nil t))
+    (goto-char (point-min))
+    (while (search-forward "<" nil t) (replace-match "&lt;" nil t))
+    (goto-char (point-min))
+    (while (search-forward ">" nil t) (replace-match "&gt;" nil t))
+    )
+  )
+
+
+After you've transformed all the set-up files, move them to the ingen
+directory
+--------------------------------------------------------------------
+
+Rename Files by a Text Pattern
+
+A BASH Technique
+
+At shell prompt, this will replace move all .baz file to .igs files.
+
+Caution:  it will also replace earlier occurrence of baz in the filename
+
+for FILE in *.baz ; do NEWFILE=`echo $FILE | sed 's/baz/igs/g'` ; mv "$FILE" $NEWFILE ; done
+
+AN EMACS Technique:
+
+Suppose you need to rename a bunch of files by a string pattern, for
+all files in a directory. However, you do not want to rename all of
+them. You need to look at it in a case-by-case basis. What can you do?
+
+Summary
+
+“Alt+x dired”, mark your files, then “Alt+x dired-do-rename-regexp”.
+Detail
+
+Start emacs by typing “emacs” in the command line interface
+prompt. (Or, double click the Emacs icon if you are in a Graphics User
+Interface environment)
+
+First you need to select the files you want to rename. Use the
+graphical menu “File‣Open Directory”. Emacs will ask you for a
+directory path. Type the directory path, then press Enter.
+
+Now, you will be shown the list of files, and now you need to “mark”
+the files you want to rename. You mark a file by moving the cursor to
+the file you want, then press m. Unmark it by pressing u. To mark all
+files by a regex, type “% m”, then give your pattern. For example, if
+you want to mark all jpg files, then type “% m jpg$”. To unmark all
+files, type U. To mark all files, type “U t”. (The “t” is a shortcut
+for toggle) emacs dired mark menu
+
+
+Now type “Alt+x dired-do-rename-regexp”. Emacs will prompt you for the
+regex string and the replacement string.
+
+Now, emacs will use your pattern and rename the marked files. Whenever
+it finds a match, it will stop and prompt you. If you want to make the
+change, type “y”. If you don't want to, type “n”. If you simply want
+emacs to go ahead and all renaming without asking, type “!”.
+
+---------------------------------------------------------------
+
+This code illustrates how to do several of text replacements on a region. Very useful. For example, you can use it to replace HTML character that needs be encoded. For example:
+
+& &amp;
+< &lt;
+> &gt;
+
+(defun replace-html-chars (start end)
+  "Replace “<” to “&lt;” and other chars in HTML.
+This works on the current selection."
+  (interactive "r")
+  (save-restriction 
+    (narrow-to-region start end)
+    (goto-char (point-min))
+    (while (search-forward "&" nil t) (replace-match "&amp;" nil t))
+    (goto-char (point-min))
+    (while (search-forward "<" nil t) (replace-match "&lt;" nil t))
+    (goto-char (point-min))
+    (while (search-forward ">" nil t) (replace-match "&gt;" nil t))
+    )
+  )
+
+You can modify the code to do replacement on URL's 

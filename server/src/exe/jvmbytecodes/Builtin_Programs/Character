@@ -1,0 +1,31 @@
+public class Character {
+
+	//main method
+	public static void main(String[] args) {
+		int hello = hello();
+		int HELLO = HELLO();
+	}
+
+	//calculate the sum of the character values of the word 'hello'
+	static int hello() {
+		char ascii_h = 'h';
+		char ascii_e = 'e';
+		char ascii_l = 'l';
+		char ascii_o = 'o';
+
+		int hello = ascii_h + ascii_e + 2*(ascii_l) + ascii_o;
+		return hello;
+	}
+
+	//calculate the sum of the character values of the word 'HELLO'
+	static int HELLO() {
+		char ascii_H = 'H';
+		char ascii_E = 'E';
+		char ascii_L = 'L';
+		char ascii_O = 'O';
+
+		int HELLO = ascii_H + ascii_E + 2*(ascii_L) + ascii_O;
+		return HELLO;
+	}
+
+}

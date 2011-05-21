@@ -1,0 +1,9 @@
+TEXTFIELD
+If you choose user-defined, enter numbers here (d immediately preceding number means "delete it", e.g., d42):
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+Random
+User-defined
+ENDCHOICE

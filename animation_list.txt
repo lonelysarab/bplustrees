@@ -1,0 +1,27 @@
+Graph               Additional Material     Breadth First Search      bfsrichard          
+Graph               Additional Material     Depth First Search        dfsrichard          
+Graph               Additional Material     Dijkstra's Shortest Path  dijkstrarichard     
+Graph               Additional Material     Floyd's Algorithm         floydrichard        
+Graph               Additional Material     Kriskal's MST             kruskalrichard      
+Graph               Additional Material     Prim's MST                primrichard          
+Graph               Vizualization Only      Topological Sort          topoalex            
+Misc                Additional Material     Red-Black Trees           rbtreemyles         
+Misc                Additional Material     Union Find                unionfindmyles      (a bit flaky -- perhaps Myles can clarify input sequence)
+Misc                Vizualization Only      Binary Search Tree        bstreealex          
+Misc                Vizualization Only      Chained Hashing           chainedhashing       
+Misc                Vizualization Only      Double Hashing            doublehashing       
+Misc                Vizualization Only      Huffman Decoding          huffmanDecoding     
+Misc                Vizualization Only      Huffman Encoding          huffmanEncoding     
+Misc                Vizualization Only      Linear Hashing            linearhashing       
+Misc                Vizualization Only      Quadratic Hashing         quadhashing         
+Misc                Vizualization Only      Stack-based Parsing       parsing_lln         
+Misc (AI)           Additional Material     A-Star Search             astarsearch         
+Misc (AI)           Additional Material     Beam Search               beamsearch          
+Misc (AI)           Additional Material     Least Cost Search         leastcostsearch     
+Sorting             Additional Material     Bubble Sort               bubblemyles         
+Sorting             Additional Material     Heap Sort                 heapmyles           
+Sorting             Additional Material     Insertion Sort            insertionmyles      (occasionally crashes -- index out of range error)
+Sorting             Additional Material     Merge Sort                mergemyles          
+Sorting             Additional Material     Quick Sort                quickmyles          
+Sorting             Additional Material     Selection Sort            selectionmyles      
+Sorting             Additional Material     Shell Sort                shellmyles          (occasionally crashes -- index out of range error)

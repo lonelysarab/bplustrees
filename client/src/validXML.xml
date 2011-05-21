@@ -1,0 +1,31 @@
+<?xml version = "1.0"?>
+<!DOCTYPE quizResults SYSTEM "/home/naps/jhave2/server/src/quizResults.dtd">
+
+<quizResults quizId="hanoi" studentId="pat" numQuestions="4" numCorrect="3"
+             startTime="2005-6-11 15:32:54" endTime="2005-6-11 15:38:12">
+    <question questionNumber="1" isCorrect="1" questionType="MC">
+        <correctAnswer>"4"</correctAnswer>
+	<givenAnswer>"4"</givenAnswer>
+    </question>
+    <question questionNumber="2" isCorrect="0" questionType="MS">
+        <correctAnswer>"2"</correctAnswer>
+	<givenAnswer>"1"</givenAnswer>
+    </question>
+    <question questionNumber="3" isCorrect="1" questionType="FB">
+        <correctAnswer>
+"bubblesort"
+"BubbleSort"
+"bubbleSort"
+"Bubblesort"
+"bubble sort"
+"Bubble Sort"
+"Bubble Sort"
+"Bubble sort"
+        </correctAnswer>
+	<givenAnswer>"bubble sort"</givenAnswer>
+    </question>
+    <question questionNumber="4" isCorrect="1" questionType="TF">
+        <correctAnswer>"0"</correctAnswer>
+	<givenAnswer>"0"</givenAnswer>
+    </question>
+</quizResults>

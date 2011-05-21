@@ -1,0 +1,14 @@
+Topological Sort Example
+myles_toposort_example new_data_only gaigs
+****
+Postfix Evaluation Example
+myles_postfix_example new_data_only gaigs
+****
+Bubble Sort Example
+myles_bubsort_example new_data_only gaigs
+****
+Tree Example
+myles_tree_example new_data_only gaigs
+****
+Graph Example
+myles_graph_example new_data_only gaigs

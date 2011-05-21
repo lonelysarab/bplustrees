@@ -1,0 +1,22 @@
+[Main]
+Type=1
+Targ=E:\summer2000\GaigsServer2000\exe\parsing_lln_quiz\parsing_lln_quiz.exe
+Icon=
+[Other Files]
+Count=0
+[Options]
+TechWebPage=
+RunHidden=0
+[Version Info]
+Comments=
+CompanyName=
+FileDescription=parsing_lln_quiz
+FileVersion=1.0
+InternalName=parsing_lln_quiz.exe
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=parsing_lln_quiz.exe
+ProductName=parsing_lln_quiz
+ProductVersion=1.0
+[Extenders]
+Count=0

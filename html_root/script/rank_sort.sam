@@ -1,0 +1,1461 @@
+viewdef v1 500 600
+viewdef v2 500 600
+view v2
+bg black
+bigtext processor1 0.05 0.1 0 Yellow Processor #1
+bigtext primarydummy1 0.35 0.1 0 steelblue 4
+view v2
+bg black
+bigtext processor2 0.05 0.2 0 Yellow Processor #2
+bigtext primarydummy2 0.35 0.2 0 steelblue 6
+view v2
+bg black
+bigtext processor3 0.05 0.3 0 Yellow Processor #3
+bigtext primarydummy3 0.35 0.3 0 steelblue 3
+view v2
+bg black
+bigtext processor4 0.05 0.4 0 Yellow Processor #4
+bigtext primarydummy4 0.35 0.4 0 steelblue 7
+view v2
+bg black
+bigtext processor5 0.05 0.5 0 Yellow Processor #5
+bigtext primarydummy5 0.35 0.5 0 steelblue 10
+view v2
+bg black
+bigtext processor6 0.05 0.6 0 Yellow Processor #6
+bigtext primarydummy6 0.35 0.6 0 steelblue 12
+view v2
+bg black
+bigtext processor7 0.05 0.7 0 Yellow Processor #7
+bigtext primarydummy7 0.35 0.7 0 steelblue 2
+view v2
+bg black
+bigtext processor8 0.05 0.8 0 Yellow Processor #8
+bigtext primarydummy8 0.35 0.8 0 steelblue 19
+bigtext header 0.3 0.9 0 blue Primary #    Comparing      Rank
+view v1
+bigtext val11 0.1 0.1 1 black 4
+bigtext val21 0.2 0.1 1 black 4
+bigtext val12 0.1 0.2 1 black 6
+bigtext val31 0.3 0.1 1 black 4
+bigtext val41 0.4 0.1 1 black 4
+bigtext val22 0.2 0.2 1 black 6
+bigtext val51 0.5 0.1 1 black 4
+bigtext val13 0.1 0.3 1 black 3
+bigtext val32 0.3 0.2 1 black 6
+bigtext val61 0.6 0.1 1 black 4
+bigtext val42 0.4 0.2 1 black 6
+bigtext val23 0.2 0.3 1 black 3
+bigtext val52 0.5 0.2 1 black 6
+bigtext val71 0.7 0.1 1 black 4
+bigtext val14 0.1 0.4 1 black 7
+bigtext val33 0.3 0.3 1 black 3
+bigtext val62 0.6 0.2 1 black 6
+bigtext val81 0.8 0.1 1 black 4
+bigtext val43 0.4 0.3 1 black 3
+bigtext val24 0.2 0.4 1 black 7
+bigtext val53 0.5 0.3 1 black 3
+bigtext val72 0.7 0.2 1 black 6
+bigtext val15 0.1 0.5 1 black 10
+bigtext val34 0.3 0.4 1 black 7
+bigtext val63 0.6 0.3 1 black 3
+bigtext val82 0.8 0.2 1 black 6
+bigtext val44 0.4 0.4 1 black 7
+bigtext val25 0.2 0.5 1 black 10
+bigtext val54 0.5 0.4 1 black 7
+bigtext val73 0.7 0.3 1 black 3
+bigtext val16 0.1 0.6 1 black 12
+bigtext val35 0.3 0.5 1 black 10
+bigtext val64 0.6 0.4 1 black 7
+bigtext val83 0.8 0.3 1 black 3
+bigtext val45 0.4 0.5 1 black 10
+bigtext val26 0.2 0.6 1 black 12
+bigtext val55 0.5 0.5 1 black 10
+bigtext val74 0.7 0.4 1 black 7
+bigtext val17 0.1 0.7 1 black 2
+bigtext val36 0.3 0.6 1 black 12
+bigtext val65 0.6 0.5 1 black 10
+bigtext val84 0.8 0.4 1 black 7
+bigtext val46 0.4 0.6 1 black 12
+bigtext val27 0.2 0.7 1 black 2
+bigtext val56 0.5 0.6 1 black 12
+bigtext val75 0.7 0.5 1 black 10
+bigtext val18 0.1 0.8 1 black 19
+bigtext val37 0.3 0.7 1 black 2
+bigtext val66 0.6 0.6 1 black 12
+bigtext val85 0.8 0.5 1 black 10
+bigtext val47 0.4 0.7 1 black 2
+bigtext val28 0.2 0.8 1 black 19
+bigtext val57 0.5 0.7 1 black 2
+bigtext val76 0.7 0.6 1 black 12
+bigtext val38 0.3 0.8 1 black 19
+bigtext val67 0.6 0.7 1 black 2
+bigtext val86 0.8 0.6 1 black 12
+bigtext val48 0.4 0.8 1 black 19
+bigtext val58 0.5 0.8 1 black 19
+bigtext val77 0.7 0.7 1 black 2
+view v2
+bigtext cp1 0.6 0.1 0 maroon          6
+view v1
+bigtext val68 0.6 0.8 1 black 19
+bigtext val87 0.8 0.7 1 black 2
+view v2
+bigtext cp2 0.6 0.2 0 maroon          3
+view v1
+view v2
+bigtext cp3 0.6 0.3 0 maroon          7
+view v1
+bigtext val78 0.7 0.8 1 black 19
+set comp11 2 val11 val12
+bigtext val88 0.8 0.8 1 black 19
+set comp22 2 val22 val23
+view v2
+bigtext cp4 0.6 0.4 0 maroon         10
+view v1
+view v2
+bigtext cp5 0.6 0.5 0 maroon         12
+view v1
+color val11 green
+color val12 red
+set comp33 2 val33 val34
+view v2
+bigtext cp6 0.6 0.6 0 maroon          2
+view v1
+color val22 green
+color val23 red
+set comp44 2 val44 val45
+view v2
+bigtext cp7 0.6 0.7 0 maroon         19
+view v1
+color val33 green
+color val34 red
+set comp55 2 val55 val56
+view v2
+bigtext cp8 0.6 0.8 0 maroon          4
+view v1
+vis comp11
+set comp66 2 val66 val67
+vis comp11
+vis comp22
+color val44 green
+color val45 red
+set comp77 2 val77 val78
+vis comp11
+vis comp22
+vis comp33
+color val55 green
+color val56 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val67 red
+set comp88 2 val88 val81
+vis comp11
+vis comp22
+vis comp33
+color val77 green
+color val78 red
+vis comp11
+vis comp22
+vis comp44
+vis comp55
+color val88 green
+color val81 red
+view v2
+delete cp1
+delete r1
+view v1
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r1 0.8 0.1 0 red          0
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+vis comp77
+view v2
+delete cp6
+delete r6
+view v1
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          1
+view v1
+view v2
+bigtext r3 0.8 0.3 0 red          0
+view v1
+vis comp77
+vis comp88
+color comp11 black
+view v2
+bigtext r4 0.8 0.4 0 red          0
+view v1
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+delete comp11
+view v2
+delete cp8
+delete r8
+view v1
+color comp22 black
+color comp33 black
+view v2
+bigtext r5 0.8 0.5 0 red          0
+view v1
+delete comp22
+view v2
+bigtext r6 0.8 0.6 0 red          1
+view v1
+view v2
+bigtext cp1 0.6 0.1 0 maroon          3
+view v1
+delete comp33
+color comp44 black
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+delete comp44
+color comp55 black
+view v2
+bigtext cp2 0.6 0.2 0 maroon          7
+view v1
+delete comp55
+view v2
+bigtext r8 0.8 0.8 0 red          1
+view v1
+view v2
+bigtext cp3 0.6 0.3 0 maroon         10
+view v1
+color comp66 black
+color comp77 black
+set comp11 2 val11 val13
+view v2
+bigtext cp4 0.6 0.4 0 maroon         12
+view v1
+delete comp66
+set comp22 2 val22 val24
+view v2
+bigtext cp5 0.6 0.5 0 maroon          2
+view v1
+delete comp77
+color comp88 black
+color val11 green
+color val13 red
+set comp33 2 val33 val35
+delete comp88
+set comp44 2 val44 val46
+view v2
+bigtext cp6 0.6 0.6 0 maroon         19
+view v1
+view v2
+bigtext cp7 0.6 0.7 0 maroon          4
+view v1
+color val22 green
+color val24 red
+set comp55 2 val55 val57
+vis comp11
+color val33 green
+color val35 red
+view v2
+bigtext cp8 0.6 0.8 0 maroon          6
+view v1
+vis comp11
+color val44 green
+color val46 red
+set comp66 2 val66 val68
+vis comp11
+vis comp22
+color val55 green
+color val57 red
+set comp77 2 val77 val71
+vis comp11
+vis comp22
+vis comp33
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val68 red
+color val77 green
+color val71 red
+set comp88 2 val88 val82
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+color val88 green
+color val82 red
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp88
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r1 0.8 0.1 0 red          1
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          1
+view v1
+view v2
+bigtext r3 0.8 0.3 0 red          0
+view v1
+view v2
+delete cp6
+delete r6
+view v1
+vis comp77
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+color comp11 black
+view v2
+bigtext r4 0.8 0.4 0 red          0
+view v1
+vis comp88
+delete comp11
+color comp22 black
+view v2
+bigtext r5 0.8 0.5 0 red          1
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+delete comp22
+color comp33 black
+delete comp33
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          1
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+view v2
+bigtext cp1 0.6 0.1 0 maroon          7
+view v1
+delete comp44
+view v2
+bigtext cp2 0.6 0.2 0 maroon         10
+view v1
+color comp55 black
+view v2
+bigtext cp3 0.6 0.3 0 maroon         12
+view v1
+delete comp55
+color comp66 black
+view v2
+bigtext r8 0.8 0.8 0 red          2
+view v1
+set comp11 2 val11 val14
+view v2
+bigtext cp4 0.6 0.4 0 maroon          2
+view v1
+delete comp66
+color comp77 black
+delete comp77
+set comp22 2 val22 val25
+set comp33 2 val33 val36
+view v2
+bigtext cp5 0.6 0.5 0 maroon         19
+view v1
+color comp88 black
+color val11 green
+color val14 red
+set comp44 2 val44 val47
+view v2
+bigtext cp6 0.6 0.6 0 maroon          4
+view v1
+delete comp88
+color val22 green
+color val25 red
+view v2
+bigtext cp7 0.6 0.7 0 maroon          6
+view v1
+color val33 green
+color val36 red
+set comp55 2 val55 val58
+vis comp11
+color val44 green
+color val47 red
+set comp66 2 val66 val61
+view v2
+bigtext cp8 0.6 0.8 0 maroon          3
+view v1
+vis comp11
+vis comp22
+set comp77 2 val77 val72
+vis comp11
+vis comp22
+vis comp33
+color val55 green
+color val58 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val61 red
+set comp88 2 val88 val83
+vis comp11
+vis comp33
+vis comp44
+color val77 green
+color val72 red
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+color val88 green
+color val83 red
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+view v2
+delete cp3
+delete r3
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r1 0.8 0.1 0 red          1
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          1
+view v1
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r3 0.8 0.3 0 red          0
+view v1
+view v2
+delete cp6
+delete r6
+view v1
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+color comp11 black
+color comp22 black
+view v2
+bigtext r4 0.8 0.4 0 red          1
+view v1
+vis comp88
+delete comp11
+color comp33 black
+view v2
+bigtext r5 0.8 0.5 0 red          1
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+delete comp22
+delete comp33
+view v2
+bigtext cp1 0.6 0.1 0 maroon         10
+view v1
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          2
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+delete comp44
+color comp55 black
+view v2
+bigtext cp2 0.6 0.2 0 maroon         12
+view v1
+view v2
+bigtext cp3 0.6 0.3 0 maroon          2
+view v1
+delete comp55
+color comp66 black
+color comp77 black
+view v2
+bigtext r8 0.8 0.8 0 red          3
+view v1
+set comp11 2 val11 val15
+view v2
+bigtext cp4 0.6 0.4 0 maroon         19
+view v1
+delete comp66
+delete comp77
+set comp22 2 val22 val26
+view v2
+bigtext cp5 0.6 0.5 0 maroon          4
+view v1
+color val11 green
+color val15 red
+set comp33 2 val33 val37
+color comp88 black
+set comp44 2 val44 val48
+view v2
+bigtext cp6 0.6 0.6 0 maroon          6
+view v1
+view v2
+bigtext cp7 0.6 0.7 0 maroon          3
+view v1
+delete comp88
+color val22 green
+color val26 red
+color val33 green
+color val37 red
+vis comp11
+set comp55 2 val55 val51
+vis comp11
+color val44 green
+color val48 red
+set comp66 2 val66 val62
+set comp77 2 val77 val73
+view v2
+bigtext cp8 0.6 0.8 0 maroon          7
+view v1
+vis comp22
+vis comp33
+color val55 green
+color val51 red
+vis comp11
+vis comp22
+vis comp33
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val62 red
+color val77 green
+color val73 red
+set comp88 2 val88 val84
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp11
+vis comp22
+vis comp44
+vis comp55
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+color val88 green
+color val84 red
+view v2
+delete cp2
+delete r2
+view v1
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp66
+vis comp77
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r1 0.8 0.1 0 red          1
+view v1
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          1
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+vis comp77
+vis comp88
+vis comp88
+view v2
+bigtext r3 0.8 0.3 0 red          1
+view v1
+view v2
+delete cp6
+delete r6
+view v1
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+color comp11 black
+view v2
+bigtext r4 0.8 0.4 0 red          1
+view v1
+vis comp88
+delete comp11
+color comp22 black
+delete comp22
+color comp33 black
+view v2
+bigtext r5 0.8 0.5 0 red          2
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+delete comp33
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          3
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+view v2
+bigtext cp1 0.6 0.1 0 maroon         12
+view v1
+delete comp44
+view v2
+bigtext cp2 0.6 0.2 0 maroon          2
+view v1
+color comp55 black
+view v2
+bigtext cp3 0.6 0.3 0 maroon         19
+view v1
+delete comp55
+color comp77 black
+view v2
+bigtext r8 0.8 0.8 0 red          4
+view v1
+set comp11 2 val11 val16
+view v2
+bigtext cp4 0.6 0.4 0 maroon          4
+view v1
+color comp66 black
+delete comp77
+set comp22 2 val22 val27
+delete comp66
+set comp33 2 val33 val38
+view v2
+bigtext cp5 0.6 0.5 0 maroon          6
+view v1
+color val11 green
+color val16 red
+view v2
+bigtext cp7 0.6 0.7 0 maroon          7
+view v1
+color comp88 black
+color val22 green
+color val27 red
+set comp44 2 val44 val41
+view v2
+bigtext cp6 0.6 0.6 0 maroon          3
+view v1
+delete comp88
+color val33 green
+color val38 red
+set comp55 2 val55 val52
+vis comp11
+color val44 green
+color val41 red
+vis comp11
+vis comp22
+set comp66 2 val66 val63
+set comp77 2 val77 val74
+view v2
+bigtext cp8 0.6 0.8 0 maroon         10
+view v1
+vis comp11
+vis comp22
+vis comp33
+color val55 green
+color val52 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val77 green
+color val74 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val63 red
+set comp88 2 val88 val85
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp55
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+color val88 green
+color val85 red
+vis comp33
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+view v2
+delete cp4
+delete r4
+view v1
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r1 0.8 0.1 0 red          1
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          2
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r3 0.8 0.3 0 red          1
+view v1
+view v2
+delete cp6
+delete r6
+view v1
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+color comp11 black
+vis comp88
+delete comp11
+view v2
+bigtext r4 0.8 0.4 0 red          2
+view v1
+vis comp88
+color comp22 black
+color comp33 black
+view v2
+delete cp8
+delete r8
+view v1
+delete comp22
+view v2
+bigtext r5 0.8 0.5 0 red          3
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+view v2
+bigtext cp1 0.6 0.1 0 maroon          2
+view v1
+delete comp33
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          4
+view v1
+delete comp44
+view v2
+bigtext cp2 0.6 0.2 0 maroon         19
+view v1
+view v2
+bigtext cp3 0.6 0.3 0 maroon          4
+view v1
+color comp55 black
+color comp77 black
+set comp11 2 val11 val17
+delete comp55
+view v2
+bigtext r8 0.8 0.8 0 red          5
+view v1
+view v2
+bigtext cp4 0.6 0.4 0 maroon          6
+view v1
+color comp66 black
+delete comp77
+set comp22 2 val22 val28
+delete comp66
+color val11 green
+color val17 red
+set comp33 2 val33 val31
+view v2
+bigtext cp5 0.6 0.5 0 maroon          3
+view v1
+view v2
+bigtext cp7 0.6 0.7 0 maroon         10
+view v1
+color comp88 black
+color val22 green
+color val28 red
+color val33 green
+color val31 red
+set comp44 2 val44 val42
+view v2
+bigtext cp6 0.6 0.6 0 maroon          7
+view v1
+delete comp88
+vis comp11
+set comp55 2 val55 val53
+vis comp11
+color val44 green
+color val42 red
+set comp77 2 val77 val75
+vis comp11
+vis comp22
+vis comp33
+set comp66 2 val66 val64
+view v2
+bigtext cp8 0.6 0.8 0 maroon         12
+view v1
+vis comp11
+vis comp22
+vis comp33
+color val55 green
+color val53 red
+vis comp11
+vis comp22
+vis comp44
+color val77 green
+color val75 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val64 red
+set comp88 2 val88 val86
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+vis comp33
+vis comp55
+vis comp66
+vis comp77
+color val88 green
+color val86 red
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+bigtext r1 0.8 0.1 0 red          2
+view v1
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          2
+view v1
+view v2
+bigtext r3 0.8 0.3 0 red          1
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+view v2
+delete cp6
+delete r6
+view v1
+vis comp88
+color comp11 black
+vis comp88
+delete comp11
+color comp22 black
+view v2
+bigtext r4 0.8 0.4 0 red          3
+view v1
+vis comp88
+delete comp22
+color comp33 black
+view v2
+bigtext r5 0.8 0.5 0 red          4
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+delete comp33
+view v2
+bigtext cp1 0.6 0.1 0 maroon         19
+view v1
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          5
+view v1
+view v2
+bigtext cp2 0.6 0.2 0 maroon          4
+view v1
+delete comp44
+view v2
+bigtext cp3 0.6 0.3 0 maroon          6
+view v1
+color comp55 black
+color comp77 black
+set comp11 2 val11 val18
+delete comp55
+delete comp77
+view v2
+bigtext r8 0.8 0.8 0 red          6
+view v1
+set comp22 2 val22 val21
+view v2
+bigtext cp4 0.6 0.4 0 maroon          3
+view v1
+color comp66 black
+set comp33 2 val33 val32
+delete comp66
+color val11 green
+color val18 red
+view v2
+bigtext cp5 0.6 0.5 0 maroon          7
+view v1
+view v2
+bigtext cp7 0.6 0.7 0 maroon         12
+view v1
+color val22 green
+color val21 red
+set comp44 2 val44 val43
+color comp88 black
+color val33 green
+color val32 red
+view v2
+bigtext cp6 0.6 0.6 0 maroon         10
+view v1
+delete comp88
+vis comp11
+set comp55 2 val55 val54
+set comp77 2 val77 val76
+vis comp11
+vis comp22
+color val44 green
+color val43 red
+vis comp11
+vis comp22
+vis comp33
+set comp66 2 val66 val65
+view v2
+bigtext cp8 0.6 0.8 0 maroon          2
+view v1
+vis comp11
+vis comp22
+vis comp33
+color val55 green
+color val54 red
+color val77 green
+color val76 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val65 red
+set comp88 2 val88 val87
+view v2
+delete cp1
+delete r1
+view v1
+vis comp33
+vis comp44
+vis comp55
+vis comp77
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+color val88 green
+color val87 red
+vis comp55
+vis comp66
+vis comp77
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+view v2
+bigtext r1 0.8 0.1 0 red          2
+view v1
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          3
+view v1
+view v2
+bigtext r3 0.8 0.3 0 red          1
+view v1
+vis comp66
+vis comp88
+color comp11 black
+view v2
+delete cp6
+delete r6
+view v1
+vis comp88
+delete comp11
+vis comp88
+color comp22 black
+color comp33 black
+view v2
+bigtext r4 0.8 0.4 0 red          4
+view v1
+vis comp88
+delete comp22
+delete comp33
+view v2
+bigtext r5 0.8 0.5 0 red          5
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          0
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+view v2
+bigtext cp1 0.6 0.1 0 maroon          4
+view v1
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          6
+view v1
+view v2
+bigtext cp2 0.6 0.2 0 maroon          6
+view v1
+view v2
+bigtext cp3 0.6 0.3 0 maroon          3
+view v1
+delete comp44
+color comp77 black
+color comp55 black
+delete comp77
+set comp11 2 val11 val11
+delete comp55
+color comp66 black
+view v2
+bigtext r8 0.8 0.8 0 red          7
+view v1
+set comp22 2 val22 val22
+set comp33 2 val33 val33
+view v2
+bigtext cp4 0.6 0.4 0 maroon          7
+view v1
+color val11 green
+color val11 red
+delete comp66
+view v2
+bigtext cp7 0.6 0.7 0 maroon          2
+view v1
+view v2
+bigtext cp5 0.6 0.5 0 maroon         10
+view v1
+color comp88 black
+color val22 green
+color val22 red
+color val33 green
+color val33 red
+set comp44 2 val44 val44
+vis comp11
+view v2
+bigtext cp6 0.6 0.6 0 maroon         12
+view v1
+delete comp88
+vis comp11
+set comp55 2 val55 val55
+set comp77 2 val77 val77
+vis comp11
+vis comp22
+vis comp33
+color val44 green
+color val44 red
+vis comp11
+vis comp22
+vis comp33
+set comp66 2 val66 val66
+color val77 green
+color val77 red
+view v2
+bigtext cp8 0.6 0.8 0 maroon         19
+view v1
+vis comp22
+vis comp33
+color val55 green
+color val55 red
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+vis comp11
+vis comp22
+vis comp33
+vis comp44
+color val66 green
+color val66 red
+vis comp77
+set comp88 2 val88 val88
+view v2
+delete cp1
+delete r1
+view v1
+vis comp22
+vis comp33
+vis comp44
+vis comp55
+vis comp77
+vis comp44
+vis comp55
+vis comp77
+view v2
+delete cp2
+delete r2
+view v1
+view v2
+delete cp3
+delete r3
+view v1
+vis comp44
+vis comp55
+vis comp66
+vis comp77
+color val88 green
+color val88 red
+vis comp44
+vis comp55
+vis comp66
+vis comp55
+vis comp66
+vis comp77
+view v2
+bigtext r1 0.8 0.1 0 red          3
+view v1
+view v2
+delete cp4
+delete r4
+view v1
+vis comp55
+vis comp66
+vis comp77
+vis comp88
+view v2
+bigtext r2 0.8 0.2 0 red          4
+view v1
+view v2
+bigtext r3 0.8 0.3 0 red          2
+view v1
+view v2
+delete cp5
+delete r5
+view v1
+vis comp66
+view v2
+delete cp7
+delete r7
+view v1
+vis comp88
+vis comp66
+vis comp88
+color comp11 black
+view v2
+delete cp6
+delete r6
+view v1
+vis comp88
+delete comp11
+view v2
+bigtext r4 0.8 0.4 0 red          5
+view v1
+vis comp88
+color comp22 black
+color comp33 black
+vis comp88
+delete comp22
+delete comp33
+view v2
+bigtext r5 0.8 0.5 0 red          6
+view v1
+view v2
+bigtext r7 0.8 0.7 0 red          1
+view v1
+view v2
+delete cp8
+delete r8
+view v1
+color comp44 black
+view v2
+bigtext r6 0.8 0.6 0 red          7
+view v1
+delete comp44
+color comp77 black
+color comp55 black
+delete comp77
+delete comp55
+color comp66 black
+view v2
+bigtext r8 0.8 0.8 0 red          8
+view v1
+delete comp66
+color comp88 black
+delete comp88
+view v2
+bigtext finalrank 0.1 0.10 0 green 2
+         
+bigtext finalrank 0.2 0.10 0 green 3
+         
+bigtext finalrank 0.3 0.10 0 green 4
+         
+bigtext finalrank 0.4 0.10 0 green 6
+         
+bigtext finalrank 0.5 0.10 0 green 7
+         
+bigtext finalrank 0.6 0.10 0 green 10
+        
+bigtext finalrank 0.7 0.10 0 green 12
+       
+bigtext finalrank 0.8 0.10 0 green 19
+       

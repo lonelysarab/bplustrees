@@ -1,0 +1,26 @@
+<tree x_spacing = "1.25" y_spacing = "1.25">
+<bounds x1 = "0.0" y1 = "0.0" x2 = "1.0" y2 = "1.0"/>
+<binary_node color = "##AAFFAA">
+<label>A</label>
+<left_node color = "#FFAAFF">
+<label>B</label>
+<left_node color = "#886644">
+<label>D</label>
+</left_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</left_node>
+<tree_edge color = "#999999">
+</tree_edge>
+<right_node color = "#446688">
+<label>C</label>
+<right_node color = "#FFFFFF">
+<label>E</label>
+</right_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</right_node>
+<tree_edge color = "#999999">
+</tree_edge>
+</binary_node>
+</tree>

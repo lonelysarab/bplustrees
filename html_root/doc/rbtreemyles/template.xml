@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>template</call_stack>
+    <program_listing>
+	<signature>template(addItem, currentNode)</signature>
+	<line line_number="1">1    1</line>
+	<line line_number="2">2    	2</line>
+	<line line_number="3">3    3</line>
+	<line line_number="4">4	if(currentNode's left child is null)</line>
+	<line line_number="5">5		currentNode.leftChild = new Node(addItem)</line>
+	<line line_number="6">6	else</line>
+	<line line_number="7">7		insert(addItem, currentNode.leftChild)</line>
+	<line line_number="8">8    else if(addItem is greater than currentNode)</line>
+	<line line_number="9">9	if(currentNode's right child is null)</line>
+	<line line_number="10">10		currentNode.rightChild = new Node(addItem)</line>
+	<line line_number="11">11	else</line>
+	<line line_number="12">12		insert(addItem, currentNode.rightChild)</line>
+	<line line_number="13">13   else</line>
+	<line line_number="14">14	->addItem in list&lt;-</line>
+    </program_listing>
+    <variables>
+        <variable><replace var="command" /> = <replace var="addItem" /></variable>
+	<variable></variable>
+	<variable></variable>
+	<variable>Blue = currently being considered</variable>
+	<variable>L. Blue = has been considered</variable>
+	<variable>Red = found addItem already in tree</variable>
+	<variable>Magenta = node added</variable>
+    </variables>
+</pseudocode>

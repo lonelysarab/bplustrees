@@ -1,0 +1,527 @@
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:   **71**  4 46 37 6 99 13 86
+Red Node Added
+***\***
+0
+R
+\R71
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71  **4**  46 37 6 99 13 86
+Comparing 4 to Blue Node
+***\***
+0
+R
+\B71
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71  **4**  46 37 6 99 13 86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+\R4
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4  **46**  37 6 99 13 86
+Comparing 46 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4  **46**  37 6 99 13 86
+Comparing 46 to Blue Node
+***\***
+0
+R
+71
+1
+L
+\B4
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4  **46**  37 6 99 13 86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+\R46
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46  **37**  6 99 13 86
+Comparing 37 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+2
+R
+46
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46  **37**  6 99 13 86
+Comparing 37 to Blue Node
+***\***
+0
+R
+71
+1
+L
+\B4
+2
+R
+46
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46  **37**  6 99 13 86
+Comparing 37 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+\B46
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46  **37**  6 99 13 86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+\R37
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37  **6**  99 13 86
+Comparing 6 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37  **6**  99 13 86
+Comparing 6 to Blue Node
+***\***
+0
+R
+71
+1
+L
+\B4
+2
+R
+46
+3
+L
+37
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37  **6**  99 13 86
+Comparing 6 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+\B46
+3
+L
+37
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37  **6**  99 13 86
+Comparing 6 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+\B37
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37  **6**  99 13 86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+\R6
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6  **99**  13 86
+Comparing 99 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6  **99**  13 86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+1
+R
+\R99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Comparing 13 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Comparing 13 to Blue Node
+***\***
+0
+R
+71
+1
+L
+\B4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Comparing 13 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+\B46
+3
+L
+37
+4
+L
+6
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Comparing 13 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+\B37
+4
+L
+6
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Comparing 13 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+\B6
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99  **13**  86
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+5
+R
+\R13
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99 13  **86** 
+Comparing 86 to Blue Node
+***\***
+0
+R
+\B71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+5
+R
+13
+1
+R
+99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99 13  **86** 
+Comparing 86 to Blue Node
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+5
+R
+13
+1
+R
+\B99
+***^***
+VIEW ALGO bstree.htm
+BinaryTree
+1
+Order of arrival:  71 4 46 37 6 99 13  **86** 
+Red Node Added
+***\***
+0
+R
+71
+1
+L
+4
+2
+R
+46
+3
+L
+37
+4
+L
+6
+5
+R
+13
+1
+R
+99
+2
+L
+\R86
+***^***

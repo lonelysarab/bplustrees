@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textarea>
+    <label_line>Enter your Java or C++ source code below:</label_line>
+    <default_field>exercise 15
+// gridsize 1 4 java
+Node p = null; // 0 0 RIGHT
+Node q = null; // 0 0 LEFT
+p = new Node( 'B', null); // 0 1
+p.next = new Node( 'C', null); // 0 2
+</default_field>
+    <value_entered></value_entered>
+  </textarea>
+</input_panel>

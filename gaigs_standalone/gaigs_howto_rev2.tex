@@ -1,0 +1,1019 @@
+%% ================================================================================
+%% This LaTeX file was created by AbiWord.                                         
+%% AbiWord is a free, Open Source word processor.                                  
+%% You may obtain more information about AbiWord at www.abisource.com              
+%% ================================================================================
+
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{hyperref}\usepackage{setspace}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\usepackage{alltt}
+ 
+\setlength{\oddsidemargin}{1.0000in-1in}
+\setlength{\textwidth}{\paperwidth - 1.0000in-1.0000in}
+
+
+\begin{document}
+\section{GAIGS ``as is'' -- that is, without extending its built-in data structure visuals}
+\begin{flushleft}
+\textbf{{\footnotesize{}The GAIGS (Generalized Algorithm Illustration via Graphical Software) is an }}\textbf{\textit{{\footnotesize{}algorithm visualization }}}\textbf{{\footnotesize{} scripting language that captures and renders }}\textbf{\textit{{\footnotesize{}snapshots}}}\textbf{{\footnotesize{} of the state of an algorithm at critical points (}}\textbf{\textit{{\footnotesize{}interesting events}}}\textbf{{\footnotesize{}) in its execution.  }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Textual snapshots read by GAIGS}}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}The following two rules underlie the structure of GAIGS show files:}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}1.      The group of text lines necessary to draw a data structure is called a textual snapshot.  A show file contains one or more textual snapshots, all of which need not be of the same data structure type. When the show file is loaded into the GAIGS program, GAIGS creates one data structure picture corresponding to each textual snapshot. }}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}2.      All textual snapshots are divided into three components: the introductory block, the title (or caption), and nodes.  The introductory block specifies optional viewing parameters, the type of data structure, the number of text lines per data structure node (which must be at least one), and the optional graphical parameters.  The title is an arbitrarily long list of text lines (character strings of 40 or fewer characters -- longer lines are truncated) explaining the snapshot.  A node is divided into two parts: the information necessary to locate it in relation to other nodes in the data structure  and  the list of text lines.  In the simplest of cases, there will only be one node per snapshot.  In such cases, it is relatively easy to link your own graphical renditions into the more standard data structure pictures that are already built into GAIGS.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}The introductory block is standard, always constituting at least the first two lines of the textual snapshot.  Note in the following format definition that the bracketed parameters are optional:}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}\{view scale x\}}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}\{view pan x y\}}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}\{view windows n \}}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}\{view jump n\}}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}\{view algo <URL> \}}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}DataStructureType}}\textbf{$^{\mathrm{{\footnotesize{}1}}}$}\textbf{{\footnotesize{} \{Textheight\}}}\textbf{$^{\mathrm{{\footnotesize{}2}}}$}\textbf{{\footnotesize{} \{TitleTextheight\}}}\textbf{$^{\mathrm{{\footnotesize{}3}}}$}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Number of  text lines per data structure node  }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Explanation of numbered terms:}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textit{{\footnotesize{}Viewing Parameters}}}\textbf{{\footnotesize{}:  All these parameters are optional, and case-insensitive. }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textit{{\footnotesize{}Scale}}}\textbf{{\footnotesize{} will scale the snapshot by }}\textbf{\textit{{\footnotesize{}x}}}\textbf{{\footnotesize{}, where }}\textbf{\textit{{\footnotesize{}x}}}\textbf{{\footnotesize{} is a real, 0 < }}\textbf{\textit{{\footnotesize{}x}}}\textbf{{\footnotesize{} <= 2. }}
+\end{flushleft}
+
+% \begin{flushleft}
+% \textbf{{\footnotesize{}\newpage
+% }}
+% \end{flushleft}
+
+\setlength{\oddsidemargin}{1.0000in-1in}
+\setlength{\textwidth}{\paperwidth - 1.0000in-1.0000in}
+% \textbf{{\footnotesize{}\newpage
+% }}
+
+\begin{flushleft}
+\textbf{\textit{{\footnotesize{}Pan}}}\textbf{{\footnotesize{} translates the image }}\textbf{\textit{{\footnotesize{}x,y}}}\textbf{{\footnotesize{} from its original position. }}\textbf{\textit{{\footnotesize{} x}}}\textbf{{\footnotesize{} and}}\textbf{\textit{{\footnotesize{} y }}}\textbf{{\footnotesize{}are reals in the range from 1 to 1.  You may supply any value for }}\textbf{\textit{{\footnotesize{}x}}}\textbf{{\footnotesize{} or}}\textbf{\textit{{\footnotesize{} y}}}\textbf{{\footnotesize{}, but since the GAIGS viewing environment is only (0,0) to (1,1) any excess panning will force the image completely off the screen.  In most cases, it will be better if you ``drag'' the graphic with the mouse for panning.  }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textit{{\footnotesize{}Windows}}}\textbf{{\footnotesize{} requests }}\textbf{\textit{{\footnotesize{}n}}}\textbf{{\footnotesize{} windows for the given data structure. }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textit{{\footnotesize{}Algo}}}\textbf{{\footnotesize{} will create a code box, fill it with code from text file specified by filename, and highlight the lines in range start thru end. Start and end are integers.  }}\textbf{\textit{{\footnotesize{}start}}}\textbf{{\footnotesize{} and }}\textbf{\textit{{\footnotesize{}end}}}\textbf{{\footnotesize{} are optional.  If }}\textbf{\textit{{\footnotesize{}end}}}\textbf{{\footnotesize{} is not specified, then only }}\textbf{\textit{{\footnotesize{}start}}}\textbf{{\footnotesize{} is highlighted.  If neither }}\textbf{\textit{{\footnotesize{}start}}}\textbf{{\footnotesize{} nor }}\textbf{\textit{{\footnotesize{}end}}}\textbf{{\footnotesize{} are specified, then whatever was previously specified will remain highlighted.  }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{$^{\mathrm{{\footnotesize{}1}}}$}\textbf{{\footnotesize{}DataStructureType:  One of the eight built-in data structure types: Stack, Queue, LinkedList, MD\_Array, BinaryTree, GeneralTree, Network, Graph OR, your own built-in structure.  }}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{$^{\mathrm{{\footnotesize{}2}}}$}\textbf{{\footnotesize{}TextHeight:  The text height in world coordinates, which must be greater than zero, to be used for all text in the snapshot except the title.  If no text height is specified, this parameter defaults to .01, so that each character's height is 1/100th of the total screen height.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{$^{\mathrm{{\footnotesize{}3}}}$}\textbf{{\footnotesize{}TitleTextHeight:  The text height in world coordinates, which must be greater than zero, to be used for all text in the snapshot title.  If no title text height is specified, this parameter defaults to the text height.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}All of the above optional parameters are intended to give you nearly complete control of the size and appearance of snapshot drawings.  Using these parameters will allow snapshots of nearly any size to be drawn so that they nicely fit on the drawing surface, or  so that they  are at least able to be entirely seen using the "scale" and "pan" options in the viewing environment.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}The snapshot title always begins on the line immediately following the introductory block.  Note the following format for a snapshot title of n lines:}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Title of Snapshot  Line 1}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}    \_}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Title of Snapshot  Line n}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}***\ensuremath{\backslash}***  (End of Title Marker)}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}If a snapshot has no title, the End of Title Marker should be positioned on the line immediately following the number of lines per data structure node specification.  Similarly,  if a snapshot does not contain any nodes (i.e., it is an "empty" snapshot), then the End of Snapshot Marker (***\^{}***) should be placed on the line below the End of Title marker.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}After the standard n + 3 lines constituting the Introductory Block and Title, it is necessary to have the textual information that describes the actual content of the data structure.}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Example -- The built-in stacks, queues, and linked\_Lists}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+% \begin{flushleft}
+% \textbf{{\footnotesize{}\newpage
+% }}
+% \end{flushleft}
+
+\setlength{\oddsidemargin}{1.0000in-1in}
+\setlength{\textwidth}{\paperwidth - 1.0000in-1.0000in}
+% \textbf{{\footnotesize{}\newpage
+% }}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Since these structures are linear in nature, no extra information in required to position nodes relative to other nodes -- the order of the nodes in the file is the order that they will appear in the data structure.  The above suggests the following format for a Stack, Queue, or Linked List having k lines per node and n total nodes:}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}      Line 1 of node 1}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}        \_}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}      Line k of node 1}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}        \_}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}      Line 1 of node  n}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}        \_}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}      Line k of node  n}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}      ***\^{}***  (End of Snapshot Marker)}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Note that, by convention, node 1 is the top of the stack, the head of the queue, and the head of the linked list, so that node n is the bottom of the stack, the tail of the queue, and the end of the linked list (its link field is automatically set to NIL).}}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+% \textbf{{\footnotesize{}2.4 MD\_Arrays}}
+
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Example -- The built-in MD\_Arrays}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+
+
+{\footnotesize{}In the array textual snapshot the following two integer specifications, both of which must be greater than 0, are required immediately following the End of Title Marker (***\ensuremath{\backslash}***):}
+
+{\footnotesize{}   }
+
+\textit{{\footnotesize{}                Number of Rows }}
+
+\textit{{\footnotesize{}                Number of  Columns  }}
+
+\textit{{\footnotesize{}                }}
+
+{\footnotesize{}Since GAIGS is able to represent arrays that have indices of any enumerated variable type (integer, character, boolean, or userdefined), the file format requires that the row and column label of each array entry precede the lines of text of that entry.  This makes the file structure for an }\textit{{\footnotesize{}x}}{\footnotesize{} by }\textit{{\footnotesize{}y}}{\footnotesize{}  array having }\textit{{\footnotesize{}k}}{\footnotesize{} lines per array entry look like the following:}
+
+
+
+\textit{{\footnotesize{}                Row label of Row 1, Column 1}}
+
+\textit{{\footnotesize{}                Column label of Row 1, Column 1}}
+
+\textit{{\footnotesize{}                Line 1 of entry 1,1             }}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of entry 1,1}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Row label of  Row  x , Column 1}}
+
+\textit{{\footnotesize{}                Column label of Row x, Column 1}}
+
+\textit{{\footnotesize{}                Line 1 of entry x,1}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of entry x, 1}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Row label of Row 1, Column y}}
+
+\textit{{\footnotesize{}                Column label of Row 1, Column y}}
+
+\textit{{\footnotesize{}                Line 1 of entry 1,y}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of entry 1,y}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Row label of Row x, Column y}}
+
+\textit{{\footnotesize{}                Column label of Row x, Column y}}
+
+\textit{{\footnotesize{}                Line  1 of entry x,y}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of entry x,y}}
+
+\textit{{\footnotesize{}                ***\^{}***   (End of Snapshot Marker)}}
+
+
+
+{\footnotesize{}Note that the length of a row label cannot exceed 30 characters, and the length of a column label cannot exceed the length of the longest line of data in the snapshot.  Labels longer than these limits will be truncated.  Also keep in mind that for onedimensional arrays, all entries should have a column label of "1".  This column label will not be included in the array picture.}
+
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Example -- The built-in graphs and networks}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+
+
+
+{\footnotesize{}In order to draw a graph or network, information about which nodes are connected is necessary.   GAIGS gets this information by requiring that an integer label be specified for each node.   These integer labels must start at one and ascend consecutively.  So that GAIGS can make the proper node connections, you then include with each node a list of integer node labels to which that node is connected.}
+
+
+
+{\footnotesize{}Two other parameters can be included with each node contained in a  connected node list.  For networks, the edgeweight, which is a string of at most 15 characters, is required.  For both graphs and networks, the optional DrawArrow delimeter (\ensuremath{\backslash}A, the "A" must be capitalized), when positioned in front of a connected node's integer label, tells GAIGS to draw an arrow on the connecting line pointing to that node. Use this option to draw directed graphs or networks.}
+
+
+
+{\footnotesize{}You must choose one of two different methods to draw a graph or network.  In the first method, you specify the x and y coordinates of the center of each graph node, keeping in mind that the display is 1.0 x 1.0, so that coordinates outside of this range are allowable, but will be clipped off the screen initially.  Using this method allows you to have complete control of the appearance of your  graphs/networks.  However, this method also requires you to figure out the graph/network configuration yourself, which could involve some extensive calculation.  To avoid manual coordinate calculation, the second method automates the configuration process at the expense of potentially uglier graphs/networks with many edge crossings.  This method draws networks and graphs using the following simple algorithm:  Given a graph or network containing }\textit{{\footnotesize{}n}}{\footnotesize{} nodes, divide a circle (whose circumference is computed to be (2n * node diameter)  node diameter) into }\textit{{\footnotesize{}n}}{\footnotesize{} arcs, and position a node at the endpoint of each arc around this circle.  Then connect each node appropriately into the graph or network.  Since the nodes are arranged circularly, every node is capable of being connected to every other node, guaranteeing that every possible graph can be illustrated.}
+
+
+
+{\footnotesize{}What follows is the file structure for graphs and networks.  Note that the only difference between a network and a graph textual snapshot is the edgeweight following each connected node, and that the only difference between textual snapshots drawn by the two different methods is the absence or presence of  x and ycoordinates on the first line of each node.}
+
+
+
+\textit{{\footnotesize{}                1  (Integer label)  \{xcoordinate\} \{ycoordinate\}}}
+
+\textit{{\footnotesize{}                \{\ensuremath{\backslash}A\} Number of Connected Node 1}}
+
+\textit{{\footnotesize{}        Edgeweight  to Connected Node 1 (Networks only)}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                \{\ensuremath{\backslash}A\}  Number of Connected Node k}}
+
+\textit{{\footnotesize{}                Edgeweight to Connected Node k  (Networks only)}}
+
+\textit{{\footnotesize{}                32767 (End of Connected Nodes Marker= MAXINT on many machines)}}
+
+\textit{{\footnotesize{}                Line 1 of Node 1}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line t of Node 1}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                n  (Integer label) \{xcoordinate\} \{ycoordinate\}}}
+
+\textit{{\footnotesize{}                \{\ensuremath{\backslash}A\} Number of Connected Node 1}}
+
+\textit{{\footnotesize{}                Edgeweight  to Connected Node 1  (Networks only)}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                \{\ensuremath{\backslash}A\} Number of Connected Node  m}}
+
+\textit{{\footnotesize{}                Edgeweight  to Connected node m (Networks only)}}
+
+\textit{{\footnotesize{}                32767 (End of Connected Nodes Marker = MAXINT on many machines)}}
+
+\textit{{\footnotesize{}                Line 1 of Node n}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line t of Node n}}
+
+\textit{{\footnotesize{}                ***\^{}*** (End of Snapshot Marker)}}
+
+
+
+{\footnotesize{}It is important to observe the following restriction when building snapshots of graphs:  no node can be connected to a node whose number is less than one or greater than }\textit{{\footnotesize{}n}}
+%{\footnotesize{}.  If you make this mistake, GAIGS will show you your error by connecting the node to the point 0.0, 0.0. }
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Example -- Binary and general trees}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+
+
+{\footnotesize{}You may be wondering why there is a separate data structure type for both binary and general trees.  "Isn't a binary tree just a special case of a general tree," you may ask.  In theory this is certainly true, but when it comes to illustrating  them, different rules govern the way in which each tree is drawn.  General trees, by convention, are drawn using the rule that a parent should be centered over its  evenlyspaced children.  This says that if a parent has only one child, that child should lie directly below its parent.  The convention used for general trees is definitely not the convention used for binary trees, however.  Binary trees are drawn using the rule that a left child must always lie to the left of its parent, and a right child to the right, with the parent centered over its children.  For this to hold in the case wherein a parent has only one child,  the position in which the missing child }\textit{{\footnotesize{}would reside}}{\footnotesize{} must be calculated, so that the parent can then be centered over both of its children, even if one of them doesn't exist. }
+
+
+
+{\footnotesize{}With these two different rules governing the drawing of general and binary trees, two different textual snapshot structures are necessary.  Both of them require that tree nodes with their level in the tree (use the convention that the root is at level 0) be listed in the order resulting from a }\textit{{\footnotesize{}preorder}}{\footnotesize{} traversal of the tree (parent node first, and children next, from left to right).   Binary Trees, however, require that each node also contain a childtype flag, either 'L' or 'R',  indicating whether it is a left or a  right child.     }
+
+
+
+{\footnotesize{}This textual scheme gives an }\textit{{\footnotesize{}n}}{\footnotesize{} level tree having }\textit{{\footnotesize{}k}}{\footnotesize{} lines per node the following format:}
+
+
+
+\textit{{\footnotesize{}                0  (Level of Root Node) }}
+
+\textit{{\footnotesize{}                R  (Binary Trees only  stands for "Root" in this case)}}
+
+\textit{{\footnotesize{}                Line 1 of Root Node}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        Line k of Root Node}}
+
+\textit{{\footnotesize{}                1  (Level of Root Node's Leftmost Child)}}
+
+\textit{{\footnotesize{}                L  (Level Indicator  Binary Trees only)}}
+
+\textit{{\footnotesize{}                Line 1 of Root's Leftmost Child}}
+
+\textit{{\footnotesize{}                .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of Root's Leftmost Child}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                (PreOrder Traversal of Root's Leftmost child's }}
+
+\textit{{\footnotesize{}         children with nodes as above)}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                1 (Level of Root Node's Rightmost Child, if it exists) }}
+
+\textit{{\footnotesize{}                R (Level Indicator  Binary Trees only) }}
+
+\textit{{\footnotesize{}                Line 1 of Root's Rightmost Child}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                Line k of Root's Leftmost Child}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .                       .}}
+
+\textit{{\footnotesize{}                (PreOrder Traversal of Root's Rightmost child's }}
+
+\textit{{\footnotesize{}       children with nodes as above)}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                        .}}
+
+\textit{{\footnotesize{}                ***\^{}*** (End of Snapshot Marker)}}{\footnotesize{}   }
+
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}Example -- Bars (that is, ``sticks'' representation of numeric data}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+
+{\footnotesize{} Still needs to be written}
+
+
+\begin{flushleft}
+\textbf{\uline{{\footnotesize{}
+Using flagging characters in snapshot files to color
+ nodes and title lines 
+}}}\textbf{{\footnotesize{} }}
+\end{flushleft}
+
+
+
+{\footnotesize{}For many applications it may be advantageous to highlight crucial nodes in your data structure snapshots.  Similarly, in graph and network illustrations, you may want to draw attention to certain node connections.  You may then want to use the title of the snapshot to create a color legend of the nodes and/or node connections that you have highlighted.  The coloring of nodes, node connectors, and title lines is made quite easy through the use of  special flagging characters in your snapshot files.  }
+
+
+
+{\footnotesize{}To color a title line, insert the flagging characters as the first characters of the line. To highlight a node connection, insert the flagging characters in front of a node on a connected node list, but after the \ensuremath{\backslash}A arrow delimiter (if an arrow is to be drawn pointing to the node).  To highlight a node, insert the flagging characters as the first characters in the first text line of the node.   The title line, the connecting line }\textit{{\footnotesize{}and label (for graphs)}}{\footnotesize{},  or the node, is then highlighted in the format associated with the inserted character, with the flagging character removed in the graphical display. The following table gives the ten available highlighting schemes and their corresponding flagging characters.     }
+
+
+
+\begin{flushleft}
+\textbf{{\footnotesize{}Table 2.1 }}{\footnotesize{} Highlighting schemes associated with flagging characters}
+\end{flushleft}
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\begin{tabular}{|l|l|l|} \hline
+Flagging  & Fill Color (for highlighted nodes)  & Text Color  \\
+character  & Text Color and label color (for connecting lines) & (for highlighted nodes) \\
+ & Text Color (for title lines) & \\ \hline
+
+\ensuremath{\backslash}X  &                      Black    &               White \\ \hline
+
+\ensuremath{\backslash}G   &                     Bright Green        &    Black \\ \hline
+
+\ensuremath{\backslash}R   &                     Red                 &                    Black \\ \hline
+
+\ensuremath{\backslash}B   &                     Blue                &                    Yellow \\ \hline
+
+\ensuremath{\backslash}W   &                     White               &                    Black \\ \hline
+
+\ensuremath{\backslash}L   &                     Light Blue          &    Black \\ \hline
+
+\ensuremath{\backslash}M   &                     Magenta             &    Black \\ \hline
+
+\ensuremath{\backslash}Y   &                     Yellow              &            Black \\ \hline
+
+\ensuremath{\backslash}\#XXXXXX & 6-digit hex color code for RGB &  White \\ 
+ & & (Black if code is white) \\ \hline
+\end{tabular}
+
+\newpage
+\section{Extending the ``snapshots'' rendered by GAIGS -- adding your own structures}
+
+Since GAIGS is object orientated, theoretically, it can be expanded to
+visualize anything.  The expansion is broken down into two parts,
+adding a data structure to GAIGS, and adding an algorithm.  Every data
+structure has StructureType as an ancestor.  
+
+\small
+\begin{verbatim}
+StructureType 
+ Md_Array     
+ LinearList   
+  Stack       
+  Queue       
+  LinkedList                  Each structure contains
+  Bar                         a nodelist among other
+ BinaryTree                   information
+ GeneralTree        
+ Graph_Network     
+  Ggraph           
+  Network          
+\end{verbatim}
+\normalsize
+
+StructureType has a
+nodelist field, so any descendant of it will also have a nodelist
+field.  This field can reference a list of nodes, with the type of
+node in the list dependent on the data structure.  
+For instance, a
+stack.nodelist is a list of plain Nodes, while Md\_Array.nodelist is a
+list of LinearNodes.  
+The node hierarchy is also given.  You may
+choose, of course, to ignore this nodelist field, and store your data
+structure any way you want.  This is done by extending the abstract
+\textit{StructureType}.  In the extended type that you define, four
+methods from \textit{StructureType} should be overridden:
+
+\begin{itemize}
+\item \verb!public void calcDimsAndStartPts(LinkedList llist, draw d)!
+  -- used to establish geometric variables that will determine how to
+  position your graphics when rendered in \textit{drawStructure}.  In
+  particular, by calling \textit{super} in your calcDimsAndStartPts,
+  you will have calculated for you \textit{TitleEndy}, which is the
+  y-coordinate of where the snapshot title ends in the (0,1) NDC space
+  in which GAIGS renders a snapshot.
+\item \verb!void loadStructure (StringTokenizer st, LinkedList llist, draw d)! 
+-- Here is where you grab and parse the tokens in one
+  instance of your structure.
+\item \verb!void drawStructure (LinkedList llist, draw d)!  
+-- Here  you render one instance of the structure use the rendering functions
+  from the \textit{GKS} class.
+\item \verb!boolean emptyStruct()!  
+-- Here you tell GAIGS how to
+  recognize an ``empty structure'' for the particular structure you
+  are defining.  If an empty structure isn't possible, merely return
+  \textit{false}.
+
+
+\item Finally, in \textit{draw.java} you will need to add a test to recognize an instance of your structure:
+
+\begin{verbatim}
+if ( structType.toUpperCase().compareTo("DEMO_STR") == 0)
+    return (new Demo_str());
+\end{verbatim}
+
+\end{itemize}
+
+\subsection{Example -- Defining a new \textit{Demo\_str}}
+
+Sample file with three Demo\_str snapshots:
+
+\begin{alltt}
+Demo_str
+1              \textit{<-- Number of lines per node, here only ``filler''}
+Hi
+There
+***\ensuremath{\backslash}***        \textit{<-- End of title}
+2              \textit{<-- Color of four-sided filled polygon}
+0.3            \textit{<-- Next eight lines are the vertices of the polygon}
+0.7
+0.7
+0.7
+0.7
+0.3
+0.3
+0.3
+***^***
+Demo_str
+1
+Number
+Two
+Snapshot
+***\ensuremath{\backslash}***
+4
+0.3
+0.6
+0.7
+0.6
+0.7
+0.1
+0.3
+0.1
+***^***
+Demo_str
+1
+That's all there is!
+***\ensuremath{\backslash}***
+5
+0.01
+0.7
+0.99
+0.7
+0.99
+0.3
+0.01
+0.3
+***^***
+\end{alltt}
+
+Implementation of the \textit{Demo\_str} class:
+
+\begin{verbatim}
+package gaigs;
+import java.io.*;
+import java.awt.*;
+import java.util.*;
+
+public class Demo_str extends StructureType {
+
+    private int str_color;
+
+    private double x[], y[];
+
+    public Demo_str () {
+        super();
+        x = new double[5];
+        y = new double[5];
+    }
+
+    public void calcDimsAndStartPts(LinkedList llist, draw d) {
+        super.calcDimsAndStartPts(llist, d);
+    }
+
+    void drawStructure (LinkedList llist, draw d) {
+
+        double xline[], yline[];
+
+        super.drawStructure(llist,d);
+        xline = new double [2];
+        yline = new double [2];
+        yline[0]=TitleEndy;
+        yline[1]=yline[0];
+        xline[0]= 0;
+        xline[1]= 1;
+        // The polyline is drawn immediately under the title/caption 
+        GKS.polyline(2,xline,yline,llist,d);
+        GKS.set_fill_int_style(bsSolid,str_color,llist,d);
+        GKS.fill_area(5,x,y,llist,d);
+        GKS.set_fill_int_style(bsClear,White,llist,d);
+        // The final Set_fill_int_style is necessary to insure that later
+        // titles are displayed on a white background. 
+    }
+
+    boolean emptyStruct() {
+        return(false);
+    }
+
+    void loadStructure (StringTokenizer st, LinkedList llist, draw d)
+        throws VisualizerLoadException  {
+
+        String tline;
+
+        if (st.hasMoreTokens()) {
+            tline = st.nextToken();
+        }
+        else 
+            throw (new VisualizerLoadException 
+                   ("End of data in Demo_str when expecting color number"));
+        str_color = Format.atoi(tline);
+        for (int i = 0; i < 4; i++)  {
+            if (st.hasMoreTokens()) {
+                tline = st.nextToken();
+            }
+            else 
+                throw (new VisualizerLoadException 
+                       ("End of data in Demo_str when expecting x coord"));
+            x[i] = Format.atof(tline);
+            if (st.hasMoreTokens()) {
+                tline = st.nextToken();
+            }
+            else 
+                throw (new VisualizerLoadException 
+                       ("End of data in Demo_str when expecting y coord"));
+            y[i] = Format.atof(tline);
+        }
+        x[4] = x[0];
+        y[4] = y[0];
+        if (st.hasMoreTokens()) {
+            tline = st.nextToken();
+        }
+        else 
+            throw (new VisualizerLoadException 
+                   ("End of data in Demo_str when expecting end of snapshot marker"));
+
+    }
+
+}
+\end{verbatim}
+
+\section{Rendering tools available in the GKS class}
+
+\begin{verbatim}
+    // Constant color declarations
+    final static int Black  =  1;
+    final static int Blue   =  2;
+    final static int Green  =  3;
+    final static int Red    =  4;
+    final static int Magenta = 5;
+    final static int LightBlue=6;
+    final static int Yellow=   7;
+    final static int White=    8;
+    final static int LightGray=9;
+
+    // Constant text justification declarations
+    final static int     TA_CENTER =0;
+    final static int       TA_LEFT =1;
+    final static int      TA_RIGHT =2;
+    final static int   TA_BASELINE= 0;
+    final static int      TA_BOTTOM=1;
+    final static int        TA_TOP =2;
+                                      
+    // Constant fill region types
+    final static int      bsSolid = 0;
+    final static int      bsClear = 1;
+    final static int bsHorizontal = 2;
+    final static int   bsVertical = 3;
+    final static int  bsFDiagonal = 4;
+    final static int  bsBDiagonal = 5;
+    final static int      bsCross = 6;
+    final static int  bsDiagCross = 7;
+
+
+
+class GKS {
+
+    public GKS () {
+    }
+
+    // Set the interior style and color for a filled region
+    public static void set_fill_int_style(int style, int colr, 
+                                          LinkedList seginfo, draw d) ;
+
+    // ptsx[0] = ptsx[numpts-1] and ptsy[0] = ptsy[numpts-1]
+
+    // Given a closed convex polygon with numpts - 1 vertices given by
+    // the x and y coordinates in ptsx and ptsy, draw a filled polygon
+    // in the current color and style
+    public static void fill_area(int numpts, double ptsx[], double ptsy[],
+                                 LinkedList seginfo, draw d) ;
+
+    // Draw a polygonal line connected the numpts points with x and y
+    // coordinates in the arrays ptsx and ptsy
+    public static void polyline (int numpts, double ptsx[], double ptsy[],
+                                 LinkedList seginfo, draw d) ;
+  
+
+    // Set the current color for rendering text
+    public static void set_textline_color(int colr, 
+                                          LinkedList seginfo, draw d); 
+ 
+    // Set the current alignment for rendering text
+    public static void set_text_align(int horiz, int vert, 
+                                      LinkedList seginfo, draw d); 
+   
+    // Set the current text size as specified by height
+    public static void set_text_height(double height, 
+                                       LinkedList seginfo, draw d); 
+  
+    // Render the text in str at position (x,y) using the current text
+    // size, color, and alignment
+    public static void text(double x,double y, String str, 
+                            LinkedList seginfo, draw d); 
+  
+    // Set the current width for rendered lines
+    public static void set_line_width(int thickness, 
+                                      LinkedList seginfo, draw d); 
+
+    // Draw an elliptical arc
+    public static void ellipse
+        (double x, double y, double stangle, double endangle, 
+         double xradius, double yradius, 
+         LinkedList seginfo, draw d);    
+
+    // Draw an unfilled circle
+    public static void circle
+        (double x, double y, double radius, LinkedList seginfo, draw d); 
+
+    // Draw a filled circle
+    public static void circle_fill
+        (double x, double y, double radius, LinkedList seginfo, draw d); 
+
+
+}
+\end{verbatim}
+
+\noindent
+One additional trick -- to find the length of a string \textit{tstr}
+in NDC coordinate space, given a \textit{draw} object \textit{d}, use
+the following:
+
+\begin{verbatim}
+int temp = d.getGraphics().getFontMetrics(defaultFont).stringWidth(tstr);
+double length_of_tstr = ((double) temp / (double) d.getSize().width);
+\end{verbatim}
+\newpage
+\section{Adding questions to a script file from a program that is writing the script file}
+
+\begin{itemize}
+\item Instantiate a questionCollection -- essentially a Vector of questions with a few additional special operations
+
+\small
+\begin{verbatim}
+public class questionCollection {
+    
+    // Constructor with the output stream to write questions to
+    public questionCollection(PrintWriter out){
+
+    // Add question q to the collection
+    public void addQuestion(question q){
+
+    // Write the tag for question at index into the output stream
+    public void insertQuestion(int index){
+
+    // Write the text of all questions and answers at the end of the script
+    public void writeQuestionsAtEOSF(){
+}
+\end{verbatim}
+
+\normalsize  
+\item At times where your script writing program wants to ask a
+  question, instantiate a \textit{tfQuestion}, \textit{mcQuestion}, or
+  \textit{fibQuestion}, all of which extend from the abstract
+  \textit{question} class:
+
+\small
+\begin{verbatim}
+public abstract class question{
+    
+    // Constructor 
+    public question()
+
+    // questionText is a string containing the text for this question
+    public void setQuestionText(String questionText){
+}
+\end{verbatim}
+  
+\normalsize
+\item Each specific derived question has a constructor that accepts a
+  string id/tag for the question and a \textit{setAnswer} method use
+  to establish the answer for this question.  For example the
+  \textit{fibQuestion} class:
+
+\small
+\begin{verbatim}
+public class fibQuestion extends question{
+    
+    // Construct the fib question, providing its identifying string
+    public fibQuestion(PrintWriter out, String id){
+
+    // Set the answer for this fib question
+    // Use \n to separate different answers that are allowed
+    public void setAnswer(String answer){
+
+\end{verbatim}
+\normalsize
+\item So, the general algorithm to create questions is (see
+  \textit{LinearHashing.java} for complete program containing this
+  algorithm:
+
+\small
+\begin{alltt}
+for each snapshot you create
+  If you want a question with this snapshot
+     \textit{Manufacture text of question and the answer}
+     fibQuestion quest = new mcQuestion(out, (new Integer(qIndex)).toString());
+     qIndex++;  // Increment your question counter
+     quest.setQuestionText(\textit{string-containing-question});
+     quest.setAnswer(\textit{the-answer});
+     Questions.addQuestion(quest);
+     Questions.insertQuestion(qIndex);
+  Now write the snapshot that is associated with the question
+\end{alltt}
+\normalsize
+\item After all the snapshots have been written, be sure to:
+
+\small
+\begin{verbatim}
+   Questions.writeQuestionsAtEOSF();
+\end{verbatim}
+\end{itemize}
+\end{document}

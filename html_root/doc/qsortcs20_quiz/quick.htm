@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Quick Sort Visualization </TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFCC99">
+
+<P>The quick sort algorithm you'll watch here displays a snapshot of the array before and after each call to the
+partition algorithm. The left window displays the actual data in the array, and in the right window, there is a
+hierarchical trace of the recursive call pattern of the algorithm. Pseudocode for the algorithm used is:</P>
+<PRE><FONT SIZE="1" COLOR="red" FACE="Courier New">QUICKSORT(A,p,r)
+  if p &lt; r
+    then q = PARTITION(A,p,r)
+      QUICKSORT(A,p,q - 1)
+      QUICKSORT(A,q + 1,r)</FONT></PRE>
+<P>The array A[p . . r] is partitioned (rearranged) into two subarrays A[p . . q-1] and A[q + 1 . . r] based on
+the value of a <I>pivot element initially taken from A[p]</I>. The pivot is re-located to index q such that q is
+the final position of p in the sorted array. Each element of A[p . . q-1] is less than or equal to the pivot, and
+each element of A[q + 1 . . r] is greater than or equal to the pivot. The index q is computed and returned as part
+of this partitioning procedure. The following logic is employed to achieve this:</P>
+<PRE><FONT SIZE="1" COLOR="red" FACE="Courier New">PARTITION(A,p,r)
+  pivot = A[p]
+  lo = p
+  hi = r
+  while lo &lt; hi do 
+    while (pivot &lt; A[hi]) and (lo &lt; hi) do
+      hi = hi - 1
+    if (lo != hi) then
+      a[lo] = a[hi]
+      lo = lo + 1
+    while (pivot &gt; A[lo]) and (lo &lt; hi) do
+      lo = lo + 1
+    if (lo != hi) then
+      a[hi] = a[lo]
+      hi = hi - 1
+  A[hi] = pivot
+  return hi</FONT></PRE>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>Enter the postfix expression to be evaluated:</label_line>
+    <default_field></default_field>
+    <value_entered></value_entered>
+  </textfield>
+</input_panel>

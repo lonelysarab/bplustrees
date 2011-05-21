@@ -1,0 +1,97 @@
+test laura's radix sort
+anim static samba
+**** 
+Knap Sack Problem
+knapsack new_data_only samba
+****
+KMP Search Algorithm
+KMP dynamic-ingen gaigs
+Boyer-Moore string search
+bm dynamic-ingen gaigs
+****
+Prim's minimal spanning tree
+prim  dynamic gaigs 
+Kruskal's minimal spanning tree
+kruskal dynamic gaigs
+Shortest path minimal spanning tree
+shrtpath dynamic gaigs
+Topological sort
+toposort dynamic gaigs
+**** 
+Lsystems
+Lsystem static javaapp
+****
+Laura's Binary Tree
+bin_tree new_data_only samba
+****
+Heap sort animation
+heap_sort_samba new_data_only samba
+****
+Parallel back substitution algorithm
+backsub static samba 
+****
+O(1) Parallel Maximum-finding algorithm
+fastmax static samba 
+****
+Bitonic merge sort
+bitonic_merge_sort static samba
+****
+Parallel rank sort
+rank_sort static samba 
+****
+Test Heap Sort
+104 static samba
+**** 
+2-3-4 Tree
+a234tree new_data_only gaigs
+**** 
+Binary Search Tree 
+Bstree new_data_only gaigs
+****
+Insertions into a heap
+Heap new_data_only gaigs
+****
+Heap sort without an array
+heapsor_no_array new_data_only gaigs
+****
+Heap sort with an array
+heapsor_with_array new_data_only gaigs
+****
+Insertion sort for Computer Science 05
+isortcs05 new_data_only gaigs
+****
+Merge sort
+mergesor new_data_only gaigs
+****
+Quick sort
+quicksor new_data_only gaigs
+****
+Red-black tree
+rbtree new_data_only gaigs
+****
+Shell sort
+shellsor new_data_only gaigs
+****
+Splay tree
+splaytr new_data_only gaigs
+****
+Stable marriage problem
+stablem new_data_only gaigs
+****
+Laura's Nifty Samba Test File
+LaurasTestFile static samba
+**** 
+Gaigs Test SHO
+gaigs_test static gaigs
+****
+Parser
+parser dynamic-ingen gaigs
+****
+Parser for CS5
+parsercs5 dynamic-ingen gaigs
+**** 
+Quick sort with 2 windows
+qsort_2win dynamic gaigs
+Quick sort with 4 windows
+qsort_4win dynamic gaigs
+****

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <combobox>
+    <label_line>Type of Algorithm</label_line>
+    <option>Simple For Loops</option>
+    <option>Nested Loops With Arrays</option>
+    <value_entered></value_entered>
+  </combobox>
+  <combobox>
+    <label_line>Level Of Difficulty</label_line>
+    <option>Experienced</option>
+    <option>Novice</option>
+    <value_entered></value_entered>
+  </combobox>
+</input_panel>

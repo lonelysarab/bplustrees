@@ -1,0 +1,38 @@
+%Animal 2
+point "100" (100, 100) color black
+fibquestion "question1"
+mcquestion "question2"
+documentation "file:///users/roesslin/www/index.html"
+tfquestion "q3"
+point "105" offset (5,5) from "100" C
+text "a" "XXXX" offset (20, 10) from "105" S color red font SansSerif size 24 bold italic
+StartQuestions
+FIBQuestion "question1"
+"This is just a simple and somewhat stupid example of a question."
+"Let us just see if it does work...!"
+ENDTEXT
+ANSWER
+"Yes"
+"Aye"
+"Yep"
+"Doodley Doo"
+ENDANSWER
+MCQuestion "question2"
+"Yet another one, this time it's a Multiple Choice (only one correct!)"
+"Liune 2"
+ENDTEXT
+"Yo"
+ENDCHOICE
+"No"
+ENDCHOICE
+"MayBe"
+ENDCHOICE
+ANSWER
+2
+ENDANSWER
+tfQuestion "q3"
+"Am I getting tired...?"
+ENDTEXT
+ANSWER
+F
+ENDANSWER

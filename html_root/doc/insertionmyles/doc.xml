@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<program_listing>
+<line line_number="1">        Key
+<line line_number="2">    Red = Sorted
+<line line_number="3">    Blue = Comparing
+</program_listing>

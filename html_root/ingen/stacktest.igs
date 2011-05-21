@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textarea>
+    <label_line>Enter sequence of operations here("pop" to pop or "pushx" to push "x")</label_line>
+    <default_field>push1</default_field>
+    <value_entered></value_entered>
+  </textarea>
+  <combobox>
+    <label_line>Original Data</label_line>
+    <option>User-defined</option>
+    <option>Random</option>
+    <value_entered></value_entered>
+  </combobox>
+</input_panel>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Knapsack Info Page</title>
+</head>
+<body>
+            <h2>The 0-1 Knapsack Algorithm </h2>
+
+<p>The Knapsack problem is the classic integer linear programming problem with a single constraint. The
+0-1 Knapsack problem is formulated as follows:<p />
+<center>
+	max c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> + ... + c<sub>n</sub>x<sub>n</sub><br />
+subject to: 
+	a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub> + ... + a<sub>n</sub>x<sub>n</sub> &lt;= b <br />
+with &nbsp; &nbsp; &nbsp;	x<sub>i</sub> = 0, 1  for i = 1, 2, ..., n.
+</center>
+</p>
+<p> The c<sub>i</sub> represents the value of selecting item i for inclusion in the knapsack; in implementation the values 
+c<sub>i</sub> will be modeled as int[] c. The a<sub>i</sub> represents the weight of item i - the weights will be modeled as
+int[] a in the implementation.  The constant b represents the maximum weight that the knapsack is permitted to hold.
+</p>
+	<p> To solve this problem one looks for
+an idea that expresses the solution in terms of subproblems.  This idea is typically expressed recursively.
+For the 0-1 knapsack problem, the classic approach is to solve the problem for one item at a time.  Think of solving
+the problem for every weight 0 through b for one item at a time.  In the "no item" case obviously the maximum value
+is 0 no matter what the weight; this takes the form of the base case for a recursive formulation.  Clearly the first 
+item cannot be placed in the knapsack until the weight reaches a<sub>1</sub> at which point the optimal value achieved
+is c<sub>1</sub>.  At each weight y for the item k it needs to be determined if not using the item, the value of Knap(k-1, y), is better than using
+the item Knap(k-1, y-a<sub>k</sub>) + c<sub>k</sub> (or c<sub>k</sub> if y = a<sub>k</sub>) at the weight y.  Clearly y-a<sub>k</sub> &gt;= 0 for item k to fit into the knapsack.
+Note that in the case of selecting item k for the knapsack the value of Knap(k-1, y-a<sub>k</sub>) is examined - choosing
+k-1 as the index of the subproblem (which yields a solution using the first k-1 items) guarantees that the item k is selected at most once.  
+</p>
+
+<p>The complete recursive formulation of the solution<br />
+<pre>
+	Knap(k, y) = Knap(k-1, y)					if y &lt; a[k]
+	Knap(k, y) = max { Knap(k-1, y), Knap(k-1, y-a[k])+ c[k] }	if y &gt; a[k]
+	Knap(k, y) = max { Knap(k-1, y),  c[k] }			if y = a[k]
+	Knap(0, y) = 0
+	
+</pre>
+<p>Implementing a dynamic programming problem solution using recursion often leads to a exponential algorithm; in this case that does not necessarily occur.
+This is due to the manner in which the reduction of the second parameter y is done in the recursion.  The dynamic programming solution utilizes
+an iterative algorithm that builds a 2-dimensional matrix of size n+1 x b.  The matrix has a initial row  which reflects the
+base cases - the entries will be 0 representing the value of selecting no items to place in the knapsack for each weight y, y= 1, ..., b.  
+</p>
+<p>The row i entries represent solutions to the following subproblems, find the max value for the knapsack using the first i items subject
+to the constraint that weight in the knapsack is less than or equal to y.  If i = 1, then the maximum value the knapsack can achieve is
+c[0] - the value of selecting the first item and this is achieved for all y &gt;= a[0]. Recall Java begins subscripting arrays at 0.
+
+
+</p>
+<h3>Comments on the visualization</h3>
+<p>The visualization was designed for a particular knapsack problem.  So when a different problem is 
+chosen the Recursive Call Tree and the dynamic programming matrix may not fit the visualization window very well.  
+Moving the image up in the window and using the zoom in feature may make for better viewing of the visualization.</p>
+<p>For your first use of this visualization try the problem:</p>
+<center>
+	max 12x<sub>1</sub> + 8x<sub>2</sub> + 5x<sub>3</sub> + 2x<sub>4</sub><br />
+subject to: 
+	5x<sub>1</sub> + 4x<sub>2</sub> + 3x<sub>3</sub> + 2x<sub>4</sub> &lt;= 7 <br />
+with &nbsp; &nbsp; &nbsp;	x<sub>i</sub> = 0, 1  for i = 1..4.
+</center>
+<p>The visualization first displays the recursive call tree for the chosen knapsack problem. </p> 
+<p>It progresses by computing the value for each entry in the dynamic programming matrix knap; the cell or cells used in the 
+computation of the current cell's entry are
+colored blue and the computed value of the current cell  is colored yellow.  When the current weight y &lt;= a[j] only the cell
+k[j-1][y-1] is shown in blue.  Once y exceeds a[j] then k[j-1][y-1-a[j]] will be shown in blue - the value of c[j] 
+is displayed in the text below the dynamic programming matrix along with the computation.</p>
+<p>Once the matrix is filled, the process of identifying the items selected is displayed in much the same way as described in the trace above.
+</p>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</body>
+</html>

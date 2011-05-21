@@ -1,0 +1,15 @@
+<h3>What this visualization is all about</h3>
+<p>
+This visualization displays the effect of a call to a procedure
+named <tt>fact</tt>, which implements the factorial function.
+A definition of <tt>fact</tt> in a Java-like format appears below.
+Observe that <tt>fact</tt> is recursive, that is, it contains a call
+to itself.
+<pre>
+int fact (int n) {
+    if (n == 0) 
+        return 1;
+    else
+        return n * fact(n-1);
+}
+</pre>

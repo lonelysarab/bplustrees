@@ -1,0 +1,4946 @@
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Here is a Huffman Tree.
+You must decode the following bit string:
+11001101111010011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 0
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string: 
+11001101111010011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+11001101111010011000100101001100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: 
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+11001101111010011000100101001100101111
+The code '11' is not for a letter, so search down the tree.
+The decoded string is: 
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+11001101111010011000100101001100101111
+The code '110' is not for a letter, so search down the tree.
+The decoded string is: 
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\B.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+11001101111010011000100101001100101111
+The code '1100' is for the letter 'w'.
+The decoded string is: w
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\B.
+freq: 2
+110 
+ 
+4
+\Bw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+1101111010011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+1101111010011000100101001100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: w
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+1101111010011000100101001100101111
+The code '11' is not for a letter, so search down the tree.
+The decoded string is: w
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+1101111010011000100101001100101111
+The code '110' is not for a letter, so search down the tree.
+The decoded string is: w
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\B.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+1101111010011000100101001100101111
+The code '1101' is for the letter 'i'.
+The decoded string is: wi
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\B.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Bi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 2
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111010011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111010011000100101001100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wi
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111010011000100101001100101111
+The code '11' is not for a letter, so search down the tree.
+The decoded string is: wi
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111010011000100101001100101111
+The code '111' is for the letter 'z'.
+The decoded string is: wiz
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Bz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 3
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+010011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+010011000100101001100101111
+The code '0' is not for a letter, so search down the tree.
+The decoded string is: wiz
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+010011000100101001100101111
+The code '01' is not for a letter, so search down the tree.
+The decoded string is: wiz
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\B.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+010011000100101001100101111
+The code '010' is for the letter 'a'.
+The decoded string is: wiza
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\B.
+freq: 2
+01 
+ 
+3
+\Ba
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 4
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+011000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+011000100101001100101111
+The code '0' is not for a letter, so search down the tree.
+The decoded string is: wiza
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+011000100101001100101111
+The code '01' is not for a letter, so search down the tree.
+The decoded string is: wiza
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\B.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+011000100101001100101111
+The code '011' is for the letter 'r'.
+The decoded string is: wizar
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\B.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Br
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 5
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+000100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+000100101001100101111
+The code '0' is not for a letter, so search down the tree.
+The decoded string is: wizar
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+000100101001100101111
+The code '00' is not for a letter, so search down the tree.
+The decoded string is: wizar
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\B.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+000100101001100101111
+The code '000' is for the letter 'd'.
+The decoded string is: wizard
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\B.
+freq: 2
+00 
+ 
+3
+\Bd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 6
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101001100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wizard
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101001100101111
+The code '10' is not for a letter, so search down the tree.
+The decoded string is: wizard
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101001100101111
+The code '100' is for the letter '_'.
+The decoded string is: wizard_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\B_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 7
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101001100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wizard_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101001100101111
+The code '10' is not for a letter, so search down the tree.
+The decoded string is: wizard_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101001100101111
+The code '101' is for the letter 'o'.
+The decoded string is: wizard_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Bo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 8
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+001100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+001100101111
+The code '0' is not for a letter, so search down the tree.
+The decoded string is: wizard_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+001100101111
+The code '00' is not for a letter, so search down the tree.
+The decoded string is: wizard_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\B.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+001100101111
+The code '001' is for the letter 'f'.
+The decoded string is: wizard_of
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\B.
+freq: 4
+0 
+ 
+2
+\B.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Bf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 9
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wizard_of
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101111
+The code '10' is not for a letter, so search down the tree.
+The decoded string is: wizard_of
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+100101111
+The code '100' is for the letter '_'.
+The decoded string is: wizard_of_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\B_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 10
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wizard_of_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101111
+The code '10' is not for a letter, so search down the tree.
+The decoded string is: wizard_of_
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+101111
+The code '101' is for the letter 'o'.
+The decoded string is: wizard_of_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\B.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Bo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 11
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111
+The code '1' is not for a letter, so search down the tree.
+The decoded string is: wizard_of_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111
+The code '11' is not for a letter, so search down the tree.
+The decoded string is: wizard_of_o
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Decode the bit string:
+111
+The code '111' is for the letter 'z'.
+The decoded string is: wizard_of_oz
+***\***
+0
+\B.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\B.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\B.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Bz
+freq: 2
+111 
+ 
+***^***
+VIEW WINDOWS 1
+GeneralTree 0.01 0.01
+4 1.15 1.15
+Done decoding.
+The decoded string is: wizard_of_oz
+***\***
+0
+\W.
+freq: 12
+ 
+ 
+1
+\W.
+freq: 4
+0 
+ 
+2
+\W.
+freq: 2
+00 
+ 
+3
+\Yd
+freq: 1
+000 
+ 
+3
+\Yf
+freq: 1
+001 
+ 
+2
+\W.
+freq: 2
+01 
+ 
+3
+\Ya
+freq: 1
+010 
+ 
+3
+\Yr
+freq: 1
+011 
+ 
+1
+\W.
+freq: 8
+1 
+ 
+2
+\W.
+freq: 4
+10 
+ 
+3
+\Y_
+freq: 2
+100 
+ 
+3
+\Yo
+freq: 2
+101 
+ 
+2
+\W.
+freq: 4
+11 
+ 
+3
+\W.
+freq: 2
+110 
+ 
+4
+\Yw
+freq: 1
+1100 
+ 
+4
+\Yi
+freq: 1
+1101 
+ 
+3
+\Yz
+freq: 2
+111 
+ 
+***^***
+STARTQUESTIONS
+FIBQUESTION 0
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+w
+ENDANSWER
+FIBQUESTION 1
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+i
+ENDANSWER
+FIBQUESTION 2
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+z
+ENDANSWER
+FIBQUESTION 3
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+a
+ENDANSWER
+FIBQUESTION 4
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+r
+ENDANSWER
+FIBQUESTION 5
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+d
+ENDANSWER
+FIBQUESTION 6
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+_
+ENDANSWER
+FIBQUESTION 7
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+o
+ENDANSWER
+FIBQUESTION 8
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+f
+ENDANSWER
+FIBQUESTION 9
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+_
+ENDANSWER
+FIBQUESTION 10
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+o
+ENDANSWER
+FIBQUESTION 11
+What letter will be decoded next?
+ENDTEXT
+ANSWER
+z
+ENDANSWER

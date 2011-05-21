@@ -1,0 +1,9 @@
+TEXTFIELD
+Enter sequence of operations here( Enter a series of non-negative integers )
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+User-defined
+Random
+ENDCHOICE

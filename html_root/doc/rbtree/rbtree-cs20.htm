@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>Red-black Tree Visualization </TITLE>
+</HEAD>
+<BODY>
+Here you will watch a succession of nodes being added to a red-black search tree.
+The order of arrival of data for the tree is indicated at the top of the snapshot,
+with the datum currently being added set off by asterisks.
+A red circular node indicates that the node is pointed to by a red pointer, and a
+black circular node indicates that the node is pointed to by a black pointer.
+Remember that the rules for adding new values to a red-black tree are as follows:
+<OL>
+<LH></LH>
+<LI> Create a new node n to hold the value, 
+<LI> If the tree is empty, make n the root, 
+<LI> Otherwise, go left or right, as with normal insertion in a binary search tree, except that if you pass 
+through a node m with red links to both of its children -- color those links black and,if m is not the 
+root, color m's parent link red.  
+<LI> Finally, at the appropriate leaf, add n as a child with a red link to its parent.
+
+</OL>
+If either step that adds red links (3 or 4) causes there to be 2 red links in a row, rotate the 
+associated nodes to create a node with 2 red links to its children. 
+<p align=center>
+<A HREF="http://gaigs.cmsc.lawrence.edu"  target=_top>Back to home page</A>
+</BODY>
+</HTML>

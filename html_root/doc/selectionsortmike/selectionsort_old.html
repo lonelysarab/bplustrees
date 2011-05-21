@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+  <TITLE>How to Use Animal</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1><font color="red">Selection Sort</font></H1>
+
+<i>See page 105 of your text book.</i>
+
+<pre>
+public static void selectionSort(int[] array) {
+   for (int i = 0; i < array.length - 1; i++) {
+      int minIndex = i;
+      for (int j = i + 1; j < array.length; j++) {
+         if (array[j] < array[minIndex]) {
+            minIndex = j;
+         }
+      }
+      if (minIndex != j) {
+         swap(array, minIndex, i);	
+      }
+   }
+}
+</pre>
+
+<H1>How do I use A<SMALL>NIMAL</SMALL>?</H1>
+
+A<SMALL>NIMAL</SMALL>'s display is divided in three sections: the
+<EM>display speed and magnification</EM> at the top, the actual
+<EM>animation content</EM> in the middle, and the <EM>animation
+control</EM> at the bottom.
+
+<H2>Animation Speed Control</H2>
+
+Use the slider in the top left region of the window to control the
+animation speed. The speed is given as a percentage between 10% (0.1x)
+and 1000% (10x) of the original speed. The button next to the slider
+can be used to reset the speed to 100% (1x).
+
+<H2>Animation Magnification Control</H2>
+
+Use the slider in the top right region of the window to control the
+magnification of the animation. The magnification is given as a
+percentage between 0% (single pixel) and 500% (5x). The button next to
+the slider can be used to reset the magnification to 100% (1x).
+
+
+<H2>Running the Animation</H2>
+
+A<SMALL>NIMAL</SMALL> animations can be displayed in both forwards and
+backwards. There are three different animation display modes: static
+single step, single step with smooth motions, and slide show.
+The animation proceeds to the next animation step after an appropriate
+button is pressed, or automatically after a defined delay. The
+control panel at the bottom contains the following buttons, from left
+to right:
+
+<P>
+<UL>
+<LI><EM>start of animation</EM> (|&lt;&lt;) - jump to the start of the
+animation. Turned off when already at the animation start.
+
+<LI><EM>jump to previous step</EM> (|&lt;) - jump to the start of the
+previous step, without showing a smooth animation of the animation
+effects.
+
+<LI><EM>reverse slide-show</EM> (<U>&lt;&lt;</U>) - display the
+animation backwards by linking all steps. Can be stopped by the pause
+button. 
+
+<LI><EM>reverse play</EM> (&lt;) - display the previous animation step
+in reverse order with smooth effects.
+
+<LI><EM>pause</EM> (||) - pause the display between the next steps.
+
+<LI><EM>play</EM> (&lt;) - display the current animation step with
+smooth effects. 
+
+<LI><EM>forward slide-show</EM> (<U>&gt;&gt;</U>) - display the
+animation by linking all steps. Can be stopped by the pause
+button. 
+
+<LI><EM>jump to next step</EM> (|&gt;) - jump to the start of the
+next step, without showing a smooth animation of the animation
+effects. 
+
+<LI><EM>end of animation</EM> (|&gt;&gt;) - jump to the end of the
+animation. Turned off when already at the animation end.
+</UL>
+
+<H2>Animation Step Control</H2>
+
+You can enter the number of the step you want to jump to in the
+text field at the bottom of the display. Note: as the numbering
+reflects the animation generation process, the animation may skip
+some steps, and the numbering may not be in order! Instead, you can
+use the slider at the bottom right to adjust the percentage of the
+animation shown, between 0% (start) and 100% (end) of the animation.
+
+
+<H2>Quiz Mode</H2>
+
+Some algorithm animations have accompanying questions. These are shown
+in the info frame also containing this documentation.
+</BODY>
+</HTML>
+

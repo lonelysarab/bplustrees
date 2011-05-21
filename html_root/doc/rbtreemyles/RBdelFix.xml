@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>remedyDoubleBlack(ChangedNode, SiblingNode, ParentNode)</signature>
+	<line line_number="1">1   Node Z</line>
+	<line line_number="2">2   if(SiblingNode is red)</line>
+	<line line_number="3">3   	Node T;</line>
+	<line line_number="4">4		if(SiblingNode == x.right)</line>
+	<line line_number="5">5			Z = SiblingNode.right</line>
+	<line line_number="6">6			T = SiblingNode.left</line>
+	<line line_number="7">7		else</line>
+	<line line_number="8">8    			Z = SiblingNode.left</line>
+	<line line_number="9">9			T = SiblingNode.right</line>
+	<line line_number="10">10	if(Z != null)</line>
+	<line line_number="11">11		restructure(Z)</line>
+	<line line_number="12">12	SiblingNode = black</line>
+	<line line_number="13">13   	ParentNode = red</line>
+	<line line_number="14">14	RBDelFix(ChangedNode, T, ParentNode)</line>
+	<line line_number="15">15   else if(SiblingNode is black and SiblingNode has a red child)</line>
+	<line line_number="16">16   	Z = SiblingNode.redChild()</line>
+	<line line_number="17">17   	int oldColor = ParentNode.color</line>
+	<line line_number="18">18   	Z = restructure(Z)</line>
+	<line line_number="19">19   	Z = oldColor</line>
+	<line line_number="20">20   	Z.left = black</line>
+	<line line_number="21">21   	Z.right = black</line>
+	<line line_number="22">22   else if(SiblingNode is black)</line>
+	<line line_number="23">23   	if(ChangedNode is not null)</line>
+	<line line_number="24">24   		ChangedNode = black</line>
+	<line line_number="25">25   	SiblingNode = red</line>
+	<line line_number="26">26   	if(ParentNode is red)</line>
+	<line line_number="27">27   		ParentNode = black</line>
+	<line line_number="28">28   	else if(ParentNode is not null)</line>
+	<line line_number="29">29   		ParentNode = black</line>
+	<line line_number="30">30   		RBDelFix(ParentNode, ParentNode.Sibling, ParentNode.parent)</line>
+	<line line_number="31">31   else</line>
+	<line line_number="32">32   	do nothing</line>
+    </program_listing>
+    <variables>
+        <variable>ChangedNode = <replace var="item" /></variable>
+	<variable>SiblingNode = <replace var="y" /></variable>
+	<variable>ParentNode = <replace var="x" /></variable>
+	<variable>Z = <replace var="v" /></variable>
+    </variables>
+</pseudocode>
+

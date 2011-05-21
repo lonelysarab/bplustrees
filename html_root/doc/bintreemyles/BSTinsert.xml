@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>insert(addItem, currentNode)</signature>
+	<line line_number="1">1	if(currentNode is null)</line>
+	<line line_number="2">2		currentNode = new Node(addItem)</line>
+	<line line_number="3">3	else if(currentNode's key is greater than addItem)</line>
+	<line line_number="4">4		currentNode.left = insert(addItem, currentNode.left</line>
+	<line line_number="5">5	else if(currentNode's key is less than addItem)</line>
+	<line line_number="6">6		currentNode.right = insert(addItem, currentNode.right)</line>
+	<line line_number="7">7	return currentNode</line>
+    </program_listing>
+    <variables>
+        <variable>addItem = <replace var="item" /></variable>
+    </variables>
+</pseudocode>

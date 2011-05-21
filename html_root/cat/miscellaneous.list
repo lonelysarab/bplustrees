@@ -1,0 +1,45 @@
+Red-Black Trees
+rbtreemyles new_data_only gaigs
+**** 
+Union-Find
+unionfindmyles new_data_only gaigs
+**** 
+Binary Search Tree 
+bstreealex new_data_only gaigs
+**** 
+Topological sort
+topoalex dynamic gaigs
+**** 
+Huffman Encoding
+huffmanEncoding new_data_only gaigs
+****
+Huffman Decoding 
+huffmanDecoding new_data_only gaigs 
+****
+Hashing with linear probing
+linearhashing new_data_only gaigs
+****
+Hashing with quadratic probing
+quadhashing new_data_only gaigs
+****
+Double hashing (Rehashing)
+doublehashing new_data_only gaigs
+****
+Hashing with chained probing
+chainedhashing new_data_only gaigs
+****
+Stack-based Parsing
+parsing_lln dynamic gaigs
+**** 
+Beam Search 
+beamsearch new_data_only gaigs
+**** 
+Best First Search 
+bestfirstsearch new_data_only gaigs
+**** 
+A-star 
+astarsearch new_data_only gaigs
+**** 
+Least Cost Search 
+leastcostsearch new_data_only gaigs
+**** 

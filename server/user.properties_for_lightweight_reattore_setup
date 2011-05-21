@@ -1,0 +1,3 @@
+# The start-up below is for running a scaled-down server with the lightweight Reattore web server included in the distribution.
+# It also assume that Reattore's base directory will be the html_root directory in the jhave2 checkout
+application.args=-r=http://localhost:8080/ -s=./build/classes/ -u=/home/wc/Desktop/trunk

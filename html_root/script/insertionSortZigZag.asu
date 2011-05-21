@@ -1,0 +1,478 @@
+%Animal 2.0
+title "Insertion Sort Animation"
+author "Dr. Guido Roessling <roessling@acm.org>"
+
+{
+  text "f1-01" "Insertion Sort" at (120,50) color black font SansSerif size 32 bold
+  text "f1-02a" "Insertion Sort is an elementary sorting algorithm." at (20,100) color black font SansSerif size 24
+  text "f1-03a" "The basic idea is to insert each element at the" at (20,130) color black font SansSerif size 24
+  text "f1-03b" "proper position into a pre-sorted field." at (20,160) color black font SansSerif size 24
+}
+{
+  hideAllBut "f1-01"
+  text "f2-01" "Verbal description" at (80,100) color black font SansSerif size 32 bold
+  codegroup "pseudo" at (20, 140) color (0,0,0) highlightColor (255,0,0) contextColor (0,0,208) font SansSerif size 18
+  addCodeLine "For each position i = 1, ..., array length - 1:" to "pseudo" indentation 0
+  addCodeLine "Set v = array[i]" to "pseudo" indentation 1
+  addCodeLine "Set j = i" to "pseudo" indentation 1
+  addCodeLine "While j > 0 and v < array[j-1]" to "pseudo" indentation 1
+  addCodeLine "array[j] = array[j-1]" to "pseudo" indentation 2
+  addCodeLine "array[j] = v" to "pseudo" indentation 1
+}
+{
+hideAllBut "f1-01"
+  array "array" (20, 120) color (0,0,0) fillColor (255,255,255) elementColor (0,0,0) elemHighlight (255,0,0) cellHighlight (0,255,0) length 8 "0" "7" "1" "6" "2" "5" "3" "4" 
+  codegroup "code" at (20, 160) color (0,0,0) highlightColor (255,0,0) contextColor (0,0,208) font Monospaced size 11
+  addCodeLine "public void insertionSort(int[] array)" to "code" indentation 0
+  addCodeLine "{" to "code" indentation 0
+  addCodeLine "int i, j, v;" to "code" indentation 1
+  addCodeLine "for (i=1; i<array.length; i++)" to "code" indentation 1
+  addCodeLine "{" to "code" indentation 1
+  addCodeLine "v = array[i];" to "code" indentation 2
+  addCodeLine "for (j=i; j>0 && v<array[j-1]; j--)" to "code" indentation 2
+  addCodeLine "array[j] = array[j-1];" to "code" indentation 3
+  addCodeLine "array[j] = v;" to "code" indentation 2
+  addCodeLine "}" to "code" indentation 1
+  addCodeLine "}" to "code" indentation 0
+}
+{
+  text "assignments" "#A" offset (100, 0) from "array" NE font SansSerif size 12
+  text "comparisons" "#C" offset (0, 20) from "assignments" SW font SansSerif size 12
+  rectangle "assRect" offset (22, 0) from "assignments" NE offset (23, 0) from "assignments" SE color blue filled fillColor blue
+  rectangle "cmpRect" offset (20, 0) from "comparisons" NE offset (21, 0) from "comparisons" SE color grey filled fillColor grey
+  highlightCode on "code" line 0
+}
+{
+  unhighlightCode on "code" line 0
+  highlightCode on "code" line 2
+  arrayIndex "i" on "array" atIndex 0 label "i" color (0,0,255)
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  arrayIndex "j" on "array" atIndex 0 label "j" color (0,176,0)
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 2
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(1, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 0
+  moveMarker "i" to position 1 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 1
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 1
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "7" on "array" position 1
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 1
+}
+{
+  unhighlightArrayElem on "array"  position 1
+  highlightArrayCell on "array"  position 1
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(2, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 1
+  moveMarker "i" to position 2 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 2
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 2
+  highlightCode on "code" line 6
+  moveMarker "j" to position 2 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 2
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 2
+  unhighlightArrayCell on "array"  position 1
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "1" on "array" position 1
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 1
+}
+{
+  unhighlightArrayElem on "array"  position 1
+  highlightArrayCell on "array"  position 1
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(3, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 2
+  moveMarker "i" to position 3 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 3
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 3
+  highlightCode on "code" line 6
+  moveMarker "j" to position 3 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 3
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 3
+  unhighlightArrayCell on "array"  position 2
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "6" on "array" position 2
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 2
+}
+{
+  unhighlightArrayElem on "array"  position 2
+  highlightArrayCell on "array"  position 2
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(4, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 3
+  moveMarker "i" to position 4 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 4
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 4
+  highlightCode on "code" line 6
+  moveMarker "j" to position 4 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 4
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 4
+  unhighlightArrayCell on "array"  position 3
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 3 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "6" on "array" position 3
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 3
+  unhighlightArrayCell on "array"  position 2
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "2" on "array" position 2
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 2
+}
+{
+  unhighlightArrayElem on "array"  position 2
+  highlightArrayCell on "array"  position 2
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(5, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 4
+  moveMarker "i" to position 5 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 5
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 5
+  highlightCode on "code" line 6
+  moveMarker "j" to position 5 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 5
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 5
+  unhighlightArrayCell on "array"  position 4
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 4 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "6" on "array" position 4
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 4
+  unhighlightArrayCell on "array"  position 3
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "5" on "array" position 3
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 3
+}
+{
+  unhighlightArrayElem on "array"  position 3
+  highlightArrayCell on "array"  position 3
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(6, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 5
+  moveMarker "i" to position 6 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 6
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 6
+  highlightCode on "code" line 6
+  moveMarker "j" to position 6 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 6
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 6
+  unhighlightArrayCell on "array"  position 5
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 5 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "6" on "array" position 5
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 5
+  unhighlightArrayCell on "array"  position 4
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 4 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "5" on "array" position 4
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 4
+  unhighlightArrayCell on "array"  position 3
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "3" on "array" position 3
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 3
+}
+{
+  unhighlightArrayElem on "array"  position 3
+  highlightArrayCell on "array"  position 3
+  unhighlightCode on "code" line 8
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  label "insertionSort(7, 7)"
+  highlightCode on "code" line 3
+  highlightArrayCell on "array"  position 6
+  moveMarker "i" to position 7 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 3
+  highlightCode on "code" line 5
+  highlightArrayElem on "array"  position 7
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 5
+  unhighlightArrayElem on "array"  position 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 7 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "7" on "array" position 7
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 7
+  unhighlightArrayCell on "array"  position 6
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 6 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "6" on "array" position 6
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 6
+  unhighlightArrayCell on "array"  position 5
+}
+{
+  unhighlightCode on "code" line 7
+  highlightCode on "code" line 6
+  moveMarker "j" to position 5 within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 7
+  arrayPut "5" on "array" position 5
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayCell on "array"  position 5
+  unhighlightArrayCell on "array"  position 4
+}
+{
+  unhighlightCode on "code" line 7
+  move "cmpRect" type "translateNodes 1 2" along line (0,0) (2, 0) within 5 ticks
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightCode on "code" line 6
+}
+{
+  unhighlightCode on "code" line 6
+  highlightCode on "code" line 8
+  arrayPut "4" on "array" position 4
+  move "assRect" type "translateNodes 1 2" along line (0,0) (1, 0) within 5 ticks
+  highlightArrayElem on "array"  position 4
+}
+{
+  unhighlightArrayElem on "array"  position 4
+  highlightArrayCell on "array"  position 4
+  unhighlightCode on "code" line 8
+  highlightCode on "code" line 3
+}
+  unhighlightCode on "code" line 3
+{
+  label "Nr. of Assignments / Comparisons"
+
+  text "eoa" "End of the animation" at offset (0, 35) from "code" SW color black font SansSerif size 32
+  text "comps" "There were 45 comparisons and 73 assignments." at offset (0, 40) from "eoa" SW color black font SansSerif size 24

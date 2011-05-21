@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textarea>
+    <label_line>Enter your Java or C++ source code below:</label_line>
+    <default_field>Set intersection
+// gridsize 3 4 java smallfont
+Node s1 = new Node( 'B', null);
+Node s2 = null; // 1 0
+s2 = new Node( 'A', null ); // 1 0
+s2.next = new Node( 'B', null);  // 1 1
+s2.next.next = new Node( 'C', null); // 1 2
+Node p1 = null; // 0 1 LEFT
+Node prev1 = null; // 0 0 RIGHT
+Node p2 = null; // 2 1 RIGHT
+</default_field>
+    <value_entered></value_entered>
+  </textarea>
+</input_panel>

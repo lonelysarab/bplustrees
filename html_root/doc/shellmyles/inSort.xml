@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>shellSort/inSort</call_stack>
+    <program_listing>
+	<signature>inSort(list, increment, start)</signature>
+	<line line_number="1">1   temp = list[start]</line>
+	<line line_number="2">2   vacant = start</line>
+	<line line_number="3">3   while(vacant &#62; increment - 1 and change made)</line>
+	<line line_number="4">4      if(list[vacant - increment] &#62; temp)</line>
+	<line line_number="5">5         swap(vacant, vacant - increment)</line>
+	<line line_number="6">6         vacant -= increment</line>
+	<line line_number="7">7   list[vacant] = temp</line>
+	<line line_number="8">8   return</line>
+    </program_listing>
+    <variables>
+	<variable>increment = <replace var="increment" /></variable>
+	<variable>start = <replace var="start"/></variable>
+	<variable>temp = <replace var="current" /></variable>
+	<variable>vacant = <replace var="vacant" /></variable>
+    </variables>
+</pseudocode>

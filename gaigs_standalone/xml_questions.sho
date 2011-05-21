@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+ <snap>
+  <title>Question 1</title>
+  <question_ref ref="k"/>
+ </snap>
+
+ <snap>
+  <title>Question 2</title>
+  <question_ref ref="222"/>
+ </snap>
+
+ <snap>
+  <title>Question 3</title>
+  <question_ref ref="abc"/>
+ </snap>
+
+ <questions>
+  <question type="TFQUESTION" id="k">
+   <question_text>This statement is a question.</question_text>
+   <answer_option>false</answer_option>
+  </question>
+  <question type="FIBQUESTION" id="222">
+   <question_text>The answer to the ultimate question of life, the universe, and everythign is:</question_text>
+   <answer_option>42</answer_option>
+   <answer_option>forty-two</answer_option>
+   <answer_option>pie</answer_option>
+  </question>
+  <question type="MCQUESTION" id="abc">
+   <question_text>"McQuestion" sounds like an item on the menu of:</question_text>
+   <answer_option is_correct="yes">McDonald's</answer_option>
+   <answer_option is_correct="no">Hardee's</answer_option>
+   <answer_option>Burger King</answer_option>
+   <answer_option>Pizza Hut</answer_option>
+  </question>
+ </questions>
+
+</show>

@@ -1,0 +1,15 @@
+CHOICE
+Array Order:
+LoadOldData
+LoadRandomArray
+LoadInOrder
+LoadInReverseOrder
+LoadInOrderAlmost
+ENDCHOICE
+CHOICE
+Pivot index:
+low index
+random index
+Median-of-three
+ENDCHOICE
+

@@ -1,0 +1,467 @@
+% Animal 1.4
+ title "PARALLEL EREW MATRIX TRANSPOSITION"
+ author "Justin C. Miller (neonprimetime) neonprimetime.geo@yahoo.com"
+{
+text "Description" "Assign each pair of elements it's own processor" (50,400) color black depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-0" (50,50) (90,90) color black depth 5
+text "origMatrix-text_0-0" "1" offset (0,0) from "origMatrix_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-1" (90,50) (130,90) color black depth 5
+text "origMatrix-text_0-1" "4" offset (0,0) from "origMatrix_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-2" (130,50) (170,90) color black depth 5
+text "origMatrix-text_0-2" "2" offset (0,0) from "origMatrix_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-3" (170,50) (210,90) color black depth 5
+text "origMatrix-text_0-3" "2" offset (0,0) from "origMatrix_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-0" (50,90) (90,130) color black depth 5
+text "origMatrix-text_1-0" "9" offset (0,0) from "origMatrix_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-1" (90,90) (130,130) color black depth 5
+text "origMatrix-text_1-1" "4" offset (0,0) from "origMatrix_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-2" (130,90) (170,130) color black depth 5
+text "origMatrix-text_1-2" "5" offset (0,0) from "origMatrix_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-3" (170,90) (210,130) color black depth 5
+text "origMatrix-text_1-3" "0" offset (0,0) from "origMatrix_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-0" (50,130) (90,170) color black depth 5
+text "origMatrix-text_2-0" "6" offset (0,0) from "origMatrix_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-1" (90,130) (130,170) color black depth 5
+text "origMatrix-text_2-1" "0" offset (0,0) from "origMatrix_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-2" (130,130) (170,170) color black depth 5
+text "origMatrix-text_2-2" "3" offset (0,0) from "origMatrix_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-3" (170,130) (210,170) color black depth 5
+text "origMatrix-text_2-3" "1" offset (0,0) from "origMatrix_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-0" (50,170) (90,210) color black depth 5
+text "origMatrix-text_3-0" "9" offset (0,0) from "origMatrix_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-1" (90,170) (130,210) color black depth 5
+text "origMatrix-text_3-1" "6" offset (0,0) from "origMatrix_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-2" (130,170) (170,210) color black depth 5
+text "origMatrix-text_3-2" "1" offset (0,0) from "origMatrix_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-3" (170,170) (210,210) color black depth 5
+text "origMatrix-text_3-3" "9" offset (0,0) from "origMatrix_3-3" C color red depth 0 font Serif size 12.0  bold
+text "label1" "Original Matrix" offset (1,-15) from "origMatrix_0-0" NW color green4 depth 0 font Serif size 12.0  bold
+}
+delay 2000
+{
+rectangle "copyMatrix2_0-0" (50,50) (90,90) color blue depth 5
+text "copyMatrix2-text_0-0" "1" offset (0,0) from "copyMatrix2_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_0-1" (90,50) (130,90) color blue depth 5
+text "copyMatrix2-text_0-1" "4" offset (0,0) from "copyMatrix2_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_0-2" (130,50) (170,90) color blue depth 5
+text "copyMatrix2-text_0-2" "2" offset (0,0) from "copyMatrix2_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_0-3" (170,50) (210,90) color blue depth 5
+text "copyMatrix2-text_0-3" "2" offset (0,0) from "copyMatrix2_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_1-0" (50,90) (90,130) color blue depth 5
+text "copyMatrix2-text_1-0" "9" offset (0,0) from "copyMatrix2_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_1-1" (90,90) (130,130) color blue depth 5
+text "copyMatrix2-text_1-1" "4" offset (0,0) from "copyMatrix2_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_1-2" (130,90) (170,130) color blue depth 5
+text "copyMatrix2-text_1-2" "5" offset (0,0) from "copyMatrix2_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_1-3" (170,90) (210,130) color blue depth 5
+text "copyMatrix2-text_1-3" "0" offset (0,0) from "copyMatrix2_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_2-0" (50,130) (90,170) color blue depth 5
+text "copyMatrix2-text_2-0" "6" offset (0,0) from "copyMatrix2_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_2-1" (90,130) (130,170) color blue depth 5
+text "copyMatrix2-text_2-1" "0" offset (0,0) from "copyMatrix2_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_2-2" (130,130) (170,170) color blue depth 5
+text "copyMatrix2-text_2-2" "3" offset (0,0) from "copyMatrix2_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_2-3" (170,130) (210,170) color blue depth 5
+text "copyMatrix2-text_2-3" "1" offset (0,0) from "copyMatrix2_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_3-0" (50,170) (90,210) color blue depth 5
+text "copyMatrix2-text_3-0" "9" offset (0,0) from "copyMatrix2_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_3-1" (90,170) (130,210) color blue depth 5
+text "copyMatrix2-text_3-1" "6" offset (0,0) from "copyMatrix2_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_3-2" (130,170) (170,210) color blue depth 5
+text "copyMatrix2-text_3-2" "1" offset (0,0) from "copyMatrix2_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix2_3-3" (170,170) (210,210) color blue depth 5
+text "copyMatrix2-text_3-3" "9" offset (0,0) from "copyMatrix2_3-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_0-0" (350,150) (390,190) color blue depth 5
+text "copyMatrix-text_0-0" "1" offset (0,0) from "copyMatrix_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_0-1" (390,150) (430,190) color blue depth 5
+text "copyMatrix-text_0-1" "4" offset (0,0) from "copyMatrix_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_0-2" (430,150) (470,190) color blue depth 5
+text "copyMatrix-text_0-2" "2" offset (0,0) from "copyMatrix_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_0-3" (470,150) (510,190) color blue depth 5
+text "copyMatrix-text_0-3" "2" offset (0,0) from "copyMatrix_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_1-0" (350,190) (390,230) color blue depth 5
+text "copyMatrix-text_1-0" "9" offset (0,0) from "copyMatrix_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_1-1" (390,190) (430,230) color blue depth 5
+text "copyMatrix-text_1-1" "4" offset (0,0) from "copyMatrix_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_1-2" (430,190) (470,230) color blue depth 5
+text "copyMatrix-text_1-2" "5" offset (0,0) from "copyMatrix_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_1-3" (470,190) (510,230) color blue depth 5
+text "copyMatrix-text_1-3" "0" offset (0,0) from "copyMatrix_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_2-0" (350,230) (390,270) color blue depth 5
+text "copyMatrix-text_2-0" "6" offset (0,0) from "copyMatrix_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_2-1" (390,230) (430,270) color blue depth 5
+text "copyMatrix-text_2-1" "0" offset (0,0) from "copyMatrix_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_2-2" (430,230) (470,270) color blue depth 5
+text "copyMatrix-text_2-2" "3" offset (0,0) from "copyMatrix_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_2-3" (470,230) (510,270) color blue depth 5
+text "copyMatrix-text_2-3" "1" offset (0,0) from "copyMatrix_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_3-0" (350,270) (390,310) color blue depth 5
+text "copyMatrix-text_3-0" "9" offset (0,0) from "copyMatrix_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_3-1" (390,270) (430,310) color blue depth 5
+text "copyMatrix-text_3-1" "6" offset (0,0) from "copyMatrix_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_3-2" (430,270) (470,310) color blue depth 5
+text "copyMatrix-text_3-2" "1" offset (0,0) from "copyMatrix_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "copyMatrix_3-3" (470,270) (510,310) color blue depth 5
+text "copyMatrix-text_3-3" "9" offset (0,0) from "copyMatrix_3-3" C color red depth 0 font Serif size 12.0  bold
+text "label2" "Copy of Original Matrix" offset (1,-15) from "copyMatrix_0-0" NW color green4 depth 0 font Serif size 12.0  bold
+hideCode "copyMatrix-text_0-0"
+line "line_0-0" offset (0,0) from "origMatrix_0-0" NW offset (0,0) from "copyMatrix_0-0" NW color green4 depth 5 hidden
+move "copyMatrix2_0-0" via "line_0-0" after 10 ms within 2000 ms
+move "copyMatrix2-text_0-0" via "line_0-0" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_0-1"
+line "line_0-1" offset (0,0) from "origMatrix_0-1" NW offset (0,0) from "copyMatrix_0-1" NW color green4 depth 5 hidden
+move "copyMatrix2_0-1" via "line_0-1" after 10 ms within 2000 ms
+move "copyMatrix2-text_0-1" via "line_0-1" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_0-2"
+line "line_0-2" offset (0,0) from "origMatrix_0-2" NW offset (0,0) from "copyMatrix_0-2" NW color green4 depth 5 hidden
+move "copyMatrix2_0-2" via "line_0-2" after 10 ms within 2000 ms
+move "copyMatrix2-text_0-2" via "line_0-2" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_0-3"
+line "line_0-3" offset (0,0) from "origMatrix_0-3" NW offset (0,0) from "copyMatrix_0-3" NW color green4 depth 5 hidden
+move "copyMatrix2_0-3" via "line_0-3" after 10 ms within 2000 ms
+move "copyMatrix2-text_0-3" via "line_0-3" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_1-0"
+line "line_1-0" offset (0,0) from "origMatrix_1-0" NW offset (0,0) from "copyMatrix_1-0" NW color green4 depth 5 hidden
+move "copyMatrix2_1-0" via "line_1-0" after 10 ms within 2000 ms
+move "copyMatrix2-text_1-0" via "line_1-0" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_1-1"
+line "line_1-1" offset (0,0) from "origMatrix_1-1" NW offset (0,0) from "copyMatrix_1-1" NW color green4 depth 5 hidden
+move "copyMatrix2_1-1" via "line_1-1" after 10 ms within 2000 ms
+move "copyMatrix2-text_1-1" via "line_1-1" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_1-2"
+line "line_1-2" offset (0,0) from "origMatrix_1-2" NW offset (0,0) from "copyMatrix_1-2" NW color green4 depth 5 hidden
+move "copyMatrix2_1-2" via "line_1-2" after 10 ms within 2000 ms
+move "copyMatrix2-text_1-2" via "line_1-2" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_1-3"
+line "line_1-3" offset (0,0) from "origMatrix_1-3" NW offset (0,0) from "copyMatrix_1-3" NW color green4 depth 5 hidden
+move "copyMatrix2_1-3" via "line_1-3" after 10 ms within 2000 ms
+move "copyMatrix2-text_1-3" via "line_1-3" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_2-0"
+line "line_2-0" offset (0,0) from "origMatrix_2-0" NW offset (0,0) from "copyMatrix_2-0" NW color green4 depth 5 hidden
+move "copyMatrix2_2-0" via "line_2-0" after 10 ms within 2000 ms
+move "copyMatrix2-text_2-0" via "line_2-0" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_2-1"
+line "line_2-1" offset (0,0) from "origMatrix_2-1" NW offset (0,0) from "copyMatrix_2-1" NW color green4 depth 5 hidden
+move "copyMatrix2_2-1" via "line_2-1" after 10 ms within 2000 ms
+move "copyMatrix2-text_2-1" via "line_2-1" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_2-2"
+line "line_2-2" offset (0,0) from "origMatrix_2-2" NW offset (0,0) from "copyMatrix_2-2" NW color green4 depth 5 hidden
+move "copyMatrix2_2-2" via "line_2-2" after 10 ms within 2000 ms
+move "copyMatrix2-text_2-2" via "line_2-2" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_2-3"
+line "line_2-3" offset (0,0) from "origMatrix_2-3" NW offset (0,0) from "copyMatrix_2-3" NW color green4 depth 5 hidden
+move "copyMatrix2_2-3" via "line_2-3" after 10 ms within 2000 ms
+move "copyMatrix2-text_2-3" via "line_2-3" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_3-0"
+line "line_3-0" offset (0,0) from "origMatrix_3-0" NW offset (0,0) from "copyMatrix_3-0" NW color green4 depth 5 hidden
+move "copyMatrix2_3-0" via "line_3-0" after 10 ms within 2000 ms
+move "copyMatrix2-text_3-0" via "line_3-0" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_3-1"
+line "line_3-1" offset (0,0) from "origMatrix_3-1" NW offset (0,0) from "copyMatrix_3-1" NW color green4 depth 5 hidden
+move "copyMatrix2_3-1" via "line_3-1" after 10 ms within 2000 ms
+move "copyMatrix2-text_3-1" via "line_3-1" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_3-2"
+line "line_3-2" offset (0,0) from "origMatrix_3-2" NW offset (0,0) from "copyMatrix_3-2" NW color green4 depth 5 hidden
+move "copyMatrix2_3-2" via "line_3-2" after 10 ms within 2000 ms
+move "copyMatrix2-text_3-2" via "line_3-2" after 10 ms within 2000 ms
+hideCode "copyMatrix-text_3-3"
+line "line_3-3" offset (0,0) from "origMatrix_3-3" NW offset (0,0) from "copyMatrix_3-3" NW color green4 depth 5 hidden
+move "copyMatrix2_3-3" via "line_3-3" after 10 ms within 2000 ms
+move "copyMatrix2-text_3-3" via "line_3-3" after 10 ms within 2000 ms
+text "StepCounter" "Step Counter = 0" (400,20) color green4 depth 0 font Serif size 12.0  bold
+}
+delay 2000
+{
+hideCode "label2"
+hideCode "copyMatrix2_0-0"
+hideCode "copyMatrix2-text_0-0"
+show "copyMatrix-text_0-0"
+hideCode "copyMatrix2_0-1"
+hideCode "copyMatrix2-text_0-1"
+show "copyMatrix-text_0-1"
+hideCode "copyMatrix2_0-2"
+hideCode "copyMatrix2-text_0-2"
+show "copyMatrix-text_0-2"
+hideCode "copyMatrix2_0-3"
+hideCode "copyMatrix2-text_0-3"
+show "copyMatrix-text_0-3"
+hideCode "copyMatrix2_1-0"
+hideCode "copyMatrix2-text_1-0"
+show "copyMatrix-text_1-0"
+hideCode "copyMatrix2_1-1"
+hideCode "copyMatrix2-text_1-1"
+show "copyMatrix-text_1-1"
+hideCode "copyMatrix2_1-2"
+hideCode "copyMatrix2-text_1-2"
+show "copyMatrix-text_1-2"
+hideCode "copyMatrix2_1-3"
+hideCode "copyMatrix2-text_1-3"
+show "copyMatrix-text_1-3"
+hideCode "copyMatrix2_2-0"
+hideCode "copyMatrix2-text_2-0"
+show "copyMatrix-text_2-0"
+hideCode "copyMatrix2_2-1"
+hideCode "copyMatrix2-text_2-1"
+show "copyMatrix-text_2-1"
+hideCode "copyMatrix2_2-2"
+hideCode "copyMatrix2-text_2-2"
+show "copyMatrix-text_2-2"
+hideCode "copyMatrix2_2-3"
+hideCode "copyMatrix2-text_2-3"
+show "copyMatrix-text_2-3"
+hideCode "copyMatrix2_3-0"
+hideCode "copyMatrix2-text_3-0"
+show "copyMatrix-text_3-0"
+hideCode "copyMatrix2_3-1"
+hideCode "copyMatrix2-text_3-1"
+show "copyMatrix-text_3-1"
+hideCode "copyMatrix2_3-2"
+hideCode "copyMatrix2-text_3-2"
+show "copyMatrix-text_3-2"
+hideCode "copyMatrix2_3-3"
+hideCode "copyMatrix2-text_3-3"
+show "copyMatrix-text_3-3"
+square "processor0" (510,310) 40 color black depth 5
+text "p0" "p0" offset (3,10) from "processor0" NW color blue depth 0 font Serif size 12.0  bold
+polyline "channelA0" (420,170) (530,170) (530,310) color black depth 5 fwarrow bwarrow
+polyline "channelB0" (370,220) (370,330) (510,330) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA0" (460,210) (570,210) (570,370) (410,370) (420,250) hidden
+polyline "hiddenchannelB0" (420,250) (410,370) (570,370) (531,210) (460,210) hidden
+square "processor1" (310,110) 40 color black depth 5
+text "p1" "p1" offset (3,10) from "processor1" NW color black depth 0 font Serif size 12.0  bold
+polyline "channelA1" (450,160) (450,130) (350,130) color black depth 5 fwarrow bwarrow
+polyline "channelB1" (380,250) (330,250) (330,150) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA1" (500,210) (500,170) (370,170) (370,290) (420,290) hidden
+polyline "hiddenchannelB1" (420,290) (370,290) (370,170) (500,170) (500,210) hidden
+square "processor2" (550,350) 40 color black depth 5
+text "p2" "p2" offset (3,10) from "processor2" NW color blue depth 0 font Serif size 12.0  bold
+polyline "channelA2" (500,172) (570,172) (570,350) color black depth 5 fwarrow bwarrow
+polyline "channelB2" (372,300) (372,370) (550,370) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA2" (540,212) (610,212) (610,410) (412,410) (422,330) hidden
+polyline "hiddenchannelB2" (422,330) (412,410) (610,410) (571,212) (540,212) hidden
+square "processor3" (270,70) 40 color black depth 5
+text "p3" "p3" offset (3,10) from "processor3" NW color black depth 0 font Serif size 12.0  bold
+polyline "channelA3" (452,200) (452,90) (310,90) color black depth 5 fwarrow bwarrow
+polyline "channelB3" (420,252) (290,252) (290,110) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA3" (500,252) (500,130) (330,130) (330,290) (460,292) hidden
+polyline "hiddenchannelB3" (460,292) (330,290) (330,130) (500,130) (500,252) hidden
+square "processor4" (590,390) 40 color black depth 5
+text "p4" "p4" offset (3,10) from "processor4" NW color blue depth 0 font Serif size 12.0  bold
+polyline "channelA4" (500,214) (610,214) (610,390) color black depth 5 fwarrow bwarrow
+polyline "channelB4" (414,300) (414,410) (590,410) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA4" (540,254) (650,254) (650,450) (454,450) (464,330) hidden
+polyline "hiddenchannelB4" (464,330) (454,450) (650,450) (611,254) (540,254) hidden
+square "processor5" (230,30) 40 color black depth 5
+text "p5" "p5" offset (3,10) from "processor5" NW color black depth 0 font Serif size 12.0  bold
+polyline "channelA5" (494,240) (494,50) (270,50) color black depth 5 fwarrow bwarrow
+polyline "channelB5" (460,294) (250,294) (250,70) color black depth 5 fwarrow bwarrow
+polyline "hiddenchannelA5" (540,294) (540,90) (290,90) (290,330) (500,334) hidden
+polyline "hiddenchannelB5" (500,334) (290,330) (290,90) (540,90) (540,294) hidden
+}
+delay 3000
+{
+hideCode "Description"
+text "Description" "Each Processor Swaps it's 2 elements" offset (0,-3) from "Description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "StepCounter"
+text "StepCounter" "Step Counter = 1" offset (0,-3) from "StepCounter" SW color green4 depth 0 font Serif size 12.0  bold
+move "copyMatrix-text_0-1" via "hiddenchannelA0" after 10 ms within 3000 ms
+move "copyMatrix-text_1-0" via "hiddenchannelB0" after 10 ms within 3000 ms
+move "copyMatrix-text_0-2" via "hiddenchannelA1" after 10 ms within 3000 ms
+move "copyMatrix-text_2-0" via "hiddenchannelB1" after 10 ms within 3000 ms
+move "copyMatrix-text_0-3" via "hiddenchannelA2" after 10 ms within 3000 ms
+move "copyMatrix-text_3-0" via "hiddenchannelB2" after 10 ms within 3000 ms
+move "copyMatrix-text_1-2" via "hiddenchannelA3" after 10 ms within 3000 ms
+move "copyMatrix-text_2-1" via "hiddenchannelB3" after 10 ms within 3000 ms
+move "copyMatrix-text_1-3" via "hiddenchannelA4" after 10 ms within 3000 ms
+move "copyMatrix-text_3-1" via "hiddenchannelB4" after 10 ms within 3000 ms
+move "copyMatrix-text_2-3" via "hiddenchannelA5" after 10 ms within 3000 ms
+move "copyMatrix-text_3-2" via "hiddenchannelB5" after 10 ms within 3000 ms
+}
+delay 2000
+{
+hideCode "label2"
+text "label2" "Transposed Matrix" offset (0,-3) from "label2" SW color green4 depth 0 font Serif size 12.0  bold
+hideCode "channelA0"
+hideCode "channelB0"
+hideCode "processor0"
+hideCode "p0"
+hideCode "channelA1"
+hideCode "channelB1"
+hideCode "processor1"
+hideCode "p1"
+hideCode "channelA2"
+hideCode "channelB2"
+hideCode "processor2"
+hideCode "p2"
+hideCode "channelA3"
+hideCode "channelB3"
+hideCode "processor3"
+hideCode "p3"
+hideCode "channelA4"
+hideCode "channelB4"
+hideCode "processor4"
+hideCode "p4"
+hideCode "channelA5"
+hideCode "channelB5"
+hideCode "processor5"
+hideCode "p5"
+}
+delay 10
+{
+hideCode "Description"
+text "Description" "Matrix is now Transposed!" offset (0,-3) from "Description" SW color red4 depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+color "origMatrix-text_0-0" black
+color "copyMatrix-text_0-0" black
+color "origMatrix-text_0-1" black
+color "copyMatrix-text_0-1" black
+color "origMatrix-text_0-2" black
+color "copyMatrix-text_0-2" black
+color "origMatrix-text_0-3" black
+color "copyMatrix-text_0-3" black
+color "origMatrix-text_1-0" red
+color "copyMatrix-text_1-0" red
+color "origMatrix-text_1-1" red
+color "copyMatrix-text_1-1" red
+color "origMatrix-text_1-2" red
+color "copyMatrix-text_1-2" red
+color "origMatrix-text_1-3" red
+color "copyMatrix-text_1-3" red
+color "origMatrix-text_2-0" red
+color "copyMatrix-text_2-0" red
+color "origMatrix-text_2-1" red
+color "copyMatrix-text_2-1" red
+color "origMatrix-text_2-2" red
+color "copyMatrix-text_2-2" red
+color "origMatrix-text_2-3" red
+color "copyMatrix-text_2-3" red
+color "origMatrix-text_3-0" red
+color "copyMatrix-text_3-0" red
+color "origMatrix-text_3-1" red
+color "copyMatrix-text_3-1" red
+color "origMatrix-text_3-2" red
+color "copyMatrix-text_3-2" red
+color "origMatrix-text_3-3" red
+color "copyMatrix-text_3-3" red
+}
+delay 1000
+{
+color "origMatrix-text_1-0" black
+color "copyMatrix-text_1-0" black
+color "origMatrix-text_1-1" black
+color "copyMatrix-text_1-1" black
+color "origMatrix-text_1-2" black
+color "copyMatrix-text_1-2" black
+color "origMatrix-text_1-3" black
+color "copyMatrix-text_1-3" black
+color "origMatrix-text_0-0" red
+color "copyMatrix-text_0-0" red
+color "origMatrix-text_0-1" red
+color "copyMatrix-text_0-1" red
+color "origMatrix-text_0-2" red
+color "copyMatrix-text_0-2" red
+color "origMatrix-text_0-3" red
+color "copyMatrix-text_0-3" red
+color "origMatrix-text_2-0" red
+color "copyMatrix-text_2-0" red
+color "origMatrix-text_2-1" red
+color "copyMatrix-text_2-1" red
+color "origMatrix-text_2-2" red
+color "copyMatrix-text_2-2" red
+color "origMatrix-text_2-3" red
+color "copyMatrix-text_2-3" red
+color "origMatrix-text_3-0" red
+color "copyMatrix-text_3-0" red
+color "origMatrix-text_3-1" red
+color "copyMatrix-text_3-1" red
+color "origMatrix-text_3-2" red
+color "copyMatrix-text_3-2" red
+color "origMatrix-text_3-3" red
+color "copyMatrix-text_3-3" red
+}
+delay 1000
+{
+color "origMatrix-text_2-0" black
+color "copyMatrix-text_2-0" black
+color "origMatrix-text_2-1" black
+color "copyMatrix-text_2-1" black
+color "origMatrix-text_2-2" black
+color "copyMatrix-text_2-2" black
+color "origMatrix-text_2-3" black
+color "copyMatrix-text_2-3" black
+color "origMatrix-text_0-0" red
+color "copyMatrix-text_0-0" red
+color "origMatrix-text_0-1" red
+color "copyMatrix-text_0-1" red
+color "origMatrix-text_0-2" red
+color "copyMatrix-text_0-2" red
+color "origMatrix-text_0-3" red
+color "copyMatrix-text_0-3" red
+color "origMatrix-text_1-0" red
+color "copyMatrix-text_1-0" red
+color "origMatrix-text_1-1" red
+color "copyMatrix-text_1-1" red
+color "origMatrix-text_1-2" red
+color "copyMatrix-text_1-2" red
+color "origMatrix-text_1-3" red
+color "copyMatrix-text_1-3" red
+color "origMatrix-text_3-0" red
+color "copyMatrix-text_3-0" red
+color "origMatrix-text_3-1" red
+color "copyMatrix-text_3-1" red
+color "origMatrix-text_3-2" red
+color "copyMatrix-text_3-2" red
+color "origMatrix-text_3-3" red
+color "copyMatrix-text_3-3" red
+}
+delay 1000
+{
+color "origMatrix-text_3-0" black
+color "copyMatrix-text_3-0" black
+color "origMatrix-text_3-1" black
+color "copyMatrix-text_3-1" black
+color "origMatrix-text_3-2" black
+color "copyMatrix-text_3-2" black
+color "origMatrix-text_3-3" black
+color "copyMatrix-text_3-3" black
+color "origMatrix-text_0-0" red
+color "copyMatrix-text_0-0" red
+color "origMatrix-text_0-1" red
+color "copyMatrix-text_0-1" red
+color "origMatrix-text_0-2" red
+color "copyMatrix-text_0-2" red
+color "origMatrix-text_0-3" red
+color "copyMatrix-text_0-3" red
+color "origMatrix-text_1-0" red
+color "copyMatrix-text_1-0" red
+color "origMatrix-text_1-1" red
+color "copyMatrix-text_1-1" red
+color "origMatrix-text_1-2" red
+color "copyMatrix-text_1-2" red
+color "origMatrix-text_1-3" red
+color "copyMatrix-text_1-3" red
+color "origMatrix-text_2-0" red
+color "copyMatrix-text_2-0" red
+color "origMatrix-text_2-1" red
+color "copyMatrix-text_2-1" red
+color "origMatrix-text_2-2" red
+color "copyMatrix-text_2-2" red
+color "origMatrix-text_2-3" red
+color "copyMatrix-text_2-3" red
+}
+delay 1000
+{
+color "origMatrix-text_3-0" red
+color "copyMatrix-text_3-0" red
+color "origMatrix-text_3-1" red
+color "copyMatrix-text_3-1" red
+color "origMatrix-text_3-2" red
+color "copyMatrix-text_3-2" red
+color "origMatrix-text_3-3" red
+color "copyMatrix-text_3-3" red
+}

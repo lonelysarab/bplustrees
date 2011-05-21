@@ -1,0 +1,883 @@
+% Animal 1.4
+ title "PARALLEL SHUFFLE MATRIX TRANSPOSITION"
+ author "Justin C. Miller (neonprimetime) neonprimetime.geo@yahoo.com"
+{
+text "description" "Copy original matrix so we have it for later." (100,50) color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+rectangle "origMatrix_0-0" (150,100) (180,130) color white depth 5 filled fillColor black
+text "origMatrix-text_0-0" "9" offset (0,0) from "origMatrix_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-1" (180,100) (210,130) color white depth 5 filled fillColor black
+text "origMatrix-text_0-1" "0" offset (0,0) from "origMatrix_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-2" (210,100) (240,130) color white depth 5 filled fillColor black
+text "origMatrix-text_0-2" "7" offset (0,0) from "origMatrix_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_0-3" (240,100) (270,130) color white depth 5 filled fillColor black
+text "origMatrix-text_0-3" "3" offset (0,0) from "origMatrix_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-0" (150,130) (180,160) color white depth 5 filled fillColor black
+text "origMatrix-text_1-0" "9" offset (0,0) from "origMatrix_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-1" (180,130) (210,160) color white depth 5 filled fillColor black
+text "origMatrix-text_1-1" "4" offset (0,0) from "origMatrix_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-2" (210,130) (240,160) color white depth 5 filled fillColor black
+text "origMatrix-text_1-2" "8" offset (0,0) from "origMatrix_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_1-3" (240,130) (270,160) color white depth 5 filled fillColor black
+text "origMatrix-text_1-3" "7" offset (0,0) from "origMatrix_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-0" (150,160) (180,190) color white depth 5 filled fillColor black
+text "origMatrix-text_2-0" "1" offset (0,0) from "origMatrix_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-1" (180,160) (210,190) color white depth 5 filled fillColor black
+text "origMatrix-text_2-1" "8" offset (0,0) from "origMatrix_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-2" (210,160) (240,190) color white depth 5 filled fillColor black
+text "origMatrix-text_2-2" "8" offset (0,0) from "origMatrix_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_2-3" (240,160) (270,190) color white depth 5 filled fillColor black
+text "origMatrix-text_2-3" "4" offset (0,0) from "origMatrix_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-0" (150,190) (180,220) color white depth 5 filled fillColor black
+text "origMatrix-text_3-0" "6" offset (0,0) from "origMatrix_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-1" (180,190) (210,220) color white depth 5 filled fillColor black
+text "origMatrix-text_3-1" "0" offset (0,0) from "origMatrix_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-2" (210,190) (240,220) color white depth 5 filled fillColor black
+text "origMatrix-text_3-2" "3" offset (0,0) from "origMatrix_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix_3-3" (240,190) (270,220) color white depth 5 filled fillColor black
+text "origMatrix-text_3-3" "8" offset (0,0) from "origMatrix_3-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_0-0" (150,100) (180,130) color white depth 5 filled fillColor black
+text "origMatrix2-text_0-0" "9" offset (0,0) from "origMatrix2_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_0-1" (180,100) (210,130) color white depth 5 filled fillColor black
+text "origMatrix2-text_0-1" "0" offset (0,0) from "origMatrix2_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_0-2" (210,100) (240,130) color white depth 5 filled fillColor black
+text "origMatrix2-text_0-2" "7" offset (0,0) from "origMatrix2_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_0-3" (240,100) (270,130) color white depth 5 filled fillColor black
+text "origMatrix2-text_0-3" "3" offset (0,0) from "origMatrix2_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_1-0" (150,130) (180,160) color white depth 5 filled fillColor black
+text "origMatrix2-text_1-0" "9" offset (0,0) from "origMatrix2_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_1-1" (180,130) (210,160) color white depth 5 filled fillColor black
+text "origMatrix2-text_1-1" "4" offset (0,0) from "origMatrix2_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_1-2" (210,130) (240,160) color white depth 5 filled fillColor black
+text "origMatrix2-text_1-2" "8" offset (0,0) from "origMatrix2_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_1-3" (240,130) (270,160) color white depth 5 filled fillColor black
+text "origMatrix2-text_1-3" "7" offset (0,0) from "origMatrix2_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_2-0" (150,160) (180,190) color white depth 5 filled fillColor black
+text "origMatrix2-text_2-0" "1" offset (0,0) from "origMatrix2_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_2-1" (180,160) (210,190) color white depth 5 filled fillColor black
+text "origMatrix2-text_2-1" "8" offset (0,0) from "origMatrix2_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_2-2" (210,160) (240,190) color white depth 5 filled fillColor black
+text "origMatrix2-text_2-2" "8" offset (0,0) from "origMatrix2_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_2-3" (240,160) (270,190) color white depth 5 filled fillColor black
+text "origMatrix2-text_2-3" "4" offset (0,0) from "origMatrix2_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_3-0" (150,190) (180,220) color white depth 5 filled fillColor black
+text "origMatrix2-text_3-0" "6" offset (0,0) from "origMatrix2_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_3-1" (180,190) (210,220) color white depth 5 filled fillColor black
+text "origMatrix2-text_3-1" "0" offset (0,0) from "origMatrix2_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_3-2" (210,190) (240,220) color white depth 5 filled fillColor black
+text "origMatrix2-text_3-2" "3" offset (0,0) from "origMatrix2_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "origMatrix2_3-3" (240,190) (270,220) color white depth 5 filled fillColor black
+text "origMatrix2-text_3-3" "8" offset (0,0) from "origMatrix2_3-3" C color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+rectangle "processors_0-0" (350,100) (390,140) color black depth 5
+text "processors-text_0-0" "9" offset (0,0) from "processors_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_0-1" (390,100) (430,140) color black depth 5
+text "processors-text_0-1" "0" offset (0,0) from "processors_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_0-2" (430,100) (470,140) color black depth 5
+text "processors-text_0-2" "7" offset (0,0) from "processors_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_0-3" (470,100) (510,140) color black depth 5
+text "processors-text_0-3" "3" offset (0,0) from "processors_0-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_1-0" (350,140) (390,180) color black depth 5
+text "processors-text_1-0" "9" offset (0,0) from "processors_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_1-1" (390,140) (430,180) color black depth 5
+text "processors-text_1-1" "4" offset (0,0) from "processors_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_1-2" (430,140) (470,180) color black depth 5
+text "processors-text_1-2" "8" offset (0,0) from "processors_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_1-3" (470,140) (510,180) color black depth 5
+text "processors-text_1-3" "7" offset (0,0) from "processors_1-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_2-0" (350,180) (390,220) color black depth 5
+text "processors-text_2-0" "1" offset (0,0) from "processors_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_2-1" (390,180) (430,220) color black depth 5
+text "processors-text_2-1" "8" offset (0,0) from "processors_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_2-2" (430,180) (470,220) color black depth 5
+text "processors-text_2-2" "8" offset (0,0) from "processors_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_2-3" (470,180) (510,220) color black depth 5
+text "processors-text_2-3" "4" offset (0,0) from "processors_2-3" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_3-0" (350,220) (390,260) color black depth 5
+text "processors-text_3-0" "6" offset (0,0) from "processors_3-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_3-1" (390,220) (430,260) color black depth 5
+text "processors-text_3-1" "0" offset (0,0) from "processors_3-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_3-2" (430,220) (470,260) color black depth 5
+text "processors-text_3-2" "3" offset (0,0) from "processors_3-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "processors_3-3" (470,220) (510,260) color black depth 5
+text "processors-text_3-3" "8" offset (0,0) from "processors_3-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-0"
+hideCode "processors-text_0-1"
+hideCode "processors-text_0-2"
+hideCode "processors-text_0-3"
+hideCode "processors-text_1-0"
+hideCode "processors-text_1-1"
+hideCode "processors-text_1-2"
+hideCode "processors-text_1-3"
+hideCode "processors-text_2-0"
+hideCode "processors-text_2-1"
+hideCode "processors-text_2-2"
+hideCode "processors-text_2-3"
+hideCode "processors-text_3-0"
+hideCode "processors-text_3-1"
+hideCode "processors-text_3-2"
+hideCode "processors-text_3-3"
+text "processor0" "p0" offset (3,10) from "processors_0-0" NW color black depth 0 font Serif size 12.0  bold
+text "processor1" "p1" offset (3,10) from "processors_0-1" NW color black depth 0 font Serif size 12.0  bold
+text "processor2" "p2" offset (3,10) from "processors_0-2" NW color black depth 0 font Serif size 12.0  bold
+text "processor3" "p3" offset (3,10) from "processors_0-3" NW color black depth 0 font Serif size 12.0  bold
+text "processor4" "p4" offset (3,10) from "processors_1-0" NW color black depth 0 font Serif size 12.0  bold
+text "processor5" "p5" offset (3,10) from "processors_1-1" NW color black depth 0 font Serif size 12.0  bold
+text "processor6" "p6" offset (3,10) from "processors_1-2" NW color black depth 0 font Serif size 12.0  bold
+text "processor7" "p7" offset (3,10) from "processors_1-3" NW color black depth 0 font Serif size 12.0  bold
+text "processor8" "p8" offset (3,10) from "processors_2-0" NW color black depth 0 font Serif size 12.0  bold
+text "processor9" "p9" offset (3,10) from "processors_2-1" NW color black depth 0 font Serif size 12.0  bold
+text "processor10" "p10" offset (3,10) from "processors_2-2" NW color black depth 0 font Serif size 12.0  bold
+text "processor11" "p11" offset (3,10) from "processors_2-3" NW color black depth 0 font Serif size 12.0  bold
+text "processor12" "p12" offset (3,10) from "processors_3-0" NW color black depth 0 font Serif size 12.0  bold
+text "processor13" "p13" offset (3,10) from "processors_3-1" NW color black depth 0 font Serif size 12.0  bold
+text "processor14" "p14" offset (3,10) from "processors_3-2" NW color black depth 0 font Serif size 12.0  bold
+text "processor15" "p15" offset (3,10) from "processors_3-3" NW color black depth 0 font Serif size 12.0  bold
+text "origMatrixTitle" "Original Matrix" offset (0,-8) from "origMatrix_0-0" NW color black depth 0 font Serif size 12.0  bold
+text "processorsTitle" "Copy of Original Matrix" offset (0,-8) from "processors_0-0" NW color black depth 0 font Serif size 12.0  bold
+text "StepCounter" "Step Counter = 0" (400, 10) color black depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+line "line_0-0" offset (0,0) from "origMatrix2-text_0-0" SW offset (0,0) from "processors-text_0-0" SW color black depth 5 hidden
+move "origMatrix2-text_0-0" via "line_0-0" after 10 ms within 1000 ms
+line "line_0-1" offset (0,0) from "origMatrix2-text_0-1" SW offset (0,0) from "processors-text_0-1" SW color black depth 5 hidden
+move "origMatrix2-text_0-1" via "line_0-1" after 10 ms within 1000 ms
+line "line_0-2" offset (0,0) from "origMatrix2-text_0-2" SW offset (0,0) from "processors-text_0-2" SW color black depth 5 hidden
+move "origMatrix2-text_0-2" via "line_0-2" after 10 ms within 1000 ms
+line "line_0-3" offset (0,0) from "origMatrix2-text_0-3" SW offset (0,0) from "processors-text_0-3" SW color black depth 5 hidden
+move "origMatrix2-text_0-3" via "line_0-3" after 10 ms within 1000 ms
+line "line_1-0" offset (0,0) from "origMatrix2-text_1-0" SW offset (0,0) from "processors-text_1-0" SW color black depth 5 hidden
+move "origMatrix2-text_1-0" via "line_1-0" after 10 ms within 1000 ms
+line "line_1-1" offset (0,0) from "origMatrix2-text_1-1" SW offset (0,0) from "processors-text_1-1" SW color black depth 5 hidden
+move "origMatrix2-text_1-1" via "line_1-1" after 10 ms within 1000 ms
+line "line_1-2" offset (0,0) from "origMatrix2-text_1-2" SW offset (0,0) from "processors-text_1-2" SW color black depth 5 hidden
+move "origMatrix2-text_1-2" via "line_1-2" after 10 ms within 1000 ms
+line "line_1-3" offset (0,0) from "origMatrix2-text_1-3" SW offset (0,0) from "processors-text_1-3" SW color black depth 5 hidden
+move "origMatrix2-text_1-3" via "line_1-3" after 10 ms within 1000 ms
+line "line_2-0" offset (0,0) from "origMatrix2-text_2-0" SW offset (0,0) from "processors-text_2-0" SW color black depth 5 hidden
+move "origMatrix2-text_2-0" via "line_2-0" after 10 ms within 1000 ms
+line "line_2-1" offset (0,0) from "origMatrix2-text_2-1" SW offset (0,0) from "processors-text_2-1" SW color black depth 5 hidden
+move "origMatrix2-text_2-1" via "line_2-1" after 10 ms within 1000 ms
+line "line_2-2" offset (0,0) from "origMatrix2-text_2-2" SW offset (0,0) from "processors-text_2-2" SW color black depth 5 hidden
+move "origMatrix2-text_2-2" via "line_2-2" after 10 ms within 1000 ms
+line "line_2-3" offset (0,0) from "origMatrix2-text_2-3" SW offset (0,0) from "processors-text_2-3" SW color black depth 5 hidden
+move "origMatrix2-text_2-3" via "line_2-3" after 10 ms within 1000 ms
+line "line_3-0" offset (0,0) from "origMatrix2-text_3-0" SW offset (0,0) from "processors-text_3-0" SW color black depth 5 hidden
+move "origMatrix2-text_3-0" via "line_3-0" after 10 ms within 1000 ms
+line "line_3-1" offset (0,0) from "origMatrix2-text_3-1" SW offset (0,0) from "processors-text_3-1" SW color black depth 5 hidden
+move "origMatrix2-text_3-1" via "line_3-1" after 10 ms within 1000 ms
+line "line_3-2" offset (0,0) from "origMatrix2-text_3-2" SW offset (0,0) from "processors-text_3-2" SW color black depth 5 hidden
+move "origMatrix2-text_3-2" via "line_3-2" after 10 ms within 1000 ms
+line "line_3-3" offset (0,0) from "origMatrix2-text_3-3" SW offset (0,0) from "processors-text_3-3" SW color black depth 5 hidden
+move "origMatrix2-text_3-3" via "line_3-3" after 10 ms within 1000 ms
+}
+delay 1000
+{
+hideCode "origMatrix2_0-0"
+hideCode "origMatrix2-text_0-0"
+show "processors-text_0-0"
+hideCode "origMatrix2_0-1"
+hideCode "origMatrix2-text_0-1"
+show "processors-text_0-1"
+hideCode "origMatrix2_0-2"
+hideCode "origMatrix2-text_0-2"
+show "processors-text_0-2"
+hideCode "origMatrix2_0-3"
+hideCode "origMatrix2-text_0-3"
+show "processors-text_0-3"
+hideCode "origMatrix2_1-0"
+hideCode "origMatrix2-text_1-0"
+show "processors-text_1-0"
+hideCode "origMatrix2_1-1"
+hideCode "origMatrix2-text_1-1"
+show "processors-text_1-1"
+hideCode "origMatrix2_1-2"
+hideCode "origMatrix2-text_1-2"
+show "processors-text_1-2"
+hideCode "origMatrix2_1-3"
+hideCode "origMatrix2-text_1-3"
+show "processors-text_1-3"
+hideCode "origMatrix2_2-0"
+hideCode "origMatrix2-text_2-0"
+show "processors-text_2-0"
+hideCode "origMatrix2_2-1"
+hideCode "origMatrix2-text_2-1"
+show "processors-text_2-1"
+hideCode "origMatrix2_2-2"
+hideCode "origMatrix2-text_2-2"
+show "processors-text_2-2"
+hideCode "origMatrix2_2-3"
+hideCode "origMatrix2-text_2-3"
+show "processors-text_2-3"
+hideCode "origMatrix2_3-0"
+hideCode "origMatrix2-text_3-0"
+show "processors-text_3-0"
+hideCode "origMatrix2_3-1"
+hideCode "origMatrix2-text_3-1"
+show "processors-text_3-1"
+hideCode "origMatrix2_3-2"
+hideCode "origMatrix2-text_3-2"
+show "processors-text_3-2"
+hideCode "origMatrix2_3-3"
+hideCode "origMatrix2-text_3-3"
+show "processors-text_3-3"
+}
+delay 2000
+{
+hideCode "description"
+text "description" "Put in the matrix in perfect shuffle format." offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 2000
+{
+line "moveline0" (390,140) (60, 350) color black depth 5 hidden
+move "processors_0-0" via "moveline0" after 10 ms within 900 ms
+move "processors-text_0-0" via "moveline0" after 10 ms within 900 ms
+move "processor0" via "moveline0" after 10 ms within 900 ms
+}
+delay 10
+{
+line "moveline1" (430,140) (100, 350) color black depth 5 hidden
+move "processors_0-1" via "moveline1" after 10 ms within 900 ms
+move "processors-text_0-1" via "moveline1" after 10 ms within 900 ms
+move "processor1" via "moveline1" after 10 ms within 900 ms
+}
+delay 10
+{
+line "moveline2" (470,140) (140, 350) color black depth 5 hidden
+move "processors_0-2" via "moveline2" after 10 ms within 900 ms
+move "processors-text_0-2" via "moveline2" after 10 ms within 900 ms
+move "processor2" via "moveline2" after 10 ms within 900 ms
+}
+delay 10
+{
+line "moveline3" (510,140) (180, 350) color black depth 5 hidden
+move "processors_0-3" via "moveline3" after 10 ms within 900 ms
+move "processors-text_0-3" via "moveline3" after 10 ms within 900 ms
+move "processor3" via "moveline3" after 10 ms within 900 ms
+}
+delay 10
+{
+line "moveline4" (390,180) (220, 350) color black depth 5 hidden
+move "processors_1-0" via "moveline4" after 10 ms within 800 ms
+move "processors-text_1-0" via "moveline4" after 10 ms within 800 ms
+move "processor4" via "moveline4" after 10 ms within 800 ms
+}
+delay 10
+{
+line "moveline5" (430,180) (260, 350) color black depth 5 hidden
+move "processors_1-1" via "moveline5" after 10 ms within 800 ms
+move "processors-text_1-1" via "moveline5" after 10 ms within 800 ms
+move "processor5" via "moveline5" after 10 ms within 800 ms
+}
+delay 10
+{
+line "moveline6" (470,180) (300, 350) color black depth 5 hidden
+move "processors_1-2" via "moveline6" after 10 ms within 800 ms
+move "processors-text_1-2" via "moveline6" after 10 ms within 800 ms
+move "processor6" via "moveline6" after 10 ms within 800 ms
+}
+delay 10
+{
+line "moveline7" (510,180) (340, 350) color black depth 5 hidden
+move "processors_1-3" via "moveline7" after 10 ms within 800 ms
+move "processors-text_1-3" via "moveline7" after 10 ms within 800 ms
+move "processor7" via "moveline7" after 10 ms within 800 ms
+}
+delay 10
+{
+line "moveline8" (390,220) (380, 350) color black depth 5 hidden
+move "processors_2-0" via "moveline8" after 10 ms within 700 ms
+move "processors-text_2-0" via "moveline8" after 10 ms within 700 ms
+move "processor8" via "moveline8" after 10 ms within 700 ms
+}
+delay 10
+{
+line "moveline9" (430,220) (420, 350) color black depth 5 hidden
+move "processors_2-1" via "moveline9" after 10 ms within 700 ms
+move "processors-text_2-1" via "moveline9" after 10 ms within 700 ms
+move "processor9" via "moveline9" after 10 ms within 700 ms
+}
+delay 10
+{
+line "moveline10" (470,220) (460, 350) color black depth 5 hidden
+move "processors_2-2" via "moveline10" after 10 ms within 700 ms
+move "processors-text_2-2" via "moveline10" after 10 ms within 700 ms
+move "processor10" via "moveline10" after 10 ms within 700 ms
+}
+delay 10
+{
+line "moveline11" (510,220) (500, 350) color black depth 5 hidden
+move "processors_2-3" via "moveline11" after 10 ms within 700 ms
+move "processors-text_2-3" via "moveline11" after 10 ms within 700 ms
+move "processor11" via "moveline11" after 10 ms within 700 ms
+}
+delay 10
+{
+line "moveline12" (390,260) (540, 350) color black depth 5 hidden
+move "processors_3-0" via "moveline12" after 10 ms within 600 ms
+move "processors-text_3-0" via "moveline12" after 10 ms within 600 ms
+move "processor12" via "moveline12" after 10 ms within 600 ms
+}
+delay 10
+{
+line "moveline13" (430,260) (580, 350) color black depth 5 hidden
+move "processors_3-1" via "moveline13" after 10 ms within 600 ms
+move "processors-text_3-1" via "moveline13" after 10 ms within 600 ms
+move "processor13" via "moveline13" after 10 ms within 600 ms
+}
+delay 10
+{
+line "moveline14" (470,260) (620, 350) color black depth 5 hidden
+move "processors_3-2" via "moveline14" after 10 ms within 600 ms
+move "processors-text_3-2" via "moveline14" after 10 ms within 600 ms
+move "processor14" via "moveline14" after 10 ms within 600 ms
+}
+delay 10
+{
+line "moveline15" (510,260) (660, 350) color black depth 5 hidden
+move "processors_3-3" via "moveline15" after 10 ms within 600 ms
+move "processors-text_3-3" via "moveline15" after 10 ms within 600 ms
+move "processor15" via "moveline15" after 10 ms within 600 ms
+}
+delay 10
+{
+hideCode "processorsTitle"
+}
+delay 10
+{
+hideCode "description"
+text "description" "Create channels of communication to pass data." offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+polyline "channel1" (40, 350) (40, 375) (10, 375) (10, 285) (40, 285) (40, 310) color black depth 5 fwarrow
+polyline "hiddenchannel1" (40, 370) (40, 415) (10, 415) (10, 325) (40, 325) (40, 370) hidden
+polyline "channel2" (90, 310) (90, 290) (110, 290) (110, 310) color black depth 5 fwarrow
+polyline "hiddenchannel2" (90, 330) (90, 290) (110, 290) (130, 330) hidden
+polyline "channel3" (130, 310) (130, 280) (190, 280) (190, 310) color black depth 5 fwarrow
+polyline "hiddenchannel3" (130, 330) (130, 280) (190, 280) (210, 330) hidden
+polyline "channel4" (170, 310) (170, 270) (270, 270) (270, 310) color black depth 5 fwarrow
+polyline "hiddenchannel4" (170, 330) (170, 270) (270, 270) (290, 330) hidden
+polyline "channel5" (210, 310) (210, 260) (350, 260) (350, 310) color black depth 5 fwarrow
+polyline "hiddenchannel5" (210, 330) (210, 260) (350, 260) (370, 330) hidden
+polyline "channel6" (250, 310) (250, 250) (430, 250) (430, 310) color black depth 5 fwarrow
+polyline "hiddenchannel6" (250, 330) (250, 250) (430, 250) (450, 330) hidden
+polyline "channel7" (290, 310) (290, 240) (510, 240) (510, 310) color black depth 5 fwarrow
+polyline "hiddenchannel7" (290, 330) (290, 240) (510, 240) (530, 330) hidden
+polyline "channel8" (330, 310) (330, 230) (590, 230) (590, 310) color black depth 5 fwarrow
+polyline "hiddenchannel8" (330, 330) (330, 230) (590, 230) (610, 330) hidden
+polyline "channel9" (350, 350) (350, 430) (90, 430) (90, 350) color black depth 5 fwarrow
+polyline "hiddenchannel9" (350, 330) (350, 430) (90, 430) (70, 330) hidden
+polyline "channel10" (390, 350) (390, 420) (170, 420) (170, 350) color black depth 5 fwarrow
+polyline "hiddenchannel10" (390, 330) (390, 420) (170, 420) (150, 330) hidden
+polyline "channel11" (430, 350) (430, 410) (250, 410) (250, 350) color black depth 5 fwarrow
+polyline "hiddenchannel11" (430, 330) (430, 410) (250, 410) (230, 330) hidden
+polyline "channel12" (470, 350) (470, 400) (330, 400) (330, 350) color black depth 5 fwarrow
+polyline "hiddenchannel12" (470, 330) (470, 400) (330, 400) (310, 330) hidden
+polyline "channel13" (510, 350) (510, 390) (410, 390) (410, 350) color black depth 5 fwarrow
+polyline "hiddenchannel13" (510, 330) (510, 390) (410, 390) (390, 330) hidden
+polyline "channel14" (550, 350) (550, 380) (490, 380) (490, 350) color black depth 5 fwarrow
+polyline "hiddenchannel14" (550, 330) (550, 380) (490, 380) (470, 330) hidden
+polyline "channel15" (590, 350) (590, 370) (570, 370) (570, 350) color black depth 5 fwarrow
+polyline "hiddenchannel15" (590, 330) (590, 370) (570, 370) (550, 330) hidden
+polyline "channel16" (640, 310) (640, 285) (665, 285) (665, 375) (640, 375) (640, 350) color black depth 5 fwarrow
+polyline "hiddenchannel16" (680, 370) (680, 325) (705, 325) (705, 415) (680, 415) (680, 370) hidden
+}
+delay 2000
+{
+hideCode "description"
+text "description" "Shuffle Q times." offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+move "processors-text_0-0" via "hiddenchannel1" after 10 ms within 2000 ms
+move "processors-text_0-1" via "hiddenchannel2" after 10 ms within 1200 ms
+move "processors-text_0-2" via "hiddenchannel3" after 10 ms within 1500 ms
+move "processors-text_0-3" via "hiddenchannel4" after 10 ms within 1687 ms
+move "processors-text_1-0" via "hiddenchannel5" after 10 ms within 1792 ms
+move "processors-text_1-1" via "hiddenchannel6" after 10 ms within 1848 ms
+move "processors-text_1-2" via "hiddenchannel7" after 10 ms within 1876 ms
+move "processors-text_1-3" via "hiddenchannel8" after 10 ms within 1890 ms
+move "processors-text_2-0" via "hiddenchannel9" after 10 ms within 1890 ms
+move "processors-text_2-1" via "hiddenchannel10" after 10 ms within 1890 ms
+move "processors-text_2-2" via "hiddenchannel11" after 10 ms within 1883 ms
+move "processors-text_2-3" via "hiddenchannel12" after 10 ms within 1869 ms
+move "processors-text_3-0" via "hiddenchannel13" after 10 ms within 1840 ms
+move "processors-text_3-1" via "hiddenchannel14" after 10 ms within 1783 ms
+move "processors-text_3-2" via "hiddenchannel15" after 10 ms within 1672 ms
+move "processors-text_3-3" via "hiddenchannel16" after 10 ms within 2000 ms
+hideCode "StepCounter"
+text "StepCounter" "Step Counter = 1" offset (0,-3) from "StepCounter" SW color green4 depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+hideCode "processors-text_0-0"
+text "processors-text_0-0" "9" offset (0,0) from "processors_0-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-1"
+text "processors-text_0-1" "1" offset (0,0) from "processors_0-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-2"
+text "processors-text_0-2" "0" offset (0,0) from "processors_0-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-3"
+text "processors-text_0-3" "8" offset (0,0) from "processors_0-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-0"
+text "processors-text_1-0" "7" offset (0,0) from "processors_1-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-1"
+text "processors-text_1-1" "8" offset (0,0) from "processors_1-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-2"
+text "processors-text_1-2" "3" offset (0,0) from "processors_1-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-3"
+text "processors-text_1-3" "4" offset (0,0) from "processors_1-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-0"
+text "processors-text_2-0" "9" offset (0,0) from "processors_2-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-1"
+text "processors-text_2-1" "6" offset (0,0) from "processors_2-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-2"
+text "processors-text_2-2" "4" offset (0,0) from "processors_2-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-3"
+text "processors-text_2-3" "0" offset (0,0) from "processors_2-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-0"
+text "processors-text_3-0" "8" offset (0,0) from "processors_3-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-1"
+text "processors-text_3-1" "3" offset (0,0) from "processors_3-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-2"
+text "processors-text_3-2" "7" offset (0,0) from "processors_3-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-3"
+text "processors-text_3-3" "8" offset (0,0) from "processors_3-3" C color red depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+move "processors-text_0-0" via "hiddenchannel1" after 10 ms within 2000 ms
+move "processors-text_0-1" via "hiddenchannel2" after 10 ms within 1200 ms
+move "processors-text_0-2" via "hiddenchannel3" after 10 ms within 1500 ms
+move "processors-text_0-3" via "hiddenchannel4" after 10 ms within 1687 ms
+move "processors-text_1-0" via "hiddenchannel5" after 10 ms within 1792 ms
+move "processors-text_1-1" via "hiddenchannel6" after 10 ms within 1848 ms
+move "processors-text_1-2" via "hiddenchannel7" after 10 ms within 1876 ms
+move "processors-text_1-3" via "hiddenchannel8" after 10 ms within 1890 ms
+move "processors-text_2-0" via "hiddenchannel9" after 10 ms within 1890 ms
+move "processors-text_2-1" via "hiddenchannel10" after 10 ms within 1890 ms
+move "processors-text_2-2" via "hiddenchannel11" after 10 ms within 1883 ms
+move "processors-text_2-3" via "hiddenchannel12" after 10 ms within 1869 ms
+move "processors-text_3-0" via "hiddenchannel13" after 10 ms within 1840 ms
+move "processors-text_3-1" via "hiddenchannel14" after 10 ms within 1783 ms
+move "processors-text_3-2" via "hiddenchannel15" after 10 ms within 1672 ms
+move "processors-text_3-3" via "hiddenchannel16" after 10 ms within 2000 ms
+hideCode "StepCounter"
+text "StepCounter" "Step Counter = 2" offset (0,-3) from "StepCounter" SW color green4 depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+hideCode "processors-text_0-0"
+text "processors-text_0-0" "9" offset (0,0) from "processors_0-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-1"
+text "processors-text_0-1" "9" offset (0,0) from "processors_0-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-2"
+text "processors-text_0-2" "1" offset (0,0) from "processors_0-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_0-3"
+text "processors-text_0-3" "6" offset (0,0) from "processors_0-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-0"
+text "processors-text_1-0" "0" offset (0,0) from "processors_1-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-1"
+text "processors-text_1-1" "4" offset (0,0) from "processors_1-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-2"
+text "processors-text_1-2" "8" offset (0,0) from "processors_1-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_1-3"
+text "processors-text_1-3" "0" offset (0,0) from "processors_1-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-0"
+text "processors-text_2-0" "7" offset (0,0) from "processors_2-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-1"
+text "processors-text_2-1" "8" offset (0,0) from "processors_2-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-2"
+text "processors-text_2-2" "8" offset (0,0) from "processors_2-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_2-3"
+text "processors-text_2-3" "3" offset (0,0) from "processors_2-3" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-0"
+text "processors-text_3-0" "3" offset (0,0) from "processors_3-0" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-1"
+text "processors-text_3-1" "7" offset (0,0) from "processors_3-1" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-2"
+text "processors-text_3-2" "4" offset (0,0) from "processors_3-2" C color red depth 0 font Serif size 12.0  bold
+hideCode "processors-text_3-3"
+text "processors-text_3-3" "8" offset (0,0) from "processors_3-3" C color red depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+hideCode "description"
+text "description" "Re-assemble the shuffled matrix." offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+hideCode "channel1"
+hideCode "channel2"
+hideCode "channel3"
+hideCode "channel4"
+hideCode "channel5"
+hideCode "channel6"
+hideCode "channel7"
+hideCode "channel8"
+hideCode "channel9"
+hideCode "channel10"
+hideCode "channel11"
+hideCode "channel12"
+hideCode "channel13"
+hideCode "channel14"
+hideCode "channel15"
+hideCode "channel16"
+}
+delay 10
+{
+hideCode "processorsTitle"
+text "processorsTitle" "Transposed Matrix" offset (0,-3) from "processorsTitle" SW color blue depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+line "movelineB0" (20, 350) (350,140) color blue depth 5 hidden
+move "processors_0-0" via "movelineB0" after 10 ms within 900 ms
+move "processors-text_0-0" via "movelineB0" after 10 ms within 900 ms
+move "processor0" via "movelineB0" after 10 ms within 900 ms
+}
+delay 10
+{
+line "movelineB1" (60, 350) (390,140) color blue depth 5 hidden
+move "processors_0-1" via "movelineB1" after 10 ms within 900 ms
+move "processors-text_0-1" via "movelineB1" after 10 ms within 900 ms
+move "processor1" via "movelineB1" after 10 ms within 900 ms
+}
+delay 10
+{
+line "movelineB2" (100, 350) (430,140) color blue depth 5 hidden
+move "processors_0-2" via "movelineB2" after 10 ms within 900 ms
+move "processors-text_0-2" via "movelineB2" after 10 ms within 900 ms
+move "processor2" via "movelineB2" after 10 ms within 900 ms
+}
+delay 10
+{
+line "movelineB3" (140, 350) (470,140) color blue depth 5 hidden
+move "processors_0-3" via "movelineB3" after 10 ms within 900 ms
+move "processors-text_0-3" via "movelineB3" after 10 ms within 900 ms
+move "processor3" via "movelineB3" after 10 ms within 900 ms
+}
+delay 10
+{
+line "movelineB4" (180, 350) (350,180) color blue depth 5 hidden
+move "processors_1-0" via "movelineB4" after 10 ms within 800 ms
+move "processors-text_1-0" via "movelineB4" after 10 ms within 800 ms
+move "processor4" via "movelineB4" after 10 ms within 800 ms
+}
+delay 10
+{
+line "movelineB5" (220, 350) (390,180) color blue depth 5 hidden
+move "processors_1-1" via "movelineB5" after 10 ms within 800 ms
+move "processors-text_1-1" via "movelineB5" after 10 ms within 800 ms
+move "processor5" via "movelineB5" after 10 ms within 800 ms
+}
+delay 10
+{
+line "movelineB6" (260, 350) (430,180) color blue depth 5 hidden
+move "processors_1-2" via "movelineB6" after 10 ms within 800 ms
+move "processors-text_1-2" via "movelineB6" after 10 ms within 800 ms
+move "processor6" via "movelineB6" after 10 ms within 800 ms
+}
+delay 10
+{
+line "movelineB7" (300, 350) (470,180) color blue depth 5 hidden
+move "processors_1-3" via "movelineB7" after 10 ms within 800 ms
+move "processors-text_1-3" via "movelineB7" after 10 ms within 800 ms
+move "processor7" via "movelineB7" after 10 ms within 800 ms
+}
+delay 10
+{
+line "movelineB8" (340, 350) (350,220) color blue depth 5 hidden
+move "processors_2-0" via "movelineB8" after 10 ms within 700 ms
+move "processors-text_2-0" via "movelineB8" after 10 ms within 700 ms
+move "processor8" via "movelineB8" after 10 ms within 700 ms
+}
+delay 10
+{
+line "movelineB9" (380, 350) (390,220) color blue depth 5 hidden
+move "processors_2-1" via "movelineB9" after 10 ms within 700 ms
+move "processors-text_2-1" via "movelineB9" after 10 ms within 700 ms
+move "processor9" via "movelineB9" after 10 ms within 700 ms
+}
+delay 10
+{
+line "movelineB10" (420, 350) (430,220) color blue depth 5 hidden
+move "processors_2-2" via "movelineB10" after 10 ms within 700 ms
+move "processors-text_2-2" via "movelineB10" after 10 ms within 700 ms
+move "processor10" via "movelineB10" after 10 ms within 700 ms
+}
+delay 10
+{
+line "movelineB11" (460, 350) (470,220) color blue depth 5 hidden
+move "processors_2-3" via "movelineB11" after 10 ms within 700 ms
+move "processors-text_2-3" via "movelineB11" after 10 ms within 700 ms
+move "processor11" via "movelineB11" after 10 ms within 700 ms
+}
+delay 10
+{
+line "movelineB12" (500, 350) (350,260) color blue depth 5 hidden
+move "processors_3-0" via "movelineB12" after 10 ms within 600 ms
+move "processors-text_3-0" via "movelineB12" after 10 ms within 600 ms
+move "processor12" via "movelineB12" after 10 ms within 600 ms
+}
+delay 10
+{
+line "movelineB13" (540, 350) (390,260) color blue depth 5 hidden
+move "processors_3-1" via "movelineB13" after 10 ms within 600 ms
+move "processors-text_3-1" via "movelineB13" after 10 ms within 600 ms
+move "processor13" via "movelineB13" after 10 ms within 600 ms
+}
+delay 10
+{
+line "movelineB14" (580, 350) (430,260) color blue depth 5 hidden
+move "processors_3-2" via "movelineB14" after 10 ms within 600 ms
+move "processors-text_3-2" via "movelineB14" after 10 ms within 600 ms
+move "processor14" via "movelineB14" after 10 ms within 600 ms
+}
+delay 10
+{
+line "movelineB15" (620, 350) (470,260) color blue depth 5 hidden
+move "processors_3-3" via "movelineB15" after 10 ms within 600 ms
+move "processors-text_3-3" via "movelineB15" after 10 ms within 600 ms
+move "processor15" via "movelineB15" after 10 ms within 600 ms
+}
+delay 10
+{
+hideCode "description"
+text "description" "Confirm the matrix is transposed." offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+color "processors-text_0-0" red
+color "processors-text_0-1" red
+color "processors-text_0-2" red
+color "processors-text_0-3" red
+color "processors-text_1-0" black
+color "processors-text_1-1" black
+color "processors-text_1-2" black
+color "processors-text_1-3" black
+color "processors-text_2-0" black
+color "processors-text_2-1" black
+color "processors-text_2-2" black
+color "processors-text_2-3" black
+color "processors-text_3-0" black
+color "processors-text_3-1" black
+color "processors-text_3-2" black
+color "processors-text_3-3" black
+color "origMatrix-text_0-0" red
+color "origMatrix-text_1-0" red
+color "origMatrix-text_2-0" red
+color "origMatrix-text_3-0" red
+color "origMatrix-text_0-1" black
+color "origMatrix-text_1-1" black
+color "origMatrix-text_2-1" black
+color "origMatrix-text_3-1" black
+color "origMatrix-text_0-2" black
+color "origMatrix-text_1-2" black
+color "origMatrix-text_2-2" black
+color "origMatrix-text_3-2" black
+color "origMatrix-text_0-3" black
+color "origMatrix-text_1-3" black
+color "origMatrix-text_2-3" black
+color "origMatrix-text_3-3" black
+}
+delay 1000
+{
+color "processors-text_0-0" red
+color "processors-text_0-1" red
+color "processors-text_0-2" red
+color "processors-text_0-3" red
+color "origMatrix-text_0-0" red
+color "origMatrix-text_1-0" red
+color "origMatrix-text_2-0" red
+color "origMatrix-text_3-0" red
+}
+delay 10
+{
+color "processors-text_0-0" black
+color "processors-text_0-1" black
+color "processors-text_0-2" black
+color "processors-text_0-3" black
+color "processors-text_1-0" red
+color "processors-text_1-1" red
+color "processors-text_1-2" red
+color "processors-text_1-3" red
+color "processors-text_2-0" black
+color "processors-text_2-1" black
+color "processors-text_2-2" black
+color "processors-text_2-3" black
+color "processors-text_3-0" black
+color "processors-text_3-1" black
+color "processors-text_3-2" black
+color "processors-text_3-3" black
+color "origMatrix-text_0-0" black
+color "origMatrix-text_1-0" black
+color "origMatrix-text_2-0" black
+color "origMatrix-text_3-0" black
+color "origMatrix-text_0-1" red
+color "origMatrix-text_1-1" red
+color "origMatrix-text_2-1" red
+color "origMatrix-text_3-1" red
+color "origMatrix-text_0-2" black
+color "origMatrix-text_1-2" black
+color "origMatrix-text_2-2" black
+color "origMatrix-text_3-2" black
+color "origMatrix-text_0-3" black
+color "origMatrix-text_1-3" black
+color "origMatrix-text_2-3" black
+color "origMatrix-text_3-3" black
+}
+delay 1000
+{
+color "processors-text_1-0" red
+color "processors-text_1-1" red
+color "processors-text_1-2" red
+color "processors-text_1-3" red
+color "origMatrix-text_0-1" red
+color "origMatrix-text_1-1" red
+color "origMatrix-text_2-1" red
+color "origMatrix-text_3-1" red
+}
+delay 10
+{
+color "processors-text_0-0" black
+color "processors-text_0-1" black
+color "processors-text_0-2" black
+color "processors-text_0-3" black
+color "processors-text_1-0" black
+color "processors-text_1-1" black
+color "processors-text_1-2" black
+color "processors-text_1-3" black
+color "processors-text_2-0" red
+color "processors-text_2-1" red
+color "processors-text_2-2" red
+color "processors-text_2-3" red
+color "processors-text_3-0" black
+color "processors-text_3-1" black
+color "processors-text_3-2" black
+color "processors-text_3-3" black
+color "origMatrix-text_0-0" black
+color "origMatrix-text_1-0" black
+color "origMatrix-text_2-0" black
+color "origMatrix-text_3-0" black
+color "origMatrix-text_0-1" black
+color "origMatrix-text_1-1" black
+color "origMatrix-text_2-1" black
+color "origMatrix-text_3-1" black
+color "origMatrix-text_0-2" red
+color "origMatrix-text_1-2" red
+color "origMatrix-text_2-2" red
+color "origMatrix-text_3-2" red
+color "origMatrix-text_0-3" black
+color "origMatrix-text_1-3" black
+color "origMatrix-text_2-3" black
+color "origMatrix-text_3-3" black
+}
+delay 1000
+{
+color "processors-text_2-0" red
+color "processors-text_2-1" red
+color "processors-text_2-2" red
+color "processors-text_2-3" red
+color "origMatrix-text_0-2" red
+color "origMatrix-text_1-2" red
+color "origMatrix-text_2-2" red
+color "origMatrix-text_3-2" red
+}
+delay 10
+{
+color "processors-text_0-0" black
+color "processors-text_0-1" black
+color "processors-text_0-2" black
+color "processors-text_0-3" black
+color "processors-text_1-0" black
+color "processors-text_1-1" black
+color "processors-text_1-2" black
+color "processors-text_1-3" black
+color "processors-text_2-0" black
+color "processors-text_2-1" black
+color "processors-text_2-2" black
+color "processors-text_2-3" black
+color "processors-text_3-0" red
+color "processors-text_3-1" red
+color "processors-text_3-2" red
+color "processors-text_3-3" red
+color "origMatrix-text_0-0" black
+color "origMatrix-text_1-0" black
+color "origMatrix-text_2-0" black
+color "origMatrix-text_3-0" black
+color "origMatrix-text_0-1" black
+color "origMatrix-text_1-1" black
+color "origMatrix-text_2-1" black
+color "origMatrix-text_3-1" black
+color "origMatrix-text_0-2" black
+color "origMatrix-text_1-2" black
+color "origMatrix-text_2-2" black
+color "origMatrix-text_3-2" black
+color "origMatrix-text_0-3" red
+color "origMatrix-text_1-3" red
+color "origMatrix-text_2-3" red
+color "origMatrix-text_3-3" red
+}
+delay 1000
+{
+color "processors-text_3-0" red
+color "processors-text_3-1" red
+color "processors-text_3-2" red
+color "processors-text_3-3" red
+color "origMatrix-text_0-3" red
+color "origMatrix-text_1-3" red
+color "origMatrix-text_2-3" red
+color "origMatrix-text_3-3" red
+}
+delay 10
+{
+hideCode "description"
+text "description" "" offset (0,-3) from "description" SW color black depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+color "processors-text_3-0" black
+color "processors-text_3-1" black
+color "processors-text_3-2" black
+color "processors-text_3-3" black
+hideCode "origMatrixTitle"
+hideCode "origMatrix_0-0"
+hideCode "origMatrix-text_0-0"
+hideCode "origMatrix_0-1"
+hideCode "origMatrix-text_0-1"
+hideCode "origMatrix_0-2"
+hideCode "origMatrix-text_0-2"
+hideCode "origMatrix_0-3"
+hideCode "origMatrix-text_0-3"
+hideCode "origMatrix_1-0"
+hideCode "origMatrix-text_1-0"
+hideCode "origMatrix_1-1"
+hideCode "origMatrix-text_1-1"
+hideCode "origMatrix_1-2"
+hideCode "origMatrix-text_1-2"
+hideCode "origMatrix_1-3"
+hideCode "origMatrix-text_1-3"
+hideCode "origMatrix_2-0"
+hideCode "origMatrix-text_2-0"
+hideCode "origMatrix_2-1"
+hideCode "origMatrix-text_2-1"
+hideCode "origMatrix_2-2"
+hideCode "origMatrix-text_2-2"
+hideCode "origMatrix_2-3"
+hideCode "origMatrix-text_2-3"
+hideCode "origMatrix_3-0"
+hideCode "origMatrix-text_3-0"
+hideCode "origMatrix_3-1"
+hideCode "origMatrix-text_3-1"
+hideCode "origMatrix_3-2"
+hideCode "origMatrix-text_3-2"
+hideCode "origMatrix_3-3"
+hideCode "origMatrix-text_3-3"
+text "finished" "FINISHED" (0,30) color blue4 depth 0 font Serif size 12.0  bold
+}

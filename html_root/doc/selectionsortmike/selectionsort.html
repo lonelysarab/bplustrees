@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>How to Use Animal</TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="CREATED" CONTENT="20020117;15373300">
+	<META NAME="CHANGEDBY" CONTENT=" ">
+	<META NAME="CHANGED" CONTENT="20020117;15391700">
+	<META NAME="ProgId" CONTENT="Word.Document">
+	<META NAME="Originator" CONTENT="Microsoft Word 9">
+	<!-- [if gte mso 9]<xml
+ <o:DocumentProperties
+  <o:AuthorThomas Naps</o:Author
+  <o:LastAuthorThomas Naps</o:LastAuthor
+  <o:Revision5</o:Revision
+  <o:TotalTime6</o:TotalTime
+  <o:Created2002-01-15T22:39:00Z</o:Created
+  <o:LastSaved2002-01-15T22:48:00Z</o:LastSaved
+  <o:Pages2</o:Pages
+  <o:Words459</o:Words
+  <o:Characters2619</o:Characters
+  <o:CompanyUW-Oshkosh</o:Company
+  <o:Lines21</o:Lines
+  <o:Paragraphs5</o:Paragraphs
+  <o:CharactersWithSpaces3216</o:CharactersWithSpaces
+  <o:Version9.4402</o:Version
+ </o:DocumentProperties
+</xml<![endif] -->
+	<STYLE>
+	<!--
+		H1 { color: #000000 }
+		TD P { color: #000000 }
+		H2 { color: #000000 }
+		P { color: #000000 }
+		PRE { color: #000000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY TEXT="#000000">
+<H1><FONT COLOR="#ff0000">Selection Sort</FONT></H1>
+<PRE>void selectionSort(int list [], int n)&nbsp; {
+&nbsp; // Make n - 1 passes through 
+  // successively smaller segments
+&nbsp; for (int k = 0; k &lt; n - 1; ++j) {
+&nbsp;&nbsp;&nbsp; int minIndex;
+&nbsp;&nbsp;&nbsp; minIndex = k; 
+&nbsp;&nbsp;&nbsp; // Find index of the smallest element 
+&nbsp;&nbsp;&nbsp; for (int j = k + 1; j &lt; n; ++j) 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;if (list[j] &lt;&nbsp; list[minIndex]) 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;minIndex = j; 
+&nbsp;&nbsp;&nbsp; if (minIndex != k)&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;int temp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;temp = list[minIndex];&nbsp;  
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;list[minIndex] = list[k]; 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;list[k] = temp;
+&nbsp;&nbsp; &nbsp;} 
+&nbsp; } 
+<SPAN STYLE="font-weight: medium"><FONT FACE="Courier New"><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT><FONT SIZE=2> </FONT></FONT></SPAN></PRE><H1>
+How do I use A<FONT SIZE=5>NIMAL</FONT>?</H1>
+<P CLASS="msonormal">A<FONT SIZE=2>NIMAL</FONT>'s display is divided
+in three sections: the <EM>display speed and magnification</EM> at
+the top, the actual <EM>animation content</EM> in the middle, and the
+<EM>animation control</EM> at the bottom. 
+</P>
+<H2>Animation Speed Control</H2>
+<P CLASS="msonormal">Use the slider in the top left region of the
+window to control the animation speed. The speed is given as a
+percentage between 10% (0.1x) and 1000% (10x) of the original speed.
+The button next to the slider can be used to reset the speed to 100%
+(1x). 
+</P>
+<H2>Animation Magnification Control</H2>
+<P CLASS="msonormal">Use the slider in the top right region of the
+window to control the magnification of the animation. The
+magnification is given as a percentage between 0% (single pixel) and
+500% (5x). The button next to the slider can be used to reset the
+magnification to 100% (1x). 
+</P>
+<H2>Running the Animation</H2>
+<P CLASS="msonormal">A<FONT SIZE=2>NIMAL</FONT> animations can be
+displayed in both forwards and backwards. There are three different
+animation display modes: static single step, single step with smooth
+motions, and slide show. The animation proceeds to the next animation
+step after an appropriate button is pressed, or automatically after a
+defined delay. The control panel at the bottom contains the following
+buttons, from left to right: 
+</P>
+<UL TYPE=DISC>
+	<LI><P STYLE="margin-bottom: 0in"><EM>start of animation</EM> (|&lt;&lt;)
+	- jump to the start of the animation. Turned off when already at the
+	animation start. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>jump to previous step</EM>
+	(|&lt;) - jump to the start of the previous step, without showing a
+	smooth animation of the animation effects. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>reverse slide-show</EM> (<U>&lt;&lt;</U>)
+	- display the animation backwards by linking all steps. Can be
+	stopped by the pause button. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>reverse play</EM> (&lt;) -
+	display the previous animation step in reverse order with smooth
+	effects. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>pause</EM> (||) - pause the
+	display between the next steps. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>play</EM> (&lt;) - display the
+	current animation step with smooth effects. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>forward slide-show</EM> (<U>&gt;&gt;</U>)
+	- display the animation by linking all steps. Can be stopped by the
+	pause button. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><EM>jump to next step</EM> (|&gt;)
+	- jump to the start of the next step, without showing a smooth
+	animation of the animation effects. 
+	</P>
+	<LI><P><EM>end of animation</EM> (|&gt;&gt;) - jump to the end of
+	the animation. Turned off when already at the animation end. 
+	</P>
+</UL>
+<H2>Animation Step Control</H2>
+<P CLASS="msonormal">You can enter the number of the step you want to
+jump to in the text field at the bottom of the display. Note: as the
+numbering reflects the animation generation process, the animation
+may skip some steps, and the numbering may not be in order! Instead,
+you can use the slider at the bottom right to adjust the percentage
+of the animation shown, between 0% (start) and 100% (end) of the
+animation. 
+</P>
+<H2>Quiz Mode</H2>
+<P CLASS="msonormal">Some algorithm animations have accompanying
+questions. These are shown in the info frame also containing this
+documentation. 
+</P>
+</BODY>
+</HTML>

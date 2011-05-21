@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<pseudocode>
+ <call_stack> 
+ <!--
+  This is useful to keep track of the activation frame
+ -->
+ </call_stack>
+ <program_listing>
+ <signature>Calculating the Semiglobal Subsequence Alignment.</signature> 
+ 
+ <line line_number="1"> // MATCH_SCORE IS +1 </line>
+ <line line_number="2"> // MISMATCH_SCORE IS 0 </line>
+ <line line_number="3"> // GAP_PENALTY IS -1 </line>
+ <line line_number="4"> mat[0,0] = 0;</line>
+ <line line_number="5"> for (int r = 1; r &amp;lt; S1.length; r++) </line>
+ <line line_number="6">     mat[r,0] = 0</line>
+ <line line_number="7"> for (int c = 1; c &amp;lt; S2.length; c++) </line>
+ <line line_number="8">     mat[0,c] = 0</line>
+ <line line_number="9"> for (int r = 1; r &amp;lt; S1.length; r++)      </line>
+ <line line_number="10">     for (int c = 1; c &amp;lt; S2.length; c++)</line>
+ <line line_number="11">         vertScore = mat[r-1, c] + (c == S2.length ? 0 : GAP_PENALTY)</line>
+ <line line_number="12">         horzScore = mat[r, c-1] + (r == S1.length + 0 : GAP_PENALTY)</line>
+ <line line_number="13">         diaScore = mat[r-1, c-1] + </line>
+ <line line_number="14">              (S1[r-1] == S2[c-1] ? MATCH_SCORE : MISMATCH_SCORE)</line>
+ <line line_number="15">         mat[r,c] = max(vertScore, horzScore, diaScore)</line>
+</program_listing>
+</pseudocode>

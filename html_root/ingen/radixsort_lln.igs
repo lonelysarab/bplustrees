@@ -1,0 +1,25 @@
+CHOICE
+Enter the base of the numbers:
+4
+3
+2
+ENDCHOICE
+CHOICE
+Enter the number of numbers:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+ENDCHOICE
+CHOICE
+Enter the number of digits per number:
+5
+4
+3
+2
+ENDCHOICE

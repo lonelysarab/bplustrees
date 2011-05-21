@@ -1,0 +1,63 @@
+Reattore HTTP Server
+  Copyright (C) 2002 Michael Hope <michaelh@juju.net.nz>
+
+Online documentation (much better than this):
+  http://reattore.sourceforge.net/
+
+Reattore is a simple single threaded HTTP server written in Java.
+Unlike most Java server applications, Reattore uses the socket channel
+features added in Java 1.4 to serve all requests from one thread,
+instead of spawning each request off to a new thread.  In theory this
+provides better performance and allows the system to degrade well
+under high load.
+
+To run
+------
+You *must* have Java 1.4.1 installed
+
+To run, type:
+  java -jar lib/reattore.jar
+
+This will start up the server using the default
+etc/default-config.xml, which serves the files below the test-site
+directory.
+
+See etc/default-config.xml and etc/max-config.xml for examples of how
+to configure the server.  The default config is very simple but
+contains little extra that could influence the benchmarks.
+
+To run using a different config file, type:
+  java -jar lib/reattore.jar <config-file-name.xml>
+
+Unfortunately the Apache digester module used for the configuration
+doesn't report any errors in the config file.  If the system doesn't
+work as expected check your spelling and order.
+
+To test
+-------
+I recommend the ApacheBench (ab) program that is included with all
+recent versions of Apache.  To test, try:
+
+  ab -k -n 10000 -c 10 http://localhost:8080/index.html
+
+or for bandwidth testing:
+
+  ab -k -n 10000 -c 10 http://localhost:8080/medium.bin
+
+Note that as the tests are on static files the system can saturate
+most network connections.  Using ab Version 2.0.40-dev on my
+iBook/800MHz using a pre-release of the jdk (build 1.4.1-beta-20) the
+basic results are:
+
+Time per request: 1.102 [ms] (mean, across all concurrent requests)
+Transfer rate:    29127.05 [Kbytes/sec] received
+
+Top:
+ Processes:  63 total, 3 running, 60 sleeping... 147 threads
+ CPU usage:  35.0% user, 65.0% sys, 0.0% idle
+ PID COMMAND      %CPU   TIME   #TH #PRTS #MREGS RPRVT  RSHRD  RSIZE
+ 6681 java        48.0%  0:35.72   9   236   109  26.7M   712K  14.7M
+ 6696 ab          29.4%  0:12.90   1    11    28  1.58M+  612K  2.00M+
+    0 kernel_tas  13.4% 15:23.10  27     0     -      -      -  33.4M+
+
+$Id: README,v 1.1.1.1 2005/05/26 02:48:18 naps Exp $

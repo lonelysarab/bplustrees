@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Array Class</call_stack>
+<program_listing>
+<line line_number = "1"> // Remove last item from array
+if array.size is less than 1 throw IndexOutOfBoundException
+else return last array element</line>
+<line line_number = "2">// Adding an item to the array
+add a new item to the end of the array</line>
+</program_listing>
+</pseudocode>

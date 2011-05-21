@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<project default="compile">
+
+  <property name="build.classes.dir" location="../build/classes" />
+
+  <target name="init">
+    <mkdir dir="${build.classes.dir}"/>
+  </target>
+  
+
+  <target name="compile" depends="init">
+    <javac srcdir="." debug="on" sourcepath="." classpath="exe/jdom.jar" destdir="${build.classes.dir}" includes="exe/*.java,exe/**/*.java" /> 
+  </target>
+
+  <!--     Right now the reu_bubsort.Sort exercise is the script producer that runs.   Substitute your own script producer in its place -->
+  <target name="run" depends="compile">
+    <java classpath="jdom.jar:${build.classes.dir}" classname="exe.reu_bubsort.Sort" fork="yes">
+      <arg value="${build.classes.dir}/foo.sho" />
+      <arg value="10" />
+    </java> 
+  </target>
+
+  <target name="clean">
+    <echo>
+      Removing all class files
+    </echo>
+    <delete> 
+      <fileset dir="${build.classes.dir}">
+        <include name="*.class" />
+      </fileset>
+    </delete>
+  </target>
+  
+</project>

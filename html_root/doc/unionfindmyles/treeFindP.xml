@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <program_listing>
+	<signature>treeFind(Array list, Array weights, index)</signature>
+	<line line_number="1">1   x = index</line>
+	<line line_number="2">2   representative = 0</line>
+	<line line_number="3">3   while(representative not found)</line>
+	<line line_number="4">4      if(list[x] != x)</line>
+	<line line_number="5">5         x = list[x]</line>
+	<line line_number="6">6      else
+	<line line_number="7">7         representative = x</line>
+	<line line_number="8">8   x = index</line>
+	<line line_number="9">9   while(representative not found)</line>
+	<line line_number="10">10     if(list[x] == representative)</line>
+	<line line_number="11">11        found = true</line>
+	<line line_number="12">12     else</line>
+	<line line_number="13">13        temp = list[x]</line>
+	<line line_number="14">14        list[x] = representative</line>
+	<line line_number="15">15        x = temp</line>
+    </program_listing>
+    <variables>
+        <variable>index = <replace var="index" /></variable>
+	<variable>x = <replace var="x" /></variable>
+	<variable>representative = <replace var="representative" /></variable>
+	<variable>temp = <replace var="temp" /></variable>
+    </variables>
+</pseudocode>

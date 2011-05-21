@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Linked List Class</call_stack>
+<program_listing>
+<line line_number = "1"> // Remove last item from linked list
+if list.size() is less than 1 throw IndexOutOfBoundException
+else return end list element</line>
+<line line_number = "2">// Adding an item to the linked list
+add a new item to the end of the linked list</line>
+</program_listing>
+</pseudocode>

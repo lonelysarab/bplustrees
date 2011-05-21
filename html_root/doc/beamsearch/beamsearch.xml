@@ -1,0 +1,33 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Beam Search Algorithm</call_stack>
+<program_listing>
+<line line_number = "1">procedure Beam(start, h(.), B): solution cost</line>
+<line line_number = "2">  g := 0;</line>
+<line line_number = "3">  hash_table := {start};
+   BEAM := {start};</line>
+<line line_number = "4">  while(BEAM is not empty) do
+     SET := empty;</line>
+<line line_number = "5">    for each state in BEAM do
+       for each successor s of state do
+         if(s = goal) then return g + 1;
+         SET := SET U {s};
+       end for
+     end for</line>
+<line line_number = "6">    BEAM := empty;
+     g := g + 1;</line>
+<line line_number = "7">    while((SET is not empty) and (B &gt; |BEAM|)) do</line>
+<line line_number = "8">      state := s in SET with smallest h value;
+       SET := SET \ {state};
+       if(state is not in hash_table) then</line>
+<line line_number = "9">        if(hash_table is full) then
+           return infinity;</line>
+<line line_number = "10">        hash_table := hash_table U {state};
+         BEAM := BEAM U {state};</line>
+<line line_number = "11">    end while</line>
+<line line_number = "12">  end while</line>
+<line line_number = "13">return infinity;</line>
+</program_listing>
+</pseudocode>
+

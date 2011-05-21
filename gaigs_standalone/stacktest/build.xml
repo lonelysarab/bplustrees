@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<project default="stacktest_compile">
+
+    <property name="project" location="../../server/build/classes:." />
+
+    <target name="stacktest_compile">
+        <echo>
+            Building the stacktest
+        </echo>
+        <javac srcdir="." classpath="${project}" includes="Stack.java StackTest.java" /> 
+    </target>
+  
+    <target name="stacktest_run">
+        <echo>
+            Running the StackTest 
+        </echo>
+        <java classpath="${project}" classname="StackTest" >
+	<arg value="foo.sho" />
+	<arg value="push1" />
+	<arg value="push2" />
+	<arg value="push3" />
+	<arg value="push4" />
+	<arg value="push5" />
+	<arg value="push6" />
+	<arg value="push7" />
+	<arg value="push8" />
+	</java> 
+    </target>
+  
+    <target name="clean">
+        <echo>
+            Removing all class files
+        </echo>
+        <delete> 
+            <fileset dir=".">
+                <include name="*.class" />
+            </fileset>
+        </delete>
+    </target>
+  
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack>heapSort/shiftDown</call_stack>
+    <program_listing> 
+	<signature>shiftDown(list, current)</signature>
+	<line line_number="1">1   while( there has been a swap and current has at least one child )</line>
+	<line line_number="2">2      if( current has only one child )</line>
+	<line line_number="3">3         biggestChild = leftchild</line>
+	<line line_number="4">4      else if( leftchild &#62;= rightchild )</line>
+	<line line_number="5">5         biggestChild = leftchild</line>
+	<line line_number="6">6      else</line>
+	<line line_number="7">7         biggestChild = rightchild</line>
+	<line line_number="8">8      if( current &#38;#60; biggestChild )</line>
+	<line line_number="9">9         swap(current, biggestChild)</line>
+    </program_listing>
+    <variables>
+        <variable>current = <replace var="currentNode" /></variable>
+	<variable> biggestChild = <replace var="biggestChild" /></variable>
+    </variables>
+</pseudocode>

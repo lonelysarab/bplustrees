@@ -1,0 +1,14 @@
+public class Short {
+
+	//main method
+	public static void main(String[] args) {
+		range();	
+	}
+
+	//calculates the range of the primitive type short
+	static void range() {
+		short s1 = -32768;
+		short s2 = 32767;
+		int range = s2 - s1;
+	}
+}

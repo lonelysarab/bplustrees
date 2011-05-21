@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+div.p {margin-top: 7pt;}
+-->
+</style>
+</head>
+
+<body>
+<h2>Huffman Encoding</h2>
+<p>The construction of a Huffman tree requires two passes through the
+  character string that we are trying to encode.  The first pass
+  merely builds a table of frequency counts of each character in the
+  string.  It is convenient to think of each character and its
+  corresponding frequency count stored in a one-node tree when this first pass is completed.  
+</p>
+<div class="p">
+  <!---->
+</div>
+After building up these frequency counts in the first pass through the
+character string, the one-node trees containing the characters and
+their counts are inserted into a priority queue.  The priority
+underlying this queue is based on a comparison in which a lower
+frequency count corresponds to a higher priority (and hence earlier
+removal from the queue).  Once this
+priority queue is established, the Huffman tree construction algorithm
+proceeds as follows:
+
+<ol type="1">
+  <li> Remove from the priority queue the two trees with the smallest frequencies.
+    <div class="p">
+      <!---->
+    </div>
+  </li>
+  <li>Form a new tree having the two trees from previous step as its
+    children, and having a root node whose frequencies are the sum of the
+    frequencies in its two subtrees.
+    <div class="p">
+      <!---->
+    </div>
+  </li>
+  <li> Insert this new tree into the priority queue.
+    <div class="p">
+      <!---->
+    </div>
+  </li>
+  <li> Repeat the preceding three steps until
+    the priority queue has only one tree in it. That tree is the final Huffman tree.</li>
+  </ol>
+
+<p>Once the tree is constructed, we can determine the bit sequence encoding for each character in the original string. The characters are in the leaf nodes of the Huffman tree. As you walk down a path in the tree leading to such a leaf node, each left branch followed in that path adds a 0 to the encoding for the string, and each right branch adds a 1.</p>
+<p>&nbsp;</p>
+</body>
+</html>

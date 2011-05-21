@@ -1,0 +1,577 @@
+% Animal 1.4
+ title "PARALLEL MESH MATRIX MULTIPLICATION"
+ author "Justin C. Miller (neonprimetime) neonprimetime.geo@yahoo.com"
+{
+rectangle "matrixA2_0-0" (50,50) (85,85) color blue4 depth 5
+text "matrixA2-text_0-0" "7" offset (0,0) from "matrixA2_0-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_0-1" (85,50) (120,85) color blue4 depth 5
+text "matrixA2-text_0-1" "6" offset (0,0) from "matrixA2_0-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_0-2" (120,50) (155,85) color blue4 depth 5
+text "matrixA2-text_0-2" "1" offset (0,0) from "matrixA2_0-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-0" (50,85) (85,120) color blue4 depth 5
+text "matrixA2-text_1-0" "4" offset (0,0) from "matrixA2_1-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-1" (85,85) (120,120) color blue4 depth 5
+text "matrixA2-text_1-1" "6" offset (0,0) from "matrixA2_1-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_1-2" (120,85) (155,120) color blue4 depth 5
+text "matrixA2-text_1-2" "0" offset (0,0) from "matrixA2_1-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-0" (50,120) (85,155) color blue4 depth 5
+text "matrixA2-text_2-0" "2" offset (0,0) from "matrixA2_2-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-1" (85,120) (120,155) color blue4 depth 5
+text "matrixA2-text_2-1" "0" offset (0,0) from "matrixA2_2-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA2_2-2" (120,120) (155,155) color blue4 depth 5
+text "matrixA2-text_2-2" "9" offset (0,0) from "matrixA2_2-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-0" (50,50) (85,85) color blue4 depth 5
+text "matrixA-text_0-0" "7" offset (0,0) from "matrixA_0-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-1" (85,50) (120,85) color blue4 depth 5
+text "matrixA-text_0-1" "6" offset (0,0) from "matrixA_0-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_0-2" (120,50) (155,85) color blue4 depth 5
+text "matrixA-text_0-2" "1" offset (0,0) from "matrixA_0-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-0" (50,85) (85,120) color blue4 depth 5
+text "matrixA-text_1-0" "4" offset (0,0) from "matrixA_1-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-1" (85,85) (120,120) color blue4 depth 5
+text "matrixA-text_1-1" "6" offset (0,0) from "matrixA_1-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_1-2" (120,85) (155,120) color blue4 depth 5
+text "matrixA-text_1-2" "0" offset (0,0) from "matrixA_1-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-0" (50,120) (85,155) color blue4 depth 5
+text "matrixA-text_2-0" "2" offset (0,0) from "matrixA_2-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-1" (85,120) (120,155) color blue4 depth 5
+text "matrixA-text_2-1" "0" offset (0,0) from "matrixA_2-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixA_2-2" (120,120) (155,155) color blue4 depth 5
+text "matrixA-text_2-2" "9" offset (0,0) from "matrixA_2-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-0" (170,50) (205,85) color blue4 depth 5
+text "matrixB2-text_0-0" "9" offset (0,0) from "matrixB2_0-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-1" (205,50) (240,85) color blue4 depth 5
+text "matrixB2-text_0-1" "1" offset (0,0) from "matrixB2_0-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_0-2" (240,50) (275,85) color blue4 depth 5
+text "matrixB2-text_0-2" "6" offset (0,0) from "matrixB2_0-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-0" (170,85) (205,120) color blue4 depth 5
+text "matrixB2-text_1-0" "2" offset (0,0) from "matrixB2_1-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-1" (205,85) (240,120) color blue4 depth 5
+text "matrixB2-text_1-1" "5" offset (0,0) from "matrixB2_1-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_1-2" (240,85) (275,120) color blue4 depth 5
+text "matrixB2-text_1-2" "3" offset (0,0) from "matrixB2_1-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-0" (170,120) (205,155) color blue4 depth 5
+text "matrixB2-text_2-0" "2" offset (0,0) from "matrixB2_2-0" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-1" (205,120) (240,155) color blue4 depth 5
+text "matrixB2-text_2-1" "0" offset (0,0) from "matrixB2_2-1" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB2_2-2" (240,120) (275,155) color blue4 depth 5
+text "matrixB2-text_2-2" "1" offset (0,0) from "matrixB2_2-2" C color blue4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-0" (170,50) (205,85) color blue4 depth 5
+text "matrixB-text_0-0" "9" offset (0,0) from "matrixB_0-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-1" (205,50) (240,85) color blue4 depth 5
+text "matrixB-text_0-1" "1" offset (0,0) from "matrixB_0-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_0-2" (240,50) (275,85) color blue4 depth 5
+text "matrixB-text_0-2" "6" offset (0,0) from "matrixB_0-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-0" (170,85) (205,120) color blue4 depth 5
+text "matrixB-text_1-0" "2" offset (0,0) from "matrixB_1-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-1" (205,85) (240,120) color blue4 depth 5
+text "matrixB-text_1-1" "5" offset (0,0) from "matrixB_1-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_1-2" (240,85) (275,120) color blue4 depth 5
+text "matrixB-text_1-2" "3" offset (0,0) from "matrixB_1-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-0" (170,120) (205,155) color blue4 depth 5
+text "matrixB-text_2-0" "2" offset (0,0) from "matrixB_2-0" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-1" (205,120) (240,155) color blue4 depth 5
+text "matrixB-text_2-1" "0" offset (0,0) from "matrixB_2-1" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "matrixB_2-2" (240,120) (275,155) color blue4 depth 5
+text "matrixB-text_2-2" "1" offset (0,0) from "matrixB_2-2" C color red4 depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-0" (120,255) (155,290) color blue4 depth 5
+text "destmatrix-text_0-0" "0" offset (0,0) from "destmatrix_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-1" (155,255) (190,290) color blue4 depth 5
+text "destmatrix-text_0-1" "0" offset (0,0) from "destmatrix_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_0-2" (190,255) (225,290) color blue4 depth 5
+text "destmatrix-text_0-2" "0" offset (0,0) from "destmatrix_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-0" (120,290) (155,325) color blue4 depth 5
+text "destmatrix-text_1-0" "0" offset (0,0) from "destmatrix_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-1" (155,290) (190,325) color blue4 depth 5
+text "destmatrix-text_1-1" "0" offset (0,0) from "destmatrix_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_1-2" (190,290) (225,325) color blue4 depth 5
+text "destmatrix-text_1-2" "0" offset (0,0) from "destmatrix_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-0" (120,325) (155,360) color blue4 depth 5
+text "destmatrix-text_2-0" "0" offset (0,0) from "destmatrix_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-1" (155,325) (190,360) color blue4 depth 5
+text "destmatrix-text_2-1" "0" offset (0,0) from "destmatrix_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix_2-2" (190,325) (225,360) color blue4 depth 5
+text "destmatrix-text_2-2" "0" offset (0,0) from "destmatrix_2-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-0" (120,255) (155,290) color blue4 depth 5
+text "destmatrix2-text_0-0" "0" offset (0,0) from "destmatrix2_0-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-1" (155,255) (190,290) color blue4 depth 5
+text "destmatrix2-text_0-1" "0" offset (0,0) from "destmatrix2_0-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_0-2" (190,255) (225,290) color blue4 depth 5
+text "destmatrix2-text_0-2" "0" offset (0,0) from "destmatrix2_0-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-0" (120,290) (155,325) color blue4 depth 5
+text "destmatrix2-text_1-0" "0" offset (0,0) from "destmatrix2_1-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-1" (155,290) (190,325) color blue4 depth 5
+text "destmatrix2-text_1-1" "0" offset (0,0) from "destmatrix2_1-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_1-2" (190,290) (225,325) color blue4 depth 5
+text "destmatrix2-text_1-2" "0" offset (0,0) from "destmatrix2_1-2" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-0" (120,325) (155,360) color blue4 depth 5
+text "destmatrix2-text_2-0" "0" offset (0,0) from "destmatrix2_2-0" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-1" (155,325) (190,360) color blue4 depth 5
+text "destmatrix2-text_2-1" "0" offset (0,0) from "destmatrix2_2-1" C color red depth 0 font Serif size 12.0  bold
+rectangle "destmatrix2_2-2" (190,325) (225,360) color blue4 depth 5
+text "destmatrix2-text_2-2" "0" offset (0,0) from "destmatrix2_2-2" C color red depth 0 font Serif size 12.0  bold
+text "matrixA-title" "Matrix A" offset (1,-15) from "matrixA-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+text "matrixB-title" "Matrix B" offset (1,-15) from "matrixB-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+text "destmatrix-title" "A * B" offset (1,-15) from "destmatrix-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+square "P0" (310,140) 70 color blue depth 5
+text "Ptext0" "P0" offset (3,12) from "P0" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight0" (380,175) (450,175) color red depth 5
+line "hiddenchannel_recieveA2_0-0" (275,175) (320,175) color red depth 5 hidden
+line "hiddenchannel_recieveA1_0-0" (275,175) (335,175) color red depth 5 hidden
+line "hiddenchannel_recieveA0_0-0" (275,175) (350,175) color red depth 5 hidden
+line "hiddenchannel_recieveA_0-0" (275,175) (415,175) color red depth 5 hidden
+line "ChannelDown0" (345,210) (345,280) color red depth 5
+line "hiddenchannel_recieveB2_0-0" (345,105) (345,165) color red depth 5 hidden
+line "hiddenchannel_recieveB1_0-0" (345,105) (345,180) color red depth 5 hidden
+line "hiddenchannel_recieveB0_0-0" (345,105) (345,195) color red depth 5 hidden
+line "hiddenchannel_recieveB_0-0" (345,105) (345,245) color red depth 5 hidden
+square "P1" (450,140) 70 color blue depth 5
+text "Ptext1" "P1" offset (3,12) from "P1" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight1" (520,175) (590,175) color red depth 5
+line "hiddenchannel_recieveA2_0-1" (415,175) (460,175) color red depth 5 hidden
+line "hiddenchannel_recieveA1_0-1" (415,175) (475,175) color red depth 5 hidden
+line "hiddenchannel_recieveA0_0-1" (415,175) (490,175) color red depth 5 hidden
+line "hiddenchannel_recieveA_0-1" (415,175) (555,175) color red depth 5 hidden
+line "ChannelDown1" (485,210) (485,280) color red depth 5
+line "hiddenchannel_recieveB2_0-1" (485,105) (485,165) color red depth 5 hidden
+line "hiddenchannel_recieveB1_0-1" (485,105) (485,180) color red depth 5 hidden
+line "hiddenchannel_recieveB0_0-1" (485,105) (485,195) color red depth 5 hidden
+line "hiddenchannel_recieveB_0-1" (485,105) (485,245) color red depth 5 hidden
+square "P2" (590,140) 70 color blue depth 5
+text "Ptext2" "P2" offset (3,12) from "P2" NW color blue4 depth 0 font Serif size 12.0  bold
+line "hiddenchannel_recieveA2_0-2" (555,175) (600,175) color red depth 5 hidden
+line "hiddenchannel_recieveA1_0-2" (555,175) (615,175) color red depth 5 hidden
+line "hiddenchannel_recieveA0_0-2" (555,175) (630,175) color red depth 5 hidden
+line "hiddenchannel_recieveA_0-2" (555,175) (695,175) color red depth 5 hidden
+line "ChannelDown2" (625,210) (625,280) color red depth 5
+line "hiddenchannel_recieveB2_0-2" (625,105) (625,165) color red depth 5 hidden
+line "hiddenchannel_recieveB1_0-2" (625,105) (625,180) color red depth 5 hidden
+line "hiddenchannel_recieveB0_0-2" (625,105) (625,195) color red depth 5 hidden
+line "hiddenchannel_recieveB_0-2" (625,105) (625,245) color red depth 5 hidden
+square "P3" (310,280) 70 color blue depth 5
+text "Ptext3" "P3" offset (3,12) from "P3" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight3" (380,315) (450,315) color red depth 5
+line "hiddenchannel_recieveA2_1-0" (275,315) (320,315) color red depth 5 hidden
+line "hiddenchannel_recieveA1_1-0" (275,315) (335,315) color red depth 5 hidden
+line "hiddenchannel_recieveA0_1-0" (275,315) (350,315) color red depth 5 hidden
+line "hiddenchannel_recieveA_1-0" (275,315) (415,315) color red depth 5 hidden
+line "ChannelDown3" (345,350) (345,420) color red depth 5
+line "hiddenchannel_recieveB2_1-0" (345,245) (345,305) color red depth 5 hidden
+line "hiddenchannel_recieveB1_1-0" (345,245) (345,320) color red depth 5 hidden
+line "hiddenchannel_recieveB0_1-0" (345,245) (345,335) color red depth 5 hidden
+line "hiddenchannel_recieveB_1-0" (345,245) (345,385) color red depth 5 hidden
+square "P4" (450,280) 70 color blue depth 5
+text "Ptext4" "P4" offset (3,12) from "P4" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight4" (520,315) (590,315) color red depth 5
+line "hiddenchannel_recieveA_1-1" (415,315) (555,315) color red depth 5 hidden
+line "ChannelDown4" (485,350) (485,420) color red depth 5
+line "hiddenchannel_recieveB_1-1" (485,245) (485,385) color red depth 5 hidden
+square "P5" (590,280) 70 color blue depth 5
+text "Ptext5" "P5" offset (3,12) from "P5" NW color blue4 depth 0 font Serif size 12.0  bold
+line "hiddenchannel_recieveA_1-2" (555,315) (695,315) color red depth 5 hidden
+line "ChannelDown5" (625,350) (625,420) color red depth 5
+line "hiddenchannel_recieveB_1-2" (625,245) (625,385) color red depth 5 hidden
+square "P6" (310,420) 70 color blue depth 5
+text "Ptext6" "P6" offset (3,12) from "P6" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight6" (380,455) (450,455) color red depth 5
+line "hiddenchannel_recieveA2_2-0" (275,455) (320,455) color red depth 5 hidden
+line "hiddenchannel_recieveA1_2-0" (275,455) (335,455) color red depth 5 hidden
+line "hiddenchannel_recieveA0_2-0" (275,455) (350,455) color red depth 5 hidden
+line "hiddenchannel_recieveA_2-0" (275,455) (415,455) color red depth 5 hidden
+line "hiddenchannel_recieveB2_2-0" (345,385) (345,445) color red depth 5 hidden
+line "hiddenchannel_recieveB1_2-0" (345,385) (345,460) color red depth 5 hidden
+line "hiddenchannel_recieveB0_2-0" (345,385) (345,475) color red depth 5 hidden
+line "hiddenchannel_recieveB_2-0" (345,385) (345,525) color red depth 5 hidden
+square "P7" (450,420) 70 color blue depth 5
+text "Ptext7" "P7" offset (3,12) from "P7" NW color blue4 depth 0 font Serif size 12.0  bold
+line "ChannelRight7" (520,455) (590,455) color red depth 5
+line "hiddenchannel_recieveA_2-1" (415,455) (555,455) color red depth 5 hidden
+line "hiddenchannel_recieveB_2-1" (485,385) (485,525) color red depth 5 hidden
+square "P8" (590,420) 70 color blue depth 5
+text "Ptext8" "P8" offset (3,12) from "P8" NW color blue4 depth 0 font Serif size 12.0  bold
+line "hiddenchannel_recieveA_2-2" (555,455) (695,455) color red depth 5 hidden
+line "hiddenchannel_recieveB_2-2" (625,385) (625,525) color red depth 5 hidden
+}
+delay 3000
+{
+text "ctotal_0-0" "C(0,0)=" offset (1,-2) from "P0" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-0" offset (0,0) from "destmatrix-text_0-0" SW offset (1,0) from "ctotal_0-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-0"
+move "destmatrix2-text_0-0" via "moveline2_0-0" after 10 ms within 1000 ms
+text "ctotal_0-1" "C(1,0)=" offset (1,-2) from "P1" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-1" offset (0,0) from "destmatrix-text_0-1" SW offset (1,0) from "ctotal_0-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-1"
+move "destmatrix2-text_0-1" via "moveline2_0-1" after 10 ms within 1000 ms
+text "ctotal_0-2" "C(2,0)=" offset (1,-2) from "P2" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_0-2" offset (0,0) from "destmatrix-text_0-2" SW offset (1,0) from "ctotal_0-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_0-2"
+move "destmatrix2-text_0-2" via "moveline2_0-2" after 10 ms within 1000 ms
+text "ctotal_1-0" "C(0,1)=" offset (1,-2) from "P3" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-0" offset (0,0) from "destmatrix-text_1-0" SW offset (1,0) from "ctotal_1-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-0"
+move "destmatrix2-text_1-0" via "moveline2_1-0" after 10 ms within 1000 ms
+text "ctotal_1-1" "C(1,1)=" offset (1,-2) from "P4" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-1" offset (0,0) from "destmatrix-text_1-1" SW offset (1,0) from "ctotal_1-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-1"
+move "destmatrix2-text_1-1" via "moveline2_1-1" after 10 ms within 1000 ms
+text "ctotal_1-2" "C(2,1)=" offset (1,-2) from "P5" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_1-2" offset (0,0) from "destmatrix-text_1-2" SW offset (1,0) from "ctotal_1-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_1-2"
+move "destmatrix2-text_1-2" via "moveline2_1-2" after 10 ms within 1000 ms
+text "ctotal_2-0" "C(0,2)=" offset (1,-2) from "P6" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-0" offset (0,0) from "destmatrix-text_2-0" SW offset (1,0) from "ctotal_2-0" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-0"
+move "destmatrix2-text_2-0" via "moveline2_2-0" after 10 ms within 1000 ms
+text "ctotal_2-1" "C(1,2)=" offset (1,-2) from "P7" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-1" offset (0,0) from "destmatrix-text_2-1" SW offset (1,0) from "ctotal_2-1" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-1"
+move "destmatrix2-text_2-1" via "moveline2_2-1" after 10 ms within 1000 ms
+text "ctotal_2-2" "C(2,2)=" offset (1,-2) from "P8" SW color green4 depth 0 font Serif size 12.0  bold
+line "moveline2_2-2" offset (0,0) from "destmatrix-text_2-2" SW offset (1,0) from "ctotal_2-2" SE color green4 depth 5 hidden
+hideCode "destmatrix-text_2-2"
+move "destmatrix2-text_2-2" via "moveline2_2-2" after 10 ms within 1000 ms
+}
+delay 1
+{
+hideCode "destmatrix2-text_0-0"
+text "runningtotal_0-0" "0" offset (1,-3) from "ctotal_0-0" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_0-1"
+text "runningtotal_0-1" "0" offset (1,-3) from "ctotal_0-1" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_0-2"
+text "runningtotal_0-2" "0" offset (1,-3) from "ctotal_0-2" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-0"
+text "runningtotal_1-0" "0" offset (1,-3) from "ctotal_1-0" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-1"
+text "runningtotal_1-1" "0" offset (1,-3) from "ctotal_1-1" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_1-2"
+text "runningtotal_1-2" "0" offset (1,-3) from "ctotal_1-2" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-0"
+text "runningtotal_2-0" "0" offset (1,-3) from "ctotal_2-0" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-1"
+text "runningtotal_2-1" "0" offset (1,-3) from "ctotal_2-1" SE color red depth 0 font Serif size 12.0  bold
+hideCode "destmatrix2-text_2-2"
+text "runningtotal_2-2" "0" offset (1,-3) from "ctotal_2-2" SE color red depth 0 font Serif size 12.0  bold
+}
+delay 10
+{
+line "hiddenchannelA_0-0" (53,62) (255,175) color red depth 5 hidden
+move "matrixA-text_0-0" via "hiddenchannelA_0-0" after 10 ms within 1000 ms
+line "hiddenchannelA_0-1" (88,62) (270,175) color red depth 5 hidden
+move "matrixA-text_0-1" via "hiddenchannelA_0-1" after 10 ms within 1000 ms
+line "hiddenchannelA_0-2" (123,62) (285,175) color red depth 5 hidden
+move "matrixA-text_0-2" via "hiddenchannelA_0-2" after 10 ms within 1000 ms
+}
+delay 10
+{
+line "hiddenchannelA_1-0" (53,97) (255,315) color red depth 5 hidden
+move "matrixA-text_1-0" via "hiddenchannelA_1-0" after 10 ms within 1000 ms
+line "hiddenchannelA_1-1" (88,97) (270,315) color red depth 5 hidden
+move "matrixA-text_1-1" via "hiddenchannelA_1-1" after 10 ms within 1000 ms
+line "hiddenchannelA_1-2" (123,97) (285,315) color red depth 5 hidden
+move "matrixA-text_1-2" via "hiddenchannelA_1-2" after 10 ms within 1000 ms
+}
+delay 10
+{
+line "hiddenchannelA_2-0" (53,132) (255,455) color red depth 5 hidden
+move "matrixA-text_2-0" via "hiddenchannelA_2-0" after 10 ms within 1000 ms
+line "hiddenchannelA_2-1" (88,132) (270,455) color red depth 5 hidden
+move "matrixA-text_2-1" via "hiddenchannelA_2-1" after 10 ms within 1000 ms
+line "hiddenchannelA_2-2" (123,132) (285,455) color red depth 5 hidden
+move "matrixA-text_2-2" via "hiddenchannelA_2-2" after 10 ms within 1000 ms
+}
+delay 10
+{
+line "hiddenchannelB_0-0" (173,62) (345,85) color red depth 5 hidden
+move "matrixB-text_0-0" via "hiddenchannelB_0-0" after 10 ms within 1000 ms
+line "hiddenchannelB_1-0" (173,97) (345,100) color red depth 5 hidden
+move "matrixB-text_1-0" via "hiddenchannelB_1-0" after 10 ms within 1000 ms
+line "hiddenchannelB_2-0" (173,132) (345,115) color red depth 5 hidden
+move "matrixB-text_2-0" via "hiddenchannelB_2-0" after 10 ms within 1000 ms
+}
+delay 10
+{
+line "hiddenchannelB_0-1" (208,62) (485,85) color red depth 5 hidden
+move "matrixB-text_0-1" via "hiddenchannelB_0-1" after 10 ms within 1000 ms
+line "hiddenchannelB_1-1" (208,97) (485,100) color red depth 5 hidden
+move "matrixB-text_1-1" via "hiddenchannelB_1-1" after 10 ms within 1000 ms
+line "hiddenchannelB_2-1" (208,132) (485,115) color red depth 5 hidden
+move "matrixB-text_2-1" via "hiddenchannelB_2-1" after 10 ms within 1000 ms
+}
+delay 10
+{
+line "hiddenchannelB_0-2" (243,62) (625,85) color red depth 5 hidden
+move "matrixB-text_0-2" via "hiddenchannelB_0-2" after 10 ms within 1000 ms
+line "hiddenchannelB_1-2" (243,97) (625,100) color red depth 5 hidden
+move "matrixB-text_1-2" via "hiddenchannelB_1-2" after 10 ms within 1000 ms
+line "hiddenchannelB_2-2" (243,132) (625,115) color red depth 5 hidden
+move "matrixB-text_2-2" via "hiddenchannelB_2-2" after 10 ms within 1000 ms
+}
+delay 1000
+{
+text "processors-title" "Processors" offset (0,-15) from "matrixB-text_0-0" NW color blue4 depth 0 font Serif size 12.0  bold italic
+move "matrixA-text_0-2" via "hiddenchannel_recieveA2_0-0" after 10 ms within 1000 ms
+move "matrixB-text_2-0" via "hiddenchannel_recieveB2_0-0" after 10 ms within 1000 ms
+text "times_0-0" "*" offset (-8,0) from "matrixB-text_2-0" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_0-0"
+text "runningtotal_0-0" "2" offset (0,-3) from "runningtotal_0-0" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+move "matrixA-text_0-1" via "hiddenchannel_recieveA1_0-0" after 10 ms within 1000 ms
+move "matrixB-text_1-0" via "hiddenchannel_recieveB1_0-0" after 10 ms within 1000 ms
+hideCode "runningtotal_0-0"
+text "runningtotal_0-0" "14" offset (0,-3) from "runningtotal_0-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_0-2" via "hiddenchannel_recieveA_0-1" after 10 ms within 1000 ms
+move "matrixB-text_2-1" via "hiddenchannel_recieveB2_0-1" after 10 ms within 1000 ms
+text "times_0-1" "*" offset (-8,0) from "matrixB-text_2-1" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_0-1"
+text "runningtotal_0-1" "0" offset (0,-3) from "runningtotal_0-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-2" via "hiddenchannel_recieveA2_1-0" after 10 ms within 1000 ms
+move "matrixB-text_2-0" via "hiddenchannel_recieveB_1-0" after 10 ms within 1000 ms
+text "times_1-0" "*" offset (-8,0) from "matrixB-text_2-0" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_1-0"
+text "runningtotal_1-0" "0" offset (0,-3) from "runningtotal_1-0" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+move "matrixA-text_0-0" via "hiddenchannel_recieveA0_0-0" after 10 ms within 1000 ms
+move "matrixB-text_0-0" via "hiddenchannel_recieveB0_0-0" after 10 ms within 1000 ms
+hideCode "runningtotal_0-0"
+text "runningtotal_0-0" "77" offset (0,-3) from "runningtotal_0-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_0-1" via "hiddenchannel_recieveA_0-1" after 10 ms within 1000 ms
+move "matrixB-text_1-1" via "hiddenchannel_recieveB1_0-1" after 10 ms within 1000 ms
+hideCode "runningtotal_0-1"
+text "runningtotal_0-1" "30" offset (0,-3) from "runningtotal_0-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_0-2" via "hiddenchannel_recieveA_0-2" after 10 ms within 1000 ms
+move "matrixB-text_2-2" via "hiddenchannel_recieveB2_0-2" after 10 ms within 1000 ms
+text "times_0-2" "*" offset (-8,0) from "matrixB-text_2-2" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_0-2"
+text "runningtotal_0-2" "1" offset (0,-3) from "runningtotal_0-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-1" via "hiddenchannel_recieveA1_1-0" after 10 ms within 1000 ms
+move "matrixB-text_1-0" via "hiddenchannel_recieveB_1-0" after 10 ms within 1000 ms
+hideCode "runningtotal_1-0"
+text "runningtotal_1-0" "12" offset (0,-3) from "runningtotal_1-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-2" via "hiddenchannel_recieveA_1-1" after 10 ms within 1000 ms
+move "matrixB-text_2-1" via "hiddenchannel_recieveB_1-1" after 10 ms within 1000 ms
+text "times_1-1" "*" offset (-8,0) from "matrixB-text_2-1" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_1-1"
+text "runningtotal_1-1" "0" offset (0,-3) from "runningtotal_1-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-2" via "hiddenchannel_recieveA2_2-0" after 10 ms within 1000 ms
+move "matrixB-text_2-0" via "hiddenchannel_recieveB_2-0" after 10 ms within 1000 ms
+text "times_2-0" "*" offset (-8,0) from "matrixB-text_2-0" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_2-0"
+text "runningtotal_2-0" "18" offset (0,-3) from "runningtotal_2-0" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "times_0-0"
+hideCode "matrixA-text_0-2"
+hideCode "matrixB-text_2-0"
+}
+delay 1000
+{
+move "matrixA-text_0-0" via "hiddenchannel_recieveA_0-1" after 10 ms within 1000 ms
+move "matrixB-text_0-1" via "hiddenchannel_recieveB0_0-1" after 10 ms within 1000 ms
+hideCode "runningtotal_0-1"
+text "runningtotal_0-1" "37" offset (0,-3) from "runningtotal_0-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_0-1" via "hiddenchannel_recieveA_0-2" after 10 ms within 1000 ms
+move "matrixB-text_1-2" via "hiddenchannel_recieveB1_0-2" after 10 ms within 1000 ms
+hideCode "runningtotal_0-2"
+text "runningtotal_0-2" "19" offset (0,-3) from "runningtotal_0-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-0" via "hiddenchannel_recieveA0_1-0" after 10 ms within 1000 ms
+move "matrixB-text_0-0" via "hiddenchannel_recieveB_1-0" after 10 ms within 1000 ms
+hideCode "runningtotal_1-0"
+text "runningtotal_1-0" "48" offset (0,-3) from "runningtotal_1-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-1" via "hiddenchannel_recieveA_1-1" after 10 ms within 1000 ms
+move "matrixB-text_1-1" via "hiddenchannel_recieveB_1-1" after 10 ms within 1000 ms
+hideCode "runningtotal_1-1"
+text "runningtotal_1-1" "30" offset (0,-3) from "runningtotal_1-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-2" via "hiddenchannel_recieveA_1-2" after 10 ms within 1000 ms
+move "matrixB-text_2-2" via "hiddenchannel_recieveB_1-2" after 10 ms within 1000 ms
+text "times_1-2" "*" offset (-8,0) from "matrixB-text_2-2" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_1-2"
+text "runningtotal_1-2" "0" offset (0,-3) from "runningtotal_1-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-1" via "hiddenchannel_recieveA1_2-0" after 10 ms within 1000 ms
+move "matrixB-text_1-0" via "hiddenchannel_recieveB_2-0" after 10 ms within 1000 ms
+hideCode "runningtotal_2-0"
+text "runningtotal_2-0" "18" offset (0,-3) from "runningtotal_2-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-2" via "hiddenchannel_recieveA_2-1" after 10 ms within 1000 ms
+move "matrixB-text_2-1" via "hiddenchannel_recieveB_2-1" after 10 ms within 1000 ms
+text "times_2-1" "*" offset (-8,0) from "matrixB-text_2-1" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_2-1"
+text "runningtotal_2-1" "0" offset (0,-3) from "runningtotal_2-1" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "times_0-0"
+hideCode "times_0-1"
+hideCode "matrixA-text_0-1"
+hideCode "times_1-0"
+hideCode "matrixA-text_1-2"
+hideCode "matrixB-text_1-0"
+hideCode "matrixB-text_2-1"
+}
+delay 1000
+{
+move "matrixA-text_0-0" via "hiddenchannel_recieveA_0-2" after 10 ms within 1000 ms
+move "matrixB-text_0-2" via "hiddenchannel_recieveB0_0-2" after 10 ms within 1000 ms
+hideCode "runningtotal_0-2"
+text "runningtotal_0-2" "61" offset (0,-3) from "runningtotal_0-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-0" via "hiddenchannel_recieveA_1-1" after 10 ms within 1000 ms
+move "matrixB-text_0-1" via "hiddenchannel_recieveB_1-1" after 10 ms within 1000 ms
+hideCode "runningtotal_1-1"
+text "runningtotal_1-1" "34" offset (0,-3) from "runningtotal_1-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_1-1" via "hiddenchannel_recieveA_1-2" after 10 ms within 1000 ms
+move "matrixB-text_1-2" via "hiddenchannel_recieveB_1-2" after 10 ms within 1000 ms
+hideCode "runningtotal_1-2"
+text "runningtotal_1-2" "18" offset (0,-3) from "runningtotal_1-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-0" via "hiddenchannel_recieveA0_2-0" after 10 ms within 1000 ms
+move "matrixB-text_0-0" via "hiddenchannel_recieveB_2-0" after 10 ms within 1000 ms
+hideCode "runningtotal_2-0"
+text "runningtotal_2-0" "36" offset (0,-3) from "runningtotal_2-0" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-1" via "hiddenchannel_recieveA_2-1" after 10 ms within 1000 ms
+move "matrixB-text_1-1" via "hiddenchannel_recieveB_2-1" after 10 ms within 1000 ms
+hideCode "runningtotal_2-1"
+text "runningtotal_2-1" "0" offset (0,-3) from "runningtotal_2-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-2" via "hiddenchannel_recieveA_2-2" after 10 ms within 1000 ms
+move "matrixB-text_2-2" via "hiddenchannel_recieveB_2-2" after 10 ms within 1000 ms
+text "times_2-2" "*" offset (-8,0) from "matrixB-text_2-2" SW color black depth 0 font Serif size 12.0  bold
+hideCode "runningtotal_2-2"
+text "runningtotal_2-2" "9" offset (0,-3) from "runningtotal_2-2" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "times_0-0"
+hideCode "times_0-1"
+hideCode "times_0-2"
+hideCode "matrixA-text_0-0"
+hideCode "times_1-0"
+hideCode "times_1-1"
+hideCode "matrixA-text_1-1"
+hideCode "times_2-0"
+hideCode "matrixB-text_0-0"
+hideCode "matrixB-text_1-1"
+hideCode "matrixB-text_2-2"
+hideCode "matrixA-text_2-2"
+}
+delay 1000
+{
+move "matrixA-text_1-0" via "hiddenchannel_recieveA_1-2" after 10 ms within 1000 ms
+move "matrixB-text_0-2" via "hiddenchannel_recieveB_1-2" after 10 ms within 1000 ms
+hideCode "runningtotal_1-2"
+text "runningtotal_1-2" "42" offset (0,-3) from "runningtotal_1-2" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-0" via "hiddenchannel_recieveA_2-1" after 10 ms within 1000 ms
+move "matrixB-text_0-1" via "hiddenchannel_recieveB_2-1" after 10 ms within 1000 ms
+hideCode "runningtotal_2-1"
+text "runningtotal_2-1" "2" offset (0,-3) from "runningtotal_2-1" SW color red depth 0 font Serif size 12.0  bold
+move "matrixA-text_2-1" via "hiddenchannel_recieveA_2-2" after 10 ms within 1000 ms
+move "matrixB-text_1-2" via "hiddenchannel_recieveB_2-2" after 10 ms within 1000 ms
+hideCode "runningtotal_2-2"
+text "runningtotal_2-2" "9" offset (0,-3) from "runningtotal_2-2" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "times_0-0"
+hideCode "times_0-1"
+hideCode "times_0-2"
+hideCode "matrixA-text_0-0"
+hideCode "times_1-0"
+hideCode "times_1-1"
+hideCode "times_1-2"
+hideCode "matrixA-text_1-0"
+hideCode "times_2-0"
+hideCode "matrixB-text_0-0"
+hideCode "times_2-1"
+hideCode "matrixB-text_0-1"
+hideCode "matrixB-text_1-2"
+hideCode "matrixA-text_2-1"
+}
+delay 1000
+{
+move "matrixA-text_2-0" via "hiddenchannel_recieveA_2-2" after 10 ms within 1000 ms
+move "matrixB-text_0-2" via "hiddenchannel_recieveB_2-2" after 10 ms within 1000 ms
+hideCode "runningtotal_2-2"
+text "runningtotal_2-2" "21" offset (0,-3) from "runningtotal_2-2" SW color red depth 0 font Serif size 12.0  bold
+}
+delay 1000
+{
+hideCode "times_0-0"
+hideCode "times_0-1"
+hideCode "times_0-2"
+hideCode "matrixA-text_0-0"
+hideCode "times_1-0"
+hideCode "times_1-1"
+hideCode "times_1-2"
+hideCode "matrixA-text_1-0"
+hideCode "times_2-0"
+hideCode "matrixB-text_0-0"
+hideCode "times_2-1"
+hideCode "matrixB-text_0-1"
+hideCode "times_2-2"
+hideCode "matrixB-text_0-2"
+hideCode "matrixA-text_2-0"
+}
+delay 1000
+{
+hideCode "processors-title"
+hideCode "P0"
+hideCode "Ptext0"
+hideCode "ChannelRight0"
+hideCode "ChannelDown0"
+hideCode "ctotal_0-0"
+line "moveline_0-0" offset (0,0) from "runningtotal_0-0" SW offset (-5,0) from "destmatrix-text_0-0" SW color red depth 5 hidden
+move "runningtotal_0-0" via "moveline_0-0" after 10 ms within 1000 ms
+hideCode "P1"
+hideCode "Ptext1"
+hideCode "ChannelRight1"
+hideCode "ChannelDown1"
+hideCode "ctotal_0-1"
+line "moveline_0-1" offset (0,0) from "runningtotal_0-1" SW offset (-5,0) from "destmatrix-text_0-1" SW color red depth 5 hidden
+move "runningtotal_0-1" via "moveline_0-1" after 10 ms within 1000 ms
+hideCode "P2"
+hideCode "Ptext2"
+hideCode "ChannelDown2"
+hideCode "ctotal_0-2"
+line "moveline_0-2" offset (0,0) from "runningtotal_0-2" SW offset (-5,0) from "destmatrix-text_0-2" SW color red depth 5 hidden
+move "runningtotal_0-2" via "moveline_0-2" after 10 ms within 1000 ms
+hideCode "P3"
+hideCode "Ptext3"
+hideCode "ChannelRight3"
+hideCode "ChannelDown3"
+hideCode "ctotal_1-0"
+line "moveline_1-0" offset (0,0) from "runningtotal_1-0" SW offset (-5,0) from "destmatrix-text_1-0" SW color red depth 5 hidden
+move "runningtotal_1-0" via "moveline_1-0" after 10 ms within 1000 ms
+hideCode "P4"
+hideCode "Ptext4"
+hideCode "ChannelRight4"
+hideCode "ChannelDown4"
+hideCode "ctotal_1-1"
+line "moveline_1-1" offset (0,0) from "runningtotal_1-1" SW offset (-5,0) from "destmatrix-text_1-1" SW color red depth 5 hidden
+move "runningtotal_1-1" via "moveline_1-1" after 10 ms within 1000 ms
+hideCode "P5"
+hideCode "Ptext5"
+hideCode "ChannelDown5"
+hideCode "ctotal_1-2"
+line "moveline_1-2" offset (0,0) from "runningtotal_1-2" SW offset (-5,0) from "destmatrix-text_1-2" SW color red depth 5 hidden
+move "runningtotal_1-2" via "moveline_1-2" after 10 ms within 1000 ms
+hideCode "P6"
+hideCode "Ptext6"
+hideCode "ChannelRight6"
+hideCode "ctotal_2-0"
+line "moveline_2-0" offset (0,0) from "runningtotal_2-0" SW offset (-5,0) from "destmatrix-text_2-0" SW color red depth 5 hidden
+move "runningtotal_2-0" via "moveline_2-0" after 10 ms within 1000 ms
+hideCode "P7"
+hideCode "Ptext7"
+hideCode "ChannelRight7"
+hideCode "ctotal_2-1"
+line "moveline_2-1" offset (0,0) from "runningtotal_2-1" SW offset (-5,0) from "destmatrix-text_2-1" SW color red depth 5 hidden
+move "runningtotal_2-1" via "moveline_2-1" after 10 ms within 1000 ms
+hideCode "P8"
+hideCode "Ptext8"
+hideCode "ctotal_2-2"
+line "moveline_2-2" offset (0,0) from "runningtotal_2-2" SW offset (-5,0) from "destmatrix-text_2-2" SW color red depth 5 hidden
+move "runningtotal_2-2" via "moveline_2-2" after 10 ms within 1000 ms
+}

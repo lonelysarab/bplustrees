@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textarea>
+    <label_line>Enter your Java or C++ source code below:</label_line>
+    <default_field>replace the following by your code
+// gridsize 2 8 C++ 0 smallfont
+Node *head = createList( 'A','B','C','D', "tail" );
+</default_field>
+    <value_entered></value_entered>
+  </textarea>
+</input_panel>

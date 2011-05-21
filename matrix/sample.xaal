@@ -1,0 +1,707 @@
+<xaal version="1.0" xmlns="http://www.cs.hut.fi/Research/SVG/XAAL"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cs.hut.fi/Research/SVG/XAAL xaal.xsd">
+ <initial>
+   <text id="TextTitle">
+     <coordinate x="90" y="200"></coordinate>
+     <alignment value="left"/>
+     <boxed value="false"/>
+     <contents>XAAL tests</contents>
+     <style>
+       <font size="50"/>
+     </style>
+   </text>
+ </initial>
+ <animation>
+   <seq>
+     <narrative>Tests for predefined colors</narrative>
+     <hide type="all"/>
+     <create>
+       <rectangle id="Rect1ColorTests">
+         <coordinate x="40" y="20"/>
+         <coordinate x="80" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="maroon"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect2ColorTests">
+         <coordinate x="100" y="20"/>
+         <coordinate x="140" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="red"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect3ColorTests">
+         <coordinate x="160" y="20"/>
+         <coordinate x="200" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="orange"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect4ColorTests">
+         <coordinate x="220" y="20"/>
+         <coordinate x="260" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="yellow"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect5ColorTests">
+         <coordinate x="280" y="20"/>
+         <coordinate x="320" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="olive"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect6ColorTests">
+         <coordinate x="340" y="20"/>
+         <coordinate x="380" y="60"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="purple"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect7ColorTests">
+         <coordinate x="40" y="80"/>
+         <coordinate x="80" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="fuchsia"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect8ColorTests">
+         <coordinate x="100" y="80"/>
+         <coordinate x="140" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="white"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect9ColorTests">
+         <coordinate x="160" y="80"/>
+         <coordinate x="200" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="lime"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect10ColorTests">
+         <coordinate x="220" y="80"/>
+         <coordinate x="260" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="green"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect11ColorTests">
+         <coordinate x="280" y="80"/>
+         <coordinate x="320" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="navy"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect12ColorTests">
+         <coordinate x="340" y="80"/>
+         <coordinate x="380" y="120"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="aqua"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect13ColorTests">
+         <coordinate x="40" y="140"/>
+         <coordinate x="80" y="180"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="teal"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect14ColorTests">
+         <coordinate x="100" y="140"/>
+         <coordinate x="140" y="180"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="black"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect15ColorTests">
+         <coordinate x="160" y="140"/>
+         <coordinate x="200" y="180"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="silver"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect16ColorTests">
+         <coordinate x="220" y="140"/>
+         <coordinate x="260" y="180"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="gray"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rect17ColorTests">
+         <coordinate x="280" y="140"/>
+         <coordinate x="320" y="180"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="blue"/>
+         </style>
+       </rectangle>
+       <text id="TextColorTests">
+         <coordinate x="100" y="240"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for predefined colors</contents>
+         <style id="TextStyle">
+           <font size="20"/>
+         </style>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <narrative>Test for element rectangle</narrative>
+     <hide type="all"/>
+     <create>
+       <rectangle id="Rectangle1" hidden="false" opacity="1.0">
+         <coordinate x="20" y="20" id="Coordinate1"/>
+         <coordinate x="100" y="100" id="Coordinate2"/>
+         <style>
+           <color name="black"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle2" hidden="false" opacity="1.0">
+         <coordinate x="120" y="20"/>
+         <coordinate x="200" y="100"/>
+         <style>
+           <fill-color name="red"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle3" hidden="false" opacity="1.0">
+         <coordinate x="220" y="20" />
+         <coordinate x="300" y="100"/>
+         <round x="50" y="50"/>
+         <style>
+           <color name="black"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle4" hidden="false" opacity="1.0">
+         <coordinate x="320" y="20"/>
+         <coordinate x="400" y="100"/>
+         <round x="50" y="50"/>
+         <style>
+           <fill-color name="red"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle5" hidden="false" opacity="1.0">
+         <coordinate x="20" y="120"/>
+         <coordinate x="100" y="200"/>
+         <style>
+           <color name="blue"/>
+           <stroke width="6"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle6" hidden="false" opacity="1.0">
+         <coordinate x="120" y="120"/>
+         <coordinate x="200" y="200"/>
+         <style>
+           <color name="blue"/>
+           <fill-color name="green"/>
+           <stroke width="6"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle7" hidden="false" opacity="1.0">
+         <coordinate x="220" y="120"/>
+         <coordinate x="300" y="200"/>
+         <round x="50" y="80"/>
+         <style>
+           <color name="blue"/>
+           <stroke width="6"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle8" hidden="false" opacity="1.0">
+         <coordinate x="320" y="120"/>
+         <coordinate x="400" y="200"/>
+         <round x="50" y="80"/>
+         <style>
+           <fill-color name="green"/>
+         </style>
+       </rectangle>
+       <text id="Text1" style="TextStyle">
+         <coordinate x="100" y="240"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for element rectangle</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <rectangle id="Rectangle2-1" hidden="false" opacity="1.0">
+         <coordinate y="20"/>
+         <coordinate x="100" y="100"/>
+         <style id="Style1">
+           <color name="black"/>
+           <fill-color name="red"/>
+         </style>
+       </rectangle>
+       <rectangle id="Rectangle2-2" hidden="false" opacity="1.0" style="Style1">
+         <coordinate x="120"/>
+         <coordinate x="200" y="100"/>
+       </rectangle>
+       <rectangle id="Rectangle2-3" hidden="false" opacity="1.0" style="Style1">
+         <coordinate x="120" y="20"/>
+         <coordinate x="120" y="100"/>
+       </rectangle>
+       <rectangle id="Rectangle2-4" hidden="false" opacity="1.0" style="Style1">
+         <coordinate x="120" y="20"/>
+         <coordinate x="200" y="20"/>
+       </rectangle>
+       <rectangle id="Rectangle2-5" hidden="false" opacity="1.0" style="Style1">
+         <coordinate x="20" y="120"/>
+         <coordinate x="100" y="200"/>
+         <round y="50"/>
+       </rectangle>
+       <rectangle id="Rectangle2-6" hidden="false" opacity="1.0" style="Style1">
+         <coordinate x="120" y="120"/>
+         <coordinate x="200" y="200"/>
+         <round x="50"/>
+       </rectangle>
+       <text id="Text2" style="TextStyle">
+         <coordinate x="100" y="240"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for element rectangle</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <circle>
+         <center x="100" y="100"/>
+         <radius length="50"/>
+         <style>
+           <color name="black"/>
+         </style>
+       </circle>
+       <circle>
+         <center x="220" y="100"/>
+         <radius length="35"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="red"/>
+         </style>
+       </circle>
+       <circle>
+         <center x="340" y="100"/>
+         <radius length="20"/>
+         <style>
+           <color name="lime"/>
+           <fill-color name="black"/>
+           <stroke width="4"/>
+         </style>
+       </circle>
+       <circle>
+         <center x="100" y="260"/>
+         <radius length="20"/>
+         <style>
+           <color name="yellow"/>
+           <fill-color name="lime"/>
+           <stroke width="4"/>
+         </style>
+       </circle>
+       <circle>
+         <center x="220" y="260"/>
+         <radius length="35"/>
+         <style>
+           <fill-color name="blue"/>
+         </style>
+       </circle>
+       <circle>
+         <center x="340" y="260"/>
+         <radius length="50"/>
+         <style>
+           <color name="red"/>
+           <stroke width="10"/>
+         </style>
+       </circle>
+       <text style="TextStyle">
+         <coordinate x="100" y="340"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for element circle</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <circle style="Style1">
+         <center/>
+         <radius length="50"/>
+       </circle>
+       <circle style="Style1">
+         <center y="100"/>
+         <radius length="50"/>
+       </circle>
+       <circle style="Style1">
+         <center x="100"/>
+         <radius length="50"/>
+       </circle>
+       <circle style="Style1">
+         <center x="100" y="100"/>
+         <radius length="50"/>
+       </circle>
+       <text style="TextStyle">
+         <coordinate x="100" y="240"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for element circle</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <line>
+         <coordinate x="38" y="137"/>
+         <coordinate x="113" y="50"/>
+         <style>
+           <color name="black"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="113" y="137"/>
+         <coordinate x="188" y="50"/>
+         <style>
+           <color name="red"/>
+           <stroke width="5"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="188" y="137"/>
+         <coordinate x="263" y="50"/>
+         <style>
+           <color name="green"/>
+           <stroke width="8"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="263" y="137"/>
+         <coordinate x="338" y="50"/>
+         <style>
+           <color name="blue"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="338" y="137"/>
+         <coordinate x="413" y="50"/>
+         <style>
+           <color name="fuchsia"/>
+           <stroke width="13"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="170" y="200"/>
+         <coordinate x="220" y="200"/>
+         <style id="LineStyle">
+           <color name="black"/>
+           <stroke width="1"/>
+         </style>
+       </line>
+       <line style="LineStyle">
+         <coordinate x="220" y="200"/>
+         <coordinate x="220" y="250"/>
+       </line>
+       <line style="LineStyle">
+         <coordinate x="220" y="250"/>
+         <coordinate x="270" y="250"/>
+       </line>
+       <line style="LineStyle">
+         <coordinate x="270" y="250"/>
+         <coordinate x="270" y="200"/>
+       </line>
+       <line style="LineStyle">
+         <coordinate x="270" y="200"/>
+         <coordinate x="320" y="200"/>
+       </line>
+       <line>
+         <coordinate x="25" y="200"/>
+         <coordinate x="75" y="200"/>
+         <style id="LineStyle2">
+           <color name="blue"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line style="LineStyle2">
+         <coordinate x="75" y="200"/>
+         <coordinate x="75" y="250"/>
+       </line>
+       <line style="LineStyle2">
+         <coordinate x="75" y="250"/>
+         <coordinate x="125" y="250"/>
+       </line>
+       <line style="LineStyle2">
+         <coordinate x="125" y="250"/>
+         <coordinate x="125" y="200"/>
+       </line>
+       <line style="LineStyle2">
+         <coordinate x="125" y="200"/>
+         <coordinate x="175" y="200"/>
+       </line>
+       <line>
+         <coordinate x="370" y="250"/>
+         <coordinate x="420" y="250"/>
+         <style>
+           <color name="black"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="420" y="200"/>
+         <coordinate x="470" y="200"/>
+         <style>
+           <color name="fuchsia"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="320" y="200"/>
+         <coordinate x="370" y="200"/>
+         <style>
+           <color name="blue"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="370" y="200"/>
+         <coordinate x="370" y="250"/>
+         <style>
+           <color name="green"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <line>
+         <coordinate x="420" y="250"/>
+         <coordinate x="420" y="200"/>
+         <style>
+           <color name="red"/>
+           <stroke width="10"/>
+         </style>
+       </line>
+       <text style="TextStyle">
+         <coordinate x="150" y="290"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for line</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <polygon>
+         <coordinate x="59" y="45"/>
+         <coordinate x="95" y="63"/>
+         <coordinate x="108" y="105"/>
+         <coordinate x="82" y="139"/>
+         <coordinate x="39" y="140"/>
+         <coordinate x="11" y="107"/>
+         <coordinate x="19" y="65"/>
+         <style><color name="black"/></style>
+       </polygon>
+       <polygon>
+         <coordinate x="179" y="45"/>
+         <coordinate x="218" y="63"/>
+         <coordinate x="228" y="105"/>
+         <coordinate x="202" y="139"/>
+         <coordinate x="159" y="140"/>
+         <coordinate x="131" y="107"/>
+         <coordinate x="139" y="65"/>
+         <coordinate x="179" y="45"/>
+         <style>
+           <fill-color name="red"/>
+         </style>
+       </polygon>
+       <polygon>
+         <coordinate x="350" y="45"/>
+         <coordinate x="375" y="80"/>
+         <coordinate x="410" y="95"/>
+         <coordinate x="375" y="110"/>
+         <coordinate x="350" y="145"/>
+         <coordinate x="325" y="120"/>
+         <coordinate x="290" y="95"/>
+         <coordinate x="325" y="70"/>
+         <coordinate x="350" y="45"/>
+         <style>
+           <color name="black"/>
+           <fill-color name="blue"/>
+           <stroke width="6"/>
+         </style>
+       </polygon>
+       <polygon>
+         <coordinate x="59" y="185"/>
+         <coordinate x="98" y="203"/>
+         <coordinate x="108" y="245"/>
+         <coordinate x="82" y="279"/>
+         <coordinate x="39" y="280"/>
+         <coordinate x="11" y="247"/>
+         <coordinate x="19" y="205"/>
+         <coordinate x="59" y="185"/>
+         <style>
+           <color red="0" green="0" blue="255"/>
+           <stroke width="8"/>
+         </style>
+       </polygon>
+       <polygon>
+         <coordinate x="179" y="185"/>
+         <coordinate x="218" y="203"/>
+         <coordinate x="228" y="245"/>
+         <coordinate x="202" y="279"/>
+         <coordinate x="159" y="280"/>
+         <coordinate x="131" y="247"/>
+         <coordinate x="139" y="205"/>
+         <style>
+           <color red="0" green="0" blue="255"/>
+           <fill-color red="0" green="255" blue="0"/>
+           <stroke width="8"/>
+         </style>
+       </polygon>
+       <polygon>
+         <coordinate x="270" y="225"/>
+         <coordinate x="300" y="245"/>
+         <coordinate x="320" y="225"/>
+         <coordinate x="340" y="245"/>
+         <coordinate x="280" y="280"/>
+         <coordinate x="390" y="280"/>
+         <coordinate x="420" y="240"/>
+         <coordinate x="280" y="185"/>
+         <style>
+           <color red="0" green="255" blue="0"/>
+           <stroke width="8"/>
+         </style>
+       </polygon>
+       <text style="TextStyle">
+         <coordinate x="150" y="340"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for polygons</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+     <polyline id="polyline-01">
+       <coordinate x="10" y="50"/>
+       <coordinate x="35" y="150"/>
+       <coordinate x="60" y="50"/>
+       <coordinate x="85" y="150"/>
+       <coordinate x="110" y="50"/>
+       <coordinate x="135" y="150"/>
+       <closed value="false"/>
+       <style>
+         <color red="0" green="0" blue="0"/>
+       </style>
+     </polyline>
+     <polyline id="polyline-02">
+       <coordinate x="220" y="50"/>
+       <coordinate x="267" y="84"/>
+       <coordinate x="249" y="140"/>
+       <coordinate x="190" y="140"/>
+       <coordinate x="172" y="84"/>
+       <coordinate x="220" y="50"/>
+       <closed value="false"/>
+       <style>
+         <color name="blue"/>
+         <stroke width="8"/>
+       </style>
+     </polyline>
+     <polyline id="polyline-03">
+       <coordinate x="310" y="50"/>
+       <coordinate x="335" y="150"/>
+       <coordinate x="360" y="50"/>
+       <coordinate x="385" y="150"/>
+       <coordinate x="410" y="50"/>
+       <coordinate x="435" y="150"/>
+       <closed value="false"/>
+       <style>
+         <color red="0" green="255" blue="0"/>
+         <fill-color name="blue"/>
+         <stroke width="4"/>
+       </style>
+     </polyline>
+     <polyline id="polyline-04">
+       <coordinate x="59" y="185"/>
+       <coordinate x="98" y="203"/>
+       <coordinate x="108" y="245"/>
+       <coordinate x="82" y="279"/>
+       <coordinate x="39" y="280"/>
+       <coordinate x="11" y="247"/>
+       <coordinate x="19" y="205"/>
+       <closed value="false"/>
+       <style>
+         <color name="red"/>
+         <stroke width="8"/>
+       </style>
+     </polyline>
+     <polyline id="polyline-05">
+       <coordinate x="189" y="185"/>
+       <coordinate x="228" y="203"/>
+       <coordinate x="238" y="245"/>
+       <coordinate x="212" y="279"/>
+       <coordinate x="169" y="280"/>
+       <coordinate x="141" y="247"/>
+       <coordinate x="149" y="205"/>
+       <closed value="false"/>
+       <style>
+         <color red="0" green="0" blue="255"/>
+         <fill-color red="0" green="255" blue="0"/>
+         <stroke width="8"/>
+       </style>
+     </polyline>
+     <polyline id="polyline-06">
+       <coordinate x="270" y="225"/>
+       <coordinate x="300" y="245"/>
+       <coordinate x="320" y="225"/>
+       <coordinate x="340" y="245"/>
+       <coordinate x="280" y="280"/>
+       <coordinate x="390" y="280"/>
+       <coordinate x="420" y="240"/>
+       <coordinate x="280" y="185"/>
+       <closed value="false"/>
+       <style>
+         <fill-color red="255" green="0" blue="255"/>
+         <stroke width="8"/>
+       </style>
+     </polyline>
+       <text style="TextStyle">
+         <coordinate x="150" y="340"/>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>Test for polylines</contents>
+       </text>
+     </create>
+   </seq>
+   <seq>
+     <hide type="all"/>
+     <create>
+       <text id="TextEndTitle">
+         <coordinate x="10" y="200"></coordinate>
+         <alignment value="left"/>
+         <boxed value="false"/>
+         <contents>That's all... for now!</contents>
+         <style>
+           <font size="50"/>
+         </style>
+       </text>
+     </create>
+   </seq>
+ </animation>
+</xaal>

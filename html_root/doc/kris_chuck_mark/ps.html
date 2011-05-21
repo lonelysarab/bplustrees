@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Infx-to-postfix</title>
+</head>
+
+<body>
+<h1>Infix-to-postfix</h1>
+<pre>
+queue infixToPostfixConversion(queue infix) {
+
+char token,  stackToken;
+stack operator;
+queue postfix;
+
+while infix not empty {
+    token = infix.dequeue();
+    if token is an operand
+           postfix.enqueue(token);
+    else if token is '('                          // opening parenthesis
+           operator.push(token);
+    else  if token is ')'                         //  closing parenthesis
+           while (stackToken = operator.pop()) is not '('
+                   // pop  and enqueue until find opening '('
+                   postfix.enqueue(stackToken);
+    else  if token is an operator  // test for operator precedence
+          while ( operator not empty and
+                precedence(stacktoken = operator.peek()) >= precedence(token)) {
+                   postfix.enqueue(stackToken);
+                   operator.pop();
+           }
+    operator.push(token);
+}
+
+while operator not empty {
+        stackToken = operator.pop();
+        postfix.enqueue(stackToken);
+}
+return postfix;
+}
+ 
+
+int precedence(char c) {
+switch(c) {
+        case '+', '-':  return 1;
+        case '*', '/':  return 2;
+}
+</pre>
+
+
+</body> </html>

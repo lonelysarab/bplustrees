@@ -1,0 +1,1751 @@
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+We have 10 keys to insert:  46, 49, 94, 7, 18, 24, 30, 31, 48, 17
+into a hash table with 7 slots.
+***\***
+7
+1
+0
+1
+\W nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\W nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 0
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 46.
+H(key) = key % TableSize
+H(46) = 46 % 7
+H(46) = 4
+4 is the hash code for key 46.
+***\***
+7
+1
+0
+1
+\W nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\W nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 46 to the end of the linked list in hash table slot 4.
+***\***
+7
+1
+0
+1
+\W nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 49.
+H(key) = key % TableSize
+H(49) = 49 % 7
+H(49) = 0
+0 is the hash code for key 49.
+***\***
+7
+1
+0
+1
+\W nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 49 to the end of the linked list in hash table slot 0.
+***\***
+7
+1
+0
+1
+\Y 49 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 2
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 94.
+H(key) = key % TableSize
+H(94) = 94 % 7
+H(94) = 3
+3 is the hash code for key 94.
+***\***
+7
+1
+0
+1
+\Y 49 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\W nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 94 to the end of the linked list in hash table slot 3.
+***\***
+7
+1
+0
+1
+\Y 49 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 3
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 7.
+H(key) = key % TableSize
+H(7) = 7 % 7
+H(7) = 0
+0 is the hash code for key 7.
+***\***
+7
+1
+0
+1
+\Y 49 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 7 to the end of the linked list in hash table slot 0.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 4
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 18.
+H(key) = key % TableSize
+H(18) = 18 % 7
+H(18) = 4
+4 is the hash code for key 18.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 18 to the end of the linked list in hash table slot 4.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 5
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 24.
+H(key) = key % TableSize
+H(24) = 24 % 7
+H(24) = 3
+3 is the hash code for key 24.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 24 to the end of the linked list in hash table slot 3.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> 24 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 6
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 30.
+H(key) = key % TableSize
+H(30) = 30 % 7
+H(30) = 2
+2 is the hash code for key 30.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\W nil
+3
+1
+\Y 94 -> 24 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 30 to the end of the linked list in hash table slot 2.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 7
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 31.
+H(key) = key % TableSize
+H(31) = 31 % 7
+H(31) = 3
+3 is the hash code for key 31.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 31 to the end of the linked list in hash table slot 3.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 8
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 48.
+H(key) = key % TableSize
+H(48) = 48 % 7
+H(48) = 6
+6 is the hash code for key 48.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\W nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 48 to the end of the linked list in hash table slot 6.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+FIBQUESTION 9
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 17.
+H(key) = key % TableSize
+H(17) = 17 % 7
+H(17) = 3
+3 is the hash code for key 17.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Add key 17 to the end of the linked list in hash table slot 3.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+We're done inserting keys.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Let's search for the following keys: 46, 25, 7, 29, 30, 10, 17, 12.
+Note that some of these keys are not in the hash table.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 10
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 46.
+H(key) = key % TableSize
+H(46) = 46 % 7
+H(46) = 4
+4 is the hash code for key 46.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 46 in hash table slot 4.
+The key 46 matches the key in the linked list of hash table slot 4
+ at position 0.  We've found the key!
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\M 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 11
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 25.
+H(key) = key % TableSize
+H(25) = 25 % 7
+H(25) = 4
+4 is the hash code for key 25.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 25 in hash table slot 4.
+The key 25 does not match the key in the linked
+list of hash table slot 4 at position 0.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\B 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 25 does not match the key in the linked
+list of hash table slot 4 at position 1.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\B 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Since there are no more nodes in the linked list at hash table slot 4,
+the key 25 is not in the hash table.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\R 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 12
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 7.
+H(key) = key % TableSize
+H(7) = 7 % 7
+H(7) = 0
+0 is the hash code for key 7.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 7 in hash table slot 0.
+The key 7 does not match the key in the linked
+list of hash table slot 0 at position 0.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\B 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 7 matches the key in the linked list of hash table slot 0
+ at position 1.  We've found the key!
+***\***
+7
+1
+0
+1
+\M 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 13
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 29.
+H(key) = key % TableSize
+H(29) = 29 % 7
+H(29) = 1
+1 is the hash code for key 29.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 29 in hash table slot 1.
+Since there are no more nodes in the linked list at hash table slot 1,
+the key 29 is not in the hash table.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\R nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 14
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 30.
+H(key) = key % TableSize
+H(30) = 30 % 7
+H(30) = 2
+2 is the hash code for key 30.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 30 in hash table slot 2.
+The key 30 matches the key in the linked list of hash table slot 2
+ at position 0.  We've found the key!
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\M 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 15
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 10.
+H(key) = key % TableSize
+H(10) = 10 % 7
+H(10) = 3
+3 is the hash code for key 10.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 10 in hash table slot 3.
+The key 10 does not match the key in the linked
+list of hash table slot 3 at position 0.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 10 does not match the key in the linked
+list of hash table slot 3 at position 1.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 10 does not match the key in the linked
+list of hash table slot 3 at position 2.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 10 does not match the key in the linked
+list of hash table slot 3 at position 3.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Since there are no more nodes in the linked list at hash table slot 3,
+the key 10 is not in the hash table.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\R 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 16
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 17.
+H(key) = key % TableSize
+H(17) = 17 % 7
+H(17) = 3
+3 is the hash code for key 17.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 17 in hash table slot 3.
+The key 17 does not match the key in the linked
+list of hash table slot 3 at position 0.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 17 does not match the key in the linked
+list of hash table slot 3 at position 1.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 17 does not match the key in the linked
+list of hash table slot 3 at position 2.
+Search the next postion in the linked list.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\B 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+The key 17 matches the key in the linked list of hash table slot 3
+ at position 3.  We've found the key!
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\M 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MCQUESTION 17
+MD_Array 0.015 0.015 HeavyBold
+1
+Compute hashcode for key 12.
+H(key) = key % TableSize
+H(12) = 12 % 7
+H(12) = 5
+5 is the hash code for key 12.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+Search for the key 12 in hash table slot 5.
+Since there are no more nodes in the linked list at hash table slot 5,
+the key 12 is not in the hash table.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\R nil
+6
+1
+\Y 48 -> nil
+***^***
+VIEW WINDOWS 1
+MD_Array 0.015 0.015 HeavyBold
+1
+We're done searching for keys.
+***\***
+7
+1
+0
+1
+\Y 49 -> 7 -> nil
+1
+1
+\W nil
+2
+1
+\Y 30 -> nil
+3
+1
+\Y 94 -> 24 -> 31 -> 17 -> nil
+4
+1
+\Y 46 -> 18 -> nil
+5
+1
+\W nil
+6
+1
+\Y 48 -> nil
+***^***
+STARTQUESTIONS
+FIBQUESTION 0
+At what index will the key 46 be inserted?
+ENDTEXT
+ANSWER
+4
+ENDANSWER
+FIBQUESTION 1
+At what index will the key 49 be inserted?
+ENDTEXT
+ANSWER
+0
+ENDANSWER
+FIBQUESTION 2
+At what index will the key 94 be inserted?
+ENDTEXT
+ANSWER
+3
+ENDANSWER
+FIBQUESTION 3
+At what index will the key 7 be inserted?
+ENDTEXT
+ANSWER
+0
+ENDANSWER
+FIBQUESTION 4
+At what index will the key 18 be inserted?
+ENDTEXT
+ANSWER
+4
+ENDANSWER
+FIBQUESTION 5
+At what index will the key 24 be inserted?
+ENDTEXT
+ANSWER
+3
+ENDANSWER
+FIBQUESTION 6
+At what index will the key 30 be inserted?
+ENDTEXT
+ANSWER
+2
+ENDANSWER
+FIBQUESTION 7
+At what index will the key 31 be inserted?
+ENDTEXT
+ANSWER
+3
+ENDANSWER
+FIBQUESTION 8
+At what index will the key 48 be inserted?
+ENDTEXT
+ANSWER
+6
+ENDANSWER
+FIBQUESTION 9
+At what index will the key 17 be inserted?
+ENDTEXT
+ANSWER
+3
+ENDANSWER
+MCQUESTION 10
+How many linked list nodes will have to be searched to determine wheither the key 46 is in the table?
+ENDTEXT
+1
+ENDCHOICE
+2
+ENDCHOICE
+3
+ENDCHOICE
+4
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 11
+How many linked list nodes will have to be searched to determine wheither the key 25 is in the table?
+ENDTEXT
+3
+ENDCHOICE
+4
+ENDCHOICE
+5
+ENDCHOICE
+2
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 12
+How many linked list nodes will have to be searched to determine wheither the key 7 is in the table?
+ENDTEXT
+2
+ENDCHOICE
+3
+ENDCHOICE
+4
+ENDCHOICE
+1
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 13
+How many linked list nodes will have to be searched to determine wheither the key 29 is in the table?
+ENDTEXT
+1
+ENDCHOICE
+2
+ENDCHOICE
+3
+ENDCHOICE
+4
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 14
+How many linked list nodes will have to be searched to determine wheither the key 30 is in the table?
+ENDTEXT
+1
+ENDCHOICE
+2
+ENDCHOICE
+3
+ENDCHOICE
+4
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 15
+How many linked list nodes will have to be searched to determine wheither the key 10 is in the table?
+ENDTEXT
+5
+ENDCHOICE
+6
+ENDCHOICE
+7
+ENDCHOICE
+4
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 16
+How many linked list nodes will have to be searched to determine wheither the key 17 is in the table?
+ENDTEXT
+4
+ENDCHOICE
+5
+ENDCHOICE
+6
+ENDCHOICE
+3
+ENDCHOICE
+ANSWER
+1
+ENDANSWER
+MCQUESTION 17
+How many linked list nodes will have to be searched to determine wheither the key 12 is in the table?
+ENDTEXT
+1
+ENDCHOICE
+2
+ENDCHOICE
+3
+ENDCHOICE
+4
+ENDCHOICE
+ANSWER
+1
+ENDANSWER

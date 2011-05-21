@@ -1,0 +1,15 @@
+public class Factorial4Long {
+    public static void main (String[] args) {
+		long fact4 = factorial(4l);
+	}
+
+    static long factorial(long n) {
+	if (n <= 1l) {
+	    return 1l;
+	}
+	else {
+	    return n * factorial(n-1l);
+	}
+    }
+}
+

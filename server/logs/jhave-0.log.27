@@ -1,0 +1,19 @@
+5/20/11 6:12 PM - INFO: Using WEBROOT = http://localhost:8080/
+5/20/11 6:12 PM - INFO: Using Script Root of /home/wc/Desktop/trunk/server/build/classes/
+5/20/11 6:12 PM - INFO: Using User Script Directory of /home/wc/Desktop/trunk/
+5/20/11 6:12 PM - INFO: JHAVE Server started. Listening on port 7004
+5/20/11 6:13 PM - INFO: Accepted connection 1 from 127.0.0.1
+5/20/11 6:13 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 6:13 PM - INFO: Object: Thread[Thread-1,5,main]
+5/20/11 6:13 PM - INFO: Accepted connection 2 from 127.0.0.1
+5/20/11 6:13 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 6:13 PM - INFO: Object: Thread[Thread-2,5,main]
+5/20/11 6:13 PM - INFO: Accepted connection 3 from 127.0.0.1
+5/20/11 6:13 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 6:13 PM - INFO: Object: Thread[Thread-3,5,main]
+5/20/11 6:13 PM - INFO: Accepted connection 4 from 127.0.0.1
+5/20/11 6:13 PM - INFO: Constructor: public jhave.server.UWOSHClientConnection(java.net.Socket,int)
+5/20/11 6:13 PM - INFO: Object: Thread[Thread-4,5,main]
+5/20/11 6:13 PM - INFO: 1 bplus_tree no_username
+5/20/11 6:13 PM - FINER: ENTRY
+5/20/11 6:13 PM - FINE: sendtoClient - 100 Client and server connected with user login no_username

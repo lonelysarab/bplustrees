@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Untitled</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#99FFFF">
+
+<P><FONT SIZE="2">The BOYER-MOORE string search algorithm does its character-by-character analysis from right-to-left
+through the substring. It uses two realignment arrays to enhance its realignment decisions. The first of these
+realignment arrays is indexed by all the</FONT> <FONT SIZE="2">characters in the alphabet and uses what is often
+called a</FONT> <FONT SIZE="2">&quot;mismatched character heuristic&quot;:</FONT></P>
+
+<UL>
+	<LI><FONT SIZE="2" FACE="Arial, Helvetica">MMC[Ch] = length(Sub) if Ch not in Sub</FONT>
+	<LI><FONT SIZE="2" FACE="Arial, Helvetica">Otherwise, MMC[Ch] = distance from the right end of Sub to the rightmost
+	occurrence of Ch in Sub</FONT><FONT SIZE="2"></FONT>
+</UL>
+
+<P><FONT SIZE="2">The second realignment array is indexed by the number of</FONT> <FONT SIZE="2">characters in
+the substring and uses a &quot;reverse&quot; KMP type of</FONT> <FONT SIZE="2">logic.</FONT></P>
+
+<UL>
+	<LI><FONT SIZE="2" FACE="Arial, Helvetica">RKMP[p]= 1 if p = length(Sub)</FONT><FONT FACE="Arial, Helvetica"> -
+	1</FONT>
+	<LI><FONT SIZE="2" FACE="Arial, Helvetica">Otherwise, RKMP[p]= </FONT><I><FONT SIZE="2" FACE="Arial, Helvetica">Suffix_length</FONT></I><FONT
+	SIZE="2" FACE="Arial, Helvetica"> + </FONT><I><FONT SIZE="2" FACE="Arial, Helvetica">Offset</FONT></I><FONT SIZE="2"></FONT>
+</UL>
+
+<P><FONT SIZE="2">where </FONT><I><FONT SIZE="2">Suffix_length</FONT></I><FONT SIZE="2"> is the length of the suffix
+of Sub beginning</FONT> <FONT SIZE="2">at position p + 1, and </FONT><I><FONT SIZE="2">Offset</FONT></I><FONT SIZE="2">
+is the least amount that this</FONT> <FONT SIZE="2">suffix must be moved to the left to match another occurrence
+of</FONT> <FONT SIZE="2">itself in Sub, without matching the character in position p.<BR>
+</FONT>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+
+</HTML>

@@ -1,0 +1,11 @@
+TEXTFIELD
+If you choose user-defined from the menu below, enter numbers here:
+NONE
+ENDTEXTFIELD
+CHOICE
+Original Data
+Random
+In-order
+Reverse-order
+User-defined
+ENDCHOICE

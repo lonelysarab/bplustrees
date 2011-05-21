@@ -1,0 +1,23 @@
+<!-- Top level definition -->
+<server>
+  <reactor>
+    <http port="8080" backlog="512">
+      <error>
+        <cache>
+	  <files baseDir="../">   <!-- This assumes that the jhave2 repo checkout directory is the base and html_root is below that -->
+	    <index>README</index>
+	  </files>
+<!--           <files baseDir="../html_root/">
+            <index>index.html</index>
+          </files> -->
+        </cache>
+        <delegator>
+          <velocity lockedPath="test-site/meta/error.vm"/>
+          <fallback>
+            <message>Not found! Code {0} on {1}</message>
+          </fallback>
+        </delegator>
+      </error>
+    </http>
+  </reactor>
+</server>

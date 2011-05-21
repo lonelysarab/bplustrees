@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+
+<input_panel>
+  
+  <textfield>
+    
+	<label_line>The array of word lengths</label_line>
+    
+	<default_field>6 5 8 4 3 6 9 4 5 7</default_field>
+    
+	<value_entered></value_entered>
+  
+  </textfield>
+  
+<textfield>
+    
+	<label_line>The max characters per line</label_line>
+    
+	<default_field>30</default_field>
+    
+	<value_entered></value_entered>
+  
+</textfield>
+  
+<textfield>
+    
+	<label_line>The space between words</label_line>
+    
+	<default_field>1</default_field>
+    
+	<value_entered></value_entered>
+  
+</textfield>
+</input_panel>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<program_listing>
+	<line line_number="1">1 int greater(int x, int y)  // y = <replace var="y" />, x = <replace var="x" /></line>
+	<line line_number="2">2 {</line>
+	<line line_number="naps">3 	int z = <replace var="y" />;</line>
+	<line line_number="naps">4 	z = <replace var="y" />;</line>
+	<line line_number="4">4 This is an example program</line>
+</program_listing>

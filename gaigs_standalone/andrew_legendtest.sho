@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+<snap>
+<title>Hey, Let's Test the New Legend Structure</title>
+<legend>
+  <name fontsize="0.08">The Legend of Colors</name>
+  <bounds x1="0.1" y1="0.0" x2="0.9" y2="0.3" fontsize="0.1"/>
+  <column>
+    <list_item color="#FF0000">
+      <label>This is red!</label>
+    </list_item>
+    <list_item color="#00FF00">
+      <label>This is green!
+This label has two lines.</label>
+    </list_item>
+    <list_item color="#0000FF">
+      <label>This is blue!</label>
+    </list_item>
+  </column>
+  <column>
+    <list_item color="#FFFF00">
+      <label>This is yellow!</label>
+    </list_item>
+  </column>
+</legend>
+</snap>
+<snap>
+<title>A* Key Example</title>
+<text x="-0.2" y="0.135" halign="1" valign="1" fontsize="0.03" color="#000000">Color Key</text>
+<legend>
+  <bounds x1="-0.2" y1="-0.05" x2="1.2" y2="0.15" fontsize="0.15"/>
+  <column>
+    <list_item color="#00A1F4">
+      <label>New Open</label>
+    </list_item>
+    <list_item color="#88E6F4">
+      <label>Old Open</label>
+    </list_item>
+  </column>
+  <column>
+    <list_item color="#44FF44">
+      <label>New Closed</label>
+    </list_item>
+    <list_item color="#AAFFAA">
+      <label>Old Closed</label>
+    </list_item>
+  </column>
+  <column>
+    <list_item color="#FF3232">
+      <label>New Reopened</label>
+    </list_item>
+    <list_item color="#FFA9A9">
+      <label>Old Reopened</label>
+    </list_item>
+  </column>
+  <column>
+    <list_item color="#FFFF00">
+      <label>Current Path</label>
+    </list_item>
+    <list_item color="#999999">
+      <label>Unvisited Path</label>
+    </list_item>
+  </column>
+</legend>
+</snap>
+</show>

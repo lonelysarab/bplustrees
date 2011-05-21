@@ -1,0 +1,73 @@
+%Animal 2
+{
+  text "demo" "List element demo" (20, 40) font SansSerif size 24 bold depth 2 
+  rectangle "headerRect" offset (5, -5) from "demo" NW offset (5, 5) from "demo" SE filled fillColor white depth 5 
+  echo bounds: "headerRect" "demo"
+}
+{
+  codeGroup "listSource" at (10, 200) color black highlightColor red
+  addCodeLine "1. Generate first list element" to "listSource"
+  addCodeLine "2. Set link of first list element to null" to "listSource"
+  addCodeLine "3. Generate new list element" to "listSource"
+  addCodeLine "4. Clear link of second list element" to "listSource"
+  addCodeLine "5. Link first with second list element" to "listSource"
+  addCodeLine "6. Generate new list element" to "listSource"
+  addCodeLine "7. Link first with new list element" to "listSource"
+  addCodeLine "8. Link second element with last element" to "listSource"
+  addCodeLine "9. Transform into 'nice' list structure" to "listSource"
+}
+{
+  highlightCode on "listSource" line 0
+  listelement "firstListElem" (100, 80) text "Elem1" pointers 1 after 20 ticks
+  echo bounds: "firstListElem"
+}
+{
+  unhighlightCode on "listSource" line 0
+  highlightCode on "listSource" line 1
+  clearLink "firstListElem"
+  echo bounds: "firstListElem"
+}
+{
+  unhighlightCode on "listSource" line 1
+  highlightCode on "listSource" line 2
+  listelement "secondListElem" offset (130, 0) from "firstListElem" NE text "Elem2" pointers 1
+}
+  echo bounds: "firstListElem" "secondListElem"
+{
+  unhighlightCode on "listSource" line 2
+  highlightCode on "listSource" line 3
+  clearLink "secondListElem"
+  echo bounds: "firstListElem" "secondListElem"
+}
+{
+  unhighlightCode on "listSource" line 3
+  highlightCode on "listSource" line 4
+  setLink "firstListElem" to "secondListElem" within 20 ticks
+  echo bounds: "firstListElem" "secondListElem"
+}
+{
+  unhighlightCode on "listSource" line 4
+  highlightCode on "listSource" line 5
+  listelement "thirdListElem" offset (80, 50) from "firstListElem" NW text "Elem3" pointers 1
+}
+{
+  unhighlightCode on "listSource" line 5
+  highlightCode on "listSource" line 6
+  setLink "thirdListElem" link 1 to "secondListElem"
+}
+{
+  unhighlightCode on "listSource" line 6
+  highlightCode on "listSource" line 7
+  setLink "firstListElem" link 1 to "thirdListElem"
+}
+{
+  unhighlightCode on "listSource" line 7
+  highlightCode on "listSource" line 8
+  move "firstListElem" type "setTip #1" along polyline (20, 120) (20, 70) after 20 ms within 20 ticks
+  move "thirdListElem" type "translateWithFixedTip" along polyline (20, 120) (20, 70) after 20 ms within 20 ticks
+}
+delay 200 ms
+{
+  move "thirdListElem" type "setTip #1" along polyline (60, 70) (40, 70) after 20 ms within 20 ticks
+  move "secondListElem" along polyline (60, 120) (40, 120) after 20 ms within 20 ticks
+}

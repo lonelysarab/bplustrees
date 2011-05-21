@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<project default="compile">
+
+    <target name="compile">
+        <javac srcdir="." destdir="../../../build/classes" classpath=".:../../../build/classes:../../../lib/jdom.jar" includes="*.java" /> 
+    </target>
+
+    <target name="run">
+       <java fork="true" dir="../../../build/classes" classpath="../../../build/classes:../../../lib/jdom.jar:../../../lib/jaxen.jar:." classname="exe.bplustrees.BPlusTree"> 
+          <arg value="foo.sho" />  
+          <arg value="10" />
+        </java> 
+    </target>
+
+    <target name="clean">
+        <echo>
+            Removing all class files
+        </echo>
+        <delete> 
+            <fileset dir="../../../build/classes/exe/bplustrees">
+                <include name="*.class" />
+            </fileset>
+        </delete>
+    </target>
+  
+</project>
+

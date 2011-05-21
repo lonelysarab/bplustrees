@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <program_listing>
+	<signature>treeFind(Array list, Array weights, index)</signature>
+	<line line_number="1">1   x = index</line>
+	<line line_number="2">2   while(representative not found)</line>
+	<line line_number="3">3      if(list[x] != x)</line>
+	<line line_number="4">4         x = list[x]</line>
+	<line line_number="5">5      else</line>
+	<line line_number="6">6         return x</line>
+    </program_listing>
+    <variables>
+        <variable>index = <replace var="index" /></variable>
+	<variable>x = <replace var="x" /></variable>
+    </variables>
+</pseudocode>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <clickingarea>
+    <label_line>Choose Mode:</label_line>
+    <default_field></default_field>
+    <value_entered></value_entered>
+  </clickingarea>
+</input_panel>
+

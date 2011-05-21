@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pseudocode>
+        <call_stack>longComSeq/solnLCS</call_stack>
+        <program_listing>
+                <signature>solnLCS(seq1, lcs, m, n)</signature>
+                <line line_number="1">1 While m and n are greater than 0 </line>
+                <line line_number="2">2         Set val = lcs[m][n] </line>
+                <line line_number="3">3         While lcs[m-1][n] equals val </line>
+                <line line_number="4">4                 go up one row in lcs - reduce m by 1 </line>
+                <line line_number="5">5         While lcs[m][n-1] equals val    </line>
+                <line line_number="6">6                 go left one column - reduce n by 1 </line>
+                <line line_number="7">7         seq1[m] is a component of the solution  </line>
+                <line line_number="8">8         go up one row - reduce m by 1   </line>
+                <line line_number="9">9         While lcs[m][n-1] equals val - 1        </line>
+                <line line_number="10">10               go left one column - reduce n by 1      </line>
+        </program_listing>
+</pseudocode>

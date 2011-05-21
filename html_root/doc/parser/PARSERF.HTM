@@ -1,0 +1,42 @@
+<!-- OLD - used with first version of GAIGS -->
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.0//EN" "html.dtd">
+<HTML>
+<HEAD>
+<TITLE> PARSE IT!</TITLE>
+</HEAD>
+<BODY>
+<FORM ACTION="/webcgi/webbatch.exe?parser/parser.web" METHOD=POST>
+Enter the expression to be parsed.  The expression should consist of variables consisting of single letters and the operators 
++, -, *, and /.  Do not leave spaces between operators and operands.<br>
+<INPUT NAME=infix TYPE="TEXT" VALUE="A+B*C" ROWS=1 SIZE="60"><br>
+If you want, adjust the infix and stack priorities of the operators below.<br>
+<SELECT NAME=plst><OPTION SELECTED>1<OPTION>2<OPTION>3<OPTION>4</SELECT>
+Stack priority of plus?<br>
+<SELECT NAME=plin><OPTION SELECTED>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Infix priority of plus?<br>
+<SELECT NAME=mist><OPTION SELECTED>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Stack priority of minus?<br>
+<SELECT NAME=miin><OPTION selected>1<OPTION>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Infix priority of minus?<br>
+<SELECT NAME=tist><OPTION>1<OPTION SELECTED>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Stack priority of times?<br>
+<SELECT NAME=tiin><OPTION>1<OPTION SELECTED>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Infix priority of times?<br>
+<SELECT NAME=dist><OPTION>1<OPTION SELECTED>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Stack priority of divide?<br>
+<SELECT NAME=diin><OPTION>1<OPTION SELECTED>2<OPTION>3<OPTION>4<OPTION>5</SELECT>
+Infix priority of divide?<br>
+<SELECT NAME=exst><OPTION>1<OPTION>2<OPTION SELECTED>3<OPTION>4<OPTION>5</SELECT>
+Stack priority of exponentiation?<br>
+<SELECT NAME=exin><OPTION>1<OPTION>2<OPTION SELECTED>3<OPTION>4<OPTION>5</SELECT>
+Infix priority of exponentiation?<br>
+<INPUT TYPE="SUBMIT" VALUE="Parse it!">
+</FORM>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3174792-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

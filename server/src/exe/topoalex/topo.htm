@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body bgcolor="#FFCCCC">
+
+<p align="left"><big><big>The topological order algorithm provides a linear
+ordering in which vertices could be visited such that, at the time a vertex is
+visited, all vertices preceding it have already been visited.&nbsp; If vertices
+represent courses in your computer science curriculum and edges represent a
+prerequisite structure among those courses, then one can think of a topological
+order as providing a linear sequence in which these courses could be
+taken.&nbsp; </big></big></p>
+<p align="left"><big><big>In the algorithm visualized here, vertices move from
+the queue to the topological order.&nbsp; Once a vertex is in the topological
+order, edges leading from it switch color from black to red.&nbsp; A vertex
+enters the queue only after all vertices immediately preceding it are have been
+included in the topological order.&nbsp; (In the course-and-prerequisite
+analogy, this means that a course enters the queue only after all of its
+prerequisites have been completed.)&nbsp; Hence, as one vertex moves from the
+queue to the topological order, zero or more additional vertices may become
+eligible to enter the queue.&nbsp; In any given step of the algorithm pictured
+here, if one vertex being added to the topological order triggers more than one
+vertex entering the queue, these new vertices are enqueued in ascending
+numerical order.</big></big></p>
+
+</body>
+
+</html>

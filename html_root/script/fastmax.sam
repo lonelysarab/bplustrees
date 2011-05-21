@@ -1,0 +1,265 @@
+bg black
+coords -0.2 -0.25 0.7 0.67
+bigtext title0 -0.1 -0.1 1 MistyRose Numbers
+bigtext title1 -0.1 -0.2 1 MistyRose Status
+bigtext value1 0.1 -0.1 1 seashell 4
+bigtext value2 0.2 -0.1 1 seashell 7
+bigtext value3 0.3 -0.1 1 seashell 8
+bigtext value4 0.4 -0.1 1 seashell 9
+bigtext value5 0.5 -0.1 1 seashell 1
+bigtext value6 0.6 -0.1 1 seashell 2
+text proc11 0.1 0.1 1 Yellow Pro# 11
+text comp11 0.1 0.08 1 beige Comparing 
+text proc12 0.1 0.2 1 Yellow Pro# 12
+text comp12 0.1 0.18 1 beige Comparing 
+text proc13 0.1 0.3 1 Yellow Pro# 13
+text comp13 0.1 0.28 1 beige Comparing 
+text proc14 0.1 0.4 1 Yellow Pro# 14
+text comp14 0.1 0.38 1 beige Comparing 
+text proc15 0.1 0.5 1 Yellow Pro# 15
+text comp15 0.1 0.48 1 beige Comparing 
+text proc16 0.1 0.6 1 Yellow Pro# 16
+text comp16 0.1 0.58 1 beige Comparing 
+text proc21 0.2 0.1 1 Yellow Pro# 21
+text comp21 0.2 0.08 1 beige Comparing 
+text proc22 0.2 0.2 1 Yellow Pro# 22
+text comp22 0.2 0.18 1 beige Comparing 
+text proc23 0.2 0.3 1 Yellow Pro# 23
+text comp23 0.2 0.28 1 beige Comparing 
+text proc24 0.2 0.4 1 Yellow Pro# 24
+text comp24 0.2 0.38 1 beige Comparing 
+text proc25 0.2 0.5 1 Yellow Pro# 25
+text comp25 0.2 0.48 1 beige Comparing 
+text proc26 0.2 0.6 1 Yellow Pro# 26
+text comp26 0.2 0.58 1 beige Comparing 
+text proc31 0.3 0.1 1 Yellow Pro# 31
+text comp31 0.3 0.08 1 beige Comparing 
+text proc32 0.3 0.2 1 Yellow Pro# 32
+text comp32 0.3 0.18 1 beige Comparing 
+text proc33 0.3 0.3 1 Yellow Pro# 33
+text comp33 0.3 0.28 1 beige Comparing 
+text proc34 0.3 0.4 1 Yellow Pro# 34
+text comp34 0.3 0.38 1 beige Comparing 
+text proc35 0.3 0.5 1 Yellow Pro# 35
+text comp35 0.3 0.48 1 beige Comparing 
+text proc36 0.3 0.6 1 Yellow Pro# 36
+text comp36 0.3 0.58 1 beige Comparing 
+text proc41 0.4 0.1 1 Yellow Pro# 41
+text comp41 0.4 0.08 1 beige Comparing 
+text proc42 0.4 0.2 1 Yellow Pro# 42
+text comp42 0.4 0.18 1 beige Comparing 
+text proc43 0.4 0.3 1 Yellow Pro# 43
+text comp43 0.4 0.28 1 beige Comparing 
+text proc44 0.4 0.4 1 Yellow Pro# 44
+text comp44 0.4 0.38 1 beige Comparing 
+text proc45 0.4 0.5 1 Yellow Pro# 45
+text comp45 0.4 0.48 1 beige Comparing 
+text proc46 0.4 0.6 1 Yellow Pro# 46
+text comp46 0.4 0.58 1 beige Comparing 
+text proc51 0.5 0.1 1 Yellow Pro# 51
+text comp51 0.5 0.08 1 beige Comparing 
+text proc52 0.5 0.2 1 Yellow Pro# 52
+text comp52 0.5 0.18 1 beige Comparing 
+text proc53 0.5 0.3 1 Yellow Pro# 53
+text comp53 0.5 0.28 1 beige Comparing 
+text proc54 0.5 0.4 1 Yellow Pro# 54
+text comp54 0.5 0.38 1 beige Comparing 
+text proc55 0.5 0.5 1 Yellow Pro# 55
+text comp55 0.5 0.48 1 beige Comparing 
+text proc56 0.5 0.6 1 Yellow Pro# 56
+text comp56 0.5 0.58 1 beige Comparing 
+text proc61 0.6 0.1 1 Yellow Pro# 61
+text comp61 0.6 0.08 1 beige Comparing 
+text proc62 0.6 0.2 1 Yellow Pro# 62
+text comp62 0.6 0.18 1 beige Comparing 
+text proc63 0.6 0.3 1 Yellow Pro# 63
+text comp63 0.6 0.28 1 beige Comparing 
+text proc64 0.6 0.4 1 Yellow Pro# 64
+text comp64 0.6 0.38 1 beige Comparing 
+text proc65 0.6 0.5 1 Yellow Pro# 65
+text comp65 0.6 0.48 1 beige Comparing 
+text proc66 0.6 0.6 1 Yellow Pro# 66
+text comp66 0.6 0.58 1 beige Comparing 
+maximum value is 
+
+text ismax1 0.1 -0.2 1 green MAX 
+text ismax2 0.2 -0.2 1 green MAX 
+text ismax3 0.3 -0.2 1 green MAX 
+text ismax4 0.4 -0.2 1 green MAX 
+text ismax5 0.5 -0.2 1 green MAX 
+text ismax6 0.6 -0.2 1 green MAX 
+text valuecomp11 0.1 0.06 1 RoyalBlue1 4
+text valuecomp12 0.1 0.16 1 RoyalBlue1 4
+text valuecomp21 0.2 0.06 1 RoyalBlue1 7
+text valuecomp13 0.1 0.26 1 RoyalBlue1 4
+text valuecomp22 0.2 0.16 1 RoyalBlue1 7
+text valuecomp31 0.3 0.06 1 RoyalBlue1 8
+text valuecomp14 0.1 0.36 1 RoyalBlue1 4
+text valuecomp23 0.2 0.26 1 RoyalBlue1 7
+text valuecomp32 0.3 0.16 1 RoyalBlue1 8
+text valuecomp41 0.4 0.06 1 RoyalBlue1 9
+text valuecomp15 0.1 0.46 1 RoyalBlue1 4
+text valuecomp24 0.2 0.36 1 RoyalBlue1 7
+text valuecomp33 0.3 0.26 1 RoyalBlue1 8
+text valuecomp42 0.4 0.16 1 RoyalBlue1 9
+text valuecomp51 0.5 0.06 1 RoyalBlue1 1
+text with11 0.1 0.04 1 red4 versus
+text with12 0.1 0.14 1 red4 versus
+text with21 0.2 0.04 1 red4 versus
+text valuecomp16 0.1 0.56 1 RoyalBlue1 4
+text valuecomp25 0.2 0.46 1 RoyalBlue1 7
+text valuecomp34 0.3 0.36 1 RoyalBlue1 8
+text valuecomp43 0.4 0.26 1 RoyalBlue1 9
+text valuecomp52 0.5 0.16 1 RoyalBlue1 1
+text valuecomp61 0.6 0.06 1 RoyalBlue1 2
+text with13 0.1 0.24 1 red4 versus
+text with22 0.2 0.14 1 red4 versus
+text with31 0.3 0.04 1 red4 versus
+text valuecomp26 0.2 0.56 1 RoyalBlue1 7
+text valuecomp35 0.3 0.46 1 RoyalBlue1 8
+text valuecomp44 0.4 0.36 1 RoyalBlue1 9
+text valuecomp53 0.5 0.26 1 RoyalBlue1 1
+text valuecomp62 0.6 0.16 1 RoyalBlue1 2
+text valuewith11 0.1 0.02 1 tomato2 4
+text with14 0.1 0.34 1 red4 versus
+text with23 0.2 0.24 1 red4 versus
+text with32 0.3 0.14 1 red4 versus
+text with41 0.4 0.04 1 red4 versus
+text valuecomp36 0.3 0.56 1 RoyalBlue1 8
+text valuecomp45 0.4 0.46 1 RoyalBlue1 9
+text valuecomp54 0.5 0.36 1 RoyalBlue1 1
+text valuecomp63 0.6 0.26 1 RoyalBlue1 2
+text valuewith12 0.1 0.12 1 tomato2 7
+text valuewith21 0.2 0.02 1 tomato2 4
+text with15 0.1 0.44 1 red4 versus
+text with24 0.2 0.34 1 red4 versus
+text with33 0.3 0.24 1 red4 versus
+text with42 0.4 0.14 1 red4 versus
+text with51 0.5 0.04 1 red4 versus
+text valuecomp46 0.4 0.56 1 RoyalBlue1 9
+text valuecomp55 0.5 0.46 1 RoyalBlue1 1
+text valuecomp64 0.6 0.36 1 RoyalBlue1 2
+text valuewith13 0.1 0.22 1 tomato2 8
+text valuewith22 0.2 0.12 1 tomato2 7
+text valuewith31 0.3 0.02 1 tomato2 4
+text with16 0.1 0.54 1 red4 versus
+text with25 0.2 0.44 1 red4 versus
+text with34 0.3 0.34 1 red4 versus
+text with43 0.4 0.24 1 red4 versus
+text with52 0.5 0.14 1 red4 versus
+text with61 0.6 0.04 1 red4 versus
+text valuecomp56 0.5 0.56 1 RoyalBlue1 1
+text valuecomp65 0.6 0.46 1 RoyalBlue1 2
+text valuewith14 0.1 0.32 1 tomato2 9
+text valuewith23 0.2 0.22 1 tomato2 8
+text valuewith32 0.3 0.12 1 tomato2 7
+text valuewith41 0.4 0.02 1 tomato2 4
+text with26 0.2 0.54 1 red4 versus
+text with35 0.3 0.44 1 red4 versus
+text with44 0.4 0.34 1 red4 versus
+text with53 0.5 0.24 1 red4 versus
+text with62 0.6 0.14 1 red4 versus
+text valuecomp66 0.6 0.56 1 RoyalBlue1 2
+text valuewith15 0.1 0.42 1 tomato2 1
+text valuewith24 0.2 0.32 1 tomato2 9
+text valuewith33 0.3 0.22 1 tomato2 8
+text valuewith42 0.4 0.12 1 tomato2 7
+text valuewith51 0.5 0.02 1 tomato2 4
+text with36 0.3 0.54 1 red4 versus
+text with45 0.4 0.44 1 red4 versus
+text with54 0.5 0.34 1 red4 versus
+text with63 0.6 0.24 1 red4 versus
+text valuewith16 0.1 0.52 1 tomato2 2
+text valuewith25 0.2 0.42 1 tomato2 1
+text valuewith34 0.3 0.32 1 tomato2 9
+text valuewith43 0.4 0.22 1 tomato2 8
+text valuewith52 0.5 0.12 1 tomato2 7
+text valuewith61 0.6 0.02 1 tomato2 4
+text with46 0.4 0.54 1 red4 versus
+text with55 0.5 0.44 1 red4 versus
+text with64 0.6 0.34 1 red4 versus
+circle circ12 0.0 0.14 0.04 SpringGreen outline
+text valuewith26 0.2 0.52 1 tomato2 2
+text valuewith35 0.3 0.42 1 tomato2 1
+text valuewith44 0.4 0.32 1 tomato2 9
+text valuewith53 0.5 0.22 1 tomato2 8
+text valuewith62 0.6 0.12 1 tomato2 7
+text with56 0.5 0.54 1 red4 versus
+text with65 0.6 0.44 1 red4 versus
+circle circ13 0.0 0.24 0.04 SpringGreen outline
+text valuewith36 0.3 0.52 1 tomato2 2
+text valuewith45 0.4 0.42 1 tomato2 1
+text valuewith54 0.5 0.32 1 tomato2 9
+text valuewith63 0.6 0.22 1 tomato2 8
+text with66 0.6 0.54 1 red4 versus
+move circ12 0.1 0.14
+color ismax1 red
+alter ismax1 NOT 
+circle circ14 0.0 0.34 0.04 SpringGreen outline
+circle circ23 0.0 0.24 0.04 SpringGreen outline
+circle circ24 0.0 0.34 0.04 SpringGreen outline
+circle circ51 0.0 0.04 0.04 SpringGreen outline
+text valuewith46 0.4 0.52 1 tomato2 2
+text valuewith55 0.5 0.42 1 tomato2 1
+text valuewith64 0.6 0.32 1 tomato2 9
+text valuewith56 0.5 0.52 1 tomato2 2
+text valuewith65 0.6 0.42 1 tomato2 1
+move circ13 0.1 0.24
+color ismax1 red
+alter ismax1 NOT 
+circle circ34 0.0 0.34 0.04 SpringGreen outline
+circle circ52 0.0 0.14 0.04 SpringGreen outline
+circle circ61 0.0 0.04 0.04 SpringGreen outline
+text valuewith66 0.6 0.52 1 tomato2 2
+move circ14 0.1 0.34
+color ismax1 red
+alter ismax1 NOT 
+move circ23 0.2 0.24
+color ismax2 red
+alter ismax2 NOT 
+circle circ53 0.0 0.24 0.04 SpringGreen outline
+circle circ62 0.0 0.14 0.04 SpringGreen outline
+move circ24 0.2 0.34
+color ismax2 red
+alter ismax2 NOT 
+move circ51 0.5 0.04
+color ismax5 red
+alter ismax5 NOT 
+circle circ54 0.0 0.34 0.04 SpringGreen outline
+circle circ63 0.0 0.24 0.04 SpringGreen outline
+move circ34 0.3 0.34
+color ismax3 red
+alter ismax3 NOT 
+move circ52 0.5 0.14
+color ismax5 red
+alter ismax5 NOT 
+move circ61 0.6 0.04
+color ismax6 red
+alter ismax6 NOT 
+circle circ64 0.0 0.34 0.04 SpringGreen outline
+move circ53 0.5 0.24
+color ismax5 red
+alter ismax5 NOT 
+move circ62 0.6 0.14
+color ismax6 red
+alter ismax6 NOT 
+move circ54 0.5 0.34
+color ismax5 red
+alter ismax5 NOT 
+move circ63 0.6 0.24
+color ismax6 red
+alter ismax6 NOT 
+circle circ56 0.0 0.54 0.04 SpringGreen outline
+move circ64 0.6 0.34
+color ismax6 red
+alter ismax6 NOT 
+move circ56 0.5 0.54
+color ismax5 red
+alter ismax5 NOT 
+
+comment 9
+comment Speedup is  1.08336673346E+0001
+comment SEQUENTIAL EXECUTION TIME: 7774
+comment PARALLEL EXECUTION TIME: 2861
+comment SPEEDUP:    2.72
+comment NUMBER OF PROCESSORS USED: 43

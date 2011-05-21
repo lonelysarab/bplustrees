@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<!DOCTYPE program_listing SYSTEM "../php_inc/program_listing.dtd">
+<pseudocode>
+<call_stack>Pseudocode for the Queue Class</call_stack>
+<program_listing>
+<line line_number = "1"> // Dequeue an item from the queue
+if queue.size() is less than 1 throw EmptyQueueException
+else return front element</line>
+<line line_number = "2">// Adding an item to the queue
+Enqueue new item into front of queue</line>
+</program_listing>
+</pseudocode>

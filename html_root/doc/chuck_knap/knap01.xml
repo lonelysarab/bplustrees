@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pseudocode>
+	<call_stack>knapsack01/dynProgKnap01</call_stack>
+	<program_listing>
+		<signature>dynProgKnap01(knap, a, c, n, b)</signature>
+		<line line_number="1">1	Initialize first row of dynamic programming matrix to 0</line>
+		<line line_number="2">2	for each item i in 1..n	</line>
+		<line line_number="3">3	   for each weight y in 0..b </line>
+		<line line_number="4">4		if y &gt; a[i-1]</line>	
+		<line line_number="5">5			knap[i][y]= max(knap[i-1][y], knap[i-1][y-a[i-1]] + c[k-1])</line>
+		<line line_number="6">6	   	else</line>
+		<line line_number="7">7			if y == a[i-1]	</line>
+		<line line_number="8">8				knap[i][y] = max {knap[i-1][y], c[k-1]}	</line>
+		<line line_number="9">9	   		else	</line>
+		<line line_number="10">10			knap[i][y] = knap[i-1][y]	</line>
+	</program_listing>
+</pseudocode>

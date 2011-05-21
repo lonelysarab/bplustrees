@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<visualizers xsi:noNamespaceSchemaLocation="visualizers.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <visualizer name="Gaigs">
+        <class value="gaigs2.GaigsAV"/>
+        <extension value="sho"/>
+        <extension value="gaigs"/>
+    </visualizer>
+    <visualizer name="Gaff">
+        <class value="org.gaffneyc.gaff.GaffVisualizer"/>
+        <extension value="gaff"/>
+    </visualizer>
+    <visualizer name="Animal">
+       <class value="animal.main.AnimalVisualizer"/>
+       <extension value="aml"/>
+   </visualizer>
+   <visualizer name="AnimalScript">
+       <class value="animal.main.AnimalScriptVisualizer"/>
+       <extension value="asu"/>
+   </visualizer>
+    <visualizer name="xaal">
+        <class value="xaal.adapters.jhave.XaalAV"/>
+        <extension value="xaal"/>
+    </visualizer>
+    <visualizer name="Matrix">
+    	<class value="jhavematrix.MatrixVisualizer"/>
+    	<extension value="matrix"/>
+    </visualizer>
+</visualizers>

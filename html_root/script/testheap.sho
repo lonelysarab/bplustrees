@@ -1,0 +1,2815 @@
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+78
+2
+1
+64
+3
+1
+26
+4
+1
+20
+5
+1
+44
+6
+1
+84
+7
+1
+83
+8
+1
+93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The Original Unsorted Array
+***\***
+0
+R
+0
+20
+1
+L
+1
+78
+2
+L
+3
+26
+3
+L
+7
+83
+3
+R
+8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+84
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 0
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+78
+2
+1
+64
+3
+1
+\R 26
+4
+1
+20
+5
+1
+44
+6
+1
+84
+7
+1
+83
+8
+1
+93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Walk the red node down the tree.
+***\***
+0
+R
+0
+20
+1
+L
+1
+78
+2
+L
+\R 3
+26
+3
+L
+7
+83
+3
+R
+8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+84
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+78
+2
+1
+64
+3
+1
+93
+4
+1
+20
+5
+1
+44
+6
+1
+84
+7
+1
+83
+8
+1
+\R 26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Done walking down the red node.
+***\***
+0
+R
+0
+20
+1
+L
+1
+78
+2
+L
+3
+93
+3
+L
+7
+83
+3
+R
+\R 8
+26
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+84
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 1
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+78
+2
+1
+\R 64
+3
+1
+93
+4
+1
+20
+5
+1
+44
+6
+1
+84
+7
+1
+83
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Walk the red node down the tree.
+***\***
+0
+R
+0
+20
+1
+L
+1
+78
+2
+L
+3
+93
+3
+L
+7
+83
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+\R 2
+64
+2
+L
+5
+44
+2
+R
+6
+84
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+78
+2
+1
+84
+3
+1
+93
+4
+1
+20
+5
+1
+44
+6
+1
+\R 64
+7
+1
+83
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Done walking down the red node.
+***\***
+0
+R
+0
+20
+1
+L
+1
+78
+2
+L
+3
+93
+3
+L
+7
+83
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+\R 6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+\R 78
+2
+1
+84
+3
+1
+93
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+83
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Walk the red node down the tree.
+***\***
+0
+R
+0
+20
+1
+L
+\R 1
+78
+2
+L
+3
+93
+3
+L
+7
+83
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+20
+1
+1
+93
+2
+1
+84
+3
+1
+83
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+\R 78
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Done walking down the red node.
+***\***
+0
+R
+0
+20
+1
+L
+1
+93
+2
+L
+3
+83
+3
+L
+\R 7
+78
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 3
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+93
+2
+1
+84
+3
+1
+83
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+78
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Walk the red node down the tree.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+93
+2
+L
+3
+83
+3
+L
+7
+78
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+93
+1
+1
+83
+2
+1
+84
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+\R 20
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Done walking down the red node.
+***\***
+0
+R
+0
+93
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+\R 7
+20
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+93
+1
+1
+83
+2
+1
+84
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+20
+8
+1
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Done walking down nodes.  We have a heap.
+***\***
+0
+R
+0
+93
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+7
+20
+3
+R
+8
+26
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 26
+1
+1
+83
+2
+1
+84
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+20
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+26
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+7
+20
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 4
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 26
+1
+1
+83
+2
+1
+84
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+64
+7
+1
+20
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+26
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+7
+20
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+84
+2
+L
+5
+44
+2
+R
+6
+64
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+84
+1
+1
+83
+2
+1
+64
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+\R 26
+7
+1
+20
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+84
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+7
+20
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+\R 6
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+83
+2
+1
+64
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+26
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 5
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+83
+2
+1
+64
+3
+1
+78
+4
+1
+20
+5
+1
+44
+6
+1
+26
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+83
+2
+L
+3
+78
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+83
+1
+1
+78
+2
+1
+64
+3
+1
+\R 20
+4
+1
+20
+5
+1
+44
+6
+1
+26
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+83
+1
+L
+1
+78
+2
+L
+\R 3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+6
+26
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 26
+1
+1
+78
+2
+1
+64
+3
+1
+20
+4
+1
+20
+5
+1
+44
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+26
+1
+L
+1
+78
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 6
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 26
+1
+1
+78
+2
+1
+64
+3
+1
+20
+4
+1
+20
+5
+1
+44
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+26
+1
+L
+1
+78
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+78
+1
+1
+\R 26
+2
+1
+64
+3
+1
+20
+4
+1
+20
+5
+1
+44
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+78
+1
+L
+\R 1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+5
+44
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 44
+1
+1
+26
+2
+1
+64
+3
+1
+20
+4
+1
+20
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+44
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 7
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 44
+1
+1
+26
+2
+1
+64
+3
+1
+20
+4
+1
+20
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+44
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+2
+64
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+64
+1
+1
+26
+2
+1
+\R 44
+3
+1
+20
+4
+1
+20
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+64
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+4
+20
+1
+R
+\R 2
+44
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+26
+2
+1
+44
+3
+1
+20
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+2
+44
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 8
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+26
+2
+1
+44
+3
+1
+20
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+2
+44
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+44
+1
+1
+26
+2
+1
+\R 20
+3
+1
+20
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+44
+1
+L
+1
+26
+2
+L
+3
+20
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\R 2
+20
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+26
+2
+1
+20
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+26
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+2
+20
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION 9
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+26
+2
+1
+20
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+26
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+2
+20
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+26
+1
+1
+\R 20
+2
+1
+20
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+0
+26
+1
+L
+\R 1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+2
+20
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION :
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+\R 0
+20
+1
+L
+1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+\Y 20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+Swap the root node with last unsorted node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+\Y 1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+FIBQUESTION ;
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+\Y 20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The yellow nodes are sorted, walk down the red node.
+***\***
+0
+R
+\R 0
+20
+1
+L
+\Y 1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\R 20
+1
+1
+\Y 20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The unsorted nodes form a heap.
+***\***
+0
+R
+\R 0
+20
+1
+L
+\Y 1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+MD_Array 0.015 0.015 HeavyBold
+1
+***\***
+9
+1
+0
+1
+\Y 20
+1
+1
+\Y 20
+2
+1
+\Y 26
+3
+1
+\Y 44
+4
+1
+\Y 64
+5
+1
+\Y 78
+6
+1
+\Y 83
+7
+1
+\Y 84
+8
+1
+\Y 93
+***^***
+VIEW WINDOWS 2
+VIEW JUMP 2
+BinaryTree   0.02 0.015 HeavyBold
+2 1.5 1.5
+The array is sorted.  We're done!
+***\***
+0
+R
+\Y 0
+20
+1
+L
+\Y 1
+20
+2
+L
+\Y 3
+44
+3
+L
+\Y 7
+84
+3
+R
+\Y 8
+93
+2
+R
+\Y 4
+64
+1
+R
+\Y 2
+26
+2
+L
+\Y 5
+78
+2
+R
+\Y 6
+83
+***^***
+STARTQUESTIONS
+FIBQUESTION 0
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+8
+ENDANSWER
+FIBQUESTION 1
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+6
+ENDANSWER
+FIBQUESTION 2
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+7
+ENDANSWER
+FIBQUESTION 3
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+7
+ENDANSWER
+FIBQUESTION 4
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+6
+ENDANSWER
+FIBQUESTION 5
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+3
+ENDANSWER
+FIBQUESTION 6
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+1
+ENDANSWER
+FIBQUESTION 7
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+2
+ENDANSWER
+FIBQUESTION 8
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+2
+ENDANSWER
+FIBQUESTION 9
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+1
+ENDANSWER
+FIBQUESTION :
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+0
+ENDANSWER
+FIBQUESTION ;
+At what index will the red node be located after it is walked down the tree?
+ENDTEXT
+ANSWER
+0
+ENDANSWER

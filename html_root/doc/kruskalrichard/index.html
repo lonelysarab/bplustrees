@@ -1,0 +1,136 @@
+<html>
+<head>
+<style type="text/css">
+	<!--
+		body
+		{
+			background-color: #FFFFFF;
+		}
+
+		font.closing_node
+		{
+			font-weight: bold;
+			color: #00FF00;
+		}
+
+		font.text
+		{
+			font-weight: bold;
+			background-color: #6666FF;
+			color: #0000FF;
+		}
+
+		font.updating_node
+		{
+			font-weight: bold;
+			color: #61C3F4;
+		}
+
+		font.orange2
+		{
+			font-weight: bold;
+			color: #FFCC33;
+		}
+
+		table
+		{
+			padding : 4;
+			border : 1px solid black;
+			text-align : center;
+		}
+
+		th
+		{
+			border : 1px solid black;
+			padding : 8;
+		}
+
+		td
+		{
+			border : 1px solid black;
+		}
+	-->
+</style>
+</head>
+<body>
+<h2>Kruskal's Algorithm</h2>
+<p>
+<p>Here's pseudo code describing Kruskal's algorithm:</p>
+<table align=center cellpadding=4>
+<tr align=left><td><code><pre>
+
+/* initialization */
+PriorityQueue = { all edges (priority determined
+                  by smallest edgeweight) }
+Create a UnionFind ADT with universe consisting
+    of all vertices in the graph
+    
+/* loop */
+while ( number of edges added to MST is not
+        equal to number of vertices minus 1 )
+{
+  Remove an edge containing X and Y from
+    the UnionFind ADT
+
+  if ( not find( X, Y) )
+    Add <font class=closing_node>edge X-Y</font> to UnionFind ADT
+    Perform union( X, Y )
+}
+</pre></code></td></tr></table>
+
+<p> Note: When two edges in the priority queue have the same weight,
+the one with the vertex coming first in alphabetical order is removed
+first.
+
+<!--
+<p></p>
+<hr>
+<p>
+Color test
+<font class=updating_node>updating_node</font><br>
+<font class=orange2>orange2</font><br>
+</p>
+<table align=center><tr><td><img src=1.gif></td></tr></table>
+<p>
+<font class=test>BLUE</font>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=2.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=3.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=4.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=5.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=6.gif></td></tr></table>
+<p>
+</p>
+<hr>
+<p>
+</p>
+<table align=center><tr><td><img src=7.gif></td></tr></table>
+<p>
+</p>
+<hr>
+-->
+</body>
+</html>

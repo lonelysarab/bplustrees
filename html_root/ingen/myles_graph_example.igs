@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD INPUT PANEL//EN" "input_panel.dtd">
+
+<input_panel>
+  <textfield>
+    <label_line>Enter starting number of nodes:</label_line>
+    <default_field>4</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>Enter starting number of edges:</label_line>
+    <default_field>2</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <textfield>
+    <label_line>Enter more operations (addx | adex,y | remx | rmex,y {add or rem node x or edge x,y} | colx,y {color node x hex string y})*:</label_line>
+    <default_field>None</default_field>
+    <value_entered></value_entered>
+  </textfield>
+  <combobox>
+    <label_line>Select how graph is generated:</label_line>
+    <option>User-defined</option>
+    <option>Random</option>
+    <option_entered></option_entered>
+  </combobox>
+</input_panel>

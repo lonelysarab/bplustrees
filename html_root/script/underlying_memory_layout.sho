@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE show PUBLIC "-//JHAVE//DTD GAIGS SHO//EN" "gaigs_sho.dtd">
+
+<show>
+
+ 
+
+  <!--  %%%%%%%%%%%%%%%%%%%% snap 1 %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+  <snap>
+    <title fontsize="0.05">Underlying layout of memory locations in a n-by-m grid (n=2, m=3)</title>
+    <memorylayout rows="2" cols="3" horiz_spacing="1.0" debug_flag="on">
+
+      <bounds x1="-0.1" y1="0.3" x2="1.1" y2="1.5"  fontsize="0.1"/>
+    </memorylayout>
+  </snap>
+
+
+
+</show>

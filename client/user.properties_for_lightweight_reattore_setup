@@ -1,0 +1,7 @@
+default.category=everything
+default.server.url=localhost
+default.server.port=7004
+default.local.port=7004
+# Use this for testing against the server running the lightweight Reattore server
+default.webroot=http://localhost:8080/html_root/
+application.args=-debug

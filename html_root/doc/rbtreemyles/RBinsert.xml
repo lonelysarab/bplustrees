@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<pseudocode>
+    <call_stack><replace var="stack" /></call_stack>
+    <program_listing>
+	<signature>RBinsert(addItem, currentNode)</signature>
+	<line line_number="1">1	if(currentNode is null)</line>
+	<line line_number="2">2		currentNode = new Node(addItem)</line>
+	<line line_number="8">3		RemedyDoubleRed(currentNode)</line>
+	<line line_number="3">4	else if(currentNode's key is greater than addItem)</line>
+	<line line_number="4">5		currentNode.left = insert(addItem, currentNode.left</line>
+	<line line_number="5">6	else if(currentNode's key is less than addItem)</line>
+	<line line_number="6">7		currentNode.right = insert(addItem, currentNode.right)</line>
+	<line line_number="7">8	return currentNode</line>
+    </program_listing>
+    <variables>
+        <variable>addItem = <replace var="item" /></variable>
+        <variable>currentNode = <replace var="v" /></variable>
+    </variables>
+</pseudocode>
