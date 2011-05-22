@@ -4,43 +4,98 @@
  *
  *
  * @author William Clements
- * @version March 16 2011
+ * @version %I%, %G%
  *************************************************************************************************/
 package exe.bplustrees;
 
 import java.io.*;
 import java.lang.*;
 import java.util.*;
-
 import java.net.*;
 import org.jdom.*;
 import exe.*;
 import exe.pseudocode.*;
 
+/*
+ * This class helps make the visualization script that is sent to the client.
+ */
 public class BPlusTree {
 
-  //for JHAVE
+  /*
+   * Title for the visualization
+   */
   static final String TITLE = null;
+
+  /*
+   * Pseudocode for the algorith to insert keys into the B+ Tree
+   */
   static final String INSERT = "exe/bplustrees/insert.xml";
+
+  /*
+   * Pseudocode for the algorithm to split a node or a leaf in a B+ tree after an insert.
+   */
   static final String SPLIT = "exe/bplustrees/split.xml";
+
+  /*
+   * Pseudocode for the algorithm to delete a key from a leaf in a B+ tree.
+   */
   static final String DELETE = "exe/bplustrees/delete.xml";
+
+  /*
+   * Pseudocode display helper
+   */
   static PseudoCodeDisplay pseudo;
+
+  /*
+   * The show file created for the client that contains the snapshots for the visualization.
+   */
   static ShowFile show;
+
+  /*
+   * Split can call itself recursively. This tracks how many times it has been called. If it is
+   * called once and the algorithm is inside the function and integer representation is 1.
+   */
   static int splitScope;
+
+  /*
+   * If the algorithm is currently inserting this is true.
+   */
   static boolean isInsert;
-  //the trees
+
+  /*
+   * The GAIGStree visual representation of a tree.
+   */
   static GAIGStree visualTree;
+
+  /*
+   * A B+ tree stored in memory.
+   */
   static BPT tree;
-  //the roots
+
+  /*
+   * A JHAVE visual representation of a root node.
+   */
   static TreeNode visualRoot;
+
+  /*
+   * A B+ tree root node stored in memory.
+   */
   static BPTNode root;
 
+  /*
+   * function that creates the script for the user.
+   * @param args[0]   show file
+   * @param args[1]   instructions for the user to enter the desired order of the tree.
+   */
   public static void main(String args[]) throws IOException {
-    // show file creation for the client
+    
+    /*
+     * Show file creation for the client.
+     */
     show = new ShowFile(args[0]);
 
     // Set restrictions on how wide the tree will be
-    if (0 < Integer.parseInt(args[1]) && Integer.parseInt(args[1]) < 5) {
+    if (3 <= Integer.parseInt(args[1]) && Integer.parseInt(args[1]) <= 4) {
       BPT.order = Integer.parseInt(args[1]);
     } else {
       BPT.order = 4;
@@ -56,10 +111,9 @@ public class BPlusTree {
     // this tests the tree
     Integer[] tempIntArray = {18,10,17,13,9,13,12,2};
     tree = new BPT(tempIntArray);
-//    tree.delete(5);
-//    Integer[] tempIntArray = {1,2,3,4,5,6,7,8,9};
 
-    /*****************************************************tree node examples below
+
+    /**********************************tree node examples below***********************************
     //assign a value to the root
     visualRoot.setValue("3");
     visualRoot.setHexColor("#eeeeff");
@@ -104,25 +158,44 @@ public class BPlusTree {
 
     visualRoot.setChild(visualRoot.getChild().getSibling());
     show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
+    **********************************************************************************************/
 
 
 
-     */
     show.close();
   }
 
+  /*
+   * Helper for making a snapshot of the current state of the algorithm.
+   * @param ISorD       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highligher for the line. often "PseudoCodeDisplay.YELLOW"
+   */
   public static String make_uri(String ISorD, int splitDepth, int x, int line, int color)
           throws IOException {
     return make_uri(ISorD, splitDepth, x, new int[]{line}, new int[]{color});
   }
 
   /*
-   * make a snapshot of the visualization
-   * @param ISorD   indicates if the program is currently inserting, spliting or deleting
+   * Makes a snapshot of the visualization
+   * @param ISorD       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param lines       current lines highlighted. represents current executing lines in algorithm.
+   * @param colors      color highlighers for the lines. often "PseudoCodeDisplay.YELLOW"
    */
   public static String make_uri(String ISorD, int splitDepth, int x, int[] lines, int[] colors)
           throws IOException {
-    String stack ="";//creation of the call stack
+    /*
+     * Creation of the call stack.
+     */
+    String stack ="";
+
+    /*
+     * The value of the key to be inserted or deleted in the tree.
+     */
     String xVal="";
 
     //setup the pseudo code display panel
