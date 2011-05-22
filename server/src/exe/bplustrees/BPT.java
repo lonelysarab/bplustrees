@@ -4,25 +4,43 @@
  *
  *
  * @author William Clements
- * @version March 16 2011
+ * @version %I%, %G%
  *************************************************************************************************/
 package exe.bplustrees;
 
 import java.io.*;
 import java.util.*;
 import exe.*;
-
 import exe.pseudocode.*;
 
+/*
+ * Object representation of a tree in memory. Multiple nodes can be made within this class.
+ */
 public class BPT {
 
+  /*
+   * If keys are being deleted from a leaf and the size of the keyList becomes this, a merge or
+   * redistribution is performed.
+   */
   public static int minimumCapacity = 2;
+
+  /*
+   * The order of the tree. When this many keys are inserted into a leaf, the leaf is split.
+   */
   public static int order = 4;
-  public ArrayList wholeTree; //helps with printing and debugging the tree
+
+  /*
+   * This helps with displaying the tree in the terminal.
+   */
+  public ArrayList wholeTree;
+
+  /*
+   * debugging the tree
+   */
   public static boolean isInDebuggingMode = false;
 
   /*
-   * Constructor makes an object the represents a tree
+   * Constructor makes an object that represents a tree
    */
   public BPT() {
   }
@@ -39,7 +57,12 @@ public class BPT {
 
 
   /*
-   * make a snapshot for the visualization
+   * Make a snapshot for the visualization.
+   * @param state       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highligher for the line. often "PseudoCodeDisplay.YELLOW"
    */
   public void snap(String state, int splitDepth, int x, int line, int color) throws IOException {
     BPlusTree.show.writeSnap(BPlusTree.TITLE, BPlusTree.doc_uri(state),
@@ -47,10 +70,16 @@ public class BPT {
   }
 
   /*
-   * make a snapshot for the visualization
+   * Make a snapshot for the visualization.
+   * @param state       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highlighter
+   * @param n           A new leaf or node that is made and it is about to be inserted into tree.
    */
   public void snap(String state, int splitDepth, int x, int line, int color, TreeNode n) throws IOException {
-    GAIGStree showNewNode = new GAIGStree(false, "New Node", "#000000",0.0, 0.8, 0.2, 0.99, 0.2);
+    GAIGStree showNewNode = new GAIGStree(false, "New Node", "#000000", 0.0, 0.8, 0.2, 0.99, 0.2);
     showNewNode.setRoot(n);
     BPlusTree.show.writeSnap(BPlusTree.TITLE, BPlusTree.doc_uri(state),
             BPlusTree.make_uri(state, splitDepth, x, line, color), BPlusTree.visualTree, showNewNode);
@@ -58,8 +87,9 @@ public class BPT {
 
   /*
    * Inserts a number into the tree
-   * @param key   the integer that is being inserted
-   * @return      true if key did not already exist and was insert
+   * 
+   * @param key   The integer that is being inserted.
+   * @return      True if key did not already exist and was insert.
    */
   public boolean insert(int key) throws IOException {
     snap("insert", 0, key, 1, PseudoCodeDisplay.YELLOW);
@@ -88,7 +118,7 @@ public class BPT {
       //traverse down to the leaf
       int index = 0;
       while (child != null) {
-        
+
         //prepare to move down the tree
         current = child;
 
@@ -103,10 +133,11 @@ public class BPT {
         index = 0;
         while (key > current.keyList.get(index) && index < current.keyList.size() - 1) {
           index++;
-          
+
           //update visualization
-          if (vchild != null)
+          if (vchild != null) {
             vchild = vchild.getSibling();
+          }
         }
 
         //child will look ahead down the tree
@@ -115,8 +146,9 @@ public class BPT {
           child = current.pointerList.get(index + 1);
 
           //update visualization
-          if (vchild != null)
+          if (vchild != null) {
             vchild = vchild.getSibling();
+          }
         } else //take the pointer on the left of the number
         {
           child = current.pointerList.get(index);
@@ -169,7 +201,8 @@ public class BPT {
   }
 
   /*
-   * for debugging
+   * For debugging and printing the tree to the terminal output.
+   * @return    a display of the tree.
    */
   public String printTree() {
     //find depth
@@ -191,7 +224,10 @@ public class BPT {
   }
 
   /*
-   * for debugging
+   * For debugging and printing the tree to the terminal output.
+   * @param node     The root.
+   * @param level    initial 0.
+   * @return         A level of the tree.
    */
   public ArrayList<String> printTree(BPTNode node, int level) {
     for (int j = 0; j < node.keyList.size(); j++) { //store all the integers in an array
@@ -232,7 +268,7 @@ public class BPT {
       BPTNode newLeafNode = new BPTNode(currentNodeToBeSplit.keyList.remove(medianIndex));
       currentNodeToBeSplit.pointerList.remove(medianIndex);
       //update visualization
-      TreeNode vnewLeafNode = new TreeNode(""+newLeafNode.keyList.get(0));
+      TreeNode vnewLeafNode = new TreeNode("" + newLeafNode.keyList.get(0));
       vnewLeafNode.setHexColor("#eeeeff");
       vcurrentNodeToBeSplit.setValue(currentNodeToBeSplit.toString());
       vcurrentNodeToBeSplit.setHexColor("#f1f701");
@@ -251,10 +287,9 @@ public class BPT {
       }
 
       //a new node is made at the root
-      if (currentNodeToBeSplit.parentPointer == null) 
-      {
+      if (currentNodeToBeSplit.parentPointer == null) {
         snap("split", BPlusTree.splitScope, 0, 16, PseudoCodeDisplay.YELLOW, vnewLeafNode);
-        
+
         //create a new parent
         BPTNode newParentNode = new BPTNode(newLeafNode.keyList.get(0));
         BPlusTree.root = newParentNode;
@@ -265,7 +300,7 @@ public class BPT {
 
         //Fix the pointers on the leaf that was split
         currentNodeToBeSplit.parentPointer = newParentNode;
-        currentNodeToBeSplit.rightLeaf = newLeafNode;        
+        currentNodeToBeSplit.rightLeaf = newLeafNode;
 
         //the visual tree
         TreeNode vnewParentNode = new TreeNode("" + newLeafNode.keyList.get(0));
@@ -286,12 +321,12 @@ public class BPT {
         newLeafNode.parentPointer = currentNodeToBeSplit.parentPointer;
         newLeafNode.rightLeaf = currentNodeToBeSplit.rightLeaf;
         currentNodeToBeSplit.rightLeaf = newLeafNode;
-        currentNodeToBeSplit.getParent().addToNode(newLeafNode.keyList.get(0),newLeafNode);
+        currentNodeToBeSplit.getParent().addToNode(newLeafNode.keyList.get(0), newLeafNode);
 
         //update visualization
         vcurrentNodeToBeSplit.getParent().setChildWithEdge(new TreeNode());
         TreeNode updatingVisualNode = vcurrentNodeToBeSplit.getParent().getChild();
-        for (int i=0; i<currentNodeToBeSplit.getParent().keyList.size()+1; i++) {
+        for (int i = 0; i < currentNodeToBeSplit.getParent().keyList.size() + 1; i++) {
           updatingVisualNode.setValue(currentNodeToBeSplit.getParent().pointerList.get(i).toString());
           updatingVisualNode.setHexColor("#eeeeff");
           updatingVisualNode = updatingVisualNode.getSibling();
@@ -346,115 +381,131 @@ public class BPT {
   }
 
   /*
-   * Deletes a number in the tree
-   * @param key   the integer to be removed
-   * @return      true if key existed and was removed
+   * Deletes a number in the tree.
+   *
+   * @param key   The integer to be removed.
+   * @return      True if key existed and was removed.
+   * 
    */
   public boolean delete(int key) throws IOException {
     snap("delete", 0, key, 1, PseudoCodeDisplay.YELLOW);
 
-    //make your way down the tree
-    BPTNode parent = null;
-    BPTNode current = BPlusTree.root;
+    //set up current and child objects to assist in traveling down the tree
+    BPTNode current = null;
+    BPTNode child = BPlusTree.root;
+    TreeNode vcurrent = null;
+    TreeNode vchild = BPlusTree.visualRoot;
 
-    TreeNode vparent = null;
-    TreeNode vcurrent = BPlusTree.visualRoot;
-
+    //traverse down to the leaf
     int index = 0;
-    while (current != null) {
+    while (child != null) {
 
-      // look through the key set in a node. decide where to go down the tree.
+      //prepare to move down the tree
+      current = child;
+
+      //update visualization
+      vcurrent = vchild;
+      vcurrent.setHexColor("#f1f701");
+      snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
+      vcurrent.setHexColor("#eeeeff");
+      vchild = vcurrent.getChild();
+
+      // look through the key list in a node. decide where to go down the tree.
       index = 0;
       while (key > current.keyList.get(index) && index < current.keyList.size() - 1) {
         index++;
+
+        //update visualization
+        if (vchild != null) {
+          vchild = vchild.getSibling();
+        }
       }
 
-      //move down the tree. choose a direction.
-      parent = current;
-      if (key >= parent.keyList.get(index)) //take the pointer to the right of the number
+      //child will look ahead down the tree
+      if (key >= current.keyList.get(index)) //take the pointer to the right of the number
       {
-        current = parent.pointerList.get(index + 1);
+        child = current.pointerList.get(index + 1);
+
+        //update visualization
+        if (vchild != null) {
+          vchild = vchild.getSibling();
+        }
       } else //take the pointer on the left of the number
       {
-        current = parent.pointerList.get(index);
+        child = current.pointerList.get(index);
       }
 
-      //the visual tree
-      vparent = vcurrent;
-      vcurrent = vparent.getChild();
-      vparent.setHexColor("#f1f701");
-      snap("delete", 0, key, 6, PseudoCodeDisplay.YELLOW);
-      vparent.setHexColor("#eeeeff");
     }
 
-    //parent == leaf node
-    if (parent.keyList.get(index) == key) { //key is, in fact, in the leaf
+    //at this point current represents a leaf node
+    if (current.keyList.get(index) == key) { //key is, in fact, in the leaf
 
       //remove key from the leaf
-      parent.keyList.remove(index);
-      parent.pointerList.remove(0); //all these pointers are blank
+      current.keyList.remove(index);
+      current.pointerList.remove(0); //all these pointers are blank
 
       // the visual tree
-      vparent.setValue(parent.toString());
-      vparent.setHexColor("#f1f701");
+      vcurrent.setValue(current.toString());
+      vcurrent.setHexColor("#f1f701");
       snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);
-      vparent.setHexColor("#eeeeff");
+      vcurrent.setHexColor("#eeeeff");
 
       //If the number of elements in the leaf falls below minimumCapacity
       //things need to be rearranged.
-      if (parent.keyList.size() < minimumCapacity) {
+      if (current.keyList.size() < minimumCapacity) {
 
         //distribute elements evenly between two adjacted nodes
-        if (parent.rightLeaf != null && parent.parentPointer != null
-                && parent.parentPointer.keyList.get(0) == parent.rightLeaf.parentPointer.keyList.get(0)
-                && parent.rightLeaf.keyList.size() < minimumCapacity) {
+        if (current.rightLeaf != null && current.parentPointer != null
+                && current.parentPointer.keyList.get(0) == current.rightLeaf.parentPointer.keyList.get(0)
+                && current.rightLeaf.keyList.size() < minimumCapacity) {
 
 
-          int medianIndex = (int) Math.ceil(((double) parent.keyList.size()) / 2.0);
+          int medianIndex = (int) Math.ceil(((double) current.keyList.size()) / 2.0);
           for (int i = 0; i < medianIndex; i++) {
-            parent.addToNode(parent.rightLeaf.keyList.get(0), null);
-            parent.rightLeaf.keyList.remove(0);
-            parent.rightLeaf.pointerList.remove(0);
+            current.addToNode(current.rightLeaf.keyList.get(0), null);
+            current.rightLeaf.keyList.remove(0);
+            current.rightLeaf.pointerList.remove(0);
           }
-          int indxOfKeyToAdjacentLeaf = parent.parentPointer.keyList.indexOf(parent.keyList.get(0)) + 1;
-          parent.parentPointer.keyList.set(indxOfKeyToAdjacentLeaf, parent.rightLeaf.keyList.get(0));
+          int indxOfKeyToAdjacentLeaf = current.parentPointer.keyList.indexOf(current.keyList.get(0)) + 1;
+          current.parentPointer.keyList.set(indxOfKeyToAdjacentLeaf, current.rightLeaf.keyList.get(0));
 
           // the visual tree
-          vparent.setValue(parent.toString());
-          vparent.setHexColor("#f1f701");
+          vcurrent.setValue(current.toString());
+          vcurrent.setHexColor("#f1f701");
           snap("delete", 0, key, 20, PseudoCodeDisplay.YELLOW);
-          vparent.setHexColor("#eeeeff");
-          vparent.getSibling().setValue(parent.rightLeaf.toString());
-          vparent.getSibling().setHexColor("#f1f701");
+          vcurrent.setHexColor("#eeeeff");
+          vcurrent.getSibling().setValue(current.rightLeaf.toString());
+          vcurrent.getSibling().setHexColor("#f1f701");
           snap("delete", 0, key, 24, PseudoCodeDisplay.YELLOW);
-          vparent.getSibling().setHexColor("#eeeeff");
-          vparent.getParent().setValue(parent.parentPointer.toString());
-          vparent.getParent().setHexColor("#f1f701");
+          vcurrent.getSibling().setHexColor("#eeeeff");
+          vcurrent.getParent().setValue(current.parentPointer.toString());
+          vcurrent.getParent().setHexColor("#f1f701");
           snap("delete", 0, key, 25, PseudoCodeDisplay.YELLOW);
-          vparent.getParent().setHexColor("#eeeeff");
+          vcurrent.getParent().setHexColor("#eeeeff");
 
         } else //distributing elements cannot be done. there are too few elements.
         {
-          for (int i = 0; i < parent.rightLeaf.keyList.size(); i++) {
-            parent.addToNode(parent.rightLeaf.keyList.get(i), null);
+          for (int i = 0; i < current.rightLeaf.keyList.size(); i++) {
+            current.addToNode(current.rightLeaf.keyList.get(i), null);
           }
-          int indexOfKeyToRemove = parent.parentPointer.keyList.indexOf(parent.keyList.get(0)) + 1;
-          parent.parentPointer.keyList.remove(indexOfKeyToRemove);
-          parent.parentPointer.pointerList.remove(indexOfKeyToRemove + 1);
-          if (parent.rightLeaf.rightLeaf != null) {
-            parent.rightLeaf.rightLeaf = parent;
-            parent.rightLeaf = parent.rightLeaf.rightLeaf;
+          int indexOfKeyToRemove = current.parentPointer.keyList.indexOf(current.keyList.get(0)) + 1;
+          current.parentPointer.keyList.remove(indexOfKeyToRemove);
+          current.parentPointer.pointerList.remove(indexOfKeyToRemove + 1);
+          if (current.rightLeaf.rightLeaf != null) {
+            current.rightLeaf.rightLeaf = current;
+            current.rightLeaf = current.rightLeaf.rightLeaf;
           } else {
-            parent.rightLeaf = null;
+            current.rightLeaf = null;
           }
 
           // the visual tree
-          vparent.setValue(parent.toString());
-          if (vparent.getSibling() != null)
-            vparent.getSibling().deactivate();
-          vparent.setHexColor("#f1f701");
+          vcurrent.setValue(current.toString());
+          if (vcurrent.getSibling() != null) {
+            vcurrent.getSibling().deactivate();
+          }
+          vcurrent.setHexColor("#f1f701");
           snap("delete", 0, key, 30, PseudoCodeDisplay.YELLOW);
-          vparent.setHexColor("#eeeeff");
+          vcurrent.setHexColor("#eeeeff");
 
         }
 
