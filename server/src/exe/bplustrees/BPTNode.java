@@ -4,7 +4,7 @@
  *
  *
  * @author William Clements
- * @version %I%, %G%
+ * @version May 21, 2010
  *************************************************************************************************/
 package exe.bplustrees;
 

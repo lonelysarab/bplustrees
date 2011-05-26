@@ -4,7 +4,7 @@
  *
  *
  * @author William Clements
- * @version %I%, %G%
+ * @version May 21, 2010
  *************************************************************************************************/
 package exe.bplustrees;
 
@@ -26,14 +26,14 @@ public class bplustrees{
      */
     public static void main(String args[]) throws IOException
     {
-    	Hashtable hash = XMLParameterParser.parseToHash(args[2]);
+        //This is meant for user input. Can be used in the future.
+    	//Hashtable hash = XMLParameterParser.parseToHash(args[2]);
 
     	String[] params = new String[2];
-
     	params[0] = args[0] + ".sho";
 
         //this string must be the exact same as the string in file html_root-ingen-bplustrees.igs
-    	params[1] = (String)hash.get("Please enter the order of the tree (3 or 4)");
+    	//params[1] = (String)hash.get("Please enter the order of the tree (3 or 4)");
 
     	BPlusTree.main(params);
     }
