@@ -4,7 +4,7 @@
  *
  *
  * @author William Clements
- * @version %I%, %G%
+ * @version May 21, 2010
  *************************************************************************************************/
 package exe.bplustrees;
 
@@ -83,35 +83,35 @@ public class BPlusTree {
   static BPTNode root;
 
   /*
-   * function that creates the script for the user.
+   * True and false questions for the user.
+   */
+  static XMLtfQuestion tf;
+
+  /*
+   * Keeps track of how many questions have been asked. 
+   */
+  static int id;
+
+  /*
+   * Function that creates the script for the user.
    * @param args[0]   show file
    * @param args[1]   instructions for the user to enter the desired order of the tree.
    */
   public static void main(String args[]) throws IOException {
-    
-    /*
-     * Show file creation for the client.
-     */
+
     show = new ShowFile(args[0]);
+    tf = new XMLtfQuestion(show,id+"");
 
-    // Set restrictions on how wide the tree will be
-    if (3 <= Integer.parseInt(args[1]) && Integer.parseInt(args[1]) <= 4) {
-      BPT.order = Integer.parseInt(args[1]);
-    } else {
-      BPT.order = 4;
-    }
-
-    // declare a new tree in JHAVE and make a root
-    visualTree = new GAIGStree(false, "B+ Tree of order " + BPT.order, "#000000",
+    //Declare a new general tree.
+    visualTree = new GAIGStree(false, "B+ Tree of order " + BPT.ORDER, "#000000",
             0.1, 0.1, 0.9, 0.9, 0.09);
-    visualRoot = new TreeNode();
-    visualTree.setRoot(visualRoot);
 
-    // initialize tree and add random numbers
-    // this tests the tree
-    Integer[] tempIntArray = {18,10,17,13,9,13,12,2};
+    //Insert random numbers into the tree.
+    Random rand = new Random();
+    int[] tempIntArray = new int[4];
+    for (int i = 0; i < tempIntArray.length; i++)
+      tempIntArray[i] = ((Math.abs(rand.nextInt())%99)+1);
     tree = new BPT(tempIntArray);
-
 
     /**********************************tree node examples below***********************************
     //assign a value to the root
@@ -137,31 +137,7 @@ public class BPlusTree {
     tempNodetwo.setHexColor("#eeeeff");
     visualRoot.setChildWithEdge(tempNodetwo);
     show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-
-    TreeNode tempNodeThree = new TreeNode();
-    tempNodeThree.setValue("3");
-    tempNodeThree.setHexColor("#eeeeff");
-    visualRoot.setChildWithEdge(tempNodeThree);
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-
-    TreeNode tempNodeFour = new TreeNode();
-    tempNodeFour.setValue("4");
-    tempNodeFour.setHexColor("#eeeeff");
-    visualRoot.setChildWithEdge(tempNodeFour);
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-
-    visualRoot.getChild().setHexColor("#f1f701");
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-    visualRoot.getChild().getSibling().setHexColor("#f1f701");
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-
-
-    visualRoot.setChild(visualRoot.getChild().getSibling());
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
     **********************************************************************************************/
-
-
-
     show.close();
   }
 
@@ -283,4 +259,48 @@ public class BPlusTree {
 
     return uri.toASCIIString();
   }
+
+
+  /*
+   * Make a snapshot for the visualization.
+   * @param state       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highligher for the line. often "PseudoCodeDisplay.YELLOW"
+   */
+  public static void snap(String state, int splitDepth, int x, int line, int color) throws IOException {
+    show.writeSnap(TITLE, doc_uri(state),
+            make_uri(state, splitDepth, x, line, color), visualTree);
+  }
+
+  /*
+   * Make a snapshot for the visualization.
+   * @param state       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highlighter
+   * @param n           A new leaf or node that is made and it is about to be inserted into tree.
+   */
+  public static void snap(String state, int splitDepth, int x, int line, int color, TreeNode n) throws IOException {
+    GAIGStree showNewNode = new GAIGStree(false, "New Node", "#000000", 0.0, 0.8, 0.2, 0.99, 0.2);
+    showNewNode.setRoot(n);
+    show.writeSnap(TITLE, doc_uri(state),
+            make_uri(state, splitDepth, x, line, color), visualTree, showNewNode);
+  }
+
+  /*
+   * Make a snapshot for the visualization.
+   * @param state       a string containing "insert", "split" or "delete". signifies current state.
+   * @param splitDepth  represents current depth that the spliting is at
+   * @param x           the key that is being inserted or deleted
+   * @param line        current line highlighted. represents current executing line in algorithm.
+   * @param color       color highlighter
+   * @param q           Question to quiz the user
+   */
+  public static void snap(String state, int splitDepth, int x, int line, int color, XMLtfQuestion q) throws IOException {
+    show.writeSnap(TITLE, doc_uri(state), make_uri(state, splitDepth, x, line, color), q, visualTree);
+  }
+
 }
