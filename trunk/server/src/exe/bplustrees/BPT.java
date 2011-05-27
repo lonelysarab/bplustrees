@@ -39,6 +39,7 @@ public class BPT {
    */
   public BPT() {
     root = new TreeNode();
+    root.setHexColor("#eeeeff");
   }
 
   /*
@@ -47,8 +48,10 @@ public class BPT {
    */
   public BPT(int[] numberArray) throws IOException {
     root = new TreeNode();
-    for (int i = 0; i < numberArray.length; i++) 
+    root.setHexColor("#eeeeff");
+    for (int i = 0; i < numberArray.length; i++) {
       insert(numberArray[i]);
+    }
   }
 
   /*
@@ -64,6 +67,7 @@ public class BPT {
       BPlusTree.visualTree.setRoot(root);
       BPlusTree.snap("insert", 0, key, 2, PseudoCodeDisplay.YELLOW);
       root.setValue("" + key + " ");
+
       root.setHexColor("#f1f701"); //highlight it
       BPlusTree.snap("insert", 0, key, 3, PseudoCodeDisplay.YELLOW);
       root.setHexColor("#eeeeff"); //unhighlight the node
@@ -111,17 +115,17 @@ public class BPT {
       if (keyIsAbsentInList(currentNode.getValue().split(" "), key)) {
 
         //update visual tree
-        currentNode.setHexColor("#f1f701");
+        currentNode.setHexColor("#f1f701");//highlight it
         BPlusTree.snap("insert", 0, key, 15, PseudoCodeDisplay.YELLOW);
 
         //properly add it into the leaf
-        addKeyToLeaf(currentNode, key);
-        
+        addKeyToNode(currentNode, key);
+
         //update visual tree
         BPlusTree.id++;
         BPlusTree.tf.setQuestionText("Will a split be performed?");
         BPlusTree.snap("insert", 0, key, 16, PseudoCodeDisplay.YELLOW, BPlusTree.tf);
-        currentNode.setHexColor("#eeeeff");
+        currentNode.setHexColor("#eeeeff");//unhighlight it
 
         //There are too many keys in the leaf. Split it.
         String[] keyList = currentNode.getValue().split(" ");
@@ -136,10 +140,11 @@ public class BPT {
       } else // The integer to be inserted already exists.
       {
         BPlusTree.snap("insert", 0, key, 21, PseudoCodeDisplay.YELLOW);
-        return false; 
+        return false;
       }
     }
 
+    //Successfully inserted.
     BPlusTree.snap("insert", 0, key, 23, PseudoCodeDisplay.YELLOW);
     return true;
   }
@@ -150,7 +155,7 @@ public class BPT {
    * @param int key       The integer you want to put in the list.
    * @return              nothing
    */
-  public void addKeyToLeaf(TreeNode theNode, int key) {
+  public void addKeyToNode(TreeNode theNode, int key) {
     String lst = theNode.getValue();
     String[] originalList = lst.split(" ");
     String returnStr = "";
@@ -210,15 +215,16 @@ public class BPT {
 
     //Split a leaf.
     if (currentNode.getChild() == null) {
-      BPlusTree.snap("split", BPlusTree.splitScope, 0, 3, PseudoCodeDisplay.YELLOW);    //////////////////////////BREAKS ON THIS ONE
+      BPlusTree.snap("split", BPlusTree.splitScope, 0, 3, PseudoCodeDisplay.YELLOW);
 
       //Make a new leaf node.
       TreeNode newLeafNode = new TreeNode("");
       newLeafNode.setHexColor("#eeeeff");
 
       //Put all the keys >= the median into the newLeafNode
-      for (int i=medianIndex; i<keyList.length; i++)
-        addKeyToLeaf(newLeafNode,removeKeyAtIndex(currentNode,medianIndex));
+      for (int i = medianIndex; i < keyList.length; i++) {
+        addKeyToNode(newLeafNode, removeKeyAtIndex(currentNode, medianIndex));
+      }
 
       //Update visualization.
       currentNode.setHexColor("#f1f701");
@@ -231,99 +237,138 @@ public class BPT {
 
         //Make a new parent.
         TreeNode newParentNode = new TreeNode();
+        newParentNode.setHexColor("#eeeeff");
         root = newParentNode;
         BPlusTree.visualTree.setRoot(root);
-        newParentNode.setHexColor("#eeeeff");
-        
+
         //Set the pointer going down and to the left.
         newParentNode.setChildWithEdge(currentNode);
         //Set the pointer going down and to the right.
         newParentNode.setChildWithEdge(newLeafNode);
         //Send a key up to the new parent from the new leaf.
         newParentNode.setValue(newLeafNode.getValue().split(" ")[0]);
-        
+
         BPlusTree.snap("split", BPlusTree.splitScope, 0, 23, PseudoCodeDisplay.YELLOW);
 
       } else // A parent exist. Attach the newLeafNode. Pass the first key up to the parent.
       {
         BPlusTree.snap("split", BPlusTree.splitScope, 0, 25, PseudoCodeDisplay.YELLOW);
+
+        newLeafNode.setSibling(currentNode.getSibling());
+        newLeafNode.setParent(currentNode.getParent());
+        newLeafNode.setLineToParent(new Edge(currentNode.getParent(), newLeafNode));
+        currentNode.setSibling(newLeafNode);
+
+        //Pass the first key in the new node up to the parent.
+        addKeyToNode(currentNode.getParent(), Integer.parseInt(newLeafNode.getValue().split(" ")[0]));
+
+        //If there are too many keys in the parent, it must be split.
+        String[] parentKeyList = currentNode.getParent().getValue().split(" ");
+        if (parentKeyList.length == ORDER) {
+          BPlusTree.snap("split", BPlusTree.splitScope, 0, 27, PseudoCodeDisplay.YELLOW);
+          BPlusTree.snap("split", BPlusTree.splitScope, 0, 28, PseudoCodeDisplay.YELLOW);
+          split(currentNode.getParent());
+        }
       }
 
     } else //Split a node.
     {
-      BPlusTree.snap("split", BPlusTree.splitScope, 0, 30, PseudoCodeDisplay.YELLOW);
-    }
-/*
-      } else // a parent exist. attach node. pass a number up to the parent
+      BPlusTree.snap("split", BPlusTree.splitScope, 0, 30, PseudoCodeDisplay.YELLOW); /////////////////////////////////////WORKING ON THIS
+
+      //Make a newNode.
+      TreeNode newNode = new TreeNode();
+      newNode.setHexColor("#eeeeff");
+      newNode.setValue("");
+
+      //Put all the keys >= the median into the newNode. Move the pointers as well.
+      for (int i = medianIndex; i < keyList.length; i++) {
+        addKeyToNode(newNode, removeKeyAtIndex(currentNode, medianIndex));
+
+        TreeNode previousNode;
+        TreeNode tempNodePointer = currentNode.getChild();
+        tempNodePointer = tempNodePointer.getSibling();
+        previousNode = tempNodePointer = tempNodePointer.getSibling();
+        tempNodePointer = tempNodePointer.getSibling();
+
+        previousNode.setSibling(tempNodePointer.getSibling());
+        tempNodePointer.setSibling(null);
+        tempNodePointer.deactivate();
+
+        newNode.setChildWithEdge(tempNodePointer);
+      }
+
+      //Pass the first key up to the parent
+      int tempKeyForTheParent = removeKeyAtIndex(newNode, 0);
+
+      //If the root was split, a new root is made.
+      if (currentNode.getParent() == null) {
+
+        //Make a new parent.
+        TreeNode newParentNode = new TreeNode();
+        newParentNode.setHexColor("#eeeeff");
+        root = newParentNode;
+        BPlusTree.visualTree.setRoot(root);
+        newParentNode.setValue(String.valueOf(tempKeyForTheParent) + " ");
+
+        //Set the pointer going down and to the left.
+        newParentNode.setChildWithEdge(currentNode);
+        //Set the pointer going down and to the right.
+        newParentNode.setChildWithEdge(newNode);
+
+        BPlusTree.snap("split", BPlusTree.splitScope, 0, 42, PseudoCodeDisplay.YELLOW);
+
+      } else // A parent exist. Attach the newNode. Pass the first key in newNode up to the parent.
       {
-        BPlusTree.snap("split", BPlusTree.splitScope, 0, 25, PseudoCodeDisplay.YELLOW);
 
-        //adjust pointers
-        newLeafNode.parentPointer = currentNodeToBeSplit.parentPointer;
-        newLeafNode.rightLeaf = currentNodeToBeSplit.rightLeaf;
-        currentNodeToBeSplit.rightLeaf = newLeafNode;
-        currentNodeToBeSplit.getParent().addToNode(newLeafNode.keyList.get(0), newLeafNode);
+        newNode.setSibling(currentNode.getSibling());
+        newNode.setParent(currentNode.getParent());
+        newNode.setLineToParent(new Edge(currentNode.getParent(), newNode));
+        currentNode.setSibling(newNode);
 
-        //update visualization
-        vcurrentNodeToBeSplit.getParent().setChildWithEdge(new TreeNode());
-        TreeNode updatingVisualNode = vcurrentNodeToBeSplit.getParent().getChild();
-        for (int i = 0; i < currentNodeToBeSplit.getParent().keyList.size() + 1; i++) {
-          updatingVisualNode.setValue(currentNodeToBeSplit.getParent().pointerList.get(i).toString());
-          updatingVisualNode.setHexColor("#eeeeff");
-          updatingVisualNode = updatingVisualNode.getSibling();
-        }
-        vcurrentNodeToBeSplit.getParent().setValue(currentNodeToBeSplit.getParent().toString());
-        BPlusTree.snap("split", BPlusTree.splitScope, 0, 26, PseudoCodeDisplay.YELLOW);
+        //Pass the first key in the new node up to the parent.
+        addKeyToNode(currentNode.getParent(), tempKeyForTheParent);
 
-        if (currentNodeToBeSplit.parentPointer.keyList.size() == ORDER) {
+        //If there are too many keys in the parent, it must be split.
+        String[] parentKeyList = currentNode.getParent().getValue().split(" ");
+        if (parentKeyList.length == ORDER) {
           BPlusTree.snap("split", BPlusTree.splitScope, 0, 27, PseudoCodeDisplay.YELLOW);
           BPlusTree.snap("split", BPlusTree.splitScope, 0, 28, PseudoCodeDisplay.YELLOW);
-          split(currentNodeToBeSplit.parentPointer, vcurrentNodeToBeSplit.getParent());
-        }
-      }
-
-    } else { //spliting a node
-      BPlusTree.snap("split", BPlusTree.splitScope, 0, 30, PseudoCodeDisplay.YELLOW);
-
-      //Make a new node. put the median and all the numbers > the median in this node
-      BPTNode newNodeOnTheRight = new BPTNode(currentNodeToBeSplit.keyList.remove(medianIndex));
-      currentNodeToBeSplit.pointerList.remove(medianIndex);
-      newNodeOnTheRight.parentPointer = currentNodeToBeSplit.parentPointer;
-      newNodeOnTheRight.rightLeaf = null;
-      newNodeOnTheRight.leftLeaf = null;
-      while (currentNodeToBeSplit.keyList.size() > medianIndex) {
-        newNodeOnTheRight.addToNode(currentNodeToBeSplit.keyList.remove(medianIndex), null);
-        currentNodeToBeSplit.pointerList.remove(medianIndex);
-      }
-
-      currentNodeToBeSplit.rightLeaf = null;
-      currentNodeToBeSplit.leftLeaf = null;
-
-      if (currentNodeToBeSplit.parentPointer == null) { //a new node is made at the root
-        BPTNode newParentNode = new BPTNode(newNodeOnTheRight.keyList.get(0));
-        newParentNode.pointerList.set(0, currentNodeToBeSplit);
-        newParentNode.pointerList.set(1, newNodeOnTheRight);
-        currentNodeToBeSplit.parentPointer = newParentNode;
-        BPlusTree.root = newParentNode;
-
-      } else  // a parent exist. pass a number up to the parent
-      {
-        BPlusTree.snap("split", BPlusTree.splitScope, 0, 49, PseudoCodeDisplay.YELLOW);
-        currentNodeToBeSplit.parentPointer.addToNode(newNodeOnTheRight.keyList.get(0),
-                newNodeOnTheRight);
-        BPlusTree.snap("split", BPlusTree.splitScope, 0, 51, PseudoCodeDisplay.YELLOW);
-        if (currentNodeToBeSplit.parentPointer.keyList.size() == ORDER)
-        {
-          BPlusTree.snap("split", BPlusTree.splitScope, 0, 52, PseudoCodeDisplay.YELLOW);
-          split(currentNodeToBeSplit.parentPointer, vcurrentNodeToBeSplit.getParent());
+          split(currentNode.getParent());
         }
       }
     }
-*/
+
     BPlusTree.splitScope--;
     return; //successfully inserted
   }
 
+  /* Picks up a pointer in a node that points down to a child and places it in a different node.
+   * @param TreeNode fromNode     This is the node that is having a pointer removed.
+   * @param TreeNode targetNode   This is the node that is going to have the pointer placed in it.
+   * @param int index             This is the index where the pointer resides in the fromNode. The
+   *                              first pointer is at index 0.
+   */
+/*  public void movePointer(TreeNode fromNode, TreeNode targetNode, int index) {
+    TreeNode tempNodePointer = fromNode.getChild();
+    TreeNode previousNode = fromNode.getChild();
+
+    for (int i = 0; i < index; i++) {
+      tempNodePointer = tempNodePointer.getSibling();
+    }
+    for (int i = 0; i < index - 1; i++) {
+      previousNode = previousNode.getSibling();
+    }
+
+    //Remove from previous node.
+    tempNodePointer.setParent(null);
+    previousNode.setSibling(tempNodePointer.getSibling());
+    tempNodePointer.setSibling(null);
+
+    //Add to targetNode.
+    targetNode.setChildWithEdge(tempNodePointer);
+    return;
+  }
+*/
   /* Removes a key out of a keylist in a node.
    *
    * @param TreeNode theNode  The node you want a key removed from.
@@ -336,8 +381,9 @@ public class BPT {
     String returnStr = "";
 
     for (int i = 0; i < originalList.length; i++) {
-      if (i != index) 
+      if (i != index) {
         returnStr += originalList[i] + " ";
+      }
     }
 
     theNode.setValue(returnStr);
@@ -353,7 +399,7 @@ public class BPT {
    */
   public boolean delete(int key) throws IOException {
     BPlusTree.snap("delete", 0, key, 1, PseudoCodeDisplay.YELLOW);
-
+/*
     //set up current and child objects to assist in traveling down the tree
     BPTNode current = null;
     BPTNode child = BPlusTree.root;
@@ -367,12 +413,13 @@ public class BPT {
       //prepare to move down the tree
       current = child;
 
-      //update visualization
       vcurrent = vchild;
+      vchild = vcurrent.getChild();
+
+      //update visualization
       vcurrent.setHexColor("#f1f701");
       BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
       vcurrent.setHexColor("#eeeeff");
-      vchild = vcurrent.getChild();
 
       // look through the key list in a node. decide where to go down the tree.
       index = 0;
@@ -408,8 +455,9 @@ public class BPT {
       current.keyList.remove(index);
       current.pointerList.remove(0); //all these pointers are blank
 
-      // the visual tree
       vcurrent.setValue(current.toString());
+
+      // the visual tree
       vcurrent.setHexColor("#f1f701");
       BPlusTree.snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);
       vcurrent.setHexColor("#eeeeff");
@@ -435,14 +483,19 @@ public class BPT {
 
           // the visual tree
           vcurrent.setValue(current.toString());
+
           vcurrent.setHexColor("#f1f701");
           BPlusTree.snap("delete", 0, key, 20, PseudoCodeDisplay.YELLOW);
           vcurrent.setHexColor("#eeeeff");
+
           vcurrent.getSibling().setValue(current.rightLeaf.toString());
+
           vcurrent.getSibling().setHexColor("#f1f701");
           BPlusTree.snap("delete", 0, key, 24, PseudoCodeDisplay.YELLOW);
           vcurrent.getSibling().setHexColor("#eeeeff");
+
           vcurrent.getParent().setValue(current.parentPointer.toString());
+
           vcurrent.getParent().setHexColor("#f1f701");
           BPlusTree.snap("delete", 0, key, 25, PseudoCodeDisplay.YELLOW);
           vcurrent.getParent().setHexColor("#eeeeff");
@@ -467,6 +520,7 @@ public class BPT {
           if (vcurrent.getSibling() != null) {
             vcurrent.getSibling().deactivate();
           }
+
           vcurrent.setHexColor("#f1f701");
           BPlusTree.snap("delete", 0, key, 30, PseudoCodeDisplay.YELLOW);
           vcurrent.setHexColor("#eeeeff");
@@ -479,7 +533,7 @@ public class BPT {
       BPlusTree.snap("delete", 0, key, 41, PseudoCodeDisplay.YELLOW);
       return false;
     }
-
+*/
     BPlusTree.snap("delete", 0, key, 42, PseudoCodeDisplay.YELLOW);
     return true; //successfully deleted
   }
