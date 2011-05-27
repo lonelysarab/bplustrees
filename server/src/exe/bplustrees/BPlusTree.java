@@ -106,9 +106,15 @@ public class BPlusTree {
     visualTree = new GAIGStree(false, "B+ Tree of order " + BPT.ORDER, "#000000",
             0.1, 0.1, 0.9, 0.9, 0.09);
 
+    //Insert a list of numbers into the tree
+    /*
+    int[] tempIntArray = {2,5,7,12,15,17,22,25,27,32,35,37,42,45,47,52,55,57,62,65,67,72,75,77,82,85,87,92,95,97};
+    tree = new BPT(tempIntArray);
+    */
+
     //Insert random numbers into the tree.
     Random rand = new Random();
-    int[] tempIntArray = new int[4];
+    int[] tempIntArray = new int[40];
     for (int i = 0; i < tempIntArray.length; i++)
       tempIntArray[i] = ((Math.abs(rand.nextInt())%99)+1);
     tree = new BPT(tempIntArray);
