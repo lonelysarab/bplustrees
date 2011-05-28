@@ -1,0 +1,57 @@
+B Plus Tree
+bplustrees dynamic gaigs
+****
+Bubble Sort
+bubblemyles new_data_only gaigs
+**** 
+Insertion Sort
+insertionmyles new_data_only gaigs
+**** 
+Selection Sort
+selectionmyles new_data_only gaigs
+**** 
+Shell Sort
+shellmyles new_data_only gaigs
+**** 
+Heap Sort
+heapmyles new_data_only gaigs
+**** 
+Merge Sort
+mergemyles new_data_only gaigs
+****
+Quick Sort
+quickmyles new_data_only gaigs
+****
+Depth First Search
+dfsrichard new_data_only gaigs
+**** 
+Breadth First Search
+bfsrichard new_data_only gaigs
+**** 
+Best First Search
+bestfirstsearch new_data_only gaigs
+**** 
+A-star 
+astarsearch new_data_only gaigs
+**** 
+Topological sort
+topoalex dynamic gaigs
+**** 
+Prim Minimal Spanning Tree
+primrichard new_data_only gaigs
+**** 
+Kruskal Minimal Spanning Tree
+kruskalrichard new_data_only gaigs
+**** 
+Dijkstra Shortest Path
+dijkstrarichard new_data_only gaigs
+**** 
+Floyd's Algo -- (loads slower than others)
+floydrichard new_data_only gaigs
+**** 
+The Union-Find ADT
+unionfindmyles new_data_only gaigs
+**** 
+Red-black Tree 
+rbtreealex new_data_only gaigs
+**** 
