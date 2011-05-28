@@ -78,11 +78,6 @@ public class BPlusTree {
   static TreeNode visualRoot;
 
   /*
-   * A B+ tree root node stored in memory.
-   */
-  static BPTNode root;
-
-  /*
    * True and false questions for the user.
    */
   static XMLtfQuestion tf;
@@ -118,6 +113,7 @@ public class BPlusTree {
     for (int i = 0; i < tempIntArray.length; i++)
       tempIntArray[i] = ((Math.abs(rand.nextInt())%99)+1);
     tree = new BPT(tempIntArray);
+    //tree.delete(tempIntArray[0]);
 
     /**********************************tree node examples below***********************************
     //assign a value to the root

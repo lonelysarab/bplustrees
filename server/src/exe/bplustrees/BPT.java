@@ -14,7 +14,7 @@ import exe.*;
 import exe.pseudocode.*;
 
 /*
- * Object representation of a tree in memory. Multiple nodes can be made within this class.
+ * Includes functions to manage a B+ Tree.
  */
 public class BPT {
 
@@ -82,37 +82,15 @@ public class BPT {
       BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
       currentNode.setHexColor("#eeeeff");
 
-      //Traverse down the tree.
-      while (currentNode.getChild() != null) {
-        //Grab all the keys in the node
-        String[] keyList = currentNode.getValue().split(" ");
-        //Look through the keys in the root node.
-        int index = 0;
-        while (Integer.parseInt(keyList[index]) < key && index < keyList.length - 1) {
-          index++;
-        }
+      currentNode = findLeafContainingKey(currentNode,key);
 
-        currentNode = currentNode.getChild(); //Go down
-
-        //Go down and to the right of the key.
-        if (key >= Integer.parseInt(keyList[index])) {
-          for (int i = 0; i < index; i++) {
-            currentNode = currentNode.getSibling();
-          }
-          currentNode = currentNode.getSibling();
-
-        } else //Go down and to the left of the key.
-        {
-          for (int i = 0; i < index; i++) {
-            currentNode = currentNode.getSibling();
-          }
-
-        }
-
-      }
+      //Update the visualization
+      currentNode.setHexColor("#f1f701");
+      BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
+      currentNode.setHexColor("#eeeeff");
 
       //"current" is at a leaf node. If the key is NOT in the leaf, insert it.
-      if (keyIsAbsentInList(currentNode.getValue().split(" "), key)) {
+      if (isKeyAbsentInList(currentNode.getValue().split(" "), key)) {
 
         //update visual tree
         currentNode.setHexColor("#f1f701");//highlight it
@@ -182,7 +160,7 @@ public class BPT {
    * @param int  key            contains the key you are searching for. ex: 4
    * @return True if the key does not exist in the list.
    */
-  public boolean keyIsAbsentInList(String[] strArray, int key) {
+  public boolean isKeyAbsentInList(String[] strArray, int key) {
     boolean returnStatement = true;
     int i = 0;
 
@@ -399,56 +377,66 @@ public class BPT {
    */
   public boolean delete(int key) throws IOException {
     BPlusTree.snap("delete", 0, key, 1, PseudoCodeDisplay.YELLOW);
+
+    //Set up pointer named current to assist in traveling down the tree
+    TreeNode currentNode = root;
+
+    //Update the visualization
+    currentNode.setHexColor("#f1f701");
+    BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
+    currentNode.setHexColor("#eeeeff");
+
+    currentNode = findLeafContainingKey(currentNode,key);
+
+    //Update the visualization
+    currentNode.setHexColor("#f1f701");
+    BPlusTree.snap("insert", 0, key, 6, PseudoCodeDisplay.YELLOW);
+    currentNode.setHexColor("#eeeeff");
+    
+    //"current" is at a leaf node. If the key IS in the leaf, delete it.
+    if (isKeyInList(currentNode.getValue().split(" "), key)) {
+      int index = findIndex(currentNode,key);
+      removeKeyAtIndex(currentNode,index);
+
+      //look at how many keys are in the leaf.
+      int numOfKeysInTheLeaf;
+      if (currentNode.getValue().compareTo("")==0)
+        numOfKeysInTheLeaf=0;
+      else
+        numOfKeysInTheLeaf = currentNode.getValue().split(" ").length;
 /*
-    //set up current and child objects to assist in traveling down the tree
-    BPTNode current = null;
-    BPTNode child = BPlusTree.root;
-    TreeNode vcurrent = null;
-    TreeNode vchild = root;
+      //Keys in leaves must be evenly distributed or merged into one leaf.
+      if (numOfKeysInTheLeaf <= MINIMUM_CAPACITY) {
 
-    //traverse down to the leaf
-    int index = 0;
-    while (child != null) {
+        //Look at the number of keys in the leaf to the right.
+        int numKeysInRightLeaf;
+        if (currentNode.getSibling() != null) {
+          numKeysInRightLeaf = currentNode.getSibling().getValue().split(" ").length;
 
-      //prepare to move down the tree
-      current = child;
+          //Evenly distribute the keys between this leaf and the leaf to the right.
+          if (numOfKeysInTheLeaf+numKeysInRightLeaf >= ORDER) {
+            
+          } else //MERGE THE LEAVES
+          {
+            
+          }
+        } else //delete this leaf.
+        {
 
-      vcurrent = vchild;
-      vchild = vcurrent.getChild();
-
-      //update visualization
-      vcurrent.setHexColor("#f1f701");
-      BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
-      vcurrent.setHexColor("#eeeeff");
-
-      // look through the key list in a node. decide where to go down the tree.
-      index = 0;
-      while (key > current.keyList.get(index) && index < current.keyList.size() - 1) {
-        index++;
-
-        //update visualization
-        if (vchild != null) {
-          vchild = vchild.getSibling();
         }
+
       }
-
-      //child will look ahead down the tree
-      if (key >= current.keyList.get(index)) //take the pointer to the right of the number
-      {
-        child = current.pointerList.get(index + 1);
-
-        //update visualization
-        if (vchild != null) {
-          vchild = vchild.getSibling();
-        }
-      } else //take the pointer on the left of the number
-      {
-        child = current.pointerList.get(index);
-      }
-
+*/
+      BPlusTree.snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);
+      
+    } else //key is not in the leaf
+    {
+      BPlusTree.snap("delete", 0, key, 41, PseudoCodeDisplay.YELLOW);
+      return false;
     }
 
-    //at this point current represents a leaf node
+
+/*
     if (current.keyList.get(index) == key) { //key is, in fact, in the leaf
 
       //remove key from the leaf
@@ -536,5 +524,75 @@ public class BPT {
 */
     BPlusTree.snap("delete", 0, key, 42, PseudoCodeDisplay.YELLOW);
     return true; //successfully deleted
+  }
+
+  /*
+   * Traverse the tree looking for the key. Stop when you get to the leaf.
+   * @param TreeNode currentNode    Start at this root node and search down the tree.
+   * @param int key                 The key you are looking for. It will reside in a leaf. 
+   * @return nothing
+   */
+  public TreeNode findLeafContainingKey (TreeNode currentNode, int key) {
+    //Traverse down the tree.
+      while (currentNode.getChild() != null) {
+        //Grab all the keys in the node
+        String[] keyList = currentNode.getValue().split(" ");
+        //Look through the keys in the root node.
+        int index = 0;
+        while (Integer.parseInt(keyList[index]) < key && index < keyList.length - 1) {
+          index++;
+        }
+
+        currentNode = currentNode.getChild(); //Go down
+
+        //Go down and to the right of the key.
+        if (key >= Integer.parseInt(keyList[index])) {
+          for (int i = 0; i < index; i++) {
+            currentNode = currentNode.getSibling();
+          }
+          currentNode = currentNode.getSibling();
+
+        } else //Go down and to the left of the key.
+        {
+          for (int i = 0; i < index; i++) {
+            currentNode = currentNode.getSibling();
+          }
+
+        }
+
+      }
+      return currentNode;
+  }
+
+  /*
+   * Find the index where the key resides
+   * @param TreeNode theNode    The node to search through.
+   * @param int key             The key that is being searched for
+   * @return index              The index where the key resides. -1 if none was found
+   */
+  public int findIndex(TreeNode theNode, int key) {
+    int returnIndex =-1;
+    String[] tempStr = theNode.getValue().split(" ");
+
+    int i=0;
+    while(i<tempStr.length) {
+      if (Integer.parseInt(tempStr[i]) == key) {
+        returnIndex = i;
+        i=tempStr.length;
+      }
+      i++;
+    }
+
+    return returnIndex;
+  }
+
+  /*
+   * Determine if a Key is in a string. If it is, true is returned.
+   * @param String[] lst   The list that will be searched
+   * @param int key        The key in question. Is this key in the list?
+   * @return               True if the key is in the list.
+   */
+  public boolean isKeyInList(String[] lst, int key) {
+    return !isKeyAbsentInList(lst,key);
   }
 }
