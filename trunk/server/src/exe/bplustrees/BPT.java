@@ -4,7 +4,7 @@
  *
  *
  * @author William Clements
- * @version May 21, 2010
+ * @version May 29, 2011
  *************************************************************************************************/
 package exe.bplustrees;
 
@@ -77,17 +77,7 @@ public class BPT {
       //Set up pointer named current to assist in traveling down the tree
       TreeNode currentNode = root;
 
-      //Update the visualization
-      currentNode.setHexColor("#f1f701");
-      BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
-      currentNode.setHexColor("#eeeeff");
-
       currentNode = findLeafContainingKey(currentNode,key);
-
-      //Update the visualization
-      currentNode.setHexColor("#f1f701");
-      BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
-      currentNode.setHexColor("#eeeeff");
 
       //"current" is at a leaf node. If the key is NOT in the leaf, insert it.
       if (isKeyAbsentInList(currentNode.getValue().split(" "), key)) {
@@ -189,7 +179,7 @@ public class BPT {
 
     //Find the medianIndex
     String[] keyList = currentNode.getValue().split(" ");
-    int medianIndex = (int) Math.ceil(((double) keyList.length) / 2.0);
+    int medianIndex = (int) Math.floor(((double) keyList.length) / 2.0);
 
     //Split a leaf.
     if (currentNode.getChild() == null) {
@@ -381,52 +371,99 @@ public class BPT {
     //Set up pointer named current to assist in traveling down the tree
     TreeNode currentNode = root;
 
-    //Update the visualization
-    currentNode.setHexColor("#f1f701");
-    BPlusTree.snap("insert", 0, key, 5, PseudoCodeDisplay.YELLOW);
-    currentNode.setHexColor("#eeeeff");
-
     currentNode = findLeafContainingKey(currentNode,key);
-
-    //Update the visualization
-    currentNode.setHexColor("#f1f701");
-    BPlusTree.snap("insert", 0, key, 6, PseudoCodeDisplay.YELLOW);
-    currentNode.setHexColor("#eeeeff");
     
     //"current" is at a leaf node. If the key IS in the leaf, delete it.
     if (isKeyInList(currentNode.getValue().split(" "), key)) {
+      //Key is removed.
       int index = findIndex(currentNode,key);
       removeKeyAtIndex(currentNode,index);
 
-      //look at how many keys are in the leaf.
+      //Look at how many keys are in the leaf.
       int numOfKeysInTheLeaf;
       if (currentNode.getValue().compareTo("")==0)
         numOfKeysInTheLeaf=0;
       else
         numOfKeysInTheLeaf = currentNode.getValue().split(" ").length;
-/*
+
       //Keys in leaves must be evenly distributed or merged into one leaf.
-      if (numOfKeysInTheLeaf <= MINIMUM_CAPACITY) {
+      if (numOfKeysInTheLeaf <= MINIMUM_CAPACITY)
+      {
 
-        //Look at the number of keys in the leaf to the right.
-        int numKeysInRightLeaf;
-        if (currentNode.getSibling() != null) {
-          numKeysInRightLeaf = currentNode.getSibling().getValue().split(" ").length;
-
-          //Evenly distribute the keys between this leaf and the leaf to the right.
-          if (numOfKeysInTheLeaf+numKeysInRightLeaf >= ORDER) {
-            
-          } else //MERGE THE LEAVES
-          {
-            
-          }
-        } else //delete this leaf.
+        if (currentNode.getParent() == null && numOfKeysInTheLeaf ==0) {
+          currentNode = null;
+        } else
         {
 
-        }
+          //Look for a suitable neighbor
+          TreeNode suitableNeighbor = searchForNeighbor(currentNode);
+          int numKeysInNeighbor;
+          if (suitableNeighbor != null)
+            numKeysInNeighbor = suitableNeighbor.getValue().split(" ").length;
+          else
+            numKeysInNeighbor=0; //The root is a leaf.
 
+          //REDISTRIBUTE
+          if (numKeysInNeighbor > MINIMUM_CAPACITY) {
+
+            String[] suitableNeighborKeys = suitableNeighbor.getValue().split(" ");
+            String[] currentNodeKeys = currentNode.getValue().split(" ");
+            //Neighbor was on the left
+            if ( Integer.parseInt(suitableNeighborKeys[0]) < Integer.parseInt(currentNodeKeys[0]) )
+            {
+              String combinedKeys = ""+suitableNeighbor.getValue()+currentNode.getValue();
+              String[] listOfCombinedKeys = combinedKeys.split(" ");
+              int medianIndex = (int) Math.floor(((double) combinedKeys.split(" ").length) / 2.0);
+              suitableNeighbor.setValue("");
+              currentNode.setValue("");
+              for (int i=0; i< listOfCombinedKeys.length; i++) {
+                if (i<medianIndex)
+                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]));
+                else
+                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]));
+              }
+
+            } else //Neighbor was on the right
+            {
+              String combinedKeys = ""+currentNode.getValue()+suitableNeighbor.getValue();
+              String[] listOfCombinedKeys = combinedKeys.split(" ");
+              int medianIndex = (int) Math.floor(((double) combinedKeys.split(" ").length) / 2.0);
+              suitableNeighbor.setValue("");
+              currentNode.setValue("");
+              for (int i=0; i< listOfCombinedKeys.length; i++) {
+                if (i<medianIndex)
+                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]));
+                else
+                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]));
+              }
+
+            }
+            fixKeys(currentNode.getParent());
+
+
+          } else //DELETE LEAF
+          {
+            if(currentNode.getParent().getValue().split(" ").length < MINIMUM_CAPACITY)
+            {
+              //Deleting the leaf in this case will make only one key in the parent.
+              //That is not desired so the tree needs to be restructured.
+              //But not before the keys in the leaf are moved out.
+              String tempKeys = currentNode.getParent().getChild().getValue();
+              if (currentNode.getParent().getChild().getSibling() != null)
+                tempKeys += currentNode.getParent().getChild().getSibling().getValue();
+              if (currentNode.getValue().compareTo(currentNode.getParent().getValue())==0)
+                currentNode.getParent().setValue("");
+              currentNode.setValue(tempKeys);
+              restructure(currentNode.getParent(),currentNode);
+              currentNode.deactivate();
+            }
+            else //After deleting the leaf here, there will be at least one key in the parent.
+              deleteLeaf(currentNode);
+
+          }
+        }
       }
-*/
+
       BPlusTree.snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);
       
     } else //key is not in the leaf
@@ -435,95 +472,134 @@ public class BPT {
       return false;
     }
 
-
-/*
-    if (current.keyList.get(index) == key) { //key is, in fact, in the leaf
-
-      //remove key from the leaf
-      current.keyList.remove(index);
-      current.pointerList.remove(0); //all these pointers are blank
-
-      vcurrent.setValue(current.toString());
-
-      // the visual tree
-      vcurrent.setHexColor("#f1f701");
-      BPlusTree.snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);
-      vcurrent.setHexColor("#eeeeff");
-
-      //If the number of elements in the leaf falls below minimumCapacity
-      //things need to be rearranged.
-      if (current.keyList.size() < MINIMUM_CAPACITY) {
-
-        //distribute elements evenly between two adjacted nodes
-        if (current.rightLeaf != null && current.parentPointer != null
-                && current.parentPointer.keyList.get(0) == current.rightLeaf.parentPointer.keyList.get(0)
-                && current.rightLeaf.keyList.size() < MINIMUM_CAPACITY) {
-
-
-          int medianIndex = (int) Math.ceil(((double) current.keyList.size()) / 2.0);
-          for (int i = 0; i < medianIndex; i++) {
-            current.addToNode(current.rightLeaf.keyList.get(0), null);
-            current.rightLeaf.keyList.remove(0);
-            current.rightLeaf.pointerList.remove(0);
-          }
-          int indxOfKeyToAdjacentLeaf = current.parentPointer.keyList.indexOf(current.keyList.get(0)) + 1;
-          current.parentPointer.keyList.set(indxOfKeyToAdjacentLeaf, current.rightLeaf.keyList.get(0));
-
-          // the visual tree
-          vcurrent.setValue(current.toString());
-
-          vcurrent.setHexColor("#f1f701");
-          BPlusTree.snap("delete", 0, key, 20, PseudoCodeDisplay.YELLOW);
-          vcurrent.setHexColor("#eeeeff");
-
-          vcurrent.getSibling().setValue(current.rightLeaf.toString());
-
-          vcurrent.getSibling().setHexColor("#f1f701");
-          BPlusTree.snap("delete", 0, key, 24, PseudoCodeDisplay.YELLOW);
-          vcurrent.getSibling().setHexColor("#eeeeff");
-
-          vcurrent.getParent().setValue(current.parentPointer.toString());
-
-          vcurrent.getParent().setHexColor("#f1f701");
-          BPlusTree.snap("delete", 0, key, 25, PseudoCodeDisplay.YELLOW);
-          vcurrent.getParent().setHexColor("#eeeeff");
-
-        } else //distributing elements cannot be done. there are too few elements.
-        {
-          for (int i = 0; i < current.rightLeaf.keyList.size(); i++) {
-            current.addToNode(current.rightLeaf.keyList.get(i), null);
-          }
-          int indexOfKeyToRemove = current.parentPointer.keyList.indexOf(current.keyList.get(0)) + 1;
-          current.parentPointer.keyList.remove(indexOfKeyToRemove);
-          current.parentPointer.pointerList.remove(indexOfKeyToRemove + 1);
-          if (current.rightLeaf.rightLeaf != null) {
-            current.rightLeaf.rightLeaf = current;
-            current.rightLeaf = current.rightLeaf.rightLeaf;
-          } else {
-            current.rightLeaf = null;
-          }
-
-          // the visual tree
-          vcurrent.setValue(current.toString());
-          if (vcurrent.getSibling() != null) {
-            vcurrent.getSibling().deactivate();
-          }
-
-          vcurrent.setHexColor("#f1f701");
-          BPlusTree.snap("delete", 0, key, 30, PseudoCodeDisplay.YELLOW);
-          vcurrent.setHexColor("#eeeeff");
-
-        }
-
-      }
-    } else //key is not in the leaf
-    {
-      BPlusTree.snap("delete", 0, key, 41, PseudoCodeDisplay.YELLOW);
-      return false;
-    }
-*/
     BPlusTree.snap("delete", 0, key, 42, PseudoCodeDisplay.YELLOW);
     return true; //successfully deleted
+  }
+
+  /*
+   * Delete the leaf from it's parent.
+   * @param TreeNode theNode    The node to be deleted from the parent.
+   */
+  public void deleteLeaf(TreeNode theNode) {
+
+    if (theNode.getSibling() != null){
+      String newKeyList = ""+theNode.getValue()+theNode.getSibling().getValue();
+      theNode.setValue(newKeyList);
+      theNode.setSibling(theNode.getSibling().getSibling());
+    }
+    else {
+      TreeNode firstChild = theNode.getParent().getChild();
+      TreeNode previousChild = null;
+      while (firstChild.getValue().compareTo(theNode.getValue())!=0) {
+        previousChild = firstChild;
+        firstChild = firstChild.getSibling();
+      }
+      String newKeyList = ""+previousChild.getValue()+theNode.getValue();
+      previousChild.setValue(newKeyList);
+      previousChild.setSibling(theNode.getSibling());
+    }
+    fixKeys(theNode.getParent());
+    theNode.deactivate();
+    return;
+  }
+
+  /* Restructure the tree. Usually occurs after a leaf is deleated leaving the parent of that leaf
+   * with only one child. The keys in the parent of that leaf get tossed up one level as well as
+   * all the other nodes on the level above the leaves. Spliting occurs and new nodes are made.
+   * What happens when the parent of the leaf is the root? The one child leaf become the root.
+   * @param TreeNode parentOfALeaf    The parent of a leaf. 
+   */
+  public void restructure(TreeNode parentOfALeaf, TreeNode loneNode) {
+    TreeNode grandparent = parentOfALeaf.getParent();
+    TreeNode[] parents = new TreeNode[grandparent.getValue().split(" ").length+1];
+    TreeNode parent = grandparent.getChild();
+    for (int i=0; i<grandparent.getValue().split(" ").length+1; i++) {
+      parents[i] = parent;
+      parent = parent.getSibling();
+    }
+    grandparent.setChild(null);
+    grandparent.setValue("");
+    TreeNode child = parents[0].getChild();
+    for (int i=0; i<parents.length; i++) {
+      for (int j=0; j<parent.getValue().split(" ").length+1; j++) {
+        grandparent.setChild(child);
+        child = child.getSibling();
+      }
+    }
+    fixKeys(grandparent);
+    return;
+  }
+
+  /*
+   * Takes a parent node of leaves as a parameter and fixes the keyList so that it reflects what
+   * is in the leaves below it.
+   * @param TreeNode theNode      The keys in this node need to be replaced with meaningful keys.
+   */
+  public void fixKeys(TreeNode theNode) {
+    theNode.setValue("");
+    TreeNode child = (theNode.getChild()).getSibling();
+
+    String newKeyList="";
+    while (child!=null)
+    {
+      newKeyList += child.getValue().split(" ")[0]+" ";
+      child = child.getSibling();
+    }
+    theNode.setValue(newKeyList);
+  }
+
+  /*
+   * Look at the sibling to the left and the sibling to the right and return the leaf that has
+   * more keys in the keylist.
+   * @param TreeNode currentLeaf    The leaf that needs to have siblings examined.
+   * @return TreeNode               One of the two siblings (on the left or the right) that has
+   *                                the most keys it it's key list. If they both have the same
+   *                                amount, the one on the left is chosen. null is returned when
+   *                                there are no neighbors.
+   */
+  public TreeNode searchForNeighbor(TreeNode currentLeaf) {
+    //the leaf is the parent in this case
+    if (currentLeaf.getParent() == null) {
+      return null;
+    } else {
+      TreeNode child = currentLeaf.getParent().getChild();
+      int numOfSiblings = currentLeaf.getParent().getValue().split(" ").length+1;
+      TreeNode[] leaves = new TreeNode[numOfSiblings];
+      int indexOfCurrentLeaf=0;
+      for (int i=0; i<numOfSiblings; i++) {
+        leaves[i] = child;
+        if (leaves[i].getValue().compareTo(currentLeaf.getValue())==0)
+          indexOfCurrentLeaf=i;
+        child = child.getSibling();
+      }
+
+      TreeNode leftLeaf = null;
+      if (indexOfCurrentLeaf > 0)
+        leftLeaf = leaves[indexOfCurrentLeaf-1];
+
+      TreeNode rightLeaf = null;
+      if (indexOfCurrentLeaf < numOfSiblings-1)
+        rightLeaf = leaves[indexOfCurrentLeaf+1];
+
+      if (leftLeaf == null && rightLeaf !=null)
+        return rightLeaf;
+      else if(rightLeaf == null && leftLeaf != null)
+        return leftLeaf;
+      else if (leftLeaf==null && rightLeaf==null)
+        return null;
+
+      int numOfRightLeafKeys = rightLeaf.getValue().split(" ").length;
+      int numOfLeftLeafKeys = leftLeaf.getValue().split(" ").length;
+
+      if (numOfRightLeafKeys < numOfLeftLeafKeys)
+        return leftLeaf;
+      else if(numOfRightLeafKeys == numOfLeftLeafKeys)
+        return leftLeaf;
+      else
+        return rightLeaf;
+
+    }
+
   }
 
   /*
@@ -532,7 +608,7 @@ public class BPT {
    * @param int key                 The key you are looking for. It will reside in a leaf. 
    * @return nothing
    */
-  public TreeNode findLeafContainingKey (TreeNode currentNode, int key) {
+  public TreeNode findLeafContainingKey (TreeNode currentNode, int key) throws IOException {
     //Traverse down the tree.
       while (currentNode.getChild() != null) {
         //Grab all the keys in the node
@@ -542,6 +618,11 @@ public class BPT {
         while (Integer.parseInt(keyList[index]) < key && index < keyList.length - 1) {
           index++;
         }
+
+        //Update the visualization
+        currentNode.setHexColor("#f1f701");
+        BPlusTree.snap("insert", 0, key, 6, PseudoCodeDisplay.YELLOW);
+        currentNode.setHexColor("#eeeeff");
 
         currentNode = currentNode.getChild(); //Go down
 

@@ -1,10 +1,10 @@
 /**************************************************************************************************
  * bplustrees.java
- * The first .class that is called when the visualization is made.
+ * The first *.class that is called when the visualization is made.
  *
  *
  * @author William Clements
- * @version May 21, 2010
+ * @version May 29, 2011
  *************************************************************************************************/
 package exe.bplustrees;
 
