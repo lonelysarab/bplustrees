@@ -1,0 +1,8 @@
+#summary An example of how B+ Trees work.
+#labels Featured
+
+= Introduction =
+
+*Below is an example of a B+ Tree.*
+
+_image1_
