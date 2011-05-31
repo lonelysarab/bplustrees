@@ -111,7 +111,7 @@ public class GeneralTree extends NonLinearStruct  {
         
         super.calcDimsAndStartPts(llist,d);
         // With circular nodes, not adding Textheight works better to finetune the circle size
-        Lenx=Maxstringlength;//+(Textheight);
+        Lenx=Maxstringlength+0.26;//+(Textheight);
         Leny=((linespernode+1)*Textheight)+
         ((linespernode-1)*(0.5*Textheight));
         TDx=(Lenx+Leny)/5.0;           // Height is a third of their average *)
