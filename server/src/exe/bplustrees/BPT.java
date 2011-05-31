@@ -77,7 +77,7 @@ public class BPT {
       //Set up pointer named current to assist in traveling down the tree
       TreeNode currentNode = root;
 
-      currentNode = findLeafContainingKey(currentNode,key);
+      currentNode = findLeafContainingKey(currentNode,key,"insert");
 
       //"current" is at a leaf node. If the key is NOT in the leaf, insert it.
       if (isKeyAbsentInList(currentNode.getValue().split(" "), key)) {
@@ -98,8 +98,11 @@ public class BPT {
         //There are too many keys in the leaf. Split it.
         String[] keyList = currentNode.getValue().split(" ");
         if (keyList.length == ORDER) {
+          BPlusTree.tf.setAnswer(true);
+
           BPlusTree.snap("insert", 0, key, 17, PseudoCodeDisplay.YELLOW);
           BPlusTree.snap("insert", 0, key, 18, PseudoCodeDisplay.YELLOW);
+          
           split(currentNode);
         } else {
           BPlusTree.tf.setAnswer(false);
@@ -174,7 +177,6 @@ public class BPT {
     BPlusTree.splitScope++;
 
     //update visualization
-    BPlusTree.tf.setAnswer(true);
     BPlusTree.snap("split", BPlusTree.splitScope, 0, 1, PseudoCodeDisplay.YELLOW);
 
     //Find the medianIndex
@@ -371,7 +373,7 @@ public class BPT {
     //Set up pointer named current to assist in traveling down the tree
     TreeNode currentNode = root;
 
-    currentNode = findLeafContainingKey(currentNode,key);
+    currentNode = findLeafContainingKey(currentNode,key,"delete");
     
     //"current" is at a leaf node. If the key IS in the leaf, delete it.
     if (isKeyInList(currentNode.getValue().split(" "), key)) {
@@ -439,7 +441,6 @@ public class BPT {
 
             }
             fixKeys(currentNode.getParent());
-
 
           } else //DELETE LEAF
           {
@@ -605,10 +606,11 @@ public class BPT {
   /*
    * Traverse the tree looking for the key. Stop when you get to the leaf.
    * @param TreeNode currentNode    Start at this root node and search down the tree.
-   * @param int key                 The key you are looking for. It will reside in a leaf. 
+   * @param int key                 The key you are looking for. It will reside in a leaf.
+   * @param String state            The current state of the program.
    * @return nothing
    */
-  public TreeNode findLeafContainingKey (TreeNode currentNode, int key) throws IOException {
+  public TreeNode findLeafContainingKey (TreeNode currentNode, int key, String state) throws IOException {
     //Traverse down the tree.
       while (currentNode.getChild() != null) {
         //Grab all the keys in the node
@@ -621,7 +623,7 @@ public class BPT {
 
         //Update the visualization
         currentNode.setHexColor("#f1f701");
-        BPlusTree.snap("insert", 0, key, 6, PseudoCodeDisplay.YELLOW);
+        BPlusTree.snap(state, 0, key, 6, PseudoCodeDisplay.YELLOW);
         currentNode.setHexColor("#eeeeff");
 
         currentNode = currentNode.getChild(); //Go down
