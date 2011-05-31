@@ -99,7 +99,7 @@ public class BPlusTree {
 
     //Declare a new general tree.
     visualTree = new GAIGStree(false, "B+ Tree of order " + BPT.ORDER, "#000000",
-            0.1, 0.1, 0.9, 0.9, 0.09);
+            0.3, 0.6, 0.7, 0.99, 0.08);
 
     //Insert a list of numbers into the tree
     /*
@@ -110,10 +110,17 @@ public class BPlusTree {
     //Insert random numbers into the tree.
     Random rand = new Random();
     int[] tempIntArray = new int[40];
+
+    //make a list of keys to add
     for (int i = 0; i < tempIntArray.length; i++)
       tempIntArray[i] = ((Math.abs(rand.nextInt())%99)+1);
+
+    //make the tree
     tree = new BPT(tempIntArray);
-    //tree.delete(tempIntArray[0]);
+
+    //delete keys
+    //for (int i = 0; i < 1; i++)
+    //  tree.delete(tempIntArray[i]);
 
     /**********************************tree node examples below***********************************
     //assign a value to the root
@@ -231,24 +238,19 @@ public class BPlusTree {
    */
   public static String doc_uri(String currentlyInsertingSplitingOrDeleting) {
     String content = "<html>"
-            + "<head><title>B+ Trees Hypertextbook</title></head>"
+            + "<head><title>B+ Trees --more info--</title></head>"
             + "<body>"
             + "<h1>Hypertextbook</h1>";
     
     if (0==currentlyInsertingSplitingOrDeleting.compareTo("insert"))
-      content += "<h2>Inserting a key into a B+ Tree</h2>\n"
-              + "Inserting a key into a B+ Tree starts at the top node. Searching through the tree is necessary to find a proper location for the key. The very first key in the top node is compared with the key that is to be inserted. If the key to be inserted is less than key in the node the key travels down and to the left of the key in the node. There should be a pointer to a node below and to the left. If there is no node, the key is simply placed to the left of the key. Since there are no nodes below the root, the root itself is currently a leaf. However, if there are nodes below, this process is continued until a leaf is reached. Only once the leaf is reached, the key can be inserted.  \n\n"
-              + "Along with this key is a pointer to a location on disk. This pointer to a location on disk is not shown in the visualization. The whole B+ tree is stored in memory to efficiently fetch pointers to locations on disk. The speed of finding something on hard drive makes theses trees useful. \n";
+      content += "<h2>Currently Inserting a key into a B+ Tree</h2>\n"
+              + "";
     else if (0==currentlyInsertingSplitingOrDeleting.compareTo("split"))
-      content += "<h2>Spliting a node or a leaf in a B+ Tree</h2>\n"
-              + "Keys are inserted into a B+ Tree and afterward a split is required if there are too many keys in the node. If the number of keys in the node is equal to the order of the tree then a split must occur. The order of the tree is determined by the programmer. For instructional purposes, an order of 4 is often used. Splitting a leaf generates a new leaf. All of the keys are distributed evenly between the two. The keys are still kept in numerical order. For example, if one leaf contains the keys 1 and 2 and the other leaf contains the keys 3 and 4.  The final step is to pass a key up the the parent node. The smallest key will be passed up in the newly created node. In our example, that would be 3. The parent now has the key 3 but does not have a pointer to a location on disk. Only a leaf has keys with pointers to locations on disk.\n\n "
-              + "<h2>More Information</h2>\n"
-              + "The splitting of a leaf generates a new leaf. This new leaf passes a key up to the parent node directly above it. If this parent node receives a key and places it within it's key list, the number of keys within the list may equal the order of the tree. The node must be split and a new node must be made along side it. Just like splitting a leaf, this new node will generate another key that must be passed up to the parent node. Splitting may occur recursively because the parent may need to be split if the number of keys in the list equals the order. \n";
+      content += "<h2>Currently Spliting in a B+ Tree</h2>\n"
+              + "";
     else
-      content += "<h2>Deleting a key in a B+ Tree</h2>\n"
-              + "Deleting a key from a B+ Tree requires a search starting at the top node. The very first key in the top node is compared with the key that needs to be deleted. If the key to be deleted is less than the key in the node the search continues on down and to the left of the key in the node. There should be a pointer to a node below and to the left. If there is no node, the key is simply deleted from the node. Since there are no nodes below the root, the root itself is currently a leaf. However, if there are nodes below, this process is continued until a leaf is reached. Only once the leaf is reached can the key be deleted from the leaf. The pointer to location on disk is deleted with the key. Only a leaf has these pointers to locations on disk. \n\n"
-              + "<h2>More Information</h2>\n"
-              + "The deletion of a key from a leaf sometimes constitutes a redistribution of keys so that a leaf does not become sparse in keys. If the number of keys in a key list in a leaf equals the minimum capacity number, keys must be taken from a nearby leaf. The minimum capacity number is determined by the programmer before the B+ Tree is started and is a number much lower than the order. If there is a sibling near by, for example to the right of the leaf, keys can be taken from this leaf and distributed evenly among the two. However, if keys are taken out of this sibling leaf, the sibling leaf may hit the minimum capacity number. This is not desired. The two must be combined and the key for the removed leaf must be removed from the parent node. \n";
+      content += "<h2>Currently Deleting a key in a B+ Tree</h2>\n"
+              + "";
 
     content += "</body></html>";
 
