@@ -4,111 +4,111 @@
   <code>
     <signature>Pseudocode</signature>
     <line num="1"> delete(x) { </line>
-    <line num="2" indent="1">     TreeNode currentNode = root;</line>
-<line num="3"></line>
-<line num="4" indent="1">     currentNode = findLeafContainingKey(currentNode,key,"delete");</line>
-<line num="5"></line>
-<line num="6" indent="1">     //"current" is at a leaf node. If the key IS in the leaf, delete it.</line>
-<line num="7" indent="1">     if (isKeyInList(currentNode.getValue().split(" "), key)) {</line>
-<line num="8" indent="2">       //Key is removed.</line>
-<line num="9" indent="2">       int index = findIndex(currentNode,key);</line>
-<line num="10" indent="2">      removeKeyAtIndex(currentNode,index);</line>
-<line num="11"></line>
-<line num="12" indent="2">      //Look at how many keys are in the leaf.</line>
-<line num="13" indent="2">      int numOfKeysInTheLeaf;</line>
-<line num="14" indent="2">      if (currentNode.getValue().compareTo("")==0)</line>
-<line num="15" indent="3">        numOfKeysInTheLeaf=0;</line>
-<line num="16" indent="2">      else
-<line num="17" indent="3">        numOfKeysInTheLeaf = currentNode.getValue().split(" ").length;</line>
-<line num="18"></line>
-<line num="19" indent="2">      //Keys in leaves must be evenly distributed or merged into one leaf.</line>
-<line num="20" indent="2">      if (numOfKeysInTheLeaf <= MINIMUM_CAPACITY)</line>
-<line num="21" indent="2">      {</line>
-<line num="22"></line>
-<line num="23" indent="3">        if (currentNode.getParent() == null && numOfKeysInTheLeaf ==0) {</line>
-<line num="24" indent="4">          currentNode = null;</line>
-<line num="25" indent="3">        } else</line>
-<line num="26" indent="3">        {</line>
-<line num="27"></line>
-<line num="28" indent="4">          //Look for a suitable neighbor</line>
-<line num="29" indent="4">          TreeNode suitableNeighbor = searchForNeighbor(currentNode);</line>
-<line num="30" indent="4">          int numKeysInNeighbor;</line>
-<line num="31" indent="4">          if (suitableNeighbor != null)</line>
-<line num="32" indent="5">            numKeysInNeighbor = suitableNeighbor.getValue().split(" ").length;</line>
-<line num="33" indent="4">          else</line>
-<line num="34" indent="5">            numKeysInNeighbor=0; //The root is a leaf.</line>
-<line num="35"></line>
-<line num="36" indent="4">          //REDISTRIBUTE</line>
-<line num="37" indent="4">          if (numKeysInNeighbor > MINIMUM_CAPACITY) {</line>
-<line num="38"></line>
-<line num="39" indent="5">            String[] suitableNeighborKeys = suitableNeighbor.getValue().split(" ");</line>
-<line num="40" indent="5">            String[] currentNodeKeys = currentNode.getValue().split(" ");</line>
-<line num="41" indent="5">            //Neighbor was on the left</line>
-<line num="42" indent="5">            if ( Integer.parseInt(suitableNeighborKeys[0]) < Integer.parseInt(currentNodeKeys[0]) )</line>
-<line num="43" indent="5">            {</line>
-<line num="44" indent="6">              String combinedKeys = ""+suitableNeighbor.getValue()+currentNode.getValue();</line>
-<line num="45" indent="6">              String[] listOfCombinedKeys = combinedKeys.split(" ");</line>
-<line num="46" indent="6">              int medianIndex = (int) Math.floor(((double) combinedKeys.split(" ").length) / 2.0);</line>
-<line num="47" indent="6">              suitableNeighbor.setValue("");</line>
-<line num="48" indent="6">              currentNode.setValue("");</line>
-<line num="49" indent="6">              for (int i=0; i< listOfCombinedKeys.length; i++) {</line>
-<line num="50" indent="7">                if (i<medianIndex)</line>
-<line num="51" indent="8">                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]));</line>
-<line num="52" indent="7">                else</line>
-<line num="53" indent="8">                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]));</line>
-<line num="54" indent="6">              }</line>
-<line num="55"></line>
-<line num="56" indent="5">            } else //Neighbor was on the right</line>
-<line num="57" indent="5">            {</line>
-<line num="58" indent="6">              String combinedKeys = ""+currentNode.getValue()+suitableNeighbor.getValue();</line>
-<line num="59" indent="6">              String[] listOfCombinedKeys = combinedKeys.split(" ");</line>
-<line num="60" indent="6">              int medianIndex = (int) Math.floor(((double) combinedKeys.split(" ").length) / 2.0);</line>
-<line num="61" indent="6">              suitableNeighbor.setValue("");</line>
-<line num="62" indent="6">              currentNode.setValue("");</line>
-<line num="63" indent="6">              for (int i=0; i< listOfCombinedKeys.length; i++) {</line>
-<line num="64" indent="7">                if (i<medianIndex)</line>
-<line num="65" indent="8">                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]));</line>
-<line num="66" indent="7">                else</line>
-<line num="67" indent="8">                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]));</line>
-<line num="68" indent="6">              }</line>
-<line num="69"></line>
-<line num="70" indent="5">            }</line>
-<line num="71" indent="5">            fixKeys(currentNode.getParent());</line>
-<line num="72"></line>
-<line num="73" indent="4">          } else //DELETE LEAF</line>
-<line num="74" indent="4">          {</line>
-<line num="75" indent="5">            if(currentNode.getParent().getValue().split(" ").length < MINIMUM_CAPACITY)</line>
-<line num="76" indent="5">            {</line>
-<line num="77" indent="6">              //Deleting the leaf in this case will make only one key in the parent.</line>
-<line num="78" indent="6">              //That is not desired so the tree needs to be restructured.</line>
-<line num="79" indent="6">              //But not before the keys in the leaf are moved out.</line>
-<line num="80" indent="6">              String tempKeys = currentNode.getParent().getChild().getValue();</line>
-<line num="81" indent="6">              if (currentNode.getParent().getChild().getSibling() != null)</line>
-<line num="82" indent="7">                tempKeys += currentNode.getParent().getChild().getSibling().getValue();</line>
-<line num="83" indent="6">              if (currentNode.getValue().compareTo(currentNode.getParent().getValue())==0)</line>
-<line num="84" indent="7">                currentNode.getParent().setValue("");</line>
-<line num="85" indent="6">              currentNode.setValue(tempKeys);</line>
-<line num="86" indent="6">              restructure(currentNode.getParent(),currentNode);</line>
-<line num="87" indent="6">              currentNode.deactivate();</line>
-<line num="88" indent="5">            }</line>
-<line num="89" indent="5">            else //After deleting the leaf here, there will be at least one key in the parent.</line>
-<line num="90" indent="6">              deleteLeaf(currentNode);</line>
-<line num="91"></line>
-<line num="92" indent="4">          }</line>
-<line num="93" indent="3">        }</line>
-<line num="94" indent="2">      }</line>
-<line num="95"></line>
-<line num="96" indent="2">      BPlusTree.snap("delete", 0, key, 14, PseudoCodeDisplay.YELLOW);</line>
-<line num="97"></line>
-<line num="98" indent="1">    } else //key is not in the leaf</line>
-<line num="99" indent="1">    {</line>
-<line num="100" indent="2">       BPlusTree.snap("delete", 0, key, 41, PseudoCodeDisplay.YELLOW);</line>
-<line num="101" indent="2">       return false;</line>
-<line num="102" indent="1">     }</line>
-<line num="103"></line>
-<line num="104" indent="1">     BPlusTree.snap("delete", 0, key, 42, PseudoCodeDisplay.YELLOW);</line>
-<line num="105" indent="1">     return true; //successfully deleted</line>
-<line num="106">}</line>
+    <line num="2" indent="1">     TreeNode currentNode = root</line>
+    <line num="3"></line>
+    <line num="4" indent="1">     currentNode = findLeafContainingKey(currentNode,key,delete)</line>
+    <line num="5"></line>
+    <line num="6" indent="1">     //current is at a leaf node. If the key IS in the leaf, delete it.</line>
+    <line num="7" indent="1">     if (isKeyInList(currentNode.getValue().split( ), key)) {</line>
+    <line num="8" indent="2">       //Key is removed.</line>
+    <line num="9" indent="2">       int index = findIndex(currentNode,key)</line>
+    <line num="10" indent="2">      removeKeyAtIndex(currentNode,index)</line>
+    <line num="11"></line>
+    <line num="12" indent="2">      //Look at how many keys are in the leaf.</line>
+    <line num="13" indent="2">      int numOfKeysInTheLeaf</line>
+    <line num="14" indent="2">      if (currentNode.getValue().compareTo()==0)</line>
+    <line num="15" indent="3">        numOfKeysInTheLeaf=0</line>
+    <line num="16" indent="2">      else</line>
+    <line num="17" indent="3">        numOfKeysInTheLeaf = currentNode.getValue().split( ).length</line>
+    <line num="18"></line>
+    <line num="19" indent="2">      //Keys in leaves must be evenly distributed or merged into one leaf.</line>
+    <line num="20" indent="2">      if (numOfKeysInTheLeaf &lt;= MINIMUM_CAPACITY)</line>
+    <line num="21" indent="2">      {</line>
+    <line num="22"></line>
+    <line num="23" indent="3">        if (currentNode.getParent() == null AND numOfKeysInTheLeaf ==0) {</line>
+    <line num="24" indent="4">          currentNode = null</line>
+    <line num="25" indent="3">        } else</line>
+    <line num="26" indent="3">        {</line>
+    <line num="27"></line>
+    <line num="28" indent="4">          //Look for a suitable neighbor</line>
+    <line num="29" indent="4">          TreeNode suitableNeighbor = searchForNeighbor(currentNode)</line>
+    <line num="30" indent="4">          int numKeysInNeighbor</line>
+    <line num="31" indent="4">          if (suitableNeighbor != null)</line>
+    <line num="32" indent="5">            numKeysInNeighbor = suitableNeighbor.getValue().split( ).length</line>
+    <line num="33" indent="4">          else</line>
+    <line num="34" indent="5">            numKeysInNeighbor=0 //The root is a leaf.</line>
+    <line num="35"></line>
+    <line num="36" indent="4">          //REDISTRIBUTE</line>
+    <line num="37" indent="4">          if (numKeysInNeighbor &gt; MINIMUM_CAPACITY) {</line>
+    <line num="38"></line>
+    <line num="39" indent="5">            String[] suitableNeighborKeys = suitableNeighbor.getValue().split( )</line>
+    <line num="40" indent="5">            String[] currentNodeKeys = currentNode.getValue().split( )</line>
+    <line num="41" indent="5">            //Neighbor was on the left</line>
+    <line num="42" indent="5">            if ( Integer.parseInt(suitableNeighborKeys[0]) &lt; Integer.parseInt(currentNodeKeys[0]) )</line>
+    <line num="43" indent="5">            {</line>
+    <line num="44" indent="6">              String combinedKeys = suitableNeighbor.getValue()+currentNode.getValue()</line>
+    <line num="45" indent="6">              String[] listOfCombinedKeys = combinedKeys.split( )</line>
+    <line num="46" indent="6">              int medianIndex = (int) Math.floor(((double) combinedKeys.split( ).length) / 2.0)</line>
+    <line num="47" indent="6">              suitableNeighbor.setValue()</line>
+    <line num="48" indent="6">              currentNode.setValue()</line>
+    <line num="49" indent="6">              for (int i=0 i &lt; listOfCombinedKeys.length i++) {</line>
+    <line num="50" indent="7">                if (i&lt;medianIndex)</line>
+    <line num="51" indent="8">                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]))</line>
+    <line num="52" indent="7">                else</line>
+    <line num="53" indent="8">                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]))</line>
+    <line num="54" indent="6">              }</line>
+    <line num="55"></line>
+    <line num="56" indent="5">            } else //Neighbor was on the right</line>
+    <line num="57" indent="5">            {</line>
+    <line num="58" indent="6">              String combinedKeys = currentNode.getValue()+suitableNeighbor.getValue()</line>
+    <line num="59" indent="6">              String[] listOfCombinedKeys = combinedKeys.split( )</line>
+    <line num="60" indent="6">              int medianIndex = (int) Math.floor(((double) combinedKeys.split( ).length) / 2.0)</line>
+    <line num="61" indent="6">              suitableNeighbor.setValue()</line>
+    <line num="62" indent="6">              currentNode.setValue()</line>
+    <line num="63" indent="6">              for (int i=0 i&lt; listOfCombinedKeys.length i++) {</line>
+    <line num="64" indent="7">                if (i&lt;medianIndex)</line>
+    <line num="65" indent="8">                  addKeyToNode(currentNode,Integer.parseInt(listOfCombinedKeys[i]))</line>
+    <line num="66" indent="7">                else</line>
+    <line num="67" indent="8">                  addKeyToNode(suitableNeighbor,Integer.parseInt(listOfCombinedKeys[i]))</line>
+    <line num="68" indent="6">              }</line>
+    <line num="69"></line>
+    <line num="70" indent="5">            }</line>
+    <line num="71" indent="5">            fixKeys(currentNode.getParent())</line>
+    <line num="72"></line>
+    <line num="73" indent="4">          } else //DELETE LEAF</line>
+    <line num="74" indent="4">          {</line>
+    <line num="75" indent="5">            if(currentNode.getParent().getValue().split( ).length &lt; MINIMUM_CAPACITY)</line>
+    <line num="76" indent="5">            {</line>
+    <line num="77" indent="6">              //Deleting the leaf in this case will make only one key in the parent.</line>
+    <line num="78" indent="6">              //That is not desired so the tree needs to be restructured.</line>
+    <line num="79" indent="6">              //But not before the keys in the leaf are moved out.</line>
+    <line num="80" indent="6">              String tempKeys = currentNode.getParent().getChild().getValue()</line>
+    <line num="81" indent="6">              if (currentNode.getParent().getChild().getSibling() != null)</line>
+    <line num="82" indent="7">                tempKeys += currentNode.getParent().getChild().getSibling().getValue()</line>
+    <line num="83" indent="6">              if (currentNode.getValue().compareTo(currentNode.getParent().getValue())==0)</line>
+    <line num="84" indent="7">                currentNode.getParent().setValue()</line>
+    <line num="85" indent="6">              currentNode.setValue(tempKeys)</line>
+    <line num="86" indent="6">              restructure(currentNode.getParent(),currentNode)</line>
+    <line num="87" indent="6">              currentNode.deactivate()</line>
+    <line num="88" indent="5">            }</line>
+    <line num="89" indent="5">            else //After deleting the leaf here, there will be at least one key in the parent.</line>
+    <line num="90" indent="6">              deleteLeaf(currentNode)</line>
+    <line num="91"></line>
+    <line num="92" indent="4">          }</line>
+    <line num="93" indent="3">        }</line>
+    <line num="94" indent="2">      }</line>
+    <line num="95"></line>
+    <line num="96" indent="2">      BPlusTree.snap(delete, 0, key, 14, PseudoCodeDisplay.YELLOW)</line>
+    <line num="97"></line>
+    <line num="98" indent="1">    } else //key is not in the leaf</line>
+    <line num="99" indent="1">    {</line>
+    <line num="100" indent="2">       BPlusTree.snap(delete, 0, key, 41, PseudoCodeDisplay.YELLOW)</line>
+    <line num="101" indent="2">       return false</line>
+    <line num="102" indent="1">     }</line>
+    <line num="103"></line>
+    <line num="104" indent="1">     BPlusTree.snap(delete, 0, key, 42, PseudoCodeDisplay.YELLOW)</line>
+    <line num="105" indent="1">     return true //successfully deleted</line>
+    <line num="106">}</line>
   </code>
   <vars><var>x = <replace var="x" /></var></vars>
 </pseudocode>
