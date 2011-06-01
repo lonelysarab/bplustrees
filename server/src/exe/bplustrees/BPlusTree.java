@@ -119,8 +119,8 @@ public class BPlusTree {
     tree = new BPT(tempIntArray);
 
     //delete keys
-    //for (int i = 0; i < 1; i++)
-    //  tree.delete(tempIntArray[i]);
+    for (int i = 0; i < 1; i++)
+      tree.delete(tempIntArray[i]);
 
     /**********************************tree node examples below***********************************
     //assign a value to the root
