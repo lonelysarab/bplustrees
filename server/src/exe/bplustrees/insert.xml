@@ -3,30 +3,26 @@
   <stack><replace var="current_function" /></stack>
   <code>
     <signature>Pseudocode</signature>
-    <line num="1"> insert(x) {</line>
-    <line num="2" indent="1"> if (root == null)</line>
-    <line num="3" indent="2"> root = x</line>
-    <line num="4" indent="1"> else {</line>
-    <line num="5" indent="2"> while(current != null) {//traverse down to leaf</line>
-    <line num="6" indent="3"> index = 0</line>
-    <line num="7" indent="3"> while (x &gt; currentNode(index) AND index &lt; currentNode.size)</line>
-    <line num="8" indent="4"> index = index+1</line>
-    <line num="9" indent="3"> parentNode = currentNode</line>
-    <line num="10" indent="3">if (x &gt;= parentNode(index))</line>
-    <line num="11" indent="4">currentNode = parentNode(index).getRightDownPointer</line>
-    <line num="12" indent="3">else</line>
-    <line num="13" indent="4">currentNode = parentNode(index).getLeftDownPointer</line>
-    <line num="14" indent="2">}</line>
-    <line num="15" indent="2">if(parent(index) != x) {</line>
-    <line num="16" indent="3">parent.add(x)</line>
-    <line num="17" indent="3">if(parent.size == order)</line>
-    <line num="18" indent="4">split(parent)</line>
-    <line num="19" indent="2">}</line>
-    <line num="20" indent="2">else</line>
-    <line num="21" indent="3">return false //integer already exist</line>
-    <line num="22" indent="1">}</line>
-    <line num="23" indent="1">return true //integer sucessfully inserted</line>
-    <line num="24">}</line>
+    <line num="1"> insert(key) {</line>
+    <line num="2" indent="1"> if (root.getKeys == null) {</line>
+    <line num="3" indent="2"> root.setKey(key)</line>
+    <line num="4" indent="1"> } else</line>
+    <line num="5" indent="2"> {</line>
+    <line num="6" indent="2"> currentNode = findLeafContainingKey(root, key)</line>
+    <line num="7" indent="2"> if (isKeyAbsentInList(currentNode.getKeys, key)) {</line>
+    <line num="8" indent="3"> addKeyToNode(currentNode, key)</line>
+    <line num="9" indent="3"> if (currentNode.keyList.length == ORDER) {</line>
+    <line num="10" indent="4"> //There are too many keys in the leaf. Split it.</line>
+    <line num="11" indent="4">split(currentNode)</line>
+    <line num="12" indent="3">}</line>
+    <line num="13" indent="2">} else // The integer to be inserted already exists.</line>
+    <line num="14" indent="2">{</line>
+    <line num="15" indent="3">return false</line>
+    <line num="16" indent="2">}</line>
+    <line num="17" indent="1">}</line>
+    <line num="18" indent="1">//Successfully inserted.</line>
+    <line num="19" indent="1">return true</line>
+    <line num="20">}</line>
   </code>
   <vars><var>x = <replace var="x" /></var></vars>
 </pseudocode>
