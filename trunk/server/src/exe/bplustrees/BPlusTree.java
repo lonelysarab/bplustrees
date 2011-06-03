@@ -4,7 +4,7 @@
  *
  *
  * @author William Clements
- * @version May 29, 2011
+ * @version June 6, 2011
  *************************************************************************************************/
 package exe.bplustrees;
 
@@ -17,17 +17,17 @@ import exe.*;
 import exe.pseudocode.*;
 
 /*
- * This class helps make the visualization script that is sent to the client.
+ * The BPlusTree class helps make the visualization script that is sent to the client.
  */
 public class BPlusTree {
 
   /*
-   * Title for the visualization
+   * Title for the visualization.
    */
   static final String TITLE = null;
 
   /*
-   * Pseudocode for the algorith to insert keys into the B+ Tree
+   * Pseudocode for the algorith to insert keys into the B+ Tree.
    */
   static final String INSERT = "exe/bplustrees/insert.xml";
 
@@ -78,11 +78,6 @@ public class BPlusTree {
   static TreeNode visualRoot;
 
   /*
-   * True and false questions for the user.
-   */
-  static XMLtfQuestion tf;
-
-  /*
    * Keeps track of how many questions have been asked. 
    */
   static int id;
@@ -95,21 +90,19 @@ public class BPlusTree {
   public static void main(String args[]) throws IOException {
 
     show = new ShowFile(args[0]);
-    tf = new XMLtfQuestion(show,id+"");
+    
 
     //Declare a new general tree.
     visualTree = new GAIGStree(false, "B+ Tree of order " + BPT.ORDER, "#000000",
             0.3, 0.6, 0.7, 0.99, 0.08);
 
     //Insert a list of numbers into the tree
-    /*
-    int[] tempIntArray = {2,5,7,12,15,17,22,25,27,32,35,37,42,45,47,52,55,57,62,65,67,72,75,77,82,85,87,92,95,97};
-    tree = new BPT(tempIntArray);
-    */
+    //int[] tempIntArray = {2,5,7,12,15,17,22,25,27,32,35,37,42,45,47,52,55,57,62,65,67,72,75,77};
+    //tree = new BPT(tempIntArray);
 
     //Insert random numbers into the tree.
     Random rand = new Random();
-    int[] tempIntArray = new int[40];
+    int[] tempIntArray = new int[22];
 
     //make a list of keys to add
     for (int i = 0; i < tempIntArray.length; i++)
@@ -119,35 +112,35 @@ public class BPlusTree {
     tree = new BPT(tempIntArray);
 
     //delete keys
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < tempIntArray.length-5; i++)
       tree.delete(tempIntArray[i]);
 
+    show.close();
+
     /**********************************tree node examples below***********************************
-    //assign a value to the root
-    visualRoot.setValue("3");
-    visualRoot.setHexColor("#eeeeff");
+    //Assign a value to the root. This works.
+    TreeNode root = new TreeNode();
+    visualTree.setRoot(root);
+    root.setValue("7");
+    root.setHexColor("#eeeeff");
+    show.writeSnap(TITLE, doc_uri(""), make_uri("",0,1,1,1), visualTree);
+    root.setValue(null);
     show.writeSnap(TITLE, doc_uri(""), make_uri("",0,1,1,1), visualTree);
 
-    //does not work... and should not
+    //Does not work... and should not.
     //TreeNode secondRoot = new TreeNode();
     //secondRoot.setValue("4");
     //visualRoot.getParent().setSiblingWithEdge(secondRoot);
     //show.writeSnap(TITLE, doc_uri(""), make_uri("",0,1,1,1), visualTree);
 
-    //make siblings
-    TreeNode tempNodeOne = new TreeNode();
-    tempNodeOne.setValue("1");
-    tempNodeOne.setHexColor("#eeeeff");
-    visualRoot.setChildWithEdge(tempNodeOne);
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-
-    TreeNode tempNodetwo = new TreeNode();
-    tempNodetwo.setValue("2");
-    tempNodetwo.setHexColor("#eeeeff");
-    visualRoot.setChildWithEdge(tempNodetwo);
-    show.writeSnap(TITLE, doc_uri(4), make_uri(1, 1, 1, PseudoCodeDisplay.RED), visualTree);
-    **********************************************************************************************/
-    show.close();
+    //Avoid programming like this.
+    //TreeNode root = new TreeNode();
+    //visualTree.setRoot(root);
+    //root.setValue("");
+    //root.setHexColor("#eeeeff");
+    //show.writeSnap(TITLE, doc_uri(""), make_uri("",0,1,1,1), visualTree);
+    *********************************************************************************************/
+    
   }
 
   /*
@@ -232,7 +225,7 @@ public class BPlusTree {
     return uri;
   }
 
-  /* Generate hypertext information for the user
+  /* Generate more information for the user
    * @param currentlyInsertingSplitingOrDeleting   what the visualization is currently doing
    * @return nothing
    */
@@ -240,7 +233,7 @@ public class BPlusTree {
     String content = "<html>"
             + "<head><title>B+ Trees --more info--</title></head>"
             + "<body>"
-            + "<h1>Hypertextbook</h1>";
+            + "<h1>More Information</h1>";
     
     if (0==currentlyInsertingSplitingOrDeleting.compareTo("insert"))
       content += "<h2>Currently Inserting a key into a B+ Tree</h2>\n"
