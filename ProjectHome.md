@@ -1,0 +1,1 @@
+This visualization was made to help students learn about B+ Trees and how they insert keys remove keys. Splitting a leaf and a node is also included. The visualization can be viewed through JHAVE from jhave.org
